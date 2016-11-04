@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,42 +21,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYb-Pm-HdP">
+                                <rect key="frame" x="0.0" y="74" width="320" height="446"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FpN-TO-LNc">
                                 <rect key="frame" x="0.0" y="424" width="320" height="144"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9R-xb-Crb">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="51.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="298 Bartell Way Suite 379" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73s-RN-IR8">
-                                                <rect key="frame" x="8" y="0.0" width="199" height="31"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iZE-NB-TdV">
+                                                <rect key="frame" x="8" y="0.0" width="199" height="48.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="298 Bartell Way Suite 379" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73s-RN-IR8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="199" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garden" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ud1-mI-xAf">
+                                                        <rect key="frame" x="0.0" y="30.5" width="50.5" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcj-VK-xEm">
                                                 <rect key="frame" x="282" y="1" width="30" height="30"/>
                                                 <state key="normal" image="close_route_menu_button"/>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garden" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ud1-mI-xAf">
-                                                <rect key="frame" x="8" y="31" width="50.5" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="U6c-ru-jtG"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="73s-RN-IR8" firstAttribute="top" secondItem="d9R-xb-Crb" secondAttribute="top" id="HeY-Ya-9cN"/>
-                                            <constraint firstAttribute="bottom" secondItem="ud1-mI-xAf" secondAttribute="bottom" id="W9g-Un-KTM"/>
-                                            <constraint firstItem="ud1-mI-xAf" firstAttribute="leading" secondItem="d9R-xb-Crb" secondAttribute="leading" constant="8" id="Y3d-Uy-uc2"/>
-                                            <constraint firstAttribute="height" constant="52" id="hFM-Ew-yNe"/>
-                                            <constraint firstAttribute="trailing" secondItem="Pcj-VK-xEm" secondAttribute="trailing" constant="8" id="jKF-Xb-hTB"/>
-                                            <constraint firstItem="73s-RN-IR8" firstAttribute="leading" secondItem="d9R-xb-Crb" secondAttribute="leading" constant="8" id="kgw-G7-gGR"/>
-                                            <constraint firstItem="Pcj-VK-xEm" firstAttribute="top" secondItem="d9R-xb-Crb" secondAttribute="top" constant="1" id="mav-LX-McE"/>
-                                            <constraint firstItem="ud1-mI-xAf" firstAttribute="top" secondItem="73s-RN-IR8" secondAttribute="bottom" id="nB1-de-6zi"/>
+                                            <constraint firstItem="iZE-NB-TdV" firstAttribute="leading" secondItem="d9R-xb-Crb" secondAttribute="leading" constant="8" id="1LB-dQ-ELe"/>
+                                            <constraint firstAttribute="trailing" secondItem="Pcj-VK-xEm" secondAttribute="trailing" constant="8" id="2YK-7i-8kh"/>
+                                            <constraint firstAttribute="bottom" secondItem="iZE-NB-TdV" secondAttribute="bottom" constant="3" id="u6K-ec-DEG"/>
+                                            <constraint firstItem="Pcj-VK-xEm" firstAttribute="top" secondItem="d9R-xb-Crb" secondAttribute="top" constant="1" id="xkW-HT-5yX"/>
+                                            <constraint firstItem="iZE-NB-TdV" firstAttribute="top" secondItem="d9R-xb-Crb" secondAttribute="top" id="y6J-yz-lfz"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -67,51 +71,79 @@
                                     <constraint firstAttribute="trailing" secondItem="d9R-xb-Crb" secondAttribute="trailing" id="j0L-dA-tba"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqC-zx-T0i">
-                                <rect key="frame" x="120" y="476" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="VPr-WP-3Hn"/>
-                                    <constraint firstAttribute="width" constant="80" id="iEg-2A-tvm"/>
-                                </constraints>
-                                <state key="normal" image="create_route_button"/>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jn3-Yl-exh">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sidewalks map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jK-3Y-iY2">
-                                        <rect key="frame" x="8" y="34" width="114" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BuM-54-Zny">
+                                        <rect key="frame" x="20" y="35.5" width="132" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sidewalks map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jK-3Y-iY2">
+                                                <rect key="frame" x="0.0" y="0.0" width="114" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark_create_route" translatesAutoresizingMaskIntoConstraints="NO" id="Qhg-iw-qkW">
+                                                <rect key="frame" x="119" y="6.5" width="13" height="8"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="8" id="Evw-Cw-rG4"/>
+                                                    <constraint firstAttribute="width" constant="13" id="IVJ-ub-ihK"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ee-lh-545">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1Ee-lh-545" secondAttribute="trailing" id="AdL-fc-HfN"/>
+                                    <constraint firstAttribute="bottom" secondItem="BuM-54-Zny" secondAttribute="bottom" constant="10" id="Iuy-g2-vZd"/>
+                                    <constraint firstItem="1Ee-lh-545" firstAttribute="leading" secondItem="Jn3-Yl-exh" secondAttribute="leading" id="P1L-so-8VC"/>
+                                    <constraint firstItem="BuM-54-Zny" firstAttribute="leading" secondItem="Jn3-Yl-exh" secondAttribute="leading" constant="20" id="QlH-1b-2uU"/>
+                                    <constraint firstAttribute="bottom" secondItem="1Ee-lh-545" secondAttribute="bottom" id="buW-SZ-XXB"/>
+                                    <constraint firstItem="1Ee-lh-545" firstAttribute="top" secondItem="Jn3-Yl-exh" secondAttribute="top" id="je2-FM-Nvm"/>
                                     <constraint firstAttribute="height" constant="66" id="nof-Mi-GWv"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEW-rQ-YTS">
+                                <rect key="frame" x="274" y="74" width="30" height="30"/>
+                                <state key="normal" image="user_location_button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqC-zx-T0i">
+                                <rect key="frame" x="120" y="476" width="80" height="80"/>
+                                <state key="normal" image="create_route_button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CMB-zp-1zh" firstAttribute="top" secondItem="FpN-TO-LNc" secondAttribute="bottom" id="1oJ-RP-fba"/>
+                            <constraint firstItem="yEW-rQ-YTS" firstAttribute="trailing" secondItem="LG5-Sm-sbU" secondAttribute="trailingMargin" id="1sq-I0-Oel"/>
+                            <constraint firstItem="CMB-zp-1zh" firstAttribute="top" secondItem="gYb-Pm-HdP" secondAttribute="bottom" constant="48" id="3ih-i1-Gu3"/>
                             <constraint firstAttribute="trailing" secondItem="FpN-TO-LNc" secondAttribute="trailing" id="CqZ-rx-g1P"/>
+                            <constraint firstItem="gYb-Pm-HdP" firstAttribute="top" secondItem="Jn3-Yl-exh" secondAttribute="bottom" constant="8" id="DEK-gv-R0E"/>
                             <constraint firstItem="wqC-zx-T0i" firstAttribute="centerX" secondItem="LG5-Sm-sbU" secondAttribute="centerX" id="G9O-fV-vOG"/>
+                            <constraint firstAttribute="trailing" secondItem="gYb-Pm-HdP" secondAttribute="trailing" id="HlF-hS-32H"/>
+                            <constraint firstItem="gYb-Pm-HdP" firstAttribute="leading" secondItem="LG5-Sm-sbU" secondAttribute="leading" id="HpE-wM-dhj"/>
                             <constraint firstItem="FpN-TO-LNc" firstAttribute="leading" secondItem="LG5-Sm-sbU" secondAttribute="leading" id="OVf-8B-N3c"/>
                             <constraint firstItem="CMB-zp-1zh" firstAttribute="top" secondItem="wqC-zx-T0i" secondAttribute="bottom" constant="12" id="TYG-dq-E5X"/>
                             <constraint firstItem="Jn3-Yl-exh" firstAttribute="top" secondItem="LG5-Sm-sbU" secondAttribute="top" id="XB9-v1-d44"/>
                             <constraint firstAttribute="trailing" secondItem="Jn3-Yl-exh" secondAttribute="trailing" id="gXw-DU-3YA"/>
+                            <constraint firstItem="yEW-rQ-YTS" firstAttribute="top" secondItem="Jn3-Yl-exh" secondAttribute="bottom" constant="8" id="iF0-Rd-d4w"/>
                             <constraint firstItem="Jn3-Yl-exh" firstAttribute="leading" secondItem="LG5-Sm-sbU" secondAttribute="leading" id="mip-bf-6Bp"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zeZ-d9-5aW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="196.875" y="166.90140845070422"/>
+            <point key="canvasLocation" x="198.75" y="158.45070422535213"/>
         </scene>
     </scenes>
     <resources>
+        <image name="checkmark_create_route" width="14" height="9"/>
         <image name="close_route_menu_button" width="30" height="30"/>
         <image name="create_route_button" width="80" height="80"/>
+        <image name="user_location_button" width="30" height="30"/>
     </resources>
 </document>
