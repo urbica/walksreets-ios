@@ -11,15 +11,29 @@
 		306D41651DCD2C1100043F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 306D41641DCD2C1100043F86 /* Assets.xcassets */; };
 		306D41681DCD2C1100043F86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306D41661DCD2C1100043F86 /* LaunchScreen.storyboard */; };
 		306D41721DCD2C6300043F86 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D41711DCD2C6300043F86 /* Config.swift */; };
+		30C8136E1DCD36EC00924001 /* RouteCreationModule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C8136D1DCD36EC00924001 /* RouteCreationModule.storyboard */; };
+		63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D393807BF77BA3F32F88643 /* RouteCreationModuleInteractor.swift */; };
+		72A2124729EC1AAC27070C3C /* RouteCreationModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552DDB458787869F10328D2 /* RouteCreationModuleConfigurator.swift */; };
+		92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342EF44F078F8AB2C7963D16 /* RouteCreationModulePresenter.swift */; };
+		B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DA9A0C5667FCEE70CEB00 /* RouteCreationModuleRouter.swift */; };
+		B747C8FC21D87E01D5973FE5 /* RouteCreationModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */; };
+		F099800B9560E696761BDEAF /* RouteCreationModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042DA9A0C5667FCEE70CEB00 /* RouteCreationModuleRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleRouter.swift; sourceTree = "<group>"; };
+		0552DDB458787869F10328D2 /* RouteCreationModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleConfigurator.swift; sourceTree = "<group>"; };
 		306D415A1DCD2C1100043F86 /* walkstreets-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "walkstreets-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		306D415D1DCD2C1100043F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		306D41641DCD2C1100043F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		306D41671DCD2C1100043F86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		306D41691DCD2C1100043F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		306D41711DCD2C6300043F86 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		30C8136D1DCD36EC00924001 /* RouteCreationModule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RouteCreationModule.storyboard; sourceTree = "<group>"; };
+		339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleViewController.swift; sourceTree = "<group>"; };
+		342EF44F078F8AB2C7963D16 /* RouteCreationModulePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModulePresenter.swift; sourceTree = "<group>"; };
+		5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleProtocols.swift; sourceTree = "<group>"; };
+		7D393807BF77BA3F32F88643 /* RouteCreationModuleInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +66,7 @@
 		306D415C1DCD2C1100043F86 /* walkstreets-ios */ = {
 			isa = PBXGroup;
 			children = (
+				62BC6B10E19030F57E87FC7A /* Src */,
 				306D41701DCD2C4E00043F86 /* App */,
 				306D416F1DCD2C2300043F86 /* SupportingFiles */,
 			);
@@ -75,6 +90,85 @@
 				306D41711DCD2C6300043F86 /* Config.swift */,
 			);
 			name = App;
+			sourceTree = "<group>";
+		};
+		4C48668F374B6EF1CD9DD512 /* Subsystems */ = {
+			isa = PBXGroup;
+			children = (
+				F71AFCEF88D307A4CE597BC0 /* RouteCreationModule */,
+			);
+			path = Subsystems;
+			sourceTree = "<group>";
+		};
+		62BC6B10E19030F57E87FC7A /* Src */ = {
+			isa = PBXGroup;
+			children = (
+				4C48668F374B6EF1CD9DD512 /* Subsystems */,
+			);
+			name = Src;
+			path = ../Src;
+			sourceTree = "<group>";
+		};
+		688AE908979FDA04E6CA69B9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				042DA9A0C5667FCEE70CEB00 /* RouteCreationModuleRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		946B3E32480AFE329CC2BC23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		992820C3CADDB94FBF856CD0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BE2EDA0CD0A902F53A3CFD27 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7D393807BF77BA3F32F88643 /* RouteCreationModuleInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C556BB4EC1E40605CF0B0DA1 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				0552DDB458787869F10328D2 /* RouteCreationModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		F71AFCEF88D307A4CE597BC0 /* RouteCreationModule */ = {
+			isa = PBXGroup;
+			children = (
+				30C8136D1DCD36EC00924001 /* RouteCreationModule.storyboard */,
+				946B3E32480AFE329CC2BC23 /* View */,
+				FB3D3192FDBAA3D7BA7BB2DE /* Presenter */,
+				BE2EDA0CD0A902F53A3CFD27 /* Interactor */,
+				688AE908979FDA04E6CA69B9 /* Router */,
+				C556BB4EC1E40605CF0B0DA1 /* Configurator */,
+				992820C3CADDB94FBF856CD0 /* Protocols */,
+			);
+			path = RouteCreationModule;
+			sourceTree = "<group>";
+		};
+		FB3D3192FDBAA3D7BA7BB2DE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				342EF44F078F8AB2C7963D16 /* RouteCreationModulePresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +233,7 @@
 			files = (
 				306D41681DCD2C1100043F86 /* LaunchScreen.storyboard in Resources */,
 				306D41651DCD2C1100043F86 /* Assets.xcassets in Resources */,
+				30C8136E1DCD36EC00924001 /* RouteCreationModule.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +246,12 @@
 			files = (
 				306D415E1DCD2C1100043F86 /* AppDelegate.swift in Sources */,
 				306D41721DCD2C6300043F86 /* Config.swift in Sources */,
+				F099800B9560E696761BDEAF /* RouteCreationModuleViewController.swift in Sources */,
+				92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */,
+				63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */,
+				B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */,
+				72A2124729EC1AAC27070C3C /* RouteCreationModuleConfigurator.swift in Sources */,
+				B747C8FC21D87E01D5973FE5 /* RouteCreationModuleProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +366,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NVMU6WZ9AZ;
 				INFOPLIST_FILE = "walkstreets-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ra-portfolio.walkstreets-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,6 +380,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NVMU6WZ9AZ;
 				INFOPLIST_FILE = "walkstreets-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ra-portfolio.walkstreets-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -304,6 +407,7 @@
 				306D416E1DCD2C1100043F86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
