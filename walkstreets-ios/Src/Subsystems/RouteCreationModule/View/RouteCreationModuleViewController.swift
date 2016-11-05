@@ -12,7 +12,7 @@ import Mapbox
 class RouteCreationModuleViewController: UIViewController, RouteCreationModuleViewInput {
     
     // main view
-    @IBOutlet weak var mapView: UIView!
+    @IBOutlet weak var mapView: MGLMapView!
     
     // route details
     @IBOutlet weak var routeDetailsView: UIView!
@@ -41,7 +41,7 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
 
     // MARK: RouteCreationModuleViewInput
     func setupInitialState() {
-        
+        setupMap()
     }
 }
 
