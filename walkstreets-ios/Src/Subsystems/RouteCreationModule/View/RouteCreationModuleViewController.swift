@@ -18,6 +18,7 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     @IBOutlet weak var routeDetailsView: UIView!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var locationTypeLabel: UILabel!
+    @IBOutlet weak var routeDetailsHeightConstraint: NSLayoutConstraint!
     
     // route settings
     @IBOutlet weak var routeSettingsView: UIView!
@@ -53,7 +54,9 @@ extension RouteCreationModuleViewController {
     }
 
     @IBAction func actionCloseRoutedetailsView(sender: AnyObject) {
-        
+        if routeDetailsView.isHidden == false {
+            closeRouteDetailsView()
+        }
     }
     
     @IBAction func actionShowCloseRouteSettings(sender: AnyObject) {

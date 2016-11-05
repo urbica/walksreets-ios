@@ -15,6 +15,7 @@
 		30FD55751DCDE70100000A97 /* Pods_walkstreets_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FD55741DCDE70100000A97 /* Pods_walkstreets_ios.framework */; };
 		30FD55771DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD55761DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift */; };
 		30FD55791DCDED6C00000A97 /* RouteCreationModuleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD55781DCDED6C00000A97 /* RouteCreationModuleConstants.swift */; };
+		30FD557B1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD557A1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift */; };
 		63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D393807BF77BA3F32F88643 /* RouteCreationModuleInteractor.swift */; };
 		72A2124729EC1AAC27070C3C /* RouteCreationModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552DDB458787869F10328D2 /* RouteCreationModuleConfigurator.swift */; };
 		92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342EF44F078F8AB2C7963D16 /* RouteCreationModulePresenter.swift */; };
@@ -38,6 +39,7 @@
 		30FD55741DCDE70100000A97 /* Pods_walkstreets_ios.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_walkstreets_ios.framework; path = "Pods/../build/Debug-iphoneos/Pods_walkstreets_ios.framework"; sourceTree = "<group>"; };
 		30FD55761DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RouteCreationModuleViewController+Maps.swift"; sourceTree = "<group>"; };
 		30FD55781DCDED6C00000A97 /* RouteCreationModuleConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleConstants.swift; sourceTree = "<group>"; };
+		30FD557A1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RouteCreationModuleViewController+Animations.swift"; sourceTree = "<group>"; };
 		339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleViewController.swift; sourceTree = "<group>"; };
 		342EF44F078F8AB2C7963D16 /* RouteCreationModulePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModulePresenter.swift; sourceTree = "<group>"; };
 		5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleProtocols.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			children = (
 				339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */,
 				30FD55761DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift */,
+				30FD557A1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				306D41721DCD2C6300043F86 /* Config.swift in Sources */,
 				30FD55791DCDED6C00000A97 /* RouteCreationModuleConstants.swift in Sources */,
 				F099800B9560E696761BDEAF /* RouteCreationModuleViewController.swift in Sources */,
+				30FD557B1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift in Sources */,
 				92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */,
 				63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */,
 				B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */,

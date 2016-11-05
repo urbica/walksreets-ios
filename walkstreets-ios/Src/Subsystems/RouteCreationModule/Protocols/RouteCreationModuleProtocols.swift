@@ -6,13 +6,16 @@
 //  Copyright © 2016 Urbica. All rights reserved.
 //
 
-protocol RouteCreationModuleViewInput: class {
+import UIKit
+import Foundation
 
+protocol RouteCreationModuleViewInput: class {
     func setupInitialState()
+    func openRouteDetailsView()
 }
 
 protocol RouteCreationModuleViewOutput {
-
+    func configureRoute(latitude: Double, longitude: Double)
     func viewIsReady()
 }
 

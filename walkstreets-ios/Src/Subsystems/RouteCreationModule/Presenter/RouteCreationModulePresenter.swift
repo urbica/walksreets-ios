@@ -15,4 +15,8 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     func viewIsReady() {
 
     }
+    
+    func configureRoute(latitude: Double, longitude: Double) {
+        print(latitude, longitude)
+    }
 }
