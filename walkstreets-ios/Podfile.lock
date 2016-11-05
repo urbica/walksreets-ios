@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (3.5.1)
+  - Alamofire (4.0.1)
   - GoogleMaps (2.1.0):
     - GoogleMaps/Maps (= 2.1.0)
   - GoogleMaps/Base (2.1.0)
@@ -10,29 +10,29 @@ PODS:
   - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
-  - Alamofire (~> 3.5.0)
+  - Alamofire
   - GoogleMaps
-  - Mapbox-iOS-SDK (~> 3.3.5)
-  - Spring (from `https://github.com/matbeich/Spring.git`, branch `swift2_3`)
+  - Mapbox-iOS-SDK
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
   - SwiftyJSON
 
 EXTERNAL SOURCES:
   Spring:
-    :branch: swift2_3
-    :git: https://github.com/matbeich/Spring.git
+    :branch: swift3
+    :git: https://github.com/MengTo/Spring.git
 
 CHECKOUT OPTIONS:
   Spring:
-    :commit: ca3aa0218c2adf4e7143986498bc3be5757a18b9
-    :git: https://github.com/matbeich/Spring.git
+    :commit: 3a9227c6e9157e7b47f5ac1ee5abab2a56b50002
+    :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
-  Alamofire: 0dfba1184a543e2aa160f4e39cac4e8aba48d223
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   GoogleMaps: 06589b9a38097bce0cd6e90f0fd9b5e4b4a9344c
   Mapbox-iOS-SDK: a3ceda9e2a38b11a18a3d09645d34826e0ea1757
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: 834c912efc2ceef31a9990f1fcf4e6c0c15996c7
+PODFILE CHECKSUM: 98e63ac9e9e3b9ae103c4de42b99c883197a67e1
 
 COCOAPODS: 1.1.0.rc.2

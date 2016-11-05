@@ -12,17 +12,25 @@
 		306D41681DCD2C1100043F86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306D41661DCD2C1100043F86 /* LaunchScreen.storyboard */; };
 		306D41721DCD2C6300043F86 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D41711DCD2C6300043F86 /* Config.swift */; };
 		30C8136E1DCD36EC00924001 /* RouteCreationModule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C8136D1DCD36EC00924001 /* RouteCreationModule.storyboard */; };
+		30FD55751DCDE70100000A97 /* Pods_walkstreets_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FD55741DCDE70100000A97 /* Pods_walkstreets_ios.framework */; };
+		30FD55771DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD55761DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift */; };
+		30FD55791DCDED6C00000A97 /* RouteCreationModuleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD55781DCDED6C00000A97 /* RouteCreationModuleConstants.swift */; };
+		30FD557B1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD557A1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift */; };
+		30FD557E1DCE0CE300000A97 /* RouteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD557D1DCE0CE300000A97 /* RouteService.swift */; };
+		30FD55811DCE0D5900000A97 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD55801DCE0D5900000A97 /* LocationManager.swift */; };
 		63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D393807BF77BA3F32F88643 /* RouteCreationModuleInteractor.swift */; };
 		72A2124729EC1AAC27070C3C /* RouteCreationModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552DDB458787869F10328D2 /* RouteCreationModuleConfigurator.swift */; };
 		92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342EF44F078F8AB2C7963D16 /* RouteCreationModulePresenter.swift */; };
 		B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DA9A0C5667FCEE70CEB00 /* RouteCreationModuleRouter.swift */; };
 		B747C8FC21D87E01D5973FE5 /* RouteCreationModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */; };
+		D9B39AC1217ED510C5C4A351 /* Pods_walkstreets_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF62A8B0EC862CC8156F93C3 /* Pods_walkstreets_ios.framework */; };
 		F099800B9560E696761BDEAF /* RouteCreationModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		042DA9A0C5667FCEE70CEB00 /* RouteCreationModuleRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleRouter.swift; sourceTree = "<group>"; };
 		0552DDB458787869F10328D2 /* RouteCreationModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleConfigurator.swift; sourceTree = "<group>"; };
+		106FD96F22ECB96D84A20203 /* Pods-walkstreets-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walkstreets-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-walkstreets-ios/Pods-walkstreets-ios.release.xcconfig"; sourceTree = "<group>"; };
 		306D415A1DCD2C1100043F86 /* walkstreets-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "walkstreets-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		306D415D1DCD2C1100043F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		306D41641DCD2C1100043F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -30,10 +38,18 @@
 		306D41691DCD2C1100043F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		306D41711DCD2C6300043F86 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		30C8136D1DCD36EC00924001 /* RouteCreationModule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RouteCreationModule.storyboard; sourceTree = "<group>"; };
+		30FD55741DCDE70100000A97 /* Pods_walkstreets_ios.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_walkstreets_ios.framework; path = "Pods/../build/Debug-iphoneos/Pods_walkstreets_ios.framework"; sourceTree = "<group>"; };
+		30FD55761DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RouteCreationModuleViewController+Maps.swift"; sourceTree = "<group>"; };
+		30FD55781DCDED6C00000A97 /* RouteCreationModuleConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleConstants.swift; sourceTree = "<group>"; };
+		30FD557A1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RouteCreationModuleViewController+Animations.swift"; sourceTree = "<group>"; };
+		30FD557D1DCE0CE300000A97 /* RouteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteService.swift; sourceTree = "<group>"; };
+		30FD55801DCE0D5900000A97 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleViewController.swift; sourceTree = "<group>"; };
 		342EF44F078F8AB2C7963D16 /* RouteCreationModulePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModulePresenter.swift; sourceTree = "<group>"; };
 		5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleProtocols.swift; sourceTree = "<group>"; };
 		7D393807BF77BA3F32F88643 /* RouteCreationModuleInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleInteractor.swift; sourceTree = "<group>"; };
+		CF62A8B0EC862CC8156F93C3 /* Pods_walkstreets_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_walkstreets_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D42975D3FFAEEA4E4FFD169D /* Pods-walkstreets-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walkstreets-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-walkstreets-ios/Pods-walkstreets-ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30FD55751DCDE70100000A97 /* Pods_walkstreets_ios.framework in Frameworks */,
+				D9B39AC1217ED510C5C4A351 /* Pods_walkstreets_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +70,8 @@
 			children = (
 				306D415C1DCD2C1100043F86 /* walkstreets-ios */,
 				306D415B1DCD2C1100043F86 /* Products */,
+				30FD55731DCDE70100000A97 /* Frameworks */,
+				66C6D368CC4617EB6AD89363 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +112,31 @@
 			name = App;
 			sourceTree = "<group>";
 		};
+		30FD55731DCDE70100000A97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30FD55741DCDE70100000A97 /* Pods_walkstreets_ios.framework */,
+				CF62A8B0EC862CC8156F93C3 /* Pods_walkstreets_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30FD557C1DCE0CA100000A97 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				30FD557D1DCE0CE300000A97 /* RouteService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		30FD557F1DCE0D3200000A97 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				30FD55801DCE0D5900000A97 /* LocationManager.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		4C48668F374B6EF1CD9DD512 /* Subsystems */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,10 +148,20 @@
 		62BC6B10E19030F57E87FC7A /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				30FD557F1DCE0D3200000A97 /* Shared */,
 				4C48668F374B6EF1CD9DD512 /* Subsystems */,
 			);
 			name = Src;
 			path = ../Src;
+			sourceTree = "<group>";
+		};
+		66C6D368CC4617EB6AD89363 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D42975D3FFAEEA4E4FFD169D /* Pods-walkstreets-ios.debug.xcconfig */,
+				106FD96F22ECB96D84A20203 /* Pods-walkstreets-ios.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		688AE908979FDA04E6CA69B9 /* Router */ = {
@@ -121,6 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */,
+				30FD55761DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift */,
+				30FD557A1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -145,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				0552DDB458787869F10328D2 /* RouteCreationModuleConfigurator.swift */,
+				30FD55781DCDED6C00000A97 /* RouteCreationModuleConstants.swift */,
 			);
 			path = Configurator;
 			sourceTree = "<group>";
@@ -159,6 +217,7 @@
 				688AE908979FDA04E6CA69B9 /* Router */,
 				C556BB4EC1E40605CF0B0DA1 /* Configurator */,
 				992820C3CADDB94FBF856CD0 /* Protocols */,
+				30FD557C1DCE0CA100000A97 /* Service */,
 			);
 			path = RouteCreationModule;
 			sourceTree = "<group>";
@@ -178,9 +237,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 306D416C1DCD2C1100043F86 /* Build configuration list for PBXNativeTarget "walkstreets-ios" */;
 			buildPhases = (
+				F30B061FEE420E443A8AA221 /* [CP] Check Pods Manifest.lock */,
 				306D41561DCD2C1100043F86 /* Sources */,
 				306D41571DCD2C1100043F86 /* Frameworks */,
 				306D41581DCD2C1100043F86 /* Resources */,
+				F7DA3E5805C8EF754CEEF118 /* [CP] Embed Pods Frameworks */,
+				A2A5BA6B8A5E83834859D8D9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,6 +301,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A2A5BA6B8A5E83834859D8D9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-walkstreets-ios/Pods-walkstreets-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F30B061FEE420E443A8AA221 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F7DA3E5805C8EF754CEEF118 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-walkstreets-ios/Pods-walkstreets-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		306D41561DCD2C1100043F86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -246,12 +356,17 @@
 			files = (
 				306D415E1DCD2C1100043F86 /* AppDelegate.swift in Sources */,
 				306D41721DCD2C6300043F86 /* Config.swift in Sources */,
+				30FD55791DCDED6C00000A97 /* RouteCreationModuleConstants.swift in Sources */,
 				F099800B9560E696761BDEAF /* RouteCreationModuleViewController.swift in Sources */,
+				30FD557B1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift in Sources */,
+				30FD557E1DCE0CE300000A97 /* RouteService.swift in Sources */,
 				92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */,
 				63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */,
 				B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */,
+				30FD55771DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift in Sources */,
 				72A2124729EC1AAC27070C3C /* RouteCreationModuleConfigurator.swift in Sources */,
 				B747C8FC21D87E01D5973FE5 /* RouteCreationModuleProtocols.swift in Sources */,
+				30FD55811DCE0D5900000A97 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,29 +477,39 @@
 		};
 		306D416D1DCD2C1100043F86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D42975D3FFAEEA4E4FFD169D /* Pods-walkstreets-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NVMU6WZ9AZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "walkstreets-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ra-portfolio.walkstreets-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
 		306D416E1DCD2C1100043F86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 106FD96F22ECB96D84A20203 /* Pods-walkstreets-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NVMU6WZ9AZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "walkstreets-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ra-portfolio.walkstreets-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};

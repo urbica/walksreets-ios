@@ -15,4 +15,12 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     func viewIsReady() {
 
     }
+    
+    func configureRoute(latitude: Double, longitude: Double) {
+        interactor.configureRoute(latitude: latitude, longitude: longitude)
+    }
+    
+    func showRoute(polyline: AnyObject) {
+        view.showRoute(polyline: polyline)
+    }
 }
