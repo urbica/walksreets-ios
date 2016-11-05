@@ -36,5 +36,26 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
                 
         output.configureRoute(latitude: Double(location.latitude), longitude: Double(location.longitude))
     }
+    
+    func showRoute(polyline: AnyObject) {
+                
+        guard let polyline = polyline as? MGLPolyline else {
+            return
+        }
+        
+        DispatchQueue.main.async {
+            [weak self] in
+            
+            self?.mapView.addAnnotation(polyline)
+        }
+    }
+    
+    func mapView(_ mapView: MGLMapView, strokeColorForShapeAnnotation annotation: MGLShape) -> UIColor {
+        return UIColor.red
+    }
+    
+    func mapView(_ mapView: MGLMapView, lineWidthForPolylineAnnotation annotation: MGLPolyline) -> CGFloat {
+        return 2.0
+    }
 
 }

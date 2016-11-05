@@ -17,7 +17,7 @@ class RouteCreationModuleInteractor: RouteCreationModuleInteractorInput {
         
         routeService.getRoute(startPoint: startPoint){ [weak self] polyline in
             
-            //self?.output.showRoute(polyline)
+            self?.output.showRoute(polyline: polyline)
         }
     }
     

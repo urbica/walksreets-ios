@@ -10,14 +10,17 @@ import Foundation
 import MapKit
 import GoogleMaps
 import CoreLocation
+import Mapbox
 
 class RouteService: NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
     
     func getRoute(startPoint: (latitude: Double, longtitude: Double), complection: @escaping (AnyObject) -> ()) {
         
-        guard let userLocation = LocationManager.sharedInstance.currentLocation else {
-            return
-        }
+        //guard let userLocation = LocationManager.sharedInstance.currentLocation else {
+            //return
+        //}
+        
+        let userLocation = CLLocation(latitude: 55.7633, longitude: 37.6209)
         
         let directionsRequest = MKDirectionsRequest()
         
@@ -25,24 +28,13 @@ class RouteService: NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
         
         let markLocationStart = MKPlacemark(coordinate: CLLocationCoordinate2DMake(startPoint.latitude, startPoint.longtitude), addressDictionary: nil)
         
-        // check distance for route
-        
-        let locationOne = CLLocation(latitude: markLocationUser.coordinate.latitude, longitude: markLocationUser.coordinate.longitude)
-        let locationTwo = CLLocation(latitude: startPoint.latitude, longitude: startPoint.longtitude)
-        let distanceKm = Double(locationOne.distance(from: locationTwo) / 1000)
-        
-        guard distanceKm < 300 else {
-            return
-        }
-        
         directionsRequest.source = MKMapItem(placemark: markLocationUser)
         directionsRequest.destination = MKMapItem(placemark: markLocationStart)
         directionsRequest.transportType = MKDirectionsTransportType.walking
         let directions = MKDirections(request: directionsRequest)
-        var rectangle: GMSPolyline?
+        var rectangle: MGLPolyline?
         
-        directions.calculate(completionHandler: { (response: MKDirectionsResponse?, error: NSError?) -> Void in
-            
+        directions.calculate { (response: MKDirectionsResponse?, error: Error?) in
             // calculate directions
             guard error == nil else {
                 return
@@ -50,7 +42,7 @@ class RouteService: NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
             
             var coords: [CLLocationCoordinate2D] = []
             
-            let path = GMSMutablePath()
+            //let path = GMSMutablePath()
             
             if let routes = response?.routes {
                 for route in routes {
@@ -62,16 +54,13 @@ class RouteService: NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
                 }
                 // draw a route
                 
-                for coord in coords {
-                    path.add(coord)
-                }
-                rectangle = GMSPolyline(path: path)
+                rectangle = MGLPolyline(coordinates: &coords, count: UInt(coords.count))
             }
             
             if let rectangle = rectangle {
                 complection(rectangle)
             }
-        } as! MKDirectionsHandler)
+        }
     }
     
 }

@@ -12,6 +12,7 @@ import Foundation
 protocol RouteCreationModuleViewInput: class {
     func setupInitialState()
     func openRouteDetailsView()
+    func showRoute(polyline: AnyObject)
 }
 
 protocol RouteCreationModuleViewOutput {
@@ -28,7 +29,7 @@ protocol RouteCreationModuleInteractorInput {
 }
 
 protocol RouteCreationModuleInteractorOutput: class {
-
+    func showRoute(polyline: AnyObject)
 }
 
 protocol RouteCreationModuleRouterInput {
