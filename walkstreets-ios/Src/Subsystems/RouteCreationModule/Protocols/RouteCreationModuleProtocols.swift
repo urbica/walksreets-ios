@@ -24,7 +24,7 @@ protocol RouteCreationModuleModuleInput: class {
 }
 
 protocol RouteCreationModuleInteractorInput {
-
+    func configureRoute(latitude: Double, longitude: Double)
 }
 
 protocol RouteCreationModuleInteractorOutput: class {

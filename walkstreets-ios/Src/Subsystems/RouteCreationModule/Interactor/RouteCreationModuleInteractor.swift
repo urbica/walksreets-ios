@@ -7,7 +7,18 @@
 //
 
 class RouteCreationModuleInteractor: RouteCreationModuleInteractorInput {
-
+    
     weak var output: RouteCreationModuleInteractorOutput!
-
+    lazy var routeService = RouteService()
+    
+    func configureRoute(latitude: Double, longitude: Double) {
+        
+        let startPoint = (latitude, longitude)
+        
+        routeService.getRoute(startPoint: startPoint){ [weak self] polyline in
+            
+            //self?.output.showRoute(polyline)
+        }
+    }
+    
 }

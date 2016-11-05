@@ -17,6 +17,6 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     }
     
     func configureRoute(latitude: Double, longitude: Double) {
-        print(latitude, longitude)
+        interactor.configureRoute(latitude: latitude, longitude: longitude)
     }
 }

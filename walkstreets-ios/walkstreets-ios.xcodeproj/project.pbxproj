@@ -16,6 +16,8 @@
 		30FD55771DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD55761DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift */; };
 		30FD55791DCDED6C00000A97 /* RouteCreationModuleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD55781DCDED6C00000A97 /* RouteCreationModuleConstants.swift */; };
 		30FD557B1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD557A1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift */; };
+		30FD557E1DCE0CE300000A97 /* RouteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD557D1DCE0CE300000A97 /* RouteService.swift */; };
+		30FD55811DCE0D5900000A97 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD55801DCE0D5900000A97 /* LocationManager.swift */; };
 		63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D393807BF77BA3F32F88643 /* RouteCreationModuleInteractor.swift */; };
 		72A2124729EC1AAC27070C3C /* RouteCreationModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552DDB458787869F10328D2 /* RouteCreationModuleConfigurator.swift */; };
 		92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342EF44F078F8AB2C7963D16 /* RouteCreationModulePresenter.swift */; };
@@ -40,6 +42,8 @@
 		30FD55761DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RouteCreationModuleViewController+Maps.swift"; sourceTree = "<group>"; };
 		30FD55781DCDED6C00000A97 /* RouteCreationModuleConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleConstants.swift; sourceTree = "<group>"; };
 		30FD557A1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RouteCreationModuleViewController+Animations.swift"; sourceTree = "<group>"; };
+		30FD557D1DCE0CE300000A97 /* RouteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteService.swift; sourceTree = "<group>"; };
+		30FD55801DCE0D5900000A97 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleViewController.swift; sourceTree = "<group>"; };
 		342EF44F078F8AB2C7963D16 /* RouteCreationModulePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModulePresenter.swift; sourceTree = "<group>"; };
 		5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleProtocols.swift; sourceTree = "<group>"; };
@@ -117,6 +121,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		30FD557C1DCE0CA100000A97 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				30FD557D1DCE0CE300000A97 /* RouteService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		30FD557F1DCE0D3200000A97 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				30FD55801DCE0D5900000A97 /* LocationManager.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		4C48668F374B6EF1CD9DD512 /* Subsystems */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +148,7 @@
 		62BC6B10E19030F57E87FC7A /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				30FD557F1DCE0D3200000A97 /* Shared */,
 				4C48668F374B6EF1CD9DD512 /* Subsystems */,
 			);
 			name = Src;
@@ -196,6 +217,7 @@
 				688AE908979FDA04E6CA69B9 /* Router */,
 				C556BB4EC1E40605CF0B0DA1 /* Configurator */,
 				992820C3CADDB94FBF856CD0 /* Protocols */,
+				30FD557C1DCE0CA100000A97 /* Service */,
 			);
 			path = RouteCreationModule;
 			sourceTree = "<group>";
@@ -337,12 +359,14 @@
 				30FD55791DCDED6C00000A97 /* RouteCreationModuleConstants.swift in Sources */,
 				F099800B9560E696761BDEAF /* RouteCreationModuleViewController.swift in Sources */,
 				30FD557B1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift in Sources */,
+				30FD557E1DCE0CE300000A97 /* RouteService.swift in Sources */,
 				92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */,
 				63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */,
 				B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */,
 				30FD55771DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift in Sources */,
 				72A2124729EC1AAC27070C3C /* RouteCreationModuleConfigurator.swift in Sources */,
 				B747C8FC21D87E01D5973FE5 /* RouteCreationModuleProtocols.swift in Sources */,
+				30FD55811DCE0D5900000A97 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
