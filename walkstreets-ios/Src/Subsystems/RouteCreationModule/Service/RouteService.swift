@@ -8,7 +8,6 @@
 
 import Foundation
 import MapKit
-import GoogleMaps
 import CoreLocation
 import Mapbox
 
