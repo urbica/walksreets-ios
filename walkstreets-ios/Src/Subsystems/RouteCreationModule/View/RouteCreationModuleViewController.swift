@@ -26,10 +26,13 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var routeTimerStackView: UIStackView!
-    
-    
+    @IBOutlet weak var routeTypeView: UIView!
+    @IBOutlet weak var routeTypeViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var regularRouteButton: UIButton!
+    @IBOutlet weak var steplessRouteButton: UIButton!
     
     var output: RouteCreationModuleViewOutput!
+    var routeType: String = "regular"
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -60,10 +63,17 @@ extension RouteCreationModuleViewController {
     }
     
     @IBAction func actionShowCloseRouteSettings(sender: AnyObject) {
-        
+        if routeTypeView.isHidden == true {
+            openRouteTypeView()
+        } else {
+            closeRouteTypeView()
+        }
     }
     
     @IBAction func actionStartroute(sender: AnyObject) {
+        if routeDetailsView.isHidden == true {
+            openRouteDetailsView()
+        }
         
     }
     
@@ -71,4 +81,17 @@ extension RouteCreationModuleViewController {
         
     }
     
+    @IBAction func chooseRegularRoute(sender: AnyObject) {
+        regularRouteButton.isHighlighted = true
+        steplessRouteButton.isHighlighted = false
+        routeType = "regular"
+        setupMap()
+    }
+    
+    @IBAction func chooseSteplessRoute(sender: AnyObject) {
+        regularRouteButton.isHighlighted = false
+        steplessRouteButton.isHighlighted = true
+        routeType = "stepless"
+        setupMap()
+    }
 }

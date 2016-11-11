@@ -26,7 +26,6 @@ struct APIResponse {
 class RootAPIService {
     
     var currentRequest: Request?
-
     
 //    func getData(method: Alamofire.Method = .POST, endpoint: String, parameters: [String : AnyObject]? = nil, cancellable: Bool = false, completionHandler: @escaping (APIResponse) -> (), errorHandler: ((String) -> ())? = nil) {
 //        

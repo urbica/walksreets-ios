@@ -37,4 +37,33 @@ extension RouteCreationModuleViewController {
             self.view.layoutIfNeeded()
         }, completion: nil)
     }
+    
+    func openRouteTypeView() {
+        view.layoutIfNeeded()
+        routeTypeView.isHidden = false
+        routeTypeView.layoutIfNeeded()
+        routeTypeViewHeightConstraint.constant = -136
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: [], animations: {
+            self.routeTypeView.alpha = 1
+            self.routeTypeView.layoutIfNeeded()
+            self.view.layoutIfNeeded()
+        }, completion: { (bool) in
+            self.mapView.isUserInteractionEnabled = false
+        })
+    }
+    
+    func closeRouteTypeView() {
+        view.layoutIfNeeded()
+        routeTypeView.layoutIfNeeded()
+        routeTypeViewHeightConstraint.constant = 20
+        UIView.animate(withDuration: 0.3, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: [], animations: {
+            self.routeTypeView.alpha = 0
+            self.routeTypeView.layoutIfNeeded()
+            self.view.layoutIfNeeded()
+        }, completion: { (bool) in
+            self.routeTypeView.isHidden = true
+            self.mapView.isUserInteractionEnabled = true
+
+        })
+    }
 }

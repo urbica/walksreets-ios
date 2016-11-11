@@ -10,6 +10,7 @@ import Foundation
 import MapKit
 import CoreLocation
 import Mapbox
+import Alamofire
 
 class RouteService: NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
     
@@ -20,6 +21,18 @@ class RouteService: NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
         //}
         
         let userLocation = CLLocation(latitude: 55.7633, longitude: 37.6209)
+        
+        let lat = startPoint.latitude
+        let lon = startPoint.longtitude
+
+        
+        let url: URL = URL(string: "http://136.243.154.153:5000/route/v1/driving/\(userLocation.coordinate.longitude),\(userLocation.coordinate.latitude);\(lon),\(lat)?overview=false&steps=true")!
+        
+
+        Alamofire.request(url).response { response in
+            print(url)
+            print(response)
+        }
         
         let directionsRequest = MKDirectionsRequest()
         
