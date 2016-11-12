@@ -16,8 +16,10 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
         
         if routeType == "regular" {
             mapView.styleURL = URL(string: "mapbox://styles/walkstreets/civ3x3k7h00482iozpl9et5mi")
-        } else {
+            routeType = "regular"
+        } else if routeType == "stepless" {
             mapView.styleURL = URL(string: "mapbox://styles/walkstreets/civ5iiv98002t2is5axe0myxx")
+            routeType = "stepless"
         }
         
         // and wide sidewalks later: mapbox://styles/walkstreets/cinr4p56q00bfc7m5vxorbwog
@@ -34,17 +36,44 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
         mapView.addGestureRecognizer(doubleTap)
         
         // delay single tap recognition until it is clearly not a double
-        let singleTap = UITapGestureRecognizer(target: self, action: #selector(handleSingleTap))
-        singleTap.require(toFail: doubleTap)
-        mapView.addGestureRecognizer(singleTap)
+        let longTap = UILongPressGestureRecognizer(target: self, action: #selector(handleLongTap))
+        longTap.require(toFail: doubleTap)
+        mapView.addGestureRecognizer(longTap)
     }
     
-    func handleSingleTap(tap: UITapGestureRecognizer) {
+    func handleLongTap(tap: UILongPressGestureRecognizer) {
+        if locationArray.isEmpty {
+            let alertController = UIAlertController(title: "Start Location", message: "Are you sure it will be your start location?", preferredStyle: .actionSheet)
+            
+            let cancelaction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                let startLocation: CLLocationCoordinate2D = self.mapView.convert(tap.location(in: self.mapView), toCoordinateFrom: self.mapView)
+                self.locationArray.append(startLocation)
+            })
+            alertController.addAction(cancelaction)
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+        } else {
+            let alertController = UIAlertController(title: "Finish Location", message: "Are you sure it will be your finish location?", preferredStyle: .actionSheet)
+            
+            let cancelaction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                let finishLocation: CLLocationCoordinate2D = self.mapView.convert(tap.location(in: self.mapView), toCoordinateFrom: self.mapView)
+                self.locationArray.append(finishLocation)
+                self.configureRouteWithLocations()
+            })
+            alertController.addAction(cancelaction)
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
         // convert tap location (CGPoint)
         // to geographic coordinates (CLLocationCoordinate2D)
-        let location: CLLocationCoordinate2D = mapView.convert(tap.location(in: mapView), toCoordinateFrom: mapView)
-                
-        output.configureRoute(latitude: Double(location.latitude), longitude: Double(location.longitude))
+        //let location: CLLocationCoordinate2D = mapView.convert(tap.location(in: mapView), toCoordinateFrom: mapView)
+    }
+    
+    func configureRouteWithLocations() {
+        output.configureRoute(startPoint: (latitude: (locationArray.last?.latitude)!, longtitude: (locationArray.last?.longitude)!), endPoint: (latitude: (locationArray.first?.latitude)!, longitude: (locationArray.first?.longitude)!), type: routeType)
     }
     
     func showRoute(polyline: AnyObject) {

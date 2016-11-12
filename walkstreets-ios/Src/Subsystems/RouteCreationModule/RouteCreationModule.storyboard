@@ -114,8 +114,8 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbA-Jh-xvU">
-                                        <rect key="frame" x="30" y="81" width="68" height="30"/>
-                                        <state key="normal" title="Edit place"/>
+                                        <rect key="frame" x="30" y="81" width="75" height="30"/>
+                                        <state key="normal" title="New Route"/>
                                         <connections>
                                             <action selector="actionEditRouteWithSender:" destination="LDy-oM-c61" eventType="touchUpInside" id="LlM-B0-qpR"/>
                                         </connections>

@@ -33,7 +33,8 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     
     var output: RouteCreationModuleViewOutput!
     var routeType: String = "regular"
-
+    var locationArray = [CLLocationCoordinate2D]()
+    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,11 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     // MARK: RouteCreationModuleViewInput
     func setupInitialState() {
         setupMap()
+    }
+    
+    func configureRouteDetailsView(address: String, street: String) {
+        addressLabel.text = address
+        locationTypeLabel.text = street
     }
 }
 
@@ -73,12 +79,18 @@ extension RouteCreationModuleViewController {
     @IBAction func actionStartroute(sender: AnyObject) {
         if routeDetailsView.isHidden == true {
             openRouteDetailsView()
+            if locationArray.count == 2 {
+                output.configureRouteDetailsWithEndPoint(endPoint: locationArray.first)
+            }
         }
         
     }
     
     @IBAction func actionEditRoute(sender: AnyObject) {
-        
+        if let annotaions = mapView.annotations {
+            mapView.removeAnnotations(annotaions)
+            locationArray.removeAll()
+        }
     }
     
     @IBAction func chooseRegularRoute(sender: AnyObject) {

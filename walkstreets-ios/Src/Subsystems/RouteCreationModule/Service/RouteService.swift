@@ -14,7 +14,7 @@ import Alamofire
 
 class RouteService: NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
     
-    func getRoute(startPoint: (latitude: Double, longtitude: Double), complection: @escaping (AnyObject) -> ()) {
+    func getRoute( startPoint: (latitude: Double, longtitude: Double), endPoint: (latitude: Double, longitude: Double), type: String, complection: @escaping (AnyObject) -> ()) {
         
         //guard let userLocation = LocationManager.sharedInstance.currentLocation else {
             //return
@@ -22,12 +22,17 @@ class RouteService: NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
         
         let userLocation = CLLocation(latitude: 55.7633, longitude: 37.6209)
         
-        let lat = startPoint.latitude
-        let lon = startPoint.longtitude
+        //let lat = startPoint.latitude
+        //let lon = startPoint.longtitude
 
+        var url: URL = URL(string: "")!
         
-        let url: URL = URL(string: "http://136.243.154.153:5000/route/v1/driving/\(userLocation.coordinate.longitude),\(userLocation.coordinate.latitude);\(lon),\(lat)?overview=false&steps=true")!
-        
+        switch type {
+        case "stepless":
+            url = URL(string: "http://routes.walkstreets.org/stepless/route/v1/driving/\(startPoint.longtitude),\(startPoint.latitude);\(endPoint.longitude),\(endPoint.latitude)?geometries=geojson&overview=false&steps=true")!
+        default:
+            url = URL(string: "http://routes.walkstreets.org/regular/route/v1/driving/\(startPoint.longtitude),\(startPoint.latitude);\(endPoint.longitude),\(endPoint.latitude)??geometries=geojson&overview=false&steps=true")!
+        }
 
         Alamofire.request(url).response { response in
             print(url)

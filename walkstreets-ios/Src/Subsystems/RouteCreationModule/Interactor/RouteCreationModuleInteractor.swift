@@ -11,14 +11,15 @@ class RouteCreationModuleInteractor: RouteCreationModuleInteractorInput {
     weak var output: RouteCreationModuleInteractorOutput!
     lazy var routeService = RouteService()
     
-    func configureRoute(latitude: Double, longitude: Double) {
+    
+    func configureRoute(startPoint: (latitude: Double, longtitude: Double), endPoint: (latitude: Double, longitude: Double), type: String) {
         
-        let startPoint = (latitude, longitude)
-        
-        routeService.getRoute(startPoint: startPoint){ [weak self] polyline in
+        routeService.getRoute(startPoint: startPoint, endPoint: endPoint, type: type, complection: { [weak self] polyline in
             
             self?.output.showRoute(polyline: polyline)
-        }
+            
+        })
     }
+    
     
 }
