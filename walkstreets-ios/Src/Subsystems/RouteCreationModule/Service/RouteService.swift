@@ -25,13 +25,10 @@ class RouteService: NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
         //let lat = startPoint.latitude
         //let lon = startPoint.longtitude
 
-        var url: URL = URL(string: "")!
+        var url = URL(string: "http://routes.walkstreets.org/regular/route/v1/driving/\(startPoint.longtitude),\(startPoint.latitude);\(endPoint.longitude),\(endPoint.latitude)??geometries=geojson&overview=false&steps=true")!
         
-        switch type {
-        case "stepless":
+        if type != "regular" {
             url = URL(string: "http://routes.walkstreets.org/stepless/route/v1/driving/\(startPoint.longtitude),\(startPoint.latitude);\(endPoint.longitude),\(endPoint.latitude)?geometries=geojson&overview=false&steps=true")!
-        default:
-            url = URL(string: "http://routes.walkstreets.org/regular/route/v1/driving/\(startPoint.longtitude),\(startPoint.latitude);\(endPoint.longitude),\(endPoint.latitude)??geometries=geojson&overview=false&steps=true")!
         }
 
         Alamofire.request(url).response { response in
