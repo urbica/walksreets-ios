@@ -114,8 +114,8 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbA-Jh-xvU">
-                                        <rect key="frame" x="30" y="81" width="68" height="30"/>
-                                        <state key="normal" title="Edit place"/>
+                                        <rect key="frame" x="30" y="81" width="75" height="30"/>
+                                        <state key="normal" title="New Route"/>
                                         <connections>
                                             <action selector="actionEditRouteWithSender:" destination="LDy-oM-c61" eventType="touchUpInside" id="LlM-B0-qpR"/>
                                         </connections>
@@ -148,6 +148,20 @@
                                     <constraint firstAttribute="trailing" secondItem="d9R-xb-Crb" secondAttribute="trailing" id="j0L-dA-tba"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEW-rQ-YTS">
+                                <rect key="frame" x="274" y="74" width="30" height="30"/>
+                                <state key="normal" image="user_location_button"/>
+                                <connections>
+                                    <action selector="actionFindUserLocationWithSender:" destination="LDy-oM-c61" eventType="touchUpInside" id="A1d-yY-zby"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqC-zx-T0i">
+                                <rect key="frame" x="120" y="476" width="80" height="80"/>
+                                <state key="normal" image="create_route_button"/>
+                                <connections>
+                                    <action selector="actionStartrouteWithSender:" destination="LDy-oM-c61" eventType="touchUpInside" id="58S-mF-Zd8"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jn3-Yl-exh">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
                                 <subviews>
@@ -203,20 +217,37 @@
                                     <constraint firstItem="6O0-32-Tm5" firstAttribute="leading" secondItem="Jn3-Yl-exh" secondAttribute="leading" id="z8w-Zb-WsE"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEW-rQ-YTS">
-                                <rect key="frame" x="274" y="74" width="30" height="30"/>
-                                <state key="normal" image="user_location_button"/>
-                                <connections>
-                                    <action selector="actionFindUserLocationWithSender:" destination="LDy-oM-c61" eventType="touchUpInside" id="A1d-yY-zby"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqC-zx-T0i">
-                                <rect key="frame" x="120" y="476" width="80" height="80"/>
-                                <state key="normal" image="create_route_button"/>
-                                <connections>
-                                    <action selector="actionStartrouteWithSender:" destination="LDy-oM-c61" eventType="touchUpInside" id="58S-mF-Zd8"/>
-                                </connections>
-                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PNz-hM-EVd">
+                                <rect key="frame" x="0.0" y="-75" width="320" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCq-47-Jcx">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Regular"/>
+                                        <connections>
+                                            <action selector="chooseRegularRouteWithSender:" destination="LDy-oM-c61" eventType="touchUpInside" id="cjo-9y-kdH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttS-Zj-pWg">
+                                        <rect key="frame" x="0.0" y="38" width="320" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Stepless"/>
+                                        <connections>
+                                            <action selector="chooseSteplessRouteWithSender:" destination="LDy-oM-c61" eventType="touchUpInside" id="4Vb-P6-1s9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ttS-Zj-pWg" firstAttribute="leading" secondItem="PNz-hM-EVd" secondAttribute="leading" id="KIo-MM-1iW"/>
+                                    <constraint firstAttribute="height" constant="75" id="Maw-a3-jOj"/>
+                                    <constraint firstItem="ttS-Zj-pWg" firstAttribute="top" secondItem="bCq-47-Jcx" secondAttribute="bottom" constant="8" id="NCq-3g-CqW"/>
+                                    <constraint firstAttribute="trailing" secondItem="bCq-47-Jcx" secondAttribute="trailing" id="Wmt-zO-hfO"/>
+                                    <constraint firstItem="bCq-47-Jcx" firstAttribute="leading" secondItem="PNz-hM-EVd" secondAttribute="leading" id="bO1-Mb-XMl"/>
+                                    <constraint firstItem="bCq-47-Jcx" firstAttribute="top" secondItem="PNz-hM-EVd" secondAttribute="top" id="gWp-OQ-YtE"/>
+                                    <constraint firstAttribute="trailing" secondItem="ttS-Zj-pWg" secondAttribute="trailing" id="goD-6H-Cvy"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -228,12 +259,15 @@
                             <constraint firstItem="wqC-zx-T0i" firstAttribute="centerX" secondItem="LG5-Sm-sbU" secondAttribute="centerX" id="G9O-fV-vOG"/>
                             <constraint firstAttribute="trailing" secondItem="gYb-Pm-HdP" secondAttribute="trailing" id="HlF-hS-32H"/>
                             <constraint firstItem="gYb-Pm-HdP" firstAttribute="leading" secondItem="LG5-Sm-sbU" secondAttribute="leading" id="HpE-wM-dhj"/>
+                            <constraint firstAttribute="trailing" secondItem="PNz-hM-EVd" secondAttribute="trailing" id="I9T-5k-iGt"/>
                             <constraint firstItem="FpN-TO-LNc" firstAttribute="leading" secondItem="LG5-Sm-sbU" secondAttribute="leading" id="OVf-8B-N3c"/>
                             <constraint firstItem="CMB-zp-1zh" firstAttribute="top" secondItem="wqC-zx-T0i" secondAttribute="bottom" constant="12" id="TYG-dq-E5X"/>
                             <constraint firstItem="Jn3-Yl-exh" firstAttribute="top" secondItem="LG5-Sm-sbU" secondAttribute="top" id="XB9-v1-d44"/>
                             <constraint firstAttribute="trailing" secondItem="Jn3-Yl-exh" secondAttribute="trailing" id="gXw-DU-3YA"/>
                             <constraint firstItem="yEW-rQ-YTS" firstAttribute="top" secondItem="Jn3-Yl-exh" secondAttribute="bottom" constant="8" id="iF0-Rd-d4w"/>
+                            <constraint firstItem="abO-eG-Lwc" firstAttribute="top" secondItem="PNz-hM-EVd" secondAttribute="bottom" constant="20" id="iIp-gC-3aN"/>
                             <constraint firstItem="Jn3-Yl-exh" firstAttribute="leading" secondItem="LG5-Sm-sbU" secondAttribute="leading" id="mip-bf-6Bp"/>
+                            <constraint firstItem="PNz-hM-EVd" firstAttribute="leading" secondItem="LG5-Sm-sbU" secondAttribute="leading" id="tDu-hv-eaj"/>
                         </constraints>
                     </view>
                     <connections>
@@ -241,10 +275,14 @@
                         <outlet property="distanceLabel" destination="9V0-Wn-GAu" id="Zt4-3U-sbf"/>
                         <outlet property="locationTypeLabel" destination="ud1-mI-xAf" id="cd2-vx-mik"/>
                         <outlet property="mapView" destination="gYb-Pm-HdP" id="P8S-Yc-T8r"/>
+                        <outlet property="regularRouteButton" destination="bCq-47-Jcx" id="6CE-tQ-jZL"/>
                         <outlet property="routeDetailsHeightConstraint" destination="3lk-zG-sCT" id="h7x-13-2eY"/>
                         <outlet property="routeDetailsView" destination="FpN-TO-LNc" id="Vmg-bA-Ypk"/>
                         <outlet property="routeSettingsView" destination="Jn3-Yl-exh" id="5Ru-wF-OLV"/>
                         <outlet property="routeTimerStackView" destination="7y9-sH-pCO" id="dFm-wR-IWz"/>
+                        <outlet property="routeTypeView" destination="PNz-hM-EVd" id="baa-e6-umo"/>
+                        <outlet property="routeTypeViewHeightConstraint" destination="iIp-gC-3aN" id="leZ-8D-ogr"/>
+                        <outlet property="steplessRouteButton" destination="ttS-Zj-pWg" id="7pr-nJ-pCh"/>
                         <outlet property="timeLabel" destination="rfd-zR-2gM" id="7Ye-UP-YHp"/>
                     </connections>
                 </viewController>

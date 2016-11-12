@@ -8,16 +8,19 @@
 
 import UIKit
 import Foundation
+import MapKit
 
 protocol RouteCreationModuleViewInput: class {
     func setupInitialState()
     func openRouteDetailsView()
     func showRoute(polyline: AnyObject)
+    func configureRouteDetailsView(address: String, street: String)
 }
 
 protocol RouteCreationModuleViewOutput {
-    func configureRoute(latitude: Double, longitude: Double)
+    func configureRoute(startPoint: (latitude: Double, longtitude: Double), endPoint: (latitude: Double, longitude: Double), type: String)
     func viewIsReady()
+    func configureRouteDetailsWithEndPoint(endPoint: CLLocationCoordinate2D?)
 }
 
 protocol RouteCreationModuleModuleInput: class {
@@ -25,7 +28,7 @@ protocol RouteCreationModuleModuleInput: class {
 }
 
 protocol RouteCreationModuleInteractorInput {
-    func configureRoute(latitude: Double, longitude: Double)
+    func configureRoute(startPoint: (latitude: Double, longtitude: Double), endPoint: (latitude: Double, longitude: Double), type: String)
 }
 
 protocol RouteCreationModuleInteractorOutput: class {

@@ -26,11 +26,15 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var routeTimerStackView: UIStackView!
-    
-    
+    @IBOutlet weak var routeTypeView: UIView!
+    @IBOutlet weak var routeTypeViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var regularRouteButton: UIButton!
+    @IBOutlet weak var steplessRouteButton: UIButton!
     
     var output: RouteCreationModuleViewOutput!
-
+    var routeType: String = "regular"
+    var locationArray = [CLLocationCoordinate2D]()
+    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +47,11 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     // MARK: RouteCreationModuleViewInput
     func setupInitialState() {
         setupMap()
+    }
+    
+    func configureRouteDetailsView(address: String, street: String) {
+        addressLabel.text = address
+        locationTypeLabel.text = street
     }
 }
 
@@ -60,15 +69,41 @@ extension RouteCreationModuleViewController {
     }
     
     @IBAction func actionShowCloseRouteSettings(sender: AnyObject) {
-        
+        if routeTypeView.isHidden == true {
+            openRouteTypeView()
+        } else {
+            closeRouteTypeView()
+        }
     }
     
     @IBAction func actionStartroute(sender: AnyObject) {
+        if routeDetailsView.isHidden == true {
+            openRouteDetailsView()
+            if locationArray.count == 2 {
+                output.configureRouteDetailsWithEndPoint(endPoint: locationArray.first)
+            }
+        }
         
     }
     
     @IBAction func actionEditRoute(sender: AnyObject) {
-        
+        if let annotaions = mapView.annotations {
+            mapView.removeAnnotations(annotaions)
+            locationArray.removeAll()
+        }
     }
     
+    @IBAction func chooseRegularRoute(sender: AnyObject) {
+        regularRouteButton.isHighlighted = true
+        steplessRouteButton.isHighlighted = false
+        routeType = "regular"
+        setupMap()
+    }
+    
+    @IBAction func chooseSteplessRoute(sender: AnyObject) {
+        regularRouteButton.isHighlighted = false
+        steplessRouteButton.isHighlighted = true
+        routeType = "stepless"
+        setupMap()
+    }
 }
