@@ -7,6 +7,7 @@
 //
 
 import MapKit
+import Mapbox
 
 class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreationModuleViewOutput, RouteCreationModuleInteractorOutput{
 
@@ -51,7 +52,8 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
         interactor.configureRoute(startPoint: startPoint, endPoint: endPoint, type: type)
     }
     
-    func showRoute(polyline: AnyObject) {
+    func showRoute(polyline: MGLPolyline) {
         view.showRoute(polyline: polyline)
     }
+    
 }

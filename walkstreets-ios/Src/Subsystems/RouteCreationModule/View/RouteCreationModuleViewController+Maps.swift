@@ -7,10 +7,14 @@
 //
 
 import Mapbox
+import MapboxDirections
+import MapKit
 
 extension RouteCreationModuleViewController : MGLMapViewDelegate {
     
     func setupMap() {
+        
+        mapView.delegate = self
         
         // regular style
         
@@ -36,19 +40,24 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
         mapView.addGestureRecognizer(doubleTap)
         
         // delay single tap recognition until it is clearly not a double
-        let longTap = UILongPressGestureRecognizer(target: self, action: #selector(handleLongTap))
-        longTap.require(toFail: doubleTap)
-        mapView.addGestureRecognizer(longTap)
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        singleTap.numberOfTapsRequired = 1
+        singleTap.require(toFail: doubleTap)
+        mapView.addGestureRecognizer(singleTap)
     }
     
-    func handleLongTap(tap: UILongPressGestureRecognizer) {
+    func handleTap(tap: UITapGestureRecognizer) {
+        
+        let tapLocation: CLLocationCoordinate2D = mapView.convert(tap.location(in: mapView), toCoordinateFrom: mapView)
+        
         if locationArray.isEmpty {
             let alertController = UIAlertController(title: "Start Location", message: "Are you sure it will be your start location?", preferredStyle: .actionSheet)
             
             let cancelaction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                let startLocation: CLLocationCoordinate2D = self.mapView.convert(tap.location(in: self.mapView), toCoordinateFrom: self.mapView)
-                self.locationArray.append(startLocation)
+                print("You tapped at: \(tapLocation.latitude), \(tapLocation.longitude)")
+
+                self.locationArray.insert(tapLocation, at: 0)
             })
             alertController.addAction(cancelaction)
             alertController.addAction(okAction)
@@ -58,33 +67,22 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
             
             let cancelaction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                let finishLocation: CLLocationCoordinate2D = self.mapView.convert(tap.location(in: self.mapView), toCoordinateFrom: self.mapView)
-                self.locationArray.append(finishLocation)
+                self.locationArray.insert(tapLocation, at: 1)
+                print("You tapped at: \(tapLocation.latitude), \(tapLocation.longitude)")
                 self.configureRouteWithLocations()
             })
             alertController.addAction(cancelaction)
             alertController.addAction(okAction)
             self.present(alertController, animated: true, completion: nil)
         }
-        
-        // convert tap location (CGPoint)
-        // to geographic coordinates (CLLocationCoordinate2D)
-        //let location: CLLocationCoordinate2D = mapView.convert(tap.location(in: mapView), toCoordinateFrom: mapView)
     }
     
     func configureRouteWithLocations() {
         output.configureRoute(startPoint: (latitude: (locationArray.last?.latitude)!, longtitude: (locationArray.last?.longitude)!), endPoint: (latitude: (locationArray.first?.latitude)!, longitude: (locationArray.first?.longitude)!), type: routeType)
     }
     
-    func showRoute(polyline: AnyObject) {
-                
-        guard let polyline = polyline as? MGLPolyline else {
-            return
-        }
-        
-        DispatchQueue.main.async {
-            [weak self] in
-            
+    func showRoute(polyline: MGLPolyline) {
+        DispatchQueue.main.async { [weak self] in
             self?.mapView.addAnnotation(polyline)
         }
     }
@@ -94,7 +92,10 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
     }
     
     func mapView(_ mapView: MGLMapView, lineWidthForPolylineAnnotation annotation: MGLPolyline) -> CGFloat {
-        return 2.0
+        return 10.0
     }
-
+    
+    func mapView(_ mapView: MGLMapView, alphaForShapeAnnotation annotation: MGLShape) -> CGFloat {
+        return 1.0
+    }
 }
