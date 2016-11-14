@@ -14,9 +14,11 @@ class RouteCreationModuleInteractor: RouteCreationModuleInteractorInput {
     
     func configureRoute(startPoint: (latitude: Double, longtitude: Double), endPoint: (latitude: Double, longitude: Double), type: String) {
         
-        routeService.getRoute(startPoint: startPoint, endPoint: endPoint, type: type, complection: { [weak self] polyline in
+        routeService.getNewRouteWithType(startPoint: startPoint, endPoint: endPoint, type: type, completionHandler: { [weak self] coordinates in
             
-            self?.output.showRoute(polyline: polyline)
+            self?.routeService.getRoute(coordinatesArray: coordinates, complection: { [weak self] polyline in
+                self?.output.showRoute(polyline: polyline)
+            })
             
         })
     }

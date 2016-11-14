@@ -9,6 +9,7 @@
 import Foundation
 import SwiftyJSON
 import Alamofire
+import MapKit
 
 protocol RouteCreationApiServiceDelegate: class {
     func updateRoute(genre: RouteEntityProtocol)
@@ -18,19 +19,5 @@ class RouteCreationApiService: RootAPIService {
     
     var genreEntity: RouteEntityProtocol?
     weak var delegate: RouteCreationApiServiceDelegate?
-    
-    func getNewRouteWithType(type: String, completionBlock: (JSON) -> Void, erroBlock: (String) -> ()) {
-        
-        //let endPoint = Config.routeEndpoint + "/" + String(type)
-        
-        //getData(.GET, endpoint: endPoint, completionHandler: { (response) in
-        //    dispatch_async(dispatch_get_main_queue(), {
-        //        completionBlock(response.json)
-        //    })
-            
-        //}) { (error) in
-        //    erroBlock(error)
-        //}
-    }
     
 }

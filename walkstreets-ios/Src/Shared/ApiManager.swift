@@ -38,7 +38,7 @@ class ApiManager {
     }
     
     private class func defaultHeaders() -> [String : String] {
-        var headers = Alamofire.SessionManager.defaultHTTPHeaders
+        let headers = Alamofire.SessionManager.defaultHTTPHeaders
 
         return headers
     }

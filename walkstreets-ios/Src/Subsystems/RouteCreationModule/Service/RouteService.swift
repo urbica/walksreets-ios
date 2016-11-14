@@ -8,72 +8,76 @@
 
 import Foundation
 import MapKit
-import CoreLocation
 import Mapbox
 import Alamofire
+import SwiftyJSON
 
 class RouteService: NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
     
-    func getRoute( startPoint: (latitude: Double, longtitude: Double), endPoint: (latitude: Double, longitude: Double), type: String, complection: @escaping (AnyObject) -> ()) {
+    let queue = DispatchQueue(label: "com.cnoon.response-queue", qos: .userInteractive, attributes: [.concurrent])
+    
+    func getNewRouteWithType(startPoint: (latitude: Double, longtitude: Double), endPoint: (latitude: Double, longitude: Double), type: String,  completionHandler: @escaping ([CLLocationCoordinate2D]) -> ()) {
         
-        //guard let userLocation = LocationManager.sharedInstance.currentLocation else {
-            //return
-        //}
+        var coordsArrayValues = [CLLocationCoordinate2D]()
         
-        let userLocation = CLLocation(latitude: 55.7633, longitude: 37.6209)
-        
-        //let lat = startPoint.latitude
-        //let lon = startPoint.longtitude
-
-        var url = URL(string: "http://routes.walkstreets.org/regular/route/v1/driving/\(startPoint.longtitude),\(startPoint.latitude);\(endPoint.longitude),\(endPoint.latitude)??geometries=geojson&overview=false&steps=true")!
+        var url = URL(string: "http://routes.walkstreets.org/regular/route/v1/driving/\(startPoint.longtitude),\(startPoint.latitude);\(endPoint.longitude),\(endPoint.latitude)?geometries=geojson&overview=false&steps=true")!
         
         if type != "regular" {
             url = URL(string: "http://routes.walkstreets.org/stepless/route/v1/driving/\(startPoint.longtitude),\(startPoint.latitude);\(endPoint.longitude),\(endPoint.latitude)?geometries=geojson&overview=false&steps=true")!
         }
-
-        Alamofire.request(url).response { response in
-            print(url)
-            print(response)
-        }
         
-        let directionsRequest = MKDirectionsRequest()
         
-        let markLocationUser = MKPlacemark(coordinate: userLocation.coordinate, addressDictionary: nil)
+        Alamofire.request(url, parameters: nil)
+            .response(
+                queue: queue,
+                responseSerializer: DataRequest.jsonResponseSerializer(),
+                completionHandler: { response in
+                    //to get status code
+                    if let status = response.response?.statusCode {
+                        switch(status){
+                        case 200:
+                            print("example success")
+                        default:
+                            print("error with response status: \(status)")
+                        }
+                    }
+                    
+                    //to get JSON return value
+                    let json = JSON(response.result.value!)
+                    let legs = json["routes"].arrayValue.first?["legs"]
+                    let steps = legs?.arrayValue.first?["steps"].arrayValue
+                    let coordsArray = steps?.first?["geometry"].dictionaryValue["coordinates"]?.arrayValue
+                    
+                    guard coordsArray != nil else {
+                        return
+                    }
+                    
+                    for coord in coordsArray! {
+                        
+                        let lat = coord.array?.first?.double
+                        let lon = coord.array?.last?.double
+                        
+                        let point = CLLocationCoordinate2D(latitude: lat!, longitude: lon!)
+                        
+                        coordsArrayValues.append(point)
+                    }
+                    completionHandler(coordsArrayValues)
+            })
+    }
+    
+    
+    func getRoute(coordinatesArray: [CLLocationCoordinate2D], complection: @escaping (MGLPolyline) -> ()) {
         
-        let markLocationStart = MKPlacemark(coordinate: CLLocationCoordinate2DMake(startPoint.latitude, startPoint.longtitude), addressDictionary: nil)
-        
-        directionsRequest.source = MKMapItem(placemark: markLocationUser)
-        directionsRequest.destination = MKMapItem(placemark: markLocationStart)
-        directionsRequest.transportType = MKDirectionsTransportType.walking
-        let directions = MKDirections(request: directionsRequest)
         var rectangle: MGLPolyline?
         
-        directions.calculate { (response: MKDirectionsResponse?, error: Error?) in
-            // calculate directions
-            guard error == nil else {
-                return
-            }
-            
-            var coords: [CLLocationCoordinate2D] = []
-            
-            //let path = GMSMutablePath()
-            
-            if let routes = response?.routes {
-                for route in routes {
-                    let coordsPointer = UnsafeMutablePointer<CLLocationCoordinate2D>.allocate(capacity: route.polyline.pointCount)
-                    route.polyline.getCoordinates(coordsPointer, range: NSMakeRange(0, route.polyline.pointCount))
-                    for i in 0..<route.polyline.pointCount {
-                        coords.append(coordsPointer[i])
-                    }
-                }
-                // draw a route
-                
-                rectangle = MGLPolyline(coordinates: &coords, count: UInt(coords.count))
-            }
-            
-            if let rectangle = rectangle {
-                complection(rectangle)
-            }
+        var coordsArrayValues = coordinatesArray
+        
+        // draw a route
+        
+        rectangle = MGLPolyline(coordinates: &coordsArrayValues, count: UInt(coordsArrayValues.count))
+    
+        if let rectangle = rectangle {
+            complection(rectangle)
         }
     }
     

@@ -9,11 +9,12 @@
 import UIKit
 import Foundation
 import MapKit
+import Mapbox
 
 protocol RouteCreationModuleViewInput: class {
     func setupInitialState()
     func openRouteDetailsView()
-    func showRoute(polyline: AnyObject)
+    func showRoute(polyline: MGLPolyline)
     func configureRouteDetailsView(address: String, street: String)
 }
 
@@ -32,7 +33,7 @@ protocol RouteCreationModuleInteractorInput {
 }
 
 protocol RouteCreationModuleInteractorOutput: class {
-    func showRoute(polyline: AnyObject)
+    func showRoute(polyline: MGLPolyline)
 }
 
 protocol RouteCreationModuleRouterInput {

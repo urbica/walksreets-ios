@@ -87,9 +87,9 @@ extension RouteCreationModuleViewController {
     }
     
     @IBAction func actionEditRoute(sender: AnyObject) {
+        locationArray.removeAll()
         if let annotaions = mapView.annotations {
             mapView.removeAnnotations(annotaions)
-            locationArray.removeAll()
         }
     }
     
