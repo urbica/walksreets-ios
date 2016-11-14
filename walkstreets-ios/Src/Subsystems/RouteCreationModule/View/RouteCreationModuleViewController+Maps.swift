@@ -7,7 +7,6 @@
 //
 
 import Mapbox
-import MapboxDirections
 import MapKit
 
 extension RouteCreationModuleViewController : MGLMapViewDelegate {

@@ -46,6 +46,8 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
 
     // MARK: RouteCreationModuleViewInput
     func setupInitialState() {
+        routeDetailsHeightConstraint.constant = 0
+        routeDetailsView.isHidden = true
         setupMap()
     }
     
