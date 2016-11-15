@@ -52,16 +52,22 @@ class RouteService: NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
                         return
                     }
                     
-                    for coord in coordsArray! {
+                    for step in steps! {
+                        let coordArray = step["geometry"].dictionaryValue["coordinates"]?.arrayValue
+                        for coord in coordArray! {
+                            
+                            let lat = coord.array?.last?.double
+                            let lon = coord.array?.first?.double
+                            
+                            let point = CLLocationCoordinate2D(latitude: lat!, longitude: lon!)
+                            
+                            coordsArrayValues.append(point)
+                        }
+                        completionHandler(coordsArrayValues)
                         
-                        let lat = coord.array?.first?.double
-                        let lon = coord.array?.last?.double
-                        
-                        let point = CLLocationCoordinate2D(latitude: lat!, longitude: lon!)
-                        
-                        coordsArrayValues.append(point)
                     }
-                    completionHandler(coordsArrayValues)
+                    
+                    
             })
     }
     

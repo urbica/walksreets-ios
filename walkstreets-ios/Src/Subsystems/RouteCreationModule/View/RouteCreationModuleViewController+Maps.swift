@@ -91,7 +91,7 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
     }
     
     func mapView(_ mapView: MGLMapView, lineWidthForPolylineAnnotation annotation: MGLPolyline) -> CGFloat {
-        return 10.0
+        return 5.0
     }
     
     func mapView(_ mapView: MGLMapView, alphaForShapeAnnotation annotation: MGLShape) -> CGFloat {

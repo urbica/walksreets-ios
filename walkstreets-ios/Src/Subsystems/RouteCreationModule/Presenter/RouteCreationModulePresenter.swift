@@ -53,7 +53,9 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     }
     
     func showRoute(polyline: MGLPolyline) {
-        view.showRoute(polyline: polyline)
+        DispatchQueue.main.async {
+            self.view.showRoute(polyline: polyline)
+        }
     }
     
 }
