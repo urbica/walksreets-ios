@@ -12,9 +12,6 @@
 		306D41681DCD2C1100043F86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306D41661DCD2C1100043F86 /* LaunchScreen.storyboard */; };
 		306D41721DCD2C6300043F86 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D41711DCD2C6300043F86 /* Config.swift */; };
 		3075B64D1DD066630096DFE7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3075B64C1DD066630096DFE7 /* MapKit.framework */; };
-		3075B64F1DD066EF0096DFE7 /* RootApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075B64E1DD066EF0096DFE7 /* RootApiService.swift */; };
-		3075B6511DD0671C0096DFE7 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075B6501DD0671C0096DFE7 /* ApiManager.swift */; };
-		3075B6531DD068E20096DFE7 /* RouteCreationApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075B6521DD068E20096DFE7 /* RouteCreationApiService.swift */; };
 		3075B6561DD069B30096DFE7 /* RouteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075B6551DD069B30096DFE7 /* RouteEntity.swift */; };
 		3075B6581DD06A370096DFE7 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075B6571DD06A370096DFE7 /* Duration.swift */; };
 		30C8136E1DCD36EC00924001 /* RouteCreationModule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C8136D1DCD36EC00924001 /* RouteCreationModule.storyboard */; };
@@ -44,9 +41,6 @@
 		306D41691DCD2C1100043F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		306D41711DCD2C6300043F86 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		3075B64C1DD066630096DFE7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		3075B64E1DD066EF0096DFE7 /* RootApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootApiService.swift; sourceTree = "<group>"; };
-		3075B6501DD0671C0096DFE7 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
-		3075B6521DD068E20096DFE7 /* RouteCreationApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCreationApiService.swift; sourceTree = "<group>"; };
 		3075B6551DD069B30096DFE7 /* RouteEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteEntity.swift; sourceTree = "<group>"; };
 		3075B6571DD06A370096DFE7 /* Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		30C8136D1DCD36EC00924001 /* RouteCreationModule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RouteCreationModule.storyboard; sourceTree = "<group>"; };
@@ -148,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				30FD557D1DCE0CE300000A97 /* RouteService.swift */,
-				3075B6521DD068E20096DFE7 /* RouteCreationApiService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -157,8 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				30FD55801DCE0D5900000A97 /* LocationManager.swift */,
-				3075B64E1DD066EF0096DFE7 /* RootApiService.swift */,
-				3075B6501DD0671C0096DFE7 /* ApiManager.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -388,14 +379,11 @@
 				30FD557B1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift in Sources */,
 				30FD557E1DCE0CE300000A97 /* RouteService.swift in Sources */,
 				92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */,
-				3075B6531DD068E20096DFE7 /* RouteCreationApiService.swift in Sources */,
-				3075B6511DD0671C0096DFE7 /* ApiManager.swift in Sources */,
 				63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */,
 				B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */,
 				30FD55771DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift in Sources */,
 				72A2124729EC1AAC27070C3C /* RouteCreationModuleConfigurator.swift in Sources */,
 				B747C8FC21D87E01D5973FE5 /* RouteCreationModuleProtocols.swift in Sources */,
-				3075B64F1DD066EF0096DFE7 /* RootApiService.swift in Sources */,
 				3075B6581DD06A370096DFE7 /* Duration.swift in Sources */,
 				3075B6561DD069B30096DFE7 /* RouteEntity.swift in Sources */,
 				30FD55811DCE0D5900000A97 /* LocationManager.swift in Sources */,

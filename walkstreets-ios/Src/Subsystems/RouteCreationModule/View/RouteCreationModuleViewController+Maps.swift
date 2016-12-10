@@ -18,14 +18,14 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
         // regular style
         
         if routeType == "regular" {
-            mapView.styleURL = URL(string: "mapbox://styles/walkstreets/civ3x3k7h00482iozpl9et5mi")
+            mapView.styleURL = RouteCreationModuleConstants.regularRouteStyle
             routeType = "regular"
         } else if routeType == "stepless" {
-            mapView.styleURL = URL(string: "mapbox://styles/walkstreets/civ5iiv98002t2is5axe0myxx")
+            mapView.styleURL = RouteCreationModuleConstants.steplessRouteStyle
             routeType = "stepless"
         }
         
-        // and wide sidewalks later: mapbox://styles/walkstreets/cinr4p56q00bfc7m5vxorbwog
+        // TODO: wide sidewalks later: mapbox://styles/walkstreets/cinr4p56q00bfc7m5vxorbwog
         
         mapView.setCenter(RouteCreationModuleConstants.moscowCenterCoordinate, zoomLevel: 13, animated: false)
         mapView.compassView.isHidden = true
