@@ -80,9 +80,9 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
         output.configureRoute(startPoint: (latitude: (locationArray.last?.latitude)!, longtitude: (locationArray.last?.longitude)!), endPoint: (latitude: (locationArray.first?.latitude)!, longitude: (locationArray.first?.longitude)!), type: routeType)
     }
     
-    func showRoute(polyline: MGLPolyline) {
+    func showRoute(polyline: AnyObject) {
         DispatchQueue.main.async { [weak self] in
-            self?.mapView.addAnnotation(polyline)
+            self?.mapView.addAnnotation(polyline as! MGLPolyline)
         }
     }
     

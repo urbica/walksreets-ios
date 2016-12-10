@@ -14,14 +14,14 @@ import Mapbox
 protocol RouteCreationModuleViewInput: class {
     func setupInitialState()
     func openRouteDetailsView()
-    func showRoute(polyline: MGLPolyline)
+    func showRoute(polyline: AnyObject)
     func configureRouteDetailsView(address: String, street: String)
 }
 
 protocol RouteCreationModuleViewOutput {
     func configureRoute(startPoint: (latitude: Double, longtitude: Double), endPoint: (latitude: Double, longitude: Double), type: String)
     func viewIsReady()
-    func configureRouteDetailsWithEndPoint(endPoint: CLLocationCoordinate2D?)
+    func configureRouteDetailsWithEndPoint(endPoint: CLLocationCoordinate2D?) -> Bool
 }
 
 protocol RouteCreationModuleModuleInput: class {
@@ -33,7 +33,7 @@ protocol RouteCreationModuleInteractorInput {
 }
 
 protocol RouteCreationModuleInteractorOutput: class {
-    func showRoute(polyline: MGLPolyline)
+    func showRoute(polyline: AnyObject)
 }
 
 protocol RouteCreationModuleRouterInput {

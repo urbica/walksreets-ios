@@ -76,7 +76,7 @@ class RouteService: NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
     }
     
     
-    func getRoute(coordinatesArray: [CLLocationCoordinate2D], complection: @escaping (MGLPolyline) -> ()) {
+    func getRoute(coordinatesArray: [CLLocationCoordinate2D], complection: @escaping (AnyObject) -> ()) {
         
         var rectangle: MGLPolyline?
         
