@@ -7,7 +7,6 @@
 //
 
 import MapKit
-import Mapbox
 
 class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreationModuleViewOutput, RouteCreationModuleInteractorOutput{
 
@@ -20,13 +19,13 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
 
     }
     
-    func configureRouteDetailsWithEndPoint(endPoint: CLLocationCoordinate2D?) {
+    func configureRouteDetailsWithEndPoint(endPoint: CLLocationCoordinate2D?) -> Bool {
         
         guard let locationLat = endPoint?.latitude else {
-            return
+            return false
         }
         guard let locationLon = endPoint?.longitude else {
-            return
+            return false
         }
         
         geoCoder.reverseGeocodeLocation(CLLocation(latitude: locationLat, longitude: locationLon), completionHandler: { (placemarks, error) -> Void in
@@ -45,6 +44,8 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
             
             self.view.configureRouteDetailsView(address: address as String, street: street as String)
         })
+        
+        return true
 
     }
     
@@ -52,7 +53,7 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
         interactor.configureRoute(startPoint: startPoint, endPoint: endPoint, type: type)
     }
     
-    func showRoute(polyline: MGLPolyline) {
+    func showRoute(polyline: AnyObject) {
         DispatchQueue.main.async {
             self.view.showRoute(polyline: polyline)
         }

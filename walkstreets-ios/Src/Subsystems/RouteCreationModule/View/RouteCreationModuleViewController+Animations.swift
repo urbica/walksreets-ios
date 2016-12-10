@@ -48,7 +48,7 @@ extension RouteCreationModuleViewController {
             self.routeTypeView.layoutIfNeeded()
             self.view.layoutIfNeeded()
         }, completion: { (bool) in
-            self.mapView.isUserInteractionEnabled = false
+
         })
     }
     
@@ -62,8 +62,6 @@ extension RouteCreationModuleViewController {
             self.view.layoutIfNeeded()
         }, completion: { (bool) in
             self.routeTypeView.isHidden = true
-            self.mapView.isUserInteractionEnabled = true
-
         })
     }
 }

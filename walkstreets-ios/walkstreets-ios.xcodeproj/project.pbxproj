@@ -12,12 +12,11 @@
 		306D41681DCD2C1100043F86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306D41661DCD2C1100043F86 /* LaunchScreen.storyboard */; };
 		306D41721DCD2C6300043F86 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D41711DCD2C6300043F86 /* Config.swift */; };
 		3075B64D1DD066630096DFE7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3075B64C1DD066630096DFE7 /* MapKit.framework */; };
-		3075B64F1DD066EF0096DFE7 /* RootApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075B64E1DD066EF0096DFE7 /* RootApiService.swift */; };
-		3075B6511DD0671C0096DFE7 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075B6501DD0671C0096DFE7 /* ApiManager.swift */; };
-		3075B6531DD068E20096DFE7 /* RouteCreationApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075B6521DD068E20096DFE7 /* RouteCreationApiService.swift */; };
 		3075B6561DD069B30096DFE7 /* RouteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075B6551DD069B30096DFE7 /* RouteEntity.swift */; };
 		3075B6581DD06A370096DFE7 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075B6571DD06A370096DFE7 /* Duration.swift */; };
 		30C8136E1DCD36EC00924001 /* RouteCreationModule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C8136D1DCD36EC00924001 /* RouteCreationModule.storyboard */; };
+		30E530951DFC937800B717CA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30E530941DFC937800B717CA /* Info.plist */; };
+		30E530971DFC938200B717CA /* walkstreets_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E530961DFC938200B717CA /* walkstreets_iosTests.swift */; };
 		30FD55751DCDE70100000A97 /* Pods_walkstreets_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FD55741DCDE70100000A97 /* Pods_walkstreets_ios.framework */; };
 		30FD55771DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD55761DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift */; };
 		30FD55791DCDED6C00000A97 /* RouteCreationModuleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD55781DCDED6C00000A97 /* RouteCreationModuleConstants.swift */; };
@@ -33,6 +32,16 @@
 		F099800B9560E696761BDEAF /* RouteCreationModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		30E5308F1DFC935000B717CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 306D41521DCD2C1100043F86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 306D41591DCD2C1100043F86;
+			remoteInfo = "walkstreets-ios";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		042DA9A0C5667FCEE70CEB00 /* RouteCreationModuleRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleRouter.swift; sourceTree = "<group>"; };
 		0552DDB458787869F10328D2 /* RouteCreationModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleConfigurator.swift; sourceTree = "<group>"; };
@@ -44,12 +53,12 @@
 		306D41691DCD2C1100043F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		306D41711DCD2C6300043F86 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		3075B64C1DD066630096DFE7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		3075B64E1DD066EF0096DFE7 /* RootApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootApiService.swift; sourceTree = "<group>"; };
-		3075B6501DD0671C0096DFE7 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
-		3075B6521DD068E20096DFE7 /* RouteCreationApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCreationApiService.swift; sourceTree = "<group>"; };
 		3075B6551DD069B30096DFE7 /* RouteEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteEntity.swift; sourceTree = "<group>"; };
 		3075B6571DD06A370096DFE7 /* Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		30C8136D1DCD36EC00924001 /* RouteCreationModule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RouteCreationModule.storyboard; sourceTree = "<group>"; };
+		30E5308A1DFC935000B717CA /* walkstreets-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "walkstreets-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30E530941DFC937800B717CA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30E530961DFC938200B717CA /* walkstreets_iosTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = walkstreets_iosTests.swift; sourceTree = "<group>"; };
 		30FD55741DCDE70100000A97 /* Pods_walkstreets_ios.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_walkstreets_ios.framework; path = "Pods/../build/Debug-iphoneos/Pods_walkstreets_ios.framework"; sourceTree = "<group>"; };
 		30FD55761DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RouteCreationModuleViewController+Maps.swift"; sourceTree = "<group>"; };
 		30FD55781DCDED6C00000A97 /* RouteCreationModuleConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleConstants.swift; sourceTree = "<group>"; };
@@ -75,13 +84,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		30E530871DFC935000B717CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		306D41511DCD2C1100043F86 = {
 			isa = PBXGroup;
 			children = (
-				306D415C1DCD2C1100043F86 /* walkstreets-ios */,
+				306D415C1DCD2C1100043F86 /* walkstreets_ios */,
+				30E5308B1DFC935000B717CA /* walkstreets-iosTests */,
 				306D415B1DCD2C1100043F86 /* Products */,
 				30FD55731DCDE70100000A97 /* Frameworks */,
 				66C6D368CC4617EB6AD89363 /* Pods */,
@@ -92,17 +109,19 @@
 			isa = PBXGroup;
 			children = (
 				306D415A1DCD2C1100043F86 /* walkstreets-ios.app */,
+				30E5308A1DFC935000B717CA /* walkstreets-iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		306D415C1DCD2C1100043F86 /* walkstreets-ios */ = {
+		306D415C1DCD2C1100043F86 /* walkstreets_ios */ = {
 			isa = PBXGroup;
 			children = (
 				62BC6B10E19030F57E87FC7A /* Src */,
 				306D41701DCD2C4E00043F86 /* App */,
 				306D416F1DCD2C2300043F86 /* SupportingFiles */,
 			);
+			name = walkstreets_ios;
 			path = "walkstreets-ios";
 			sourceTree = "<group>";
 		};
@@ -134,6 +153,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		30E5308B1DFC935000B717CA /* walkstreets-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				30E530961DFC938200B717CA /* walkstreets_iosTests.swift */,
+				30E530941DFC937800B717CA /* Info.plist */,
+			);
+			path = "walkstreets-iosTests";
+			sourceTree = "<group>";
+		};
 		30FD55731DCDE70100000A97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				30FD557D1DCE0CE300000A97 /* RouteService.swift */,
-				3075B6521DD068E20096DFE7 /* RouteCreationApiService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -157,8 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				30FD55801DCE0D5900000A97 /* LocationManager.swift */,
-				3075B64E1DD066EF0096DFE7 /* RootApiService.swift */,
-				3075B6501DD0671C0096DFE7 /* ApiManager.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -280,6 +305,24 @@
 			productReference = 306D415A1DCD2C1100043F86 /* walkstreets-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
+		30E530891DFC935000B717CA /* walkstreets-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30E530931DFC935000B717CA /* Build configuration list for PBXNativeTarget "walkstreets-iosTests" */;
+			buildPhases = (
+				30E530861DFC935000B717CA /* Sources */,
+				30E530871DFC935000B717CA /* Frameworks */,
+				30E530881DFC935000B717CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30E530901DFC935000B717CA /* PBXTargetDependency */,
+			);
+			name = "walkstreets-iosTests";
+			productName = "walkstreets-iosTests";
+			productReference = 30E5308A1DFC935000B717CA /* walkstreets-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -294,6 +337,12 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = NVMU6WZ9AZ;
 						ProvisioningStyle = Automatic;
+					};
+					30E530891DFC935000B717CA = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = NVMU6WZ9AZ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 306D41591DCD2C1100043F86;
 					};
 				};
 			};
@@ -311,6 +360,7 @@
 			projectRoot = "";
 			targets = (
 				306D41591DCD2C1100043F86 /* walkstreets-ios */,
+				30E530891DFC935000B717CA /* walkstreets-iosTests */,
 			);
 		};
 /* End PBXProject section */
@@ -323,6 +373,14 @@
 				306D41681DCD2C1100043F86 /* LaunchScreen.storyboard in Resources */,
 				306D41651DCD2C1100043F86 /* Assets.xcassets in Resources */,
 				30C8136E1DCD36EC00924001 /* RouteCreationModule.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30E530881DFC935000B717CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30E530951DFC937800B717CA /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,21 +446,34 @@
 				30FD557B1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift in Sources */,
 				30FD557E1DCE0CE300000A97 /* RouteService.swift in Sources */,
 				92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */,
-				3075B6531DD068E20096DFE7 /* RouteCreationApiService.swift in Sources */,
-				3075B6511DD0671C0096DFE7 /* ApiManager.swift in Sources */,
 				63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */,
 				B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */,
 				30FD55771DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift in Sources */,
 				72A2124729EC1AAC27070C3C /* RouteCreationModuleConfigurator.swift in Sources */,
 				B747C8FC21D87E01D5973FE5 /* RouteCreationModuleProtocols.swift in Sources */,
-				3075B64F1DD066EF0096DFE7 /* RootApiService.swift in Sources */,
 				3075B6581DD06A370096DFE7 /* Duration.swift in Sources */,
 				3075B6561DD069B30096DFE7 /* RouteEntity.swift in Sources */,
 				30FD55811DCE0D5900000A97 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		30E530861DFC935000B717CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30E530971DFC938200B717CA /* walkstreets_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		30E530901DFC935000B717CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 306D41591DCD2C1100043F86 /* walkstreets-ios */;
+			targetProxy = 30E5308F1DFC935000B717CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		306D41661DCD2C1100043F86 /* LaunchScreen.storyboard */ = {
@@ -545,6 +616,34 @@
 			};
 			name = Release;
 		};
+		30E530911DFC935000B717CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = NVMU6WZ9AZ;
+				INFOPLIST_FILE = "walkstreets-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ra-portfolio.walkstreets-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/walkstreets-ios.app/walkstreets-ios";
+			};
+			name = Debug;
+		};
+		30E530921DFC935000B717CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = NVMU6WZ9AZ;
+				INFOPLIST_FILE = "walkstreets-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ra-portfolio.walkstreets-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/walkstreets-ios.app/walkstreets-ios";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -565,6 +664,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		30E530931DFC935000B717CA /* Build configuration list for PBXNativeTarget "walkstreets-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30E530911DFC935000B717CA /* Debug */,
+				30E530921DFC935000B717CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

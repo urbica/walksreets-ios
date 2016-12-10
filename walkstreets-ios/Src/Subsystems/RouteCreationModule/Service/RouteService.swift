@@ -20,10 +20,10 @@ class RouteService: NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
         
         var coordsArrayValues = [CLLocationCoordinate2D]()
         
-        var url = URL(string: "http://routes.walkstreets.org/regular/route/v1/driving/\(startPoint.longtitude),\(startPoint.latitude);\(endPoint.longitude),\(endPoint.latitude)?geometries=geojson&overview=false&steps=true")!
+        var url = URL(string: "\(RouteCreationModuleConstants.mainApiPoint)\(startPoint.longtitude),\(startPoint.latitude);\(endPoint.longitude),\(endPoint.latitude)?geometries=geojson&overview=false&steps=true")!
         
         if type != "regular" {
-            url = URL(string: "http://routes.walkstreets.org/stepless/route/v1/driving/\(startPoint.longtitude),\(startPoint.latitude);\(endPoint.longitude),\(endPoint.latitude)?geometries=geojson&overview=false&steps=true")!
+            url = URL(string: "\(RouteCreationModuleConstants.mainApiPoint)\(startPoint.longtitude),\(startPoint.latitude);\(endPoint.longitude),\(endPoint.latitude)?geometries=geojson&overview=false&steps=true")!
         }
         
         
@@ -39,40 +39,44 @@ class RouteService: NSObject, CLLocationManagerDelegate, MKMapViewDelegate {
                             print("example success")
                         default:
                             print("error with response status: \(status)")
+                            return
                         }
                     }
                     
                     //to get JSON return value
-                    let json = JSON(response.result.value!)
-                    let legs = json["routes"].arrayValue.first?["legs"]
-                    let steps = legs?.arrayValue.first?["steps"].arrayValue
-                    let coordsArray = steps?.first?["geometry"].dictionaryValue["coordinates"]?.arrayValue
-                    
-                    guard coordsArray != nil else {
+                    guard let steps = self.parseJSON(json: JSON(response.result.value!)) else {
                         return
                     }
                     
-                    for step in steps! {
-                        let coordArray = step["geometry"].dictionaryValue["coordinates"]?.arrayValue
-                        for coord in coordArray! {
+                    for step in steps {
+                        guard let coordArray = step["geometry"].dictionaryValue["coordinates"]?.arrayValue else {
+                            return
+                        }
+                        for coord in coordArray {
                             
-                            let lat = coord.array?.last?.double
-                            let lon = coord.array?.first?.double
-                            
-                            let point = CLLocationCoordinate2D(latitude: lat!, longitude: lon!)
-                            
-                            coordsArrayValues.append(point)
+                            if let lat = coord.array?.last?.double, let lon = coord.array?.first?.double {
+                                
+                                let point = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+                                
+                                coordsArrayValues.append(point)
+                            }
                         }
                         completionHandler(coordsArrayValues)
-                        
                     }
-                    
-                    
             })
     }
     
+    func parseJSON(json: JSON) -> [JSON]? {
+        
+        let legs = json["routes"].arrayValue.first?["legs"]
+        let steps = legs?.arrayValue.first?["steps"].arrayValue
+        
+        return steps
+        
+    }
     
-    func getRoute(coordinatesArray: [CLLocationCoordinate2D], complection: @escaping (MGLPolyline) -> ()) {
+    
+    func getRoute(coordinatesArray: [CLLocationCoordinate2D], complection: @escaping (AnyObject) -> ()) {
         
         var rectangle: MGLPolyline?
         
