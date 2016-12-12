@@ -8,10 +8,11 @@ target 'walkstreets-ios' do
   # Pods for walkstreets-ios
 pod 'GoogleMaps'
 pod 'SwiftyJSON'
-pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
-pod 'Alamofire', '~> 4.0'
+pod 'Spring'
+pod 'Alamofire'
 pod 'Mapbox-iOS-SDK'
 
+end
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|
@@ -19,6 +20,4 @@ post_install do |installer|
             config.build_settings['SWIFT_VERSION'] = '3.0'
         end
     end
-end
-
 end
