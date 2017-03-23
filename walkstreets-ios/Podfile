@@ -8,7 +8,7 @@ target 'walkstreets-ios' do
   # Pods for walkstreets-ios
 pod 'GoogleMaps'
 pod 'SwiftyJSON'
-pod 'Spring'
+pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
 pod 'Alamofire'
 pod 'Mapbox-iOS-SDK'
 
