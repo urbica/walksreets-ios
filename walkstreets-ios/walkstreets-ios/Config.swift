@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct Config {
+    
+    static let prodApiPoint = "http://www.basemap.ru/walk/api/rpc/"
+    static let routeEndpoint = "get_route"
+    
+}
