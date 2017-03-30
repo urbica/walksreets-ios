@@ -14,6 +14,10 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     var interactor: RouteCreationModuleInteractorInput!
     var router: RouteCreationModuleRouterInput!
     let geoCoder = CLGeocoder()
+    
+    var routeType: String {
+         return view.routeType
+    }
 
     func viewIsReady() {
 
@@ -49,11 +53,15 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
 
     }
     
-    func configureRoute(startPoint: (latitude: Double, longtitude: Double), endPoint: (latitude: Double, longitude: Double), type: String) {
-        interactor.configureRoute(startPoint: startPoint, endPoint: endPoint, type: type)
+    func configureRoute(startPoint: (latitude: Double, longtitude: Double), endPoint: (latitude: Double, longitude: Double)) {
+        interactor.configureRoute(startPoint: startPoint, endPoint: endPoint, type: routeType)
     }
     
     func showRoute(polyline: AnyObject) {
-        self.view.showRoute(polyline: polyline)
+        view.showRoute(polyline: polyline)
+    }
+    
+    func addPointTuple(pointTuple: (CLLocationCoordinate2D, CLLocationCoordinate2D)) {
+        view.addPointTuple(pointTuple:pointTuple)
     }
 }

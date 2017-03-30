@@ -12,5 +12,6 @@ struct Config {
     
     static let prodApiPoint = "http://www.basemap.ru/walk/api/rpc/"
     static let routeEndpoint = "get_route"
+    static let greenEndpoint = "get_green_route"
     
 }

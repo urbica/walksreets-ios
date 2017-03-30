@@ -13,14 +13,13 @@ import Alamofire
 import SwiftyJSON
 
 class RouteService: RootApiService {
-        
-    func getNewRouteWithType(parameters: [String: Any],  completionHandler: @escaping ([CLLocationCoordinate2D]) -> ()) {
+    func getNewRouteWithType(parameters: [String: Any], endpoint: String, completionHandler: @escaping ([CLLocationCoordinate2D]) -> ()) {
         getData(method: .post, endpoint: Config.routeEndpoint, parameters: parameters, encoding: URLEncoding.httpBody, headers: nil, completionHandler: { (response) in
             var coor = [CLLocationCoordinate2D]()
             if let featuresArray = response.json["features"].array {
                _ = featuresArray.map { $0.dictionary?["geometry"]?["coordinates"].array?.forEach({ (coordinate) in
-                    coor.append(CLLocationCoordinate2D(latitude: coordinate[1].double!, longitude: coordinate[0].double!))
-                }) }
+                    coor.append(CLLocationCoordinate2D(latitude: coordinate[1].doubleValue, longitude: coordinate[0].doubleValue))
+                })}
                 completionHandler(coor)
             }
         }) { (error) in

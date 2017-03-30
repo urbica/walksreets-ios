@@ -20,9 +20,9 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
         if routeType == "regular" {
             mapView.styleURL = RouteCreationModuleConstants.regularRouteStyle
             routeType = "regular"
-        } else if routeType == "stepless" {
+        } else if routeType == "green" {
             mapView.styleURL = RouteCreationModuleConstants.steplessRouteStyle
-            routeType = "stepless"
+            routeType = "green"
         }
         
         // TODO: wide sidewalks later: mapbox://styles/walkstreets/cinr4p56q00bfc7m5vxorbwog
@@ -77,13 +77,25 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
     }
     
     func configureRouteWithLocations() {
-        output.configureRoute(startPoint: (latitude: (locationArray.last?.latitude)!, longtitude: (locationArray.last?.longitude)!), endPoint: (latitude: (locationArray.first?.latitude)!, longitude: (locationArray.first?.longitude)!), type: routeType)
+        output.configureRoute(startPoint: (latitude: (locationArray.last?.latitude)!, longtitude: (locationArray.last?.longitude)!), endPoint: (latitude: (locationArray.first?.latitude)!, longitude: (locationArray.first?.longitude)!))
+    }
+    
+    func addPointTuple(pointTuple: (CLLocationCoordinate2D, CLLocationCoordinate2D)) {
+        let startAnnotation = MGLPointAnnotation()
+        let endAnnotation = MGLPointAnnotation()
+        
+        startAnnotation.coordinate = pointTuple.0
+        startAnnotation.title = "Your start point"
+        
+        endAnnotation.coordinate = pointTuple.1
+        endAnnotation.title = "Your finish point"
+        
+        mapView.addAnnotations([startAnnotation, endAnnotation])
+        
     }
     
     func showRoute(polyline: AnyObject) {
-        DispatchQueue.main.async { [weak self] in
-            self?.mapView.addAnnotation(polyline as! MGLPolyline)
-        }
+        mapView.addAnnotation(polyline as! MGLPolyline)
     }
     
     func mapView(_ mapView: MGLMapView, strokeColorForShapeAnnotation annotation: MGLShape) -> UIColor {
@@ -91,7 +103,7 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
     }
     
     func mapView(_ mapView: MGLMapView, lineWidthForPolylineAnnotation annotation: MGLPolyline) -> CGFloat {
-        return 5.0
+        return 2.0
     }
     
     func mapView(_ mapView: MGLMapView, alphaForShapeAnnotation annotation: MGLShape) -> CGFloat {
