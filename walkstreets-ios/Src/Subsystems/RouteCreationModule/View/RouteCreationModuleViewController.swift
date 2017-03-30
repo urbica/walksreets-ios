@@ -105,7 +105,7 @@ extension RouteCreationModuleViewController {
     @IBAction func chooseSteplessRoute(sender: AnyObject) {
         regularRouteButton.isHighlighted = false
         steplessRouteButton.isHighlighted = true
-        routeType = "stepless"
+        routeType = "green"
         setupMap()
     }
 }
