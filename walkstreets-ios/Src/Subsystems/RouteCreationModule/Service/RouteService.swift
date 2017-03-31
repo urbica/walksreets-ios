@@ -6,9 +6,7 @@
 //  Copyright © 2016 Roman Ustiantcev. All rights reserved.
 //
 
-import Foundation
 import MapKit
-import Mapbox
 import Alamofire
 import SwiftyJSON
 
