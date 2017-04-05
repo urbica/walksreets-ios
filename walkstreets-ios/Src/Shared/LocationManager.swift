@@ -6,65 +6,153 @@
 //  Copyright © 2016 Roman Ustiantcev. All rights reserved.
 //
 
+import Foundation
 import CoreLocation
 
-class LocationManager: NSObject {
-    static let sharedInstance = LocationManager()
+public protocol LocationProtocol {
     
-    static let LocationDidChangeNotification = "LocationDidChangeNotification"
-    var currentLocation: CLLocation?
+    var manager: CLLocationManager { get }
+    var desiredAccuracy: CLLocationAccuracy { get set }
+    var distanceFilter: CLLocationDistance { get set }
+    var pausesLocationUpdates: Bool { get set }
+    var monitoringAlavialbe: Bool {get set}
+    func startUpdating()
+    func stopUpdating()
+    func monitorNewRegion(_ region: CLCircularRegion)
+    func stopMonitorRegion(_ region: CLCircularRegion)
+    func getLocationAccuracy() -> String
+    func getCoordinate() -> CLLocationCoordinate2D
+    func checkIfEnabled() -> Bool
+    init()
+}
+
+fileprivate class LocationManagerDelegate: NSObject, CLLocationManagerDelegate {
     
-    private var locationManager: CLLocationManager? = CLLocationManager()
-    private var lastUpdatedLocation: CLLocation?
-    
-    override init() {
-        super.init()
+    deinit {
+        print("Location Core Deinitialized")
     }
     
-    func start() {
-        locationManager?.requestWhenInUseAuthorization()
-        locationManager?.delegate = self
-        locationManager?.distanceFilter = 5
-        locationManager?.startUpdatingLocation()
-    }
-    
-    func getDistanceTo(lat: Double, lon: Double) -> String? {
+    internal func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        guard let distance = distanceTo(lat: lat, lon: lon) else {
-            return nil
+    }
+    
+    internal func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        NSLog("\(error)")
+    }
+    
+    internal func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
+        NSLog("\(error)")
+    }
+    
+    internal func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+    }
+    
+    internal func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
+        switch  state {
+        case .inside:
+            break
+        case .outside:
+            break
+        default:
+            break
         }
         
-        let distanceString = distance > 1000 ? "\(Int(distance / 1000)) km" : "\(Int(distance)) m"
-        
-        return distanceString
     }
     
-    func distanceTo(lat: Double, lon: Double) -> Double? {
-        
-        guard !(lat == 0 && lon == 0) else {
-            return nil
+    internal func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .authorizedAlways:
+            break
+        case .authorizedWhenInUse:
+            break
+        case .denied :
+            manager.requestWhenInUseAuthorization()
+        case .notDetermined:
+            manager.requestWhenInUseAuthorization()
+        case .restricted:
+            manager.requestWhenInUseAuthorization()
         }
-        
-        let toLocation = CLLocation(latitude: lat, longitude: lon)
-        let distance = currentLocation?.distance(from: toLocation)
-        return distance
     }
+    
     
 }
 
-extension LocationManager: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        guard let location = locations.last else {
-            return
-        }
-        
-        let distanceToLocation = distanceTo(lat: location.coordinate.latitude, lon: location.coordinate.longitude)!
-        
-        if currentLocation == nil || distanceToLocation >= 100.0 {
-            currentLocation = locations.last!
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: LocationManager.LocationDidChangeNotification), object: nil)
-            
+struct Location: LocationProtocol {
+    
+    public var desiredAccuracy: CLLocationAccuracy
+    public var distanceFilter: CLLocationDistance
+    public var pausesLocationUpdates: Bool
+    public var monitoringAlavialbe: Bool
+    
+    public static var core: LocationProtocol = Location()
+    
+    public var manager = CLLocationManager()
+    fileprivate var managerDelegate = LocationManagerDelegate()
+    
+    init() {
+        self.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        self.distanceFilter = kCLDistanceFilterNone
+        self.pausesLocationUpdates = false
+        self.monitoringAlavialbe =  CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self)
+        manager.delegate = managerDelegate
+        manager.requestWhenInUseAuthorization()
+        if #available(iOS 9.0, *) {
+            manager.allowsBackgroundLocationUpdates = true
         }
     }
+    
+    public func startUpdating() {
+        self.manager.startUpdatingLocation()
+    }
+    
+    public func stopUpdating() {
+        self.manager.stopUpdatingLocation()
+    }
+    
+    public func checkIfEnabled() -> Bool {
+        return CLLocationManager.locationServicesEnabled()
+    }
+    
+    public func monitorNewRegion(_ region: CLCircularRegion) {
+        region.notifyOnEntry = true
+        self.manager.startMonitoring(for: region)
+    }
+    
+    public func stopMonitorRegion(_ region: CLCircularRegion) {
+        self.manager.startMonitoring(for: region)
+    }
+    
+    public func getLocationAccuracy() -> String {
+        
+        if (self.manager.location!.horizontalAccuracy < 0)
+        {
+            print("No Signal")
+            return "No Signal"
+        }
+        else if (self.manager.location!.horizontalAccuracy > 163)
+        {
+            print("Poor Signal")
+            return "Poor"
+        }
+        else if (self.manager.location!.horizontalAccuracy > 48)
+        {
+            print("Average Signal")
+            return "Average"
+        }
+        else
+        {
+            print("Full Signal")
+            return "Full"
+        }
+    }
+    
+    public func getCoordinate() -> CLLocationCoordinate2D {
+        
+        guard let location = self.manager.location else {
+            return CLLocationCoordinate2D()
+        }
+        
+        return location.coordinate
+    }
+    
 }

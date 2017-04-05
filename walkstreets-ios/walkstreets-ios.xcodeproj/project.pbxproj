@@ -22,19 +22,20 @@
 		30FD557B1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD557A1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift */; };
 		30FD557E1DCE0CE300000A97 /* RouteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD557D1DCE0CE300000A97 /* RouteService.swift */; };
 		30FD55811DCE0D5900000A97 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD55801DCE0D5900000A97 /* LocationManager.swift */; };
-		5E33F45F7434193EA1F1CDBE /* StartScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E65FAAA8DCCC77AF59E186A /* StartScreenPresenter.swift */; };
 		63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D393807BF77BA3F32F88643 /* RouteCreationModuleInteractor.swift */; };
 		72A2124729EC1AAC27070C3C /* RouteCreationModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552DDB458787869F10328D2 /* RouteCreationModuleConfigurator.swift */; };
 		92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342EF44F078F8AB2C7963D16 /* RouteCreationModulePresenter.swift */; };
-		A686276CFEB915C0A70EFF07 /* StartScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F11826AC38EBA75FA25F727 /* StartScreenProtocols.swift */; };
-		B55212183E4A559FC50B946F /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658F57A72C9A93E5C4DD883D /* StartScreenViewController.swift */; };
 		B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DA9A0C5667FCEE70CEB00 /* RouteCreationModuleRouter.swift */; };
 		B747C8FC21D87E01D5973FE5 /* RouteCreationModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */; };
 		D9B39AC1217ED510C5C4A351 /* Pods_walkstreets_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF62A8B0EC862CC8156F93C3 /* Pods_walkstreets_ios.framework */; };
 		E022832E1E95279D00B7AB3D /* StartScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E022832D1E95279D00B7AB3D /* StartScreen.storyboard */; };
 		E0C4F6661E8C06D3005C63C4 /* RootApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C4F6651E8C06D3005C63C4 /* RootApiService.swift */; };
+		E0E142DB1E954C1D001C45BE /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142DA1E954C1D001C45BE /* StartScreenViewController.swift */; };
+		E0E142DD1E954C41001C45BE /* StartScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142DC1E954C41001C45BE /* StartScreenPresenter.swift */; };
+		E0E142DF1E954C56001C45BE /* StartScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142DE1E954C56001C45BE /* StartScreenConfigurator.swift */; };
+		E0E142E11E954C73001C45BE /* StartScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142E01E954C73001C45BE /* StartScreenProtocols.swift */; };
+		E0E142E31E954CAD001C45BE /* StartScreenConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142E21E954CAD001C45BE /* StartScreenConstants.swift */; };
 		F099800B9560E696761BDEAF /* RouteCreationModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */; };
-		FC29D3933FE57B04CD73C91B /* StartScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04A9B6BE0AE5337DBAD1A5A /* StartScreenConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +52,6 @@
 		042DA9A0C5667FCEE70CEB00 /* RouteCreationModuleRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleRouter.swift; sourceTree = "<group>"; };
 		0552DDB458787869F10328D2 /* RouteCreationModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleConfigurator.swift; sourceTree = "<group>"; };
 		106FD96F22ECB96D84A20203 /* Pods-walkstreets-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walkstreets-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-walkstreets-ios/Pods-walkstreets-ios.release.xcconfig"; sourceTree = "<group>"; };
-		1F11826AC38EBA75FA25F727 /* StartScreenProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StartScreenProtocols.swift; path = ../../../../walkstreets_ios/Src/Subsystems/StartScreen/Protocols/StartScreenProtocols.swift; sourceTree = "<group>"; };
 		306D415A1DCD2C1100043F86 /* walkstreets-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "walkstreets-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		306D415D1DCD2C1100043F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		306D41641DCD2C1100043F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,15 +73,17 @@
 		30FD55801DCE0D5900000A97 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleViewController.swift; sourceTree = "<group>"; };
 		342EF44F078F8AB2C7963D16 /* RouteCreationModulePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModulePresenter.swift; sourceTree = "<group>"; };
-		3E65FAAA8DCCC77AF59E186A /* StartScreenPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StartScreenPresenter.swift; path = ../../../../walkstreets_ios/Src/Subsystems/StartScreen/Presenter/StartScreenPresenter.swift; sourceTree = "<group>"; };
 		5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleProtocols.swift; sourceTree = "<group>"; };
-		658F57A72C9A93E5C4DD883D /* StartScreenViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StartScreenViewController.swift; path = ../../../../walkstreets_ios/Src/Subsystems/StartScreen/View/StartScreenViewController.swift; sourceTree = "<group>"; };
 		7D393807BF77BA3F32F88643 /* RouteCreationModuleInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleInteractor.swift; sourceTree = "<group>"; };
 		CF62A8B0EC862CC8156F93C3 /* Pods_walkstreets_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_walkstreets_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42975D3FFAEEA4E4FFD169D /* Pods-walkstreets-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walkstreets-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-walkstreets-ios/Pods-walkstreets-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		E022832D1E95279D00B7AB3D /* StartScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartScreen.storyboard; sourceTree = "<group>"; };
-		E04A9B6BE0AE5337DBAD1A5A /* StartScreenConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StartScreenConfigurator.swift; path = ../../../../walkstreets_ios/Src/Subsystems/StartScreen/Configurator/StartScreenConfigurator.swift; sourceTree = "<group>"; };
 		E0C4F6651E8C06D3005C63C4 /* RootApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootApiService.swift; sourceTree = "<group>"; };
+		E0E142DA1E954C1D001C45BE /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+		E0E142DC1E954C41001C45BE /* StartScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenPresenter.swift; sourceTree = "<group>"; };
+		E0E142DE1E954C56001C45BE /* StartScreenConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenConfigurator.swift; sourceTree = "<group>"; };
+		E0E142E01E954C73001C45BE /* StartScreenProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenProtocols.swift; sourceTree = "<group>"; };
+		E0E142E21E954CAD001C45BE /* StartScreenConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,7 +205,7 @@
 		38BD42CB4DE72C4E09CEBF79 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				1F11826AC38EBA75FA25F727 /* StartScreenProtocols.swift */,
+				E0E142E01E954C73001C45BE /* StartScreenProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -220,7 +222,8 @@
 		57EEB4B49CF4D79C0E2957A3 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
-				E04A9B6BE0AE5337DBAD1A5A /* StartScreenConfigurator.swift */,
+				E0E142DE1E954C56001C45BE /* StartScreenConfigurator.swift */,
+				E0E142E21E954CAD001C45BE /* StartScreenConstants.swift */,
 			);
 			path = Configurator;
 			sourceTree = "<group>";
@@ -294,7 +297,7 @@
 		C15DCE86234321B3715812CD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				658F57A72C9A93E5C4DD883D /* StartScreenViewController.swift */,
+				E0E142DA1E954C1D001C45BE /* StartScreenViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -319,7 +322,7 @@
 		E203BAA7A8D302530385DB6C /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				3E65FAAA8DCCC77AF59E186A /* StartScreenPresenter.swift */,
+				E0E142DC1E954C41001C45BE /* StartScreenPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -402,6 +405,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = NVMU6WZ9AZ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					30E530891DFC935000B717CA = {
 						CreatedOnToolsVersion = 8.1;
@@ -504,14 +512,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0E142DF1E954C56001C45BE /* StartScreenConfigurator.swift in Sources */,
+				E0E142DB1E954C1D001C45BE /* StartScreenViewController.swift in Sources */,
 				306D415E1DCD2C1100043F86 /* AppDelegate.swift in Sources */,
+				E0E142E31E954CAD001C45BE /* StartScreenConstants.swift in Sources */,
 				306D41721DCD2C6300043F86 /* Config.swift in Sources */,
 				30FD55791DCDED6C00000A97 /* RouteCreationModuleConstants.swift in Sources */,
+				E0E142DD1E954C41001C45BE /* StartScreenPresenter.swift in Sources */,
 				F099800B9560E696761BDEAF /* RouteCreationModuleViewController.swift in Sources */,
 				30FD557B1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift in Sources */,
 				30FD557E1DCE0CE300000A97 /* RouteService.swift in Sources */,
 				92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */,
 				63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */,
+				E0E142E11E954C73001C45BE /* StartScreenProtocols.swift in Sources */,
 				B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */,
 				30FD55771DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift in Sources */,
 				72A2124729EC1AAC27070C3C /* RouteCreationModuleConfigurator.swift in Sources */,
@@ -520,10 +533,6 @@
 				3075B6561DD069B30096DFE7 /* RouteEntity.swift in Sources */,
 				E0C4F6661E8C06D3005C63C4 /* RootApiService.swift in Sources */,
 				30FD55811DCE0D5900000A97 /* LocationManager.swift in Sources */,
-				B55212183E4A559FC50B946F /* StartScreenViewController.swift in Sources */,
-				5E33F45F7434193EA1F1CDBE /* StartScreenPresenter.swift in Sources */,
-				FC29D3933FE57B04CD73C91B /* StartScreenConfigurator.swift in Sources */,
-				A686276CFEB915C0A70EFF07 /* StartScreenProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
