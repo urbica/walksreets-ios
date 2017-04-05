@@ -10,10 +10,10 @@ xcodeproj_path: walkstreets-ios.xcodeproj
 project_target: walkstreets-ios
 
 # The file path for new modules
-project_file_path: Src/Subsystems/
+project_file_path: walkstreets_ios/Src/Subsystems/
 
 # The Xcode group path to new modules
-project_group_path: Src/Subsystems/
+project_group_path: walkstreets_ios/Src/Subsystems/
 
 ### Dependencies settings section
 podfile_path: Podfile
@@ -24,3 +24,4 @@ templates:
 #- {name: mvvm_controller}
 #- {name: swifty_viper}
 - {name: swifty_viper_bogdan}
+- {name: swifty_mvp_roman}
