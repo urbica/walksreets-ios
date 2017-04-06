@@ -14,7 +14,7 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
     func setupMap() {
         
         mapView.delegate = self
-        
+        mapView.showsUserLocation = true
         // regular style
         
         if routeType == "regular" {

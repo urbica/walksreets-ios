@@ -15,7 +15,6 @@
 		3075B6561DD069B30096DFE7 /* RouteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075B6551DD069B30096DFE7 /* RouteEntity.swift */; };
 		3075B6581DD06A370096DFE7 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075B6571DD06A370096DFE7 /* Duration.swift */; };
 		30C8136E1DCD36EC00924001 /* RouteCreationModule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C8136D1DCD36EC00924001 /* RouteCreationModule.storyboard */; };
-		30E530951DFC937800B717CA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30E530941DFC937800B717CA /* Info.plist */; };
 		30E530971DFC938200B717CA /* walkstreets_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E530961DFC938200B717CA /* walkstreets_iosTests.swift */; };
 		30FD55751DCDE70100000A97 /* Pods_walkstreets_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FD55741DCDE70100000A97 /* Pods_walkstreets_ios.framework */; };
 		30FD55771DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD55761DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift */; };
@@ -29,7 +28,13 @@
 		B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DA9A0C5667FCEE70CEB00 /* RouteCreationModuleRouter.swift */; };
 		B747C8FC21D87E01D5973FE5 /* RouteCreationModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */; };
 		D9B39AC1217ED510C5C4A351 /* Pods_walkstreets_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF62A8B0EC862CC8156F93C3 /* Pods_walkstreets_ios.framework */; };
+		E022832E1E95279D00B7AB3D /* StartScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E022832D1E95279D00B7AB3D /* StartScreen.storyboard */; };
 		E0C4F6661E8C06D3005C63C4 /* RootApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C4F6651E8C06D3005C63C4 /* RootApiService.swift */; };
+		E0E142DB1E954C1D001C45BE /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142DA1E954C1D001C45BE /* StartScreenViewController.swift */; };
+		E0E142DD1E954C41001C45BE /* StartScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142DC1E954C41001C45BE /* StartScreenPresenter.swift */; };
+		E0E142DF1E954C56001C45BE /* StartScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142DE1E954C56001C45BE /* StartScreenConfigurator.swift */; };
+		E0E142E11E954C73001C45BE /* StartScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142E01E954C73001C45BE /* StartScreenProtocols.swift */; };
+		E0E142E31E954CAD001C45BE /* StartScreenConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142E21E954CAD001C45BE /* StartScreenConstants.swift */; };
 		F099800B9560E696761BDEAF /* RouteCreationModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +77,13 @@
 		7D393807BF77BA3F32F88643 /* RouteCreationModuleInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleInteractor.swift; sourceTree = "<group>"; };
 		CF62A8B0EC862CC8156F93C3 /* Pods_walkstreets_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_walkstreets_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42975D3FFAEEA4E4FFD169D /* Pods-walkstreets-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walkstreets-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-walkstreets-ios/Pods-walkstreets-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		E022832D1E95279D00B7AB3D /* StartScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartScreen.storyboard; sourceTree = "<group>"; };
 		E0C4F6651E8C06D3005C63C4 /* RootApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootApiService.swift; sourceTree = "<group>"; };
+		E0E142DA1E954C1D001C45BE /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+		E0E142DC1E954C41001C45BE /* StartScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenPresenter.swift; sourceTree = "<group>"; };
+		E0E142DE1E954C56001C45BE /* StartScreenConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenConfigurator.swift; sourceTree = "<group>"; };
+		E0E142E01E954C73001C45BE /* StartScreenProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenProtocols.swift; sourceTree = "<group>"; };
+		E0E142E21E954CAD001C45BE /* StartScreenConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,12 +202,30 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		38BD42CB4DE72C4E09CEBF79 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E0E142E01E954C73001C45BE /* StartScreenProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		4C48668F374B6EF1CD9DD512 /* Subsystems */ = {
 			isa = PBXGroup;
 			children = (
 				F71AFCEF88D307A4CE597BC0 /* RouteCreationModule */,
+				856095D59408619462511290 /* StartScreen */,
 			);
 			path = Subsystems;
+			sourceTree = "<group>";
+		};
+		57EEB4B49CF4D79C0E2957A3 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				E0E142DE1E954C56001C45BE /* StartScreenConfigurator.swift */,
+				E0E142E21E954CAD001C45BE /* StartScreenConstants.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 		62BC6B10E19030F57E87FC7A /* Src */ = {
@@ -227,6 +256,18 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		856095D59408619462511290 /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E022832D1E95279D00B7AB3D /* StartScreen.storyboard */,
+				C15DCE86234321B3715812CD /* View */,
+				E203BAA7A8D302530385DB6C /* Presenter */,
+				57EEB4B49CF4D79C0E2957A3 /* Configurator */,
+				38BD42CB4DE72C4E09CEBF79 /* Protocols */,
+			);
+			path = StartScreen;
+			sourceTree = "<group>";
+		};
 		946B3E32480AFE329CC2BC23 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +294,14 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		C15DCE86234321B3715812CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E0E142DA1E954C1D001C45BE /* StartScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C556BB4EC1E40605CF0B0DA1 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +317,14 @@
 				E0C4F6651E8C06D3005C63C4 /* RootApiService.swift */,
 			);
 			path = RootApiService;
+			sourceTree = "<group>";
+		};
+		E203BAA7A8D302530385DB6C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E0E142DC1E954C41001C45BE /* StartScreenPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		F71AFCEF88D307A4CE597BC0 /* RouteCreationModule */ = {
@@ -341,13 +398,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Roman Ustiantcev";
 				TargetAttributes = {
 					306D41591DCD2C1100043F86 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = NVMU6WZ9AZ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					30E530891DFC935000B717CA = {
 						CreatedOnToolsVersion = 8.1;
@@ -384,6 +446,7 @@
 				306D41681DCD2C1100043F86 /* LaunchScreen.storyboard in Resources */,
 				306D41651DCD2C1100043F86 /* Assets.xcassets in Resources */,
 				30C8136E1DCD36EC00924001 /* RouteCreationModule.storyboard in Resources */,
+				E022832E1E95279D00B7AB3D /* StartScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +454,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30E530951DFC937800B717CA /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,14 +512,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0E142DF1E954C56001C45BE /* StartScreenConfigurator.swift in Sources */,
+				E0E142DB1E954C1D001C45BE /* StartScreenViewController.swift in Sources */,
 				306D415E1DCD2C1100043F86 /* AppDelegate.swift in Sources */,
+				E0E142E31E954CAD001C45BE /* StartScreenConstants.swift in Sources */,
 				306D41721DCD2C6300043F86 /* Config.swift in Sources */,
 				30FD55791DCDED6C00000A97 /* RouteCreationModuleConstants.swift in Sources */,
+				E0E142DD1E954C41001C45BE /* StartScreenPresenter.swift in Sources */,
 				F099800B9560E696761BDEAF /* RouteCreationModuleViewController.swift in Sources */,
 				30FD557B1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift in Sources */,
 				30FD557E1DCE0CE300000A97 /* RouteService.swift in Sources */,
 				92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */,
 				63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */,
+				E0E142E11E954C73001C45BE /* StartScreenProtocols.swift in Sources */,
 				B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */,
 				30FD55771DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift in Sources */,
 				72A2124729EC1AAC27070C3C /* RouteCreationModuleConfigurator.swift in Sources */,
@@ -517,6 +584,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -567,6 +635,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
