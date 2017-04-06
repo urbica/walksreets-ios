@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class StartScreenViewController: UIViewController, StartScreenViewInput {
     
@@ -20,22 +21,33 @@ class StartScreenViewController: UIViewController, StartScreenViewInput {
         super.viewDidLoad()
         StartScreenModuleConfigurator().configureModuleForViewInput(viewInput: self)
         output.viewIsReady()
+        setupInitialState()
     }
     
     
     // MARK: StartScreenViewInput
     func setupInitialState() {
-        switch Location.core.checkIfEnabled() {
-        case true:
-            locationButton.isEnabled = false
-        case false:
+        
+        switch CLLocationManager.authorizationStatus() {
+        case .authorizedAlways, .authorizedWhenInUse:
+            forwardButton.setTitleColor(UIColor.black, for: .normal)
             forwardButton.isEnabled = true
+            locationButton.setTitleColor(UIColor.gray, for: .disabled)
+            locationButton.isEnabled = false
+        default:
+            forwardButton.setTitleColor(UIColor.gray, for: .normal)
+            forwardButton.isEnabled = false
+            locationButton.setTitleColor(UIColor.black, for: .disabled)
+            locationButton.isEnabled = true
         }
     }
     
     func initLocationManager() {
         _ = Location.core.getCoordinate()
         locationButton.isEnabled = false
+        locationButton.setTitleColor(UIColor.gray, for: .disabled)
+        
+        forwardButton.setTitleColor(UIColor.black, for: .normal)
         forwardButton.isEnabled = true
     }
     

@@ -37,16 +37,13 @@
                                 <rect key="frame" x="0.0" y="345" width="375" height="322"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r8e-Ig-73Z">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+                                        <rect key="frame" x="20" y="0.0" width="355" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Включить геолокацию" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BW0-pW-NoW">
-                                                <rect key="frame" x="8" y="19" width="179" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozn-aE-4m7">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozn-aE-4m7">
+                                                <rect key="frame" x="0.0" y="0.0" width="355" height="30"/>
+                                                <state key="normal" title="ВКЛЮЧИТЬ ГЕОЛОКАЦИЮ">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="actionInitLocationWithSender:" destination="Aze-nC-i8p" eventType="touchUpInside" id="UA9-43-Dpl"/>
                                                 </connections>
@@ -55,25 +52,20 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="ozn-aE-4m7" secondAttribute="trailing" id="BJO-rb-08U"/>
-                                            <constraint firstAttribute="height" constant="58" id="CVj-fS-JWp"/>
-                                            <constraint firstItem="BW0-pW-NoW" firstAttribute="centerY" secondItem="r8e-Ig-73Z" secondAttribute="centerY" id="ON4-NM-vW0"/>
+                                            <constraint firstAttribute="height" constant="30" id="CVj-fS-JWp"/>
                                             <constraint firstItem="ozn-aE-4m7" firstAttribute="leading" secondItem="r8e-Ig-73Z" secondAttribute="leading" id="PnB-QH-elf"/>
                                             <constraint firstItem="ozn-aE-4m7" firstAttribute="top" secondItem="r8e-Ig-73Z" secondAttribute="top" id="UOP-mN-6Zc"/>
                                             <constraint firstAttribute="bottom" secondItem="ozn-aE-4m7" secondAttribute="bottom" id="UcN-VI-pIk"/>
-                                            <constraint firstItem="BW0-pW-NoW" firstAttribute="leading" secondItem="r8e-Ig-73Z" secondAttribute="leading" constant="8" id="Ztd-XU-Jie"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iaj-LE-Yeo">
-                                        <rect key="frame" x="0.0" y="66" width="375" height="70"/>
+                                        <rect key="frame" x="20" y="38" width="355" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Далее" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M15-yl-B4S">
-                                                <rect key="frame" x="8" y="24" width="50" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87Y-Pi-130">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87Y-Pi-130">
+                                                <rect key="frame" x="0.0" y="0.0" width="355" height="30"/>
+                                                <state key="normal" title="ДАЛЕЕ">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="actionOpenRouteCreationWithSender:" destination="Aze-nC-i8p" eventType="touchUpInside" id="WvU-IJ-h6T"/>
                                                 </connections>
@@ -81,11 +73,9 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="0ab-XW-6Fm"/>
+                                            <constraint firstAttribute="height" constant="30" id="0ab-XW-6Fm"/>
                                             <constraint firstAttribute="bottom" secondItem="87Y-Pi-130" secondAttribute="bottom" id="LHu-gX-zKe"/>
                                             <constraint firstAttribute="trailing" secondItem="87Y-Pi-130" secondAttribute="trailing" id="Ofi-wf-EjG"/>
-                                            <constraint firstItem="M15-yl-B4S" firstAttribute="leading" secondItem="Iaj-LE-Yeo" secondAttribute="leading" constant="8" id="f6O-33-Fud"/>
-                                            <constraint firstItem="M15-yl-B4S" firstAttribute="centerY" secondItem="Iaj-LE-Yeo" secondAttribute="centerY" id="pO7-3l-eQR"/>
                                             <constraint firstItem="87Y-Pi-130" firstAttribute="top" secondItem="Iaj-LE-Yeo" secondAttribute="top" id="rhN-hT-y7N"/>
                                             <constraint firstItem="87Y-Pi-130" firstAttribute="leading" secondItem="Iaj-LE-Yeo" secondAttribute="leading" id="yiH-QS-R8d"/>
                                         </constraints>
@@ -98,8 +88,8 @@
                                     <constraint firstAttribute="height" constant="322" id="9aa-gN-yrF"/>
                                     <constraint firstItem="r8e-Ig-73Z" firstAttribute="top" secondItem="oaP-GA-YdF" secondAttribute="top" id="DsL-D8-R9U"/>
                                     <constraint firstItem="Iaj-LE-Yeo" firstAttribute="top" secondItem="r8e-Ig-73Z" secondAttribute="bottom" constant="8" id="Htv-ri-jV2"/>
-                                    <constraint firstItem="r8e-Ig-73Z" firstAttribute="leading" secondItem="oaP-GA-YdF" secondAttribute="leading" id="Rl6-iF-FPe"/>
-                                    <constraint firstItem="Iaj-LE-Yeo" firstAttribute="leading" secondItem="oaP-GA-YdF" secondAttribute="leading" id="lhw-uY-87H"/>
+                                    <constraint firstItem="r8e-Ig-73Z" firstAttribute="leading" secondItem="oaP-GA-YdF" secondAttribute="leading" constant="20" id="Rl6-iF-FPe"/>
+                                    <constraint firstItem="Iaj-LE-Yeo" firstAttribute="leading" secondItem="oaP-GA-YdF" secondAttribute="leading" constant="20" id="lhw-uY-87H"/>
                                 </constraints>
                             </view>
                         </subviews>
