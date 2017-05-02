@@ -422,6 +422,7 @@
 				306D41581DCD2C1100043F86 /* Resources */,
 				F7DA3E5805C8EF754CEEF118 /* [CP] Embed Pods Frameworks */,
 				A2A5BA6B8A5E83834859D8D9 /* [CP] Copy Pods Resources */,
+				E058C0CA1EB8D00800E981EB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -537,6 +538,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-walkstreets-ios/Pods-walkstreets-ios-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		E058C0CA1EB8D00800E981EB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 18d051be1a4381947d54cf113e55232abc9f408d f4358cb03f3278dab616637610e5e358b6511708771edc684ec9bfef155f9020";
 		};
 		F30B061FEE420E443A8AA221 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

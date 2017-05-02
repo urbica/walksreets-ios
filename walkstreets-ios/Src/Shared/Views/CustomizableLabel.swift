@@ -15,7 +15,11 @@ class CustomizableLabel: UILabel {
     @IBInspectable var borderColor: UIColor?
     @IBInspectable var horizontalInsets: CGFloat = 0
     @IBInspectable var verticalInsets: CGFloat = 0
-    
+    @IBInspectable var characterSpacing: CGFloat = 0 {
+        didSet {
+            setCharacterSpacing(value: characterSpacing)
+        }
+    }
     
     override func awakeFromNib() {
         layer.masksToBounds = true;
@@ -46,5 +50,13 @@ class CustomizableLabel: UILabel {
         
         layer.borderWidth = width
         layer.add(borderWidthAnimation, forKey: "border width")
+    }
+    
+    func setCharacterSpacing(value: CGFloat) {
+        if let textString = text {
+            let attributedString = NSMutableAttributedString(string: textString)
+            attributedString.addAttribute(NSKernAttributeName, value: value, range: NSRange(location: 0, length: attributedString.length - 1))
+            attributedText = attributedString
+        }
     }
 }

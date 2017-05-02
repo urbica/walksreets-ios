@@ -2,13 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>VremenaGroteskMedium.otf</string>
-		<string>VremenaGroteskBook.otf</string>
-		<string>VremenaGroteskBold.otf</string>
-		<string>VremenaGrotesk.otf</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -25,6 +18,20 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>18d051be1a4381947d54cf113e55232abc9f408d</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MGLMapboxAccessToken</key>
@@ -38,6 +45,13 @@
 	<string>Please, give location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Please, give location</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>VremenaGroteskMedium.otf</string>
+		<string>VremenaGroteskBook.otf</string>
+		<string>VremenaGroteskBold.otf</string>
+		<string>VremenaGrotesk.otf</string>
+	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
