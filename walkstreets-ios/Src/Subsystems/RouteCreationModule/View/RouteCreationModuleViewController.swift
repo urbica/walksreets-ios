@@ -40,7 +40,7 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         super.viewDidLoad()
         RouteCreationModuleModuleConfigurator().configureModuleForViewInput(viewInput: self)
         output.viewIsReady()
-        setupInitialState()
+        //setupInitialState()
     }
 
 

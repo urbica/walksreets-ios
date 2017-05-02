@@ -29,6 +29,8 @@
 		B747C8FC21D87E01D5973FE5 /* RouteCreationModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */; };
 		D9B39AC1217ED510C5C4A351 /* Pods_walkstreets_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF62A8B0EC862CC8156F93C3 /* Pods_walkstreets_ios.framework */; };
 		E022832E1E95279D00B7AB3D /* StartScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E022832D1E95279D00B7AB3D /* StartScreen.storyboard */; };
+		E058C0B61EB8BC0E00E981EB /* CustomizableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0B51EB8BC0E00E981EB /* CustomizableView.swift */; };
+		E058C0BE1EB8BF1300E981EB /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0BD1EB8BF1300E981EB /* UIColor+Helpers.swift */; };
 		E0C4F6661E8C06D3005C63C4 /* RootApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C4F6651E8C06D3005C63C4 /* RootApiService.swift */; };
 		E0E142DB1E954C1D001C45BE /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142DA1E954C1D001C45BE /* StartScreenViewController.swift */; };
 		E0E142DD1E954C41001C45BE /* StartScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142DC1E954C41001C45BE /* StartScreenPresenter.swift */; };
@@ -78,6 +80,12 @@
 		CF62A8B0EC862CC8156F93C3 /* Pods_walkstreets_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_walkstreets_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42975D3FFAEEA4E4FFD169D /* Pods-walkstreets-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walkstreets-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-walkstreets-ios/Pods-walkstreets-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		E022832D1E95279D00B7AB3D /* StartScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartScreen.storyboard; sourceTree = "<group>"; };
+		E058C0B51EB8BC0E00E981EB /* CustomizableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableView.swift; sourceTree = "<group>"; };
+		E058C0B81EB8BD8C00E981EB /* VremenaGrotesk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VremenaGrotesk.otf; sourceTree = "<group>"; };
+		E058C0B91EB8BD8C00E981EB /* VremenaGroteskBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VremenaGroteskBold.otf; sourceTree = "<group>"; };
+		E058C0BA1EB8BD8C00E981EB /* VremenaGroteskBook.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VremenaGroteskBook.otf; sourceTree = "<group>"; };
+		E058C0BB1EB8BD8C00E981EB /* VremenaGroteskMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VremenaGroteskMedium.otf; sourceTree = "<group>"; };
+		E058C0BD1EB8BF1300E981EB /* UIColor+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
 		E0C4F6651E8C06D3005C63C4 /* RootApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootApiService.swift; sourceTree = "<group>"; };
 		E0E142DA1E954C1D001C45BE /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		E0E142DC1E954C41001C45BE /* StartScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenPresenter.swift; sourceTree = "<group>"; };
@@ -141,6 +149,7 @@
 		306D416F1DCD2C2300043F86 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				E058C0B71EB8BD6D00E981EB /* Fonts */,
 				306D41641DCD2C1100043F86 /* Assets.xcassets */,
 				306D41661DCD2C1100043F86 /* LaunchScreen.storyboard */,
 				306D41691DCD2C1100043F86 /* Info.plist */,
@@ -196,6 +205,8 @@
 		30FD557F1DCE0D3200000A97 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E058C0BC1EB8BEF600E981EB /* UIColor+Helpers */,
+				E058C0B41EB8BBAA00E981EB /* Views */,
 				E0C4F6641E8C06A4005C63C4 /* RootApiService */,
 				30FD55801DCE0D5900000A97 /* LocationManager.swift */,
 			);
@@ -309,6 +320,33 @@
 				30FD55781DCDED6C00000A97 /* RouteCreationModuleConstants.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		E058C0B41EB8BBAA00E981EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E058C0B51EB8BC0E00E981EB /* CustomizableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E058C0B71EB8BD6D00E981EB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E058C0B81EB8BD8C00E981EB /* VremenaGrotesk.otf */,
+				E058C0B91EB8BD8C00E981EB /* VremenaGroteskBold.otf */,
+				E058C0BA1EB8BD8C00E981EB /* VremenaGroteskBook.otf */,
+				E058C0BB1EB8BD8C00E981EB /* VremenaGroteskMedium.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E058C0BC1EB8BEF600E981EB /* UIColor+Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E058C0BD1EB8BF1300E981EB /* UIColor+Helpers.swift */,
+			);
+			path = "UIColor+Helpers";
 			sourceTree = "<group>";
 		};
 		E0C4F6641E8C06A4005C63C4 /* RootApiService */ = {
@@ -517,6 +555,7 @@
 				306D415E1DCD2C1100043F86 /* AppDelegate.swift in Sources */,
 				E0E142E31E954CAD001C45BE /* StartScreenConstants.swift in Sources */,
 				306D41721DCD2C6300043F86 /* Config.swift in Sources */,
+				E058C0BE1EB8BF1300E981EB /* UIColor+Helpers.swift in Sources */,
 				30FD55791DCDED6C00000A97 /* RouteCreationModuleConstants.swift in Sources */,
 				E0E142DD1E954C41001C45BE /* StartScreenPresenter.swift in Sources */,
 				F099800B9560E696761BDEAF /* RouteCreationModuleViewController.swift in Sources */,
@@ -526,6 +565,7 @@
 				63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */,
 				E0E142E11E954C73001C45BE /* StartScreenProtocols.swift in Sources */,
 				B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */,
+				E058C0B61EB8BC0E00E981EB /* CustomizableView.swift in Sources */,
 				30FD55771DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift in Sources */,
 				72A2124729EC1AAC27070C3C /* RouteCreationModuleConfigurator.swift in Sources */,
 				B747C8FC21D87E01D5973FE5 /* RouteCreationModuleProtocols.swift in Sources */,
