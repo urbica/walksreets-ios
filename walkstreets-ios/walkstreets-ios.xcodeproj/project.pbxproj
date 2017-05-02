@@ -31,6 +31,13 @@
 		E022832E1E95279D00B7AB3D /* StartScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E022832D1E95279D00B7AB3D /* StartScreen.storyboard */; };
 		E058C0B61EB8BC0E00E981EB /* CustomizableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0B51EB8BC0E00E981EB /* CustomizableView.swift */; };
 		E058C0BE1EB8BF1300E981EB /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0BD1EB8BF1300E981EB /* UIColor+Helpers.swift */; };
+		E058C0BF1EB8C47200E981EB /* VremenaGrotesk.otf in Resources */ = {isa = PBXBuildFile; fileRef = E058C0B81EB8BD8C00E981EB /* VremenaGrotesk.otf */; };
+		E058C0C01EB8C47500E981EB /* VremenaGroteskBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E058C0B91EB8BD8C00E981EB /* VremenaGroteskBold.otf */; };
+		E058C0C11EB8C47900E981EB /* VremenaGroteskBook.otf in Resources */ = {isa = PBXBuildFile; fileRef = E058C0BA1EB8BD8C00E981EB /* VremenaGroteskBook.otf */; };
+		E058C0C21EB8C47C00E981EB /* VremenaGroteskMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E058C0BB1EB8BD8C00E981EB /* VremenaGroteskMedium.otf */; };
+		E058C0C41EB8C52400E981EB /* CustomizableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0C31EB8C52400E981EB /* CustomizableLabel.swift */; };
+		E058C0C61EB8C53D00E981EB /* CustomizableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0C51EB8C53D00E981EB /* CustomizableButton.swift */; };
+		E058C0C91EB8C57300E981EB /* GDC+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0C81EB8C57300E981EB /* GDC+Helpers.swift */; };
 		E0C4F6661E8C06D3005C63C4 /* RootApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C4F6651E8C06D3005C63C4 /* RootApiService.swift */; };
 		E0E142DB1E954C1D001C45BE /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142DA1E954C1D001C45BE /* StartScreenViewController.swift */; };
 		E0E142DD1E954C41001C45BE /* StartScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142DC1E954C41001C45BE /* StartScreenPresenter.swift */; };
@@ -86,6 +93,9 @@
 		E058C0BA1EB8BD8C00E981EB /* VremenaGroteskBook.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VremenaGroteskBook.otf; sourceTree = "<group>"; };
 		E058C0BB1EB8BD8C00E981EB /* VremenaGroteskMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VremenaGroteskMedium.otf; sourceTree = "<group>"; };
 		E058C0BD1EB8BF1300E981EB /* UIColor+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
+		E058C0C31EB8C52400E981EB /* CustomizableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableLabel.swift; sourceTree = "<group>"; };
+		E058C0C51EB8C53D00E981EB /* CustomizableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableButton.swift; sourceTree = "<group>"; };
+		E058C0C81EB8C57300E981EB /* GDC+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GDC+Helpers.swift"; sourceTree = "<group>"; };
 		E0C4F6651E8C06D3005C63C4 /* RootApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootApiService.swift; sourceTree = "<group>"; };
 		E0E142DA1E954C1D001C45BE /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		E0E142DC1E954C41001C45BE /* StartScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenPresenter.swift; sourceTree = "<group>"; };
@@ -205,6 +215,7 @@
 		30FD557F1DCE0D3200000A97 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E058C0C71EB8C55500E981EB /* GDC+Helpers */,
 				E058C0BC1EB8BEF600E981EB /* UIColor+Helpers */,
 				E058C0B41EB8BBAA00E981EB /* Views */,
 				E0C4F6641E8C06A4005C63C4 /* RootApiService */,
@@ -326,6 +337,8 @@
 			isa = PBXGroup;
 			children = (
 				E058C0B51EB8BC0E00E981EB /* CustomizableView.swift */,
+				E058C0C31EB8C52400E981EB /* CustomizableLabel.swift */,
+				E058C0C51EB8C53D00E981EB /* CustomizableButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -347,6 +360,14 @@
 				E058C0BD1EB8BF1300E981EB /* UIColor+Helpers.swift */,
 			);
 			path = "UIColor+Helpers";
+			sourceTree = "<group>";
+		};
+		E058C0C71EB8C55500E981EB /* GDC+Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E058C0C81EB8C57300E981EB /* GDC+Helpers.swift */,
+			);
+			path = "GDC+Helpers";
 			sourceTree = "<group>";
 		};
 		E0C4F6641E8C06A4005C63C4 /* RootApiService */ = {
@@ -481,8 +502,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E058C0BF1EB8C47200E981EB /* VremenaGrotesk.otf in Resources */,
+				E058C0C01EB8C47500E981EB /* VremenaGroteskBold.otf in Resources */,
 				306D41681DCD2C1100043F86 /* LaunchScreen.storyboard in Resources */,
 				306D41651DCD2C1100043F86 /* Assets.xcassets in Resources */,
+				E058C0C11EB8C47900E981EB /* VremenaGroteskBook.otf in Resources */,
+				E058C0C21EB8C47C00E981EB /* VremenaGroteskMedium.otf in Resources */,
 				30C8136E1DCD36EC00924001 /* RouteCreationModule.storyboard in Resources */,
 				E022832E1E95279D00B7AB3D /* StartScreen.storyboard in Resources */,
 			);
@@ -554,6 +579,7 @@
 				E0E142DB1E954C1D001C45BE /* StartScreenViewController.swift in Sources */,
 				306D415E1DCD2C1100043F86 /* AppDelegate.swift in Sources */,
 				E0E142E31E954CAD001C45BE /* StartScreenConstants.swift in Sources */,
+				E058C0C41EB8C52400E981EB /* CustomizableLabel.swift in Sources */,
 				306D41721DCD2C6300043F86 /* Config.swift in Sources */,
 				E058C0BE1EB8BF1300E981EB /* UIColor+Helpers.swift in Sources */,
 				30FD55791DCDED6C00000A97 /* RouteCreationModuleConstants.swift in Sources */,
@@ -562,10 +588,12 @@
 				30FD557B1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift in Sources */,
 				30FD557E1DCE0CE300000A97 /* RouteService.swift in Sources */,
 				92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */,
+				E058C0C61EB8C53D00E981EB /* CustomizableButton.swift in Sources */,
 				63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */,
 				E0E142E11E954C73001C45BE /* StartScreenProtocols.swift in Sources */,
 				B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */,
 				E058C0B61EB8BC0E00E981EB /* CustomizableView.swift in Sources */,
+				E058C0C91EB8C57300E981EB /* GDC+Helpers.swift in Sources */,
 				30FD55771DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift in Sources */,
 				72A2124729EC1AAC27070C3C /* RouteCreationModuleConfigurator.swift in Sources */,
 				B747C8FC21D87E01D5973FE5 /* RouteCreationModuleProtocols.swift in Sources */,
