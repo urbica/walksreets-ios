@@ -310,28 +310,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kML-PR-LQ9" customClass="MGLMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1TK-UE-1UL">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="routeCreation_info" translatesAutoresizingMaskIntoConstraints="NO" id="BQv-OI-fzC">
-                                                <rect key="frame" x="19" y="19" width="22" height="22"/>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDr-c4-IdH">
-                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="nDr-c4-IdH" secondAttribute="trailing" id="4eA-tM-O2Y"/>
-                                            <constraint firstItem="nDr-c4-IdH" firstAttribute="leading" secondItem="1TK-UE-1UL" secondAttribute="leading" id="9P0-b5-TIb"/>
-                                            <constraint firstAttribute="width" constant="60" id="Bi3-wX-omG"/>
-                                            <constraint firstItem="BQv-OI-fzC" firstAttribute="centerX" secondItem="1TK-UE-1UL" secondAttribute="centerX" id="Pyu-6M-XFQ"/>
-                                            <constraint firstItem="nDr-c4-IdH" firstAttribute="top" secondItem="1TK-UE-1UL" secondAttribute="top" id="RXy-2x-GkD"/>
-                                            <constraint firstAttribute="bottom" secondItem="nDr-c4-IdH" secondAttribute="bottom" id="a4U-au-HMC"/>
-                                            <constraint firstAttribute="height" constant="60" id="bos-O1-Vgz"/>
-                                            <constraint firstItem="BQv-OI-fzC" firstAttribute="centerY" secondItem="1TK-UE-1UL" secondAttribute="centerY" id="cAY-aw-e7J"/>
-                                        </constraints>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOi-Rc-gh0">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -343,17 +321,15 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="TOi-Rc-gh0" firstAttribute="top" secondItem="kML-PR-LQ9" secondAttribute="top" id="0Gr-qw-01o"/>
-                                    <constraint firstItem="1TK-UE-1UL" firstAttribute="leading" secondItem="kML-PR-LQ9" secondAttribute="leading" id="boj-ke-cvw"/>
-                                    <constraint firstItem="1TK-UE-1UL" firstAttribute="top" secondItem="kML-PR-LQ9" secondAttribute="top" id="owy-dF-M0r"/>
                                     <constraint firstAttribute="trailing" secondItem="TOi-Rc-gh0" secondAttribute="trailing" id="sVd-ST-dbj"/>
                                     <constraint firstItem="TOi-Rc-gh0" firstAttribute="leading" secondItem="kML-PR-LQ9" secondAttribute="leading" id="vSW-Fl-F8p"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/mapbox/light-v9"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/walkmap/cizpnte4900gh2rplobw8pgu0"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWg-je-kaT" customClass="CustomizableView" customModule="walkstreets_ios" customModuleProvider="target">
-                                <rect key="frame" x="20" y="478" width="280" height="55"/>
+                                <rect key="frame" x="20" y="468" width="280" height="55"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D1b-dI-Ufc">
                                         <rect key="frame" x="0.0" y="0.0" width="141" height="55"/>
@@ -365,7 +341,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="141" height="55"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADDRESS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0q-DH-e7h" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                                <rect key="frame" x="32" y="9" width="68" height="14"/>
+                                                <rect key="frame" x="32" y="9.5" width="67.5" height="14"/>
                                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -451,14 +427,31 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lI0-I4-Gna" customClass="CustomizableButton" customModule="walkstreets_ios" customModuleProvider="target">
+                                <rect key="frame" x="130" y="528" width="60" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="50p-l9-vYW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="17"/>
+                                <state key="normal" title="about">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                        <real key="value" value="1.5700000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kML-PR-LQ9" firstAttribute="leading" secondItem="Ri3-tg-QXr" secondAttribute="leading" id="Iv2-yq-LrN"/>
                             <constraint firstItem="HWg-je-kaT" firstAttribute="leading" secondItem="Ri3-tg-QXr" secondAttribute="leading" constant="20" id="Nni-gV-MOL"/>
+                            <constraint firstItem="lI0-I4-Gna" firstAttribute="centerX" secondItem="Ri3-tg-QXr" secondAttribute="centerX" id="ODc-be-3pV"/>
                             <constraint firstAttribute="trailing" secondItem="kML-PR-LQ9" secondAttribute="trailing" id="ZU0-JT-baY"/>
                             <constraint firstItem="kML-PR-LQ9" firstAttribute="top" secondItem="Ri3-tg-QXr" secondAttribute="top" id="hnw-Nf-rl7"/>
-                            <constraint firstItem="cTQ-ed-HJz" firstAttribute="top" secondItem="HWg-je-kaT" secondAttribute="bottom" constant="35" id="lx3-qr-erP"/>
+                            <constraint firstItem="cTQ-ed-HJz" firstAttribute="top" secondItem="HWg-je-kaT" secondAttribute="bottom" constant="45" id="lx3-qr-erP"/>
+                            <constraint firstItem="lI0-I4-Gna" firstAttribute="top" secondItem="HWg-je-kaT" secondAttribute="bottom" constant="5" id="rFm-p2-cKN"/>
                             <constraint firstItem="cTQ-ed-HJz" firstAttribute="top" secondItem="kML-PR-LQ9" secondAttribute="bottom" id="sEQ-iM-hi5"/>
                             <constraint firstAttribute="trailing" secondItem="HWg-je-kaT" secondAttribute="trailing" constant="20" id="uev-Fi-eNu"/>
                         </constraints>
@@ -512,7 +505,6 @@
         <image name="checkmark_create_route" width="14" height="9"/>
         <image name="close_route_menu_button" width="30" height="30"/>
         <image name="create_route_button" width="80" height="80"/>
-        <image name="routeCreation_info" width="22" height="22"/>
         <image name="routeCreation_search" width="14" height="14"/>
         <image name="user_location_button" width="30" height="30"/>
     </resources>
