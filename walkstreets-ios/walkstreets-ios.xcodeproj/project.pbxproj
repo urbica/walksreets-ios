@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0831A58BF9B0F4CEF0A32550 /* AddressSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30978BA783FA2AFCFC2DBD08 /* AddressSearchInteractor.swift */; };
+		16318C2A56C2D27F1A5A66AD /* AddressSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A52F8D1C9334185D70B5A0 /* AddressSearchPresenter.swift */; };
+		179C28D7EE35EAF4EFF76A2B /* AddressSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48795177FF9C29210DCF1098 /* AddressSearchRouter.swift */; };
+		25D6E5956C3B6181E637B548 /* AddressSearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54AE4BEA1CCA121327F5967 /* AddressSearchProtocols.swift */; };
 		306D415E1DCD2C1100043F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D415D1DCD2C1100043F86 /* AppDelegate.swift */; };
 		306D41651DCD2C1100043F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 306D41641DCD2C1100043F86 /* Assets.xcassets */; };
 		306D41681DCD2C1100043F86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306D41661DCD2C1100043F86 /* LaunchScreen.storyboard */; };
@@ -26,15 +30,20 @@
 		63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D393807BF77BA3F32F88643 /* RouteCreationModuleInteractor.swift */; };
 		6A1FA1A1997B190C2CA98A19 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CFCAB5B63E57F7BECA4911 /* AboutViewController.swift */; };
 		72A2124729EC1AAC27070C3C /* RouteCreationModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552DDB458787869F10328D2 /* RouteCreationModuleConfigurator.swift */; };
+		79F47F130202C72F05897F9D /* AddressSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ED4AA49E3F290998D8FFF1 /* AddressSearchViewController.swift */; };
 		8B9EF1F0C1123394DC3BD340 /* AboutConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A07B55A947D3B4C36EF54 /* AboutConfigurator.swift */; };
 		92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342EF44F078F8AB2C7963D16 /* RouteCreationModulePresenter.swift */; };
 		960E20EFE390E5F4DCFCFA2F /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283844FEC4424901696A8FA4 /* AboutPresenter.swift */; };
 		B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DA9A0C5667FCEE70CEB00 /* RouteCreationModuleRouter.swift */; };
 		B747C8FC21D87E01D5973FE5 /* RouteCreationModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */; };
+		D3EAF393C21361678ABD0218 /* AddressSearchConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB35B9503B06A0A18391D68 /* AddressSearchConfigurator.swift */; };
 		D9B39AC1217ED510C5C4A351 /* Pods_walkstreets_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF62A8B0EC862CC8156F93C3 /* Pods_walkstreets_ios.framework */; };
 		E022832E1E95279D00B7AB3D /* StartScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E022832D1E95279D00B7AB3D /* StartScreen.storyboard */; };
 		E02B70901EBB2B7600379C76 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02B708F1EBB2B7600379C76 /* About.storyboard */; };
 		E02B70921EBB2DEA00379C76 /* CustomizableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02B70911EBB2DEA00379C76 /* CustomizableTextView.swift */; };
+		E02B70941EBB5CB700379C76 /* AddressSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02B70931EBB5CB700379C76 /* AddressSearch.storyboard */; };
+		E02B70961EBB5F6B00379C76 /* CustomizableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02B70951EBB5F6B00379C76 /* CustomizableTextField.swift */; };
+		E02B70991EBB5FA600379C76 /* AddressSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02B70981EBB5FA600379C76 /* AddressSearchCell.swift */; };
 		E058C0B61EB8BC0E00E981EB /* CustomizableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0B51EB8BC0E00E981EB /* CustomizableView.swift */; };
 		E058C0BE1EB8BF1300E981EB /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0BD1EB8BF1300E981EB /* UIColor+Helpers.swift */; };
 		E058C0BF1EB8C47200E981EB /* VremenaGrotesk.otf in Resources */ = {isa = PBXBuildFile; fileRef = E058C0B81EB8BD8C00E981EB /* VremenaGrotesk.otf */; };
@@ -69,6 +78,7 @@
 		061EEE0F9E70D196A9F10334 /* AboutProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutProtocols.swift; sourceTree = "<group>"; };
 		106FD96F22ECB96D84A20203 /* Pods-walkstreets-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walkstreets-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-walkstreets-ios/Pods-walkstreets-ios.release.xcconfig"; sourceTree = "<group>"; };
 		283844FEC4424901696A8FA4 /* AboutPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
+		2EB35B9503B06A0A18391D68 /* AddressSearchConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchConfigurator.swift; sourceTree = "<group>"; };
 		306D415A1DCD2C1100043F86 /* walkstreets-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "walkstreets-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		306D415D1DCD2C1100043F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		306D41641DCD2C1100043F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +88,7 @@
 		3075B64C1DD066630096DFE7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3075B6551DD069B30096DFE7 /* RouteEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteEntity.swift; sourceTree = "<group>"; };
 		3075B6571DD06A370096DFE7 /* Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
+		30978BA783FA2AFCFC2DBD08 /* AddressSearchInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchInteractor.swift; sourceTree = "<group>"; };
 		30C8136D1DCD36EC00924001 /* RouteCreationModule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RouteCreationModule.storyboard; sourceTree = "<group>"; };
 		30E5308A1DFC935000B717CA /* walkstreets-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "walkstreets-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E530941DFC937800B717CA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,15 +101,22 @@
 		30FD55801DCE0D5900000A97 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleViewController.swift; sourceTree = "<group>"; };
 		342EF44F078F8AB2C7963D16 /* RouteCreationModulePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModulePresenter.swift; sourceTree = "<group>"; };
+		37A52F8D1C9334185D70B5A0 /* AddressSearchPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchPresenter.swift; sourceTree = "<group>"; };
+		48795177FF9C29210DCF1098 /* AddressSearchRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchRouter.swift; sourceTree = "<group>"; };
+		55ED4AA49E3F290998D8FFF1 /* AddressSearchViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchViewController.swift; sourceTree = "<group>"; };
 		5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleProtocols.swift; sourceTree = "<group>"; };
 		79CFCAB5B63E57F7BECA4911 /* AboutViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		7D393807BF77BA3F32F88643 /* RouteCreationModuleInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleInteractor.swift; sourceTree = "<group>"; };
 		807A07B55A947D3B4C36EF54 /* AboutConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutConfigurator.swift; sourceTree = "<group>"; };
+		C54AE4BEA1CCA121327F5967 /* AddressSearchProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchProtocols.swift; sourceTree = "<group>"; };
 		CF62A8B0EC862CC8156F93C3 /* Pods_walkstreets_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_walkstreets_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42975D3FFAEEA4E4FFD169D /* Pods-walkstreets-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walkstreets-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-walkstreets-ios/Pods-walkstreets-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		E022832D1E95279D00B7AB3D /* StartScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartScreen.storyboard; sourceTree = "<group>"; };
 		E02B708F1EBB2B7600379C76 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		E02B70911EBB2DEA00379C76 /* CustomizableTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableTextView.swift; sourceTree = "<group>"; };
+		E02B70931EBB5CB700379C76 /* AddressSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddressSearch.storyboard; sourceTree = "<group>"; };
+		E02B70951EBB5F6B00379C76 /* CustomizableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableTextField.swift; sourceTree = "<group>"; };
+		E02B70981EBB5FA600379C76 /* AddressSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressSearchCell.swift; sourceTree = "<group>"; };
 		E058C0B51EB8BC0E00E981EB /* CustomizableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableView.swift; sourceTree = "<group>"; };
 		E058C0B81EB8BD8C00E981EB /* VremenaGrotesk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VremenaGrotesk.otf; sourceTree = "<group>"; };
 		E058C0B91EB8BD8C00E981EB /* VremenaGroteskBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VremenaGroteskBold.otf; sourceTree = "<group>"; };
@@ -141,6 +159,14 @@
 			isa = PBXGroup;
 			children = (
 				061EEE0F9E70D196A9F10334 /* AboutProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		222D46650C9ED6E6110B1B9E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C54AE4BEA1CCA121327F5967 /* AddressSearchProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -198,6 +224,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		30808981E1EBFB4FA284FE4C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				37A52F8D1C9334185D70B5A0 /* AddressSearchPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		30E5308B1DFC935000B717CA /* walkstreets-iosTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,12 +279,21 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		39A78A390016BEAA423850BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55ED4AA49E3F290998D8FFF1 /* AddressSearchViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4C48668F374B6EF1CD9DD512 /* Subsystems */ = {
 			isa = PBXGroup;
 			children = (
 				F71AFCEF88D307A4CE597BC0 /* RouteCreationModule */,
 				856095D59408619462511290 /* StartScreen */,
 				AC08AA12B957383CF8E68AE0 /* About */,
+				6B2CD48A3A0F49F845635187 /* AddressSearch */,
 			);
 			path = Subsystems;
 			sourceTree = "<group>";
@@ -289,6 +332,29 @@
 				042DA9A0C5667FCEE70CEB00 /* RouteCreationModuleRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		6A5EF5F698EA96AC99D2D4B0 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				48795177FF9C29210DCF1098 /* AddressSearchRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		6B2CD48A3A0F49F845635187 /* AddressSearch */ = {
+			isa = PBXGroup;
+			children = (
+				E02B70931EBB5CB700379C76 /* AddressSearch.storyboard */,
+				E02B70971EBB5F8500379C76 /* Cell */,
+				39A78A390016BEAA423850BF /* View */,
+				30808981E1EBFB4FA284FE4C /* Presenter */,
+				F71F59D054CA17599907B2E1 /* Interactor */,
+				6A5EF5F698EA96AC99D2D4B0 /* Router */,
+				B73E94EB8BEDEB0D04D66023 /* Configurator */,
+				222D46650C9ED6E6110B1B9E /* Protocols */,
+			);
+			path = AddressSearch;
 			sourceTree = "<group>";
 		};
 		856095D59408619462511290 /* StartScreen */ = {
@@ -349,6 +415,14 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		B73E94EB8BEDEB0D04D66023 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				2EB35B9503B06A0A18391D68 /* AddressSearchConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		BE2EDA0CD0A902F53A3CFD27 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +448,14 @@
 			path = Configurator;
 			sourceTree = "<group>";
 		};
+		E02B70971EBB5F8500379C76 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E02B70981EBB5FA600379C76 /* AddressSearchCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		E058C0B41EB8BBAA00E981EB /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +463,7 @@
 				E058C0C31EB8C52400E981EB /* CustomizableLabel.swift */,
 				E058C0C51EB8C53D00E981EB /* CustomizableButton.swift */,
 				E02B70911EBB2DEA00379C76 /* CustomizableTextView.swift */,
+				E02B70951EBB5F6B00379C76 /* CustomizableTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -449,6 +532,14 @@
 				30FD557C1DCE0CA100000A97 /* Service */,
 			);
 			path = RouteCreationModule;
+			sourceTree = "<group>";
+		};
+		F71F59D054CA17599907B2E1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				30978BA783FA2AFCFC2DBD08 /* AddressSearchInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		FB3D3192FDBAA3D7BA7BB2DE /* Presenter */ = {
@@ -554,6 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E058C0BF1EB8C47200E981EB /* VremenaGrotesk.otf in Resources */,
+				E02B70941EBB5CB700379C76 /* AddressSearch.storyboard in Resources */,
 				E058C0C01EB8C47500E981EB /* VremenaGroteskBold.otf in Resources */,
 				306D41681DCD2C1100043F86 /* LaunchScreen.storyboard in Resources */,
 				306D41651DCD2C1100043F86 /* Assets.xcassets in Resources */,
@@ -646,6 +738,7 @@
 				E0E142E31E954CAD001C45BE /* StartScreenConstants.swift in Sources */,
 				E058C0C41EB8C52400E981EB /* CustomizableLabel.swift in Sources */,
 				306D41721DCD2C6300043F86 /* Config.swift in Sources */,
+				E02B70961EBB5F6B00379C76 /* CustomizableTextField.swift in Sources */,
 				E058C0BE1EB8BF1300E981EB /* UIColor+Helpers.swift in Sources */,
 				30FD55791DCDED6C00000A97 /* RouteCreationModuleConstants.swift in Sources */,
 				E0E142DD1E954C41001C45BE /* StartScreenPresenter.swift in Sources */,
@@ -653,6 +746,7 @@
 				30FD557B1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift in Sources */,
 				30FD557E1DCE0CE300000A97 /* RouteService.swift in Sources */,
 				92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */,
+				E02B70991EBB5FA600379C76 /* AddressSearchCell.swift in Sources */,
 				E058C0C61EB8C53D00E981EB /* CustomizableButton.swift in Sources */,
 				63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */,
 				E0E142E11E954C73001C45BE /* StartScreenProtocols.swift in Sources */,
@@ -671,6 +765,12 @@
 				960E20EFE390E5F4DCFCFA2F /* AboutPresenter.swift in Sources */,
 				8B9EF1F0C1123394DC3BD340 /* AboutConfigurator.swift in Sources */,
 				5307848F0056AEC1DD01A210 /* AboutProtocols.swift in Sources */,
+				79F47F130202C72F05897F9D /* AddressSearchViewController.swift in Sources */,
+				16318C2A56C2D27F1A5A66AD /* AddressSearchPresenter.swift in Sources */,
+				0831A58BF9B0F4CEF0A32550 /* AddressSearchInteractor.swift in Sources */,
+				179C28D7EE35EAF4EFF76A2B /* AddressSearchRouter.swift in Sources */,
+				D3EAF393C21361678ABD0218 /* AddressSearchConfigurator.swift in Sources */,
+				25D6E5956C3B6181E637B548 /* AddressSearchProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
