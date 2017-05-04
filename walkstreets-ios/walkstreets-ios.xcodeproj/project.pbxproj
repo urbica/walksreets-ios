@@ -11,7 +11,6 @@
 		16318C2A56C2D27F1A5A66AD /* AddressSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A52F8D1C9334185D70B5A0 /* AddressSearchPresenter.swift */; };
 		179C28D7EE35EAF4EFF76A2B /* AddressSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48795177FF9C29210DCF1098 /* AddressSearchRouter.swift */; };
 		25D6E5956C3B6181E637B548 /* AddressSearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54AE4BEA1CCA121327F5967 /* AddressSearchProtocols.swift */; };
-		2C4A813E61366E3720B16848 /* AddressSearchInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4768FB244D22FF58A677698B /* AddressSearchInitializer.swift */; };
 		306D415E1DCD2C1100043F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D415D1DCD2C1100043F86 /* AppDelegate.swift */; };
 		306D41651DCD2C1100043F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 306D41641DCD2C1100043F86 /* Assets.xcassets */; };
 		306D41681DCD2C1100043F86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306D41661DCD2C1100043F86 /* LaunchScreen.storyboard */; };
@@ -103,7 +102,6 @@
 		339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleViewController.swift; sourceTree = "<group>"; };
 		342EF44F078F8AB2C7963D16 /* RouteCreationModulePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModulePresenter.swift; sourceTree = "<group>"; };
 		37A52F8D1C9334185D70B5A0 /* AddressSearchPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchPresenter.swift; sourceTree = "<group>"; };
-		4768FB244D22FF58A677698B /* AddressSearchInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchInitializer.swift; sourceTree = "<group>"; };
 		48795177FF9C29210DCF1098 /* AddressSearchRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchRouter.swift; sourceTree = "<group>"; };
 		55ED4AA49E3F290998D8FFF1 /* AddressSearchViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchViewController.swift; sourceTree = "<group>"; };
 		5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleProtocols.swift; sourceTree = "<group>"; };
@@ -421,7 +419,6 @@
 			isa = PBXGroup;
 			children = (
 				2EB35B9503B06A0A18391D68 /* AddressSearchConfigurator.swift */,
-				4768FB244D22FF58A677698B /* AddressSearchInitializer.swift */,
 			);
 			path = Configurator;
 			sourceTree = "<group>";
@@ -773,7 +770,6 @@
 				0831A58BF9B0F4CEF0A32550 /* AddressSearchInteractor.swift in Sources */,
 				179C28D7EE35EAF4EFF76A2B /* AddressSearchRouter.swift in Sources */,
 				D3EAF393C21361678ABD0218 /* AddressSearchConfigurator.swift in Sources */,
-				2C4A813E61366E3720B16848 /* AddressSearchInitializer.swift in Sources */,
 				25D6E5956C3B6181E637B548 /* AddressSearchProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
