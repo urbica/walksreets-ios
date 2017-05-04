@@ -43,6 +43,8 @@
 		E02B70901EBB2B7600379C76 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02B708F1EBB2B7600379C76 /* About.storyboard */; };
 		E02B70921EBB2DEA00379C76 /* CustomizableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02B70911EBB2DEA00379C76 /* CustomizableTextView.swift */; };
 		E02B70941EBB5CB700379C76 /* AddressSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02B70931EBB5CB700379C76 /* AddressSearch.storyboard */; };
+		E02B70961EBB5F6B00379C76 /* CustomizableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02B70951EBB5F6B00379C76 /* CustomizableTextField.swift */; };
+		E02B70991EBB5FA600379C76 /* AddressSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02B70981EBB5FA600379C76 /* AddressSearchCell.swift */; };
 		E058C0B61EB8BC0E00E981EB /* CustomizableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0B51EB8BC0E00E981EB /* CustomizableView.swift */; };
 		E058C0BE1EB8BF1300E981EB /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0BD1EB8BF1300E981EB /* UIColor+Helpers.swift */; };
 		E058C0BF1EB8C47200E981EB /* VremenaGrotesk.otf in Resources */ = {isa = PBXBuildFile; fileRef = E058C0B81EB8BD8C00E981EB /* VremenaGrotesk.otf */; };
@@ -115,6 +117,8 @@
 		E02B708F1EBB2B7600379C76 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		E02B70911EBB2DEA00379C76 /* CustomizableTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableTextView.swift; sourceTree = "<group>"; };
 		E02B70931EBB5CB700379C76 /* AddressSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddressSearch.storyboard; sourceTree = "<group>"; };
+		E02B70951EBB5F6B00379C76 /* CustomizableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableTextField.swift; sourceTree = "<group>"; };
+		E02B70981EBB5FA600379C76 /* AddressSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressSearchCell.swift; sourceTree = "<group>"; };
 		E058C0B51EB8BC0E00E981EB /* CustomizableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableView.swift; sourceTree = "<group>"; };
 		E058C0B81EB8BD8C00E981EB /* VremenaGrotesk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VremenaGrotesk.otf; sourceTree = "<group>"; };
 		E058C0B91EB8BD8C00E981EB /* VremenaGroteskBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VremenaGroteskBold.otf; sourceTree = "<group>"; };
@@ -344,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				E02B70931EBB5CB700379C76 /* AddressSearch.storyboard */,
+				E02B70971EBB5F8500379C76 /* Cell */,
 				39A78A390016BEAA423850BF /* View */,
 				30808981E1EBFB4FA284FE4C /* Presenter */,
 				F71F59D054CA17599907B2E1 /* Interactor */,
@@ -446,6 +451,14 @@
 			path = Configurator;
 			sourceTree = "<group>";
 		};
+		E02B70971EBB5F8500379C76 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E02B70981EBB5FA600379C76 /* AddressSearchCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		E058C0B41EB8BBAA00E981EB /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +466,7 @@
 				E058C0C31EB8C52400E981EB /* CustomizableLabel.swift */,
 				E058C0C51EB8C53D00E981EB /* CustomizableButton.swift */,
 				E02B70911EBB2DEA00379C76 /* CustomizableTextView.swift */,
+				E02B70951EBB5F6B00379C76 /* CustomizableTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -727,6 +741,7 @@
 				E0E142E31E954CAD001C45BE /* StartScreenConstants.swift in Sources */,
 				E058C0C41EB8C52400E981EB /* CustomizableLabel.swift in Sources */,
 				306D41721DCD2C6300043F86 /* Config.swift in Sources */,
+				E02B70961EBB5F6B00379C76 /* CustomizableTextField.swift in Sources */,
 				E058C0BE1EB8BF1300E981EB /* UIColor+Helpers.swift in Sources */,
 				30FD55791DCDED6C00000A97 /* RouteCreationModuleConstants.swift in Sources */,
 				E0E142DD1E954C41001C45BE /* StartScreenPresenter.swift in Sources */,
@@ -734,6 +749,7 @@
 				30FD557B1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift in Sources */,
 				30FD557E1DCE0CE300000A97 /* RouteService.swift in Sources */,
 				92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */,
+				E02B70991EBB5FA600379C76 /* AddressSearchCell.swift in Sources */,
 				E058C0C61EB8C53D00E981EB /* CustomizableButton.swift in Sources */,
 				63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */,
 				E0E142E11E954C73001C45BE /* StartScreenProtocols.swift in Sources */,
