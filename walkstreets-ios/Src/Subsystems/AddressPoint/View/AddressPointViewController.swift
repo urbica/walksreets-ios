@@ -15,6 +15,7 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        AddressPointModuleConfigurator().configureModuleForViewInput(viewInput: self)
         output.viewIsReady()
     }
 

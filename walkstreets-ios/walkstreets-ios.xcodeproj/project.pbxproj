@@ -10,7 +10,6 @@
 		0831A58BF9B0F4CEF0A32550 /* AddressSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30978BA783FA2AFCFC2DBD08 /* AddressSearchInteractor.swift */; };
 		16318C2A56C2D27F1A5A66AD /* AddressSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A52F8D1C9334185D70B5A0 /* AddressSearchPresenter.swift */; };
 		179C28D7EE35EAF4EFF76A2B /* AddressSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48795177FF9C29210DCF1098 /* AddressSearchRouter.swift */; };
-		19127D36028C7FA135753380 /* AddressPointInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD184C2015BE8EB98C77641 /* AddressPointInitializer.swift */; };
 		19BCB4F82ACD4BBC9B7A4125 /* AddressPointPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9872266730A6439ED8F37EB /* AddressPointPresenter.swift */; };
 		25D6E5956C3B6181E637B548 /* AddressSearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54AE4BEA1CCA121327F5967 /* AddressSearchProtocols.swift */; };
 		276F19702527E9378A8A2E65 /* AddressPointInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3915E3E5329A2A4F3A443 /* AddressPointInteractor.swift */; };
@@ -51,6 +50,7 @@
 		E02B70941EBB5CB700379C76 /* AddressSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02B70931EBB5CB700379C76 /* AddressSearch.storyboard */; };
 		E02B70961EBB5F6B00379C76 /* CustomizableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02B70951EBB5F6B00379C76 /* CustomizableTextField.swift */; };
 		E02B70991EBB5FA600379C76 /* AddressSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02B70981EBB5FA600379C76 /* AddressSearchCell.swift */; };
+		E02B709B1EBB656000379C76 /* AddressPoint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02B709A1EBB656000379C76 /* AddressPoint.storyboard */; };
 		E058C0B61EB8BC0E00E981EB /* CustomizableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0B51EB8BC0E00E981EB /* CustomizableView.swift */; };
 		E058C0BE1EB8BF1300E981EB /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0BD1EB8BF1300E981EB /* UIColor+Helpers.swift */; };
 		E058C0BF1EB8C47200E981EB /* VremenaGrotesk.otf in Resources */ = {isa = PBXBuildFile; fileRef = E058C0B81EB8BD8C00E981EB /* VremenaGrotesk.otf */; };
@@ -119,7 +119,6 @@
 		7D393807BF77BA3F32F88643 /* RouteCreationModuleInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleInteractor.swift; sourceTree = "<group>"; };
 		807A07B55A947D3B4C36EF54 /* AboutConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutConfigurator.swift; sourceTree = "<group>"; };
 		8D650CF947229325031A05ED /* AddressPointConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressPointConfigurator.swift; sourceTree = "<group>"; };
-		9DD184C2015BE8EB98C77641 /* AddressPointInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressPointInitializer.swift; sourceTree = "<group>"; };
 		C54AE4BEA1CCA121327F5967 /* AddressSearchProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchProtocols.swift; sourceTree = "<group>"; };
 		CF62A8B0EC862CC8156F93C3 /* Pods_walkstreets_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_walkstreets_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42975D3FFAEEA4E4FFD169D /* Pods-walkstreets-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walkstreets-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-walkstreets-ios/Pods-walkstreets-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +130,7 @@
 		E02B70931EBB5CB700379C76 /* AddressSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddressSearch.storyboard; sourceTree = "<group>"; };
 		E02B70951EBB5F6B00379C76 /* CustomizableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableTextField.swift; sourceTree = "<group>"; };
 		E02B70981EBB5FA600379C76 /* AddressSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressSearchCell.swift; sourceTree = "<group>"; };
+		E02B709A1EBB656000379C76 /* AddressPoint.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddressPoint.storyboard; sourceTree = "<group>"; };
 		E058C0B51EB8BC0E00E981EB /* CustomizableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableView.swift; sourceTree = "<group>"; };
 		E058C0B81EB8BD8C00E981EB /* VremenaGrotesk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VremenaGrotesk.otf; sourceTree = "<group>"; };
 		E058C0B91EB8BD8C00E981EB /* VremenaGroteskBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VremenaGroteskBold.otf; sourceTree = "<group>"; };
@@ -182,7 +182,6 @@
 			children = (
 				43C3915E3E5329A2A4F3A443 /* AddressPointInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -386,7 +385,6 @@
 			children = (
 				DEFA5594D1CE4F888B8AF8C8 /* AddressPointRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -415,7 +413,6 @@
 			children = (
 				1ECF8AA8FAB81349AFEB4BC6 /* AddressPointViewController.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -442,7 +439,6 @@
 			children = (
 				D9872266730A6439ED8F37EB /* AddressPointPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -451,7 +447,6 @@
 			children = (
 				6FC315C2E75BF88764510E78 /* AddressPointProtocols.swift */,
 			);
-			name = Protocols;
 			path = Protocols;
 			sourceTree = "<group>";
 		};
@@ -471,15 +466,14 @@
 			isa = PBXGroup;
 			children = (
 				8D650CF947229325031A05ED /* AddressPointConfigurator.swift */,
-				9DD184C2015BE8EB98C77641 /* AddressPointInitializer.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
 		B545B93FD05502EB079F3EFC /* AddressPoint */ = {
 			isa = PBXGroup;
 			children = (
+				E02B709A1EBB656000379C76 /* AddressPoint.storyboard */,
 				90CF1449DF88D28122B471B9 /* View */,
 				A2230D3F183281CFC2897642 /* Presenter */,
 				181F00B62EC35F905F09E7D1 /* Interactor */,
@@ -487,7 +481,6 @@
 				AEFB022D3E41B05E91923A6A /* Configurator */,
 				A2C8FFC7AAD52F178CA26250 /* Protocols */,
 			);
-			name = AddressPoint;
 			path = AddressPoint;
 			sourceTree = "<group>";
 		};
@@ -734,6 +727,7 @@
 				306D41681DCD2C1100043F86 /* LaunchScreen.storyboard in Resources */,
 				306D41651DCD2C1100043F86 /* Assets.xcassets in Resources */,
 				E058C0C11EB8C47900E981EB /* VremenaGroteskBook.otf in Resources */,
+				E02B709B1EBB656000379C76 /* AddressPoint.storyboard in Resources */,
 				E02B70901EBB2B7600379C76 /* About.storyboard in Resources */,
 				E058C0C21EB8C47C00E981EB /* VremenaGroteskMedium.otf in Resources */,
 				30C8136E1DCD36EC00924001 /* RouteCreationModule.storyboard in Resources */,
@@ -860,7 +854,6 @@
 				276F19702527E9378A8A2E65 /* AddressPointInteractor.swift in Sources */,
 				C225BC6A1B91D9763A4CFA99 /* AddressPointRouter.swift in Sources */,
 				B43E9393F4861E965D635E0A /* AddressPointConfigurator.swift in Sources */,
-				19127D36028C7FA135753380 /* AddressPointInitializer.swift in Sources */,
 				D404E4669FBB44F91AC14072 /* AddressPointProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
