@@ -52,6 +52,9 @@
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjW-qd-OSp">
                                                         <rect key="frame" x="0.0" y="0.0" width="67" height="56"/>
+                                                        <connections>
+                                                            <action selector="actionSelectTimeWithSender:" destination="G9h-yb-vWj" eventType="touchUpInside" id="7xD-oJ-CmD"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -77,15 +80,18 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tI-2P-kBP">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tI-2P-kBP">
                                                         <rect key="frame" x="0.0" y="56" width="67" height="4"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="4" id="bL8-gI-lkI"/>
                                                         </constraints>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcw-Zt-seB">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcw-Zt-seB">
                                                         <rect key="frame" x="0.0" y="0.0" width="67" height="56"/>
+                                                        <connections>
+                                                            <action selector="actionSelectTimeWithSender:" destination="G9h-yb-vWj" eventType="touchUpInside" id="R1j-14-U4k"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -110,15 +116,18 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nuf-vQ-b9f">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nuf-vQ-b9f">
                                                         <rect key="frame" x="0.0" y="56" width="67" height="4"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="4" id="OV7-A8-3Z9"/>
                                                         </constraints>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNR-ew-zFv">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNR-ew-zFv">
                                                         <rect key="frame" x="0.0" y="0.0" width="67" height="56"/>
+                                                        <connections>
+                                                            <action selector="actionSelectTimeWithSender:" destination="G9h-yb-vWj" eventType="touchUpInside" id="juy-pG-LN6"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -392,6 +401,9 @@
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCJ-vu-rM6">
                                                                 <rect key="frame" x="0.0" y="0.0" width="102.5" height="55"/>
+                                                                <connections>
+                                                                    <action selector="actionSelectRoutePriorityWithSender:" destination="G9h-yb-vWj" eventType="touchUpInside" id="MLC-D8-gAK"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -420,8 +432,11 @@
                                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZ5-Pd-W7Y">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZ5-Pd-W7Y">
                                                                 <rect key="frame" x="-2" y="0.0" width="105" height="55"/>
+                                                                <connections>
+                                                                    <action selector="actionSelectRoutePriorityWithSender:" destination="G9h-yb-vWj" eventType="touchUpInside" id="L8E-BQ-53c"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -450,8 +465,11 @@
                                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKY-wh-HF1">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKY-wh-HF1">
                                                                 <rect key="frame" x="0.0" y="0.0" width="102.5" height="55"/>
+                                                                <connections>
+                                                                    <action selector="actionSelectRoutePriorityWithSender:" destination="G9h-yb-vWj" eventType="touchUpInside" id="gRG-uI-bGX"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -547,6 +565,12 @@
                         <outletCollection property="timeButtons" destination="yjW-qd-OSp" collectionClass="NSMutableArray" id="QIF-Cd-8CS"/>
                         <outletCollection property="timeButtons" destination="wcw-Zt-seB" collectionClass="NSMutableArray" id="T0B-ms-3NC"/>
                         <outletCollection property="timeButtons" destination="XNR-ew-zFv" collectionClass="NSMutableArray" id="WRF-9B-ROg"/>
+                        <outletCollection property="priorityViews" destination="IPA-1Q-pwH" collectionClass="NSMutableArray" id="fsK-dM-KKT"/>
+                        <outletCollection property="priorityViews" destination="JFk-3l-hBz" collectionClass="NSMutableArray" id="1Je-Kf-szv"/>
+                        <outletCollection property="priorityViews" destination="Ybj-T4-Q9o" collectionClass="NSMutableArray" id="sOb-Lp-H0y"/>
+                        <outletCollection property="priorityLabels" destination="6Ob-Ub-5rb" collectionClass="NSMutableArray" id="u2E-MB-qak"/>
+                        <outletCollection property="priorityLabels" destination="wus-Go-cK4" collectionClass="NSMutableArray" id="iqC-xb-IYx"/>
+                        <outletCollection property="priorityLabels" destination="1hT-dw-bh8" collectionClass="NSMutableArray" id="vbo-KK-4lq"/>
                         <segue destination="egM-tx-RAw" kind="show" id="vRq-a5-Hnm"/>
                         <segue destination="QCw-Js-pt1" kind="show" id="qQv-XQ-lQu"/>
                     </connections>
