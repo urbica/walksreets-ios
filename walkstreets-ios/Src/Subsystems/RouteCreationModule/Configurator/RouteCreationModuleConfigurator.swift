@@ -20,6 +20,7 @@ class RouteCreationModuleModuleConfigurator {
     private func configure(viewController: RouteCreationModuleViewController) {
 
         let router = RouteCreationModuleRouter()
+        router.view = viewController
 
         let presenter = RouteCreationModulePresenter()
         presenter.view = viewController

@@ -8,4 +8,11 @@
 
 class RouteCreationModuleRouter: RouteCreationModuleRouterInput {
 
+    weak var view: RouteCreationModuleViewController?
+    
+    func openAbout() {
+        view?.performSegue(withIdentifier: "openAbout", sender: nil)
+    }
+    
+    
 }

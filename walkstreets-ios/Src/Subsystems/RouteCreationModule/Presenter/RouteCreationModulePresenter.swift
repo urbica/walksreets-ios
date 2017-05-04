@@ -64,4 +64,8 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     func addPointTuple(pointTuple: (CLLocationCoordinate2D, CLLocationCoordinate2D)) {
         view.addPointTuple(pointTuple:pointTuple)
     }
+    
+    func openAbout() {
+        router.openAbout()
+    }
 }

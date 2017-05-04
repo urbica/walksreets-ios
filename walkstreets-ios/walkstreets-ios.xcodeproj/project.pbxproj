@@ -22,13 +22,19 @@
 		30FD557B1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD557A1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift */; };
 		30FD557E1DCE0CE300000A97 /* RouteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD557D1DCE0CE300000A97 /* RouteService.swift */; };
 		30FD55811DCE0D5900000A97 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD55801DCE0D5900000A97 /* LocationManager.swift */; };
+		5307848F0056AEC1DD01A210 /* AboutProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061EEE0F9E70D196A9F10334 /* AboutProtocols.swift */; };
 		63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D393807BF77BA3F32F88643 /* RouteCreationModuleInteractor.swift */; };
+		6A1FA1A1997B190C2CA98A19 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CFCAB5B63E57F7BECA4911 /* AboutViewController.swift */; };
 		72A2124729EC1AAC27070C3C /* RouteCreationModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552DDB458787869F10328D2 /* RouteCreationModuleConfigurator.swift */; };
+		8B9EF1F0C1123394DC3BD340 /* AboutConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A07B55A947D3B4C36EF54 /* AboutConfigurator.swift */; };
 		92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342EF44F078F8AB2C7963D16 /* RouteCreationModulePresenter.swift */; };
+		960E20EFE390E5F4DCFCFA2F /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283844FEC4424901696A8FA4 /* AboutPresenter.swift */; };
 		B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DA9A0C5667FCEE70CEB00 /* RouteCreationModuleRouter.swift */; };
 		B747C8FC21D87E01D5973FE5 /* RouteCreationModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */; };
 		D9B39AC1217ED510C5C4A351 /* Pods_walkstreets_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF62A8B0EC862CC8156F93C3 /* Pods_walkstreets_ios.framework */; };
 		E022832E1E95279D00B7AB3D /* StartScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E022832D1E95279D00B7AB3D /* StartScreen.storyboard */; };
+		E02B70901EBB2B7600379C76 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02B708F1EBB2B7600379C76 /* About.storyboard */; };
+		E02B70921EBB2DEA00379C76 /* CustomizableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02B70911EBB2DEA00379C76 /* CustomizableTextView.swift */; };
 		E058C0B61EB8BC0E00E981EB /* CustomizableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0B51EB8BC0E00E981EB /* CustomizableView.swift */; };
 		E058C0BE1EB8BF1300E981EB /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0BD1EB8BF1300E981EB /* UIColor+Helpers.swift */; };
 		E058C0BF1EB8C47200E981EB /* VremenaGrotesk.otf in Resources */ = {isa = PBXBuildFile; fileRef = E058C0B81EB8BD8C00E981EB /* VremenaGrotesk.otf */; };
@@ -60,7 +66,9 @@
 /* Begin PBXFileReference section */
 		042DA9A0C5667FCEE70CEB00 /* RouteCreationModuleRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleRouter.swift; sourceTree = "<group>"; };
 		0552DDB458787869F10328D2 /* RouteCreationModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleConfigurator.swift; sourceTree = "<group>"; };
+		061EEE0F9E70D196A9F10334 /* AboutProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutProtocols.swift; sourceTree = "<group>"; };
 		106FD96F22ECB96D84A20203 /* Pods-walkstreets-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walkstreets-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-walkstreets-ios/Pods-walkstreets-ios.release.xcconfig"; sourceTree = "<group>"; };
+		283844FEC4424901696A8FA4 /* AboutPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
 		306D415A1DCD2C1100043F86 /* walkstreets-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "walkstreets-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		306D415D1DCD2C1100043F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		306D41641DCD2C1100043F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,10 +91,14 @@
 		339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleViewController.swift; sourceTree = "<group>"; };
 		342EF44F078F8AB2C7963D16 /* RouteCreationModulePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModulePresenter.swift; sourceTree = "<group>"; };
 		5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleProtocols.swift; sourceTree = "<group>"; };
+		79CFCAB5B63E57F7BECA4911 /* AboutViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		7D393807BF77BA3F32F88643 /* RouteCreationModuleInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleInteractor.swift; sourceTree = "<group>"; };
+		807A07B55A947D3B4C36EF54 /* AboutConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutConfigurator.swift; sourceTree = "<group>"; };
 		CF62A8B0EC862CC8156F93C3 /* Pods_walkstreets_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_walkstreets_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42975D3FFAEEA4E4FFD169D /* Pods-walkstreets-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walkstreets-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-walkstreets-ios/Pods-walkstreets-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		E022832D1E95279D00B7AB3D /* StartScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartScreen.storyboard; sourceTree = "<group>"; };
+		E02B708F1EBB2B7600379C76 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		E02B70911EBB2DEA00379C76 /* CustomizableTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableTextView.swift; sourceTree = "<group>"; };
 		E058C0B51EB8BC0E00E981EB /* CustomizableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableView.swift; sourceTree = "<group>"; };
 		E058C0B81EB8BD8C00E981EB /* VremenaGrotesk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VremenaGrotesk.otf; sourceTree = "<group>"; };
 		E058C0B91EB8BD8C00E981EB /* VremenaGroteskBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VremenaGroteskBold.otf; sourceTree = "<group>"; };
@@ -125,10 +137,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0764E9B32E5DC264F689289A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				061EEE0F9E70D196A9F10334 /* AboutProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		306D41511DCD2C1100043F86 = {
 			isa = PBXGroup;
 			children = (
-				306D415C1DCD2C1100043F86 /* walkstreets_ios */,
+				62BC6B10E19030F57E87FC7A /* Src */,
+				306D41701DCD2C4E00043F86 /* App */,
+				306D416F1DCD2C2300043F86 /* SupportingFiles */,
 				30E5308B1DFC935000B717CA /* walkstreets-iosTests */,
 				306D415B1DCD2C1100043F86 /* Products */,
 				30FD55731DCDE70100000A97 /* Frameworks */,
@@ -145,17 +167,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		306D415C1DCD2C1100043F86 /* walkstreets_ios */ = {
-			isa = PBXGroup;
-			children = (
-				62BC6B10E19030F57E87FC7A /* Src */,
-				306D41701DCD2C4E00043F86 /* App */,
-				306D416F1DCD2C2300043F86 /* SupportingFiles */,
-			);
-			name = walkstreets_ios;
-			path = "walkstreets-ios";
-			sourceTree = "<group>";
-		};
 		306D416F1DCD2C2300043F86 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +176,7 @@
 				306D41691DCD2C1100043F86 /* Info.plist */,
 			);
 			name = SupportingFiles;
+			path = "walkstreets-ios";
 			sourceTree = "<group>";
 		};
 		306D41701DCD2C4E00043F86 /* App */ = {
@@ -174,6 +186,7 @@
 				306D41711DCD2C6300043F86 /* Config.swift */,
 			);
 			name = App;
+			path = "walkstreets-ios";
 			sourceTree = "<group>";
 		};
 		3075B6541DD069810096DFE7 /* Model */ = {
@@ -237,6 +250,7 @@
 			children = (
 				F71AFCEF88D307A4CE597BC0 /* RouteCreationModule */,
 				856095D59408619462511290 /* StartScreen */,
+				AC08AA12B957383CF8E68AE0 /* About */,
 			);
 			path = Subsystems;
 			sourceTree = "<group>";
@@ -257,8 +271,7 @@
 				4C48668F374B6EF1CD9DD512 /* Subsystems */,
 				3075B6541DD069810096DFE7 /* Model */,
 			);
-			name = Src;
-			path = ../Src;
+			path = Src;
 			sourceTree = "<group>";
 		};
 		66C6D368CC4617EB6AD89363 /* Pods */ = {
@@ -290,6 +303,14 @@
 			path = StartScreen;
 			sourceTree = "<group>";
 		};
+		88ED381B7FD15F457790ADB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				79CFCAB5B63E57F7BECA4911 /* AboutViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		946B3E32480AFE329CC2BC23 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +327,26 @@
 				5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AC08AA12B957383CF8E68AE0 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				E02B708F1EBB2B7600379C76 /* About.storyboard */,
+				88ED381B7FD15F457790ADB5 /* View */,
+				B5686E66532B46DDD637BE03 /* Presenter */,
+				EAA03A7E069979C9C2D32CC2 /* Configurator */,
+				0764E9B32E5DC264F689289A /* Protocols */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		B5686E66532B46DDD637BE03 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				283844FEC4424901696A8FA4 /* AboutPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		BE2EDA0CD0A902F53A3CFD27 /* Interactor */ = {
@@ -339,6 +380,7 @@
 				E058C0B51EB8BC0E00E981EB /* CustomizableView.swift */,
 				E058C0C31EB8C52400E981EB /* CustomizableLabel.swift */,
 				E058C0C51EB8C53D00E981EB /* CustomizableButton.swift */,
+				E02B70911EBB2DEA00379C76 /* CustomizableTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -384,6 +426,14 @@
 				E0E142DC1E954C41001C45BE /* StartScreenPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EAA03A7E069979C9C2D32CC2 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				807A07B55A947D3B4C36EF54 /* AboutConfigurator.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 		F71AFCEF88D307A4CE597BC0 /* RouteCreationModule */ = {
@@ -508,6 +558,7 @@
 				306D41681DCD2C1100043F86 /* LaunchScreen.storyboard in Resources */,
 				306D41651DCD2C1100043F86 /* Assets.xcassets in Resources */,
 				E058C0C11EB8C47900E981EB /* VremenaGroteskBook.otf in Resources */,
+				E02B70901EBB2B7600379C76 /* About.storyboard in Resources */,
 				E058C0C21EB8C47C00E981EB /* VremenaGroteskMedium.otf in Resources */,
 				30C8136E1DCD36EC00924001 /* RouteCreationModule.storyboard in Resources */,
 				E022832E1E95279D00B7AB3D /* StartScreen.storyboard in Resources */,
@@ -605,6 +656,7 @@
 				E058C0C61EB8C53D00E981EB /* CustomizableButton.swift in Sources */,
 				63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */,
 				E0E142E11E954C73001C45BE /* StartScreenProtocols.swift in Sources */,
+				E02B70921EBB2DEA00379C76 /* CustomizableTextView.swift in Sources */,
 				B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */,
 				E058C0B61EB8BC0E00E981EB /* CustomizableView.swift in Sources */,
 				E058C0C91EB8C57300E981EB /* GDC+Helpers.swift in Sources */,
@@ -615,6 +667,10 @@
 				3075B6561DD069B30096DFE7 /* RouteEntity.swift in Sources */,
 				E0C4F6661E8C06D3005C63C4 /* RootApiService.swift in Sources */,
 				30FD55811DCE0D5900000A97 /* LocationManager.swift in Sources */,
+				6A1FA1A1997B190C2CA98A19 /* AboutViewController.swift in Sources */,
+				960E20EFE390E5F4DCFCFA2F /* AboutPresenter.swift in Sources */,
+				8B9EF1F0C1123394DC3BD340 /* AboutConfigurator.swift in Sources */,
+				5307848F0056AEC1DD01A210 /* AboutProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

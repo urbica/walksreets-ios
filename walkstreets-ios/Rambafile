@@ -10,10 +10,10 @@ xcodeproj_path: walkstreets-ios.xcodeproj
 project_target: walkstreets-ios
 
 # The file path for new modules
-project_file_path: walkstreets_ios/Src/Subsystems/
+project_file_path: Src/Subsystems/
 
 # The Xcode group path to new modules
-project_group_path: walkstreets_ios/Src/Subsystems/
+project_group_path: Src/Subsystems/
 
 ### Dependencies settings section
 podfile_path: Podfile
