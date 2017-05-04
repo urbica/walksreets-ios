@@ -15,21 +15,12 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
         
         mapView.delegate = self
         mapView.showsUserLocation = true
-        // regular style
-        
-        if routeType == "regular" {
-            mapView.styleURL = RouteCreationModuleConstants.regularRouteStyle
-            routeType = "regular"
-        } else if routeType == "green" {
-            mapView.styleURL = RouteCreationModuleConstants.steplessRouteStyle
-            routeType = "green"
-        }
-        
-        // TODO: wide sidewalks later: mapbox://styles/walkstreets/cinr4p56q00bfc7m5vxorbwog
         
         mapView.setCenter(RouteCreationModuleConstants.moscowCenterCoordinate, zoomLevel: 13, animated: false)
         mapView.compassView.isHidden = true
-        setupTapMap()
+        
+        // Double tap later
+        //setupTapMap()
     }
     
     func setupTapMap() {

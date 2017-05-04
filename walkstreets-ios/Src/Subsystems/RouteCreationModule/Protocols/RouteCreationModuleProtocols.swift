@@ -16,10 +16,8 @@ protocol RouteCreationModuleViewInput: class {
     var routeType: String {get}
     
     func setupInitialState()
-    func openRouteDetailsView()
     func showRoute(polyline: AnyObject)
     func addPointTuple(pointTuple: (CLLocationCoordinate2D, CLLocationCoordinate2D))
-    func configureRouteDetailsView(address: String, street: String)
 }
 
 protocol RouteCreationModuleViewOutput {

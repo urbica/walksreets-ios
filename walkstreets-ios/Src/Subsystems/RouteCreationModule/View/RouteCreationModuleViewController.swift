@@ -14,22 +14,23 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     // main view
     @IBOutlet weak var mapView: MGLMapView!
     
-    // route details
+    // start route view
+    @IBOutlet weak var startRouteView: UIView!
+    
+    
+    // route time views
+    @IBOutlet weak var routeTimeView: UIView!
+    @IBOutlet var timeLabels: Array<UILabel>!
+    @IBOutlet var selectedTimeViews: Array<UIView>!
+    @IBOutlet var timeButtons: Array<UIButton>!
+    @IBOutlet weak var timeViewHeightConstraint: NSLayoutConstraint!
+    
+    // route detail view
     @IBOutlet weak var routeDetailsView: UIView!
-    @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var locationTypeLabel: UILabel!
+    @IBOutlet weak var lengthTimeLabel: UILabel!
     @IBOutlet weak var routeDetailsHeightConstraint: NSLayoutConstraint!
     
-    // route settings
-    @IBOutlet weak var routeSettingsView: UIView!
     
-    @IBOutlet weak var distanceLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var routeTimerStackView: UIStackView!
-    @IBOutlet weak var routeTypeView: UIView!
-    @IBOutlet weak var routeTypeViewHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var regularRouteButton: UIButton!
-    @IBOutlet weak var steplessRouteButton: UIButton!
     
     var output: RouteCreationModuleViewOutput!
     var routeType: String = "regular"
@@ -40,21 +41,20 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         super.viewDidLoad()
         RouteCreationModuleModuleConfigurator().configureModuleForViewInput(viewInput: self)
         output.viewIsReady()
-        //setupInitialState()
+        setupInitialState()
     }
 
 
     // MARK: RouteCreationModuleViewInput
     func setupInitialState() {
         routeDetailsHeightConstraint.constant = 0
+        timeViewHeightConstraint.constant = 0
+        
+        routeTimeView.isHidden = true
         routeDetailsView.isHidden = true
         setupMap()
     }
     
-    func configureRouteDetailsView(address: String, street: String) {
-        addressLabel.text = address
-        locationTypeLabel.text = street
-    }
 }
 
 extension RouteCreationModuleViewController {
@@ -64,29 +64,14 @@ extension RouteCreationModuleViewController {
     
     }
 
-    @IBAction func actionCloseRoutedetailsView(sender: AnyObject) {
-        if routeDetailsView.isHidden == false {
-            closeRouteDetailsView()
-        }
+    @IBAction func actionRouteDetailsView(sender: AnyObject) {
+        showRouteViews()
     }
     
-    @IBAction func actionShowCloseRouteSettings(sender: AnyObject) {
-        if routeTypeView.isHidden == true {
-            openRouteTypeView()
-        } else {
-            closeRouteTypeView()
-        }
+    @IBAction func closeRouteDetailsView(sender: AnyObject) {
+        hideRouteViews()
     }
     
-    @IBAction func actionStartroute(sender: AnyObject) {
-        if routeDetailsView.isHidden == true {
-            openRouteDetailsView()
-            if locationArray.count == 2 {
-                output.configureRouteDetailsWithEndPoint(endPoint: locationArray.first)
-            }
-        }
-        
-    }
     
     @IBAction func actionEditRoute(sender: AnyObject) {
         locationArray.removeAll()
@@ -95,17 +80,5 @@ extension RouteCreationModuleViewController {
         }
     }
     
-    @IBAction func chooseRegularRoute(sender: AnyObject) {
-        regularRouteButton.isHighlighted = true
-        steplessRouteButton.isHighlighted = false
-        routeType = "regular"
-        setupMap()
-    }
     
-    @IBAction func chooseSteplessRoute(sender: AnyObject) {
-        regularRouteButton.isHighlighted = false
-        steplessRouteButton.isHighlighted = true
-        routeType = "green"
-        setupMap()
-    }
 }

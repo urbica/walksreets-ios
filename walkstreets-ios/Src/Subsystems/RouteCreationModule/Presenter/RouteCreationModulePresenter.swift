@@ -46,7 +46,7 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
                 return
             }
             
-            self.view.configureRouteDetailsView(address: address as String, street: street as String)
+            //self.view.configureRouteDetailsView(address: address as String, street: street as String)
         })
         
         return true
