@@ -326,6 +326,9 @@
                                                 <real key="value" value="1.5700000000000001"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="actionOpenAboutWithSender:" destination="G9h-yb-vWj" eventType="touchUpInside" id="WER-9O-iiy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -571,7 +574,7 @@
                         <outletCollection property="priorityLabels" destination="6Ob-Ub-5rb" collectionClass="NSMutableArray" id="u2E-MB-qak"/>
                         <outletCollection property="priorityLabels" destination="wus-Go-cK4" collectionClass="NSMutableArray" id="iqC-xb-IYx"/>
                         <outletCollection property="priorityLabels" destination="1hT-dw-bh8" collectionClass="NSMutableArray" id="vbo-KK-4lq"/>
-                        <segue destination="egM-tx-RAw" kind="show" id="vRq-a5-Hnm"/>
+                        <segue destination="egM-tx-RAw" kind="show" identifier="openAbout" id="vRq-a5-Hnm"/>
                         <segue destination="QCw-Js-pt1" kind="show" id="qQv-XQ-lQu"/>
                     </connections>
                 </viewController>
@@ -579,13 +582,13 @@
             </objects>
             <point key="canvasLocation" x="1912.5" y="150"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--About-->
         <scene sceneID="o64-au-i2J">
             <objects>
-                <viewControllerPlaceholder id="egM-tx-RAw" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="About" id="egM-tx-RAw" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OM1-L1-udn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2585" y="83"/>
+            <point key="canvasLocation" x="2495" y="80"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="zUO-P6-f5x">

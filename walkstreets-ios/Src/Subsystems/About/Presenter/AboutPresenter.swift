@@ -6,6 +6,8 @@
 //  Copyright © 2017 Urbica. All rights reserved.
 //
 
+import Foundation
+
 class AboutPresenter: AboutViewOutput {
 
     weak var view: AboutViewInput!
@@ -13,4 +15,7 @@ class AboutPresenter: AboutViewOutput {
     func viewIsReady() {
 
     }
+    
+
+    
 }

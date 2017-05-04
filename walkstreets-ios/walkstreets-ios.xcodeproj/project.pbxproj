@@ -34,6 +34,7 @@
 		D9B39AC1217ED510C5C4A351 /* Pods_walkstreets_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF62A8B0EC862CC8156F93C3 /* Pods_walkstreets_ios.framework */; };
 		E022832E1E95279D00B7AB3D /* StartScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E022832D1E95279D00B7AB3D /* StartScreen.storyboard */; };
 		E02B70901EBB2B7600379C76 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02B708F1EBB2B7600379C76 /* About.storyboard */; };
+		E02B70921EBB2DEA00379C76 /* CustomizableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02B70911EBB2DEA00379C76 /* CustomizableTextView.swift */; };
 		E058C0B61EB8BC0E00E981EB /* CustomizableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0B51EB8BC0E00E981EB /* CustomizableView.swift */; };
 		E058C0BE1EB8BF1300E981EB /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0BD1EB8BF1300E981EB /* UIColor+Helpers.swift */; };
 		E058C0BF1EB8C47200E981EB /* VremenaGrotesk.otf in Resources */ = {isa = PBXBuildFile; fileRef = E058C0B81EB8BD8C00E981EB /* VremenaGrotesk.otf */; };
@@ -97,6 +98,7 @@
 		D42975D3FFAEEA4E4FFD169D /* Pods-walkstreets-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walkstreets-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-walkstreets-ios/Pods-walkstreets-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		E022832D1E95279D00B7AB3D /* StartScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartScreen.storyboard; sourceTree = "<group>"; };
 		E02B708F1EBB2B7600379C76 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		E02B70911EBB2DEA00379C76 /* CustomizableTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableTextView.swift; sourceTree = "<group>"; };
 		E058C0B51EB8BC0E00E981EB /* CustomizableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableView.swift; sourceTree = "<group>"; };
 		E058C0B81EB8BD8C00E981EB /* VremenaGrotesk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VremenaGrotesk.otf; sourceTree = "<group>"; };
 		E058C0B91EB8BD8C00E981EB /* VremenaGroteskBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VremenaGroteskBold.otf; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 				E058C0B51EB8BC0E00E981EB /* CustomizableView.swift */,
 				E058C0C31EB8C52400E981EB /* CustomizableLabel.swift */,
 				E058C0C51EB8C53D00E981EB /* CustomizableButton.swift */,
+				E02B70911EBB2DEA00379C76 /* CustomizableTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 				E058C0C61EB8C53D00E981EB /* CustomizableButton.swift in Sources */,
 				63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */,
 				E0E142E11E954C73001C45BE /* StartScreenProtocols.swift in Sources */,
+				E02B70921EBB2DEA00379C76 /* CustomizableTextView.swift in Sources */,
 				B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */,
 				E058C0B61EB8BC0E00E981EB /* CustomizableView.swift in Sources */,
 				E058C0C91EB8C57300E981EB /* GDC+Helpers.swift in Sources */,

@@ -90,6 +90,10 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         self.selectedTimeIndex = index
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+    }
 }
 
 extension RouteCreationModuleViewController {
@@ -113,6 +117,10 @@ extension RouteCreationModuleViewController {
     
     @IBAction func closeRouteDetailsView(sender: AnyObject) {
         hideRouteViews()
+    }
+    
+    @IBAction func actionOpenAbout(sender: AnyObject) {
+        output.openAbout()
     }
     
     
