@@ -20,6 +20,7 @@ class AddressSearchModuleConfigurator {
     private func configure(viewController: AddressSearchViewController) {
 
         let router = AddressSearchRouter()
+        router.view = viewController
 
         let presenter = AddressSearchPresenter()
         presenter.view = viewController

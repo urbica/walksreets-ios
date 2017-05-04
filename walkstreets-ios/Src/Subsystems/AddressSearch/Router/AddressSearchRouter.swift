@@ -8,4 +8,11 @@
 
 class AddressSearchRouter: AddressSearchRouterInput {
 
+    weak var view: AddressSearchViewController?
+    
+    func actionBack() {
+        view?.navigationController?.popViewController(animated: true)
+    }
+    
+    
 }

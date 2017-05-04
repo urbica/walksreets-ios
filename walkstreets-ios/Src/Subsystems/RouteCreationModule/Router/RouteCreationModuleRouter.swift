@@ -14,5 +14,8 @@ class RouteCreationModuleRouter: RouteCreationModuleRouterInput {
         view?.performSegue(withIdentifier: "openAbout", sender: nil)
     }
     
+    func openSearch() {
+        view?.performSegue(withIdentifier: "openSearch", sender: nil)
+    }
     
 }

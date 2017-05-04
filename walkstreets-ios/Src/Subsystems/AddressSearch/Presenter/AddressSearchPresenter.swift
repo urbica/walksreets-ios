@@ -15,4 +15,8 @@ class AddressSearchPresenter: AddressSearchModuleInput, AddressSearchViewOutput,
     func viewIsReady() {
 
     }
+    
+    func actionBack() {
+        router.actionBack()
+    }
 }

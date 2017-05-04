@@ -68,4 +68,8 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     func openAbout() {
         router.openAbout()
     }
+    
+    func openSearch() {
+        router.openSearch()
+    }
 }

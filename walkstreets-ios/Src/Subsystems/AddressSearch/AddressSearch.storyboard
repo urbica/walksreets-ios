@@ -13,10 +13,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Address Search View Controller-->
         <scene sceneID="bHc-FY-cQV">
             <objects>
-                <viewController id="bnG-6x-a93" sceneMemberID="viewController">
+                <viewController id="bnG-6x-a93" customClass="AddressSearchViewController" customModule="walkstreets_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TgG-QY-a82"/>
                         <viewControllerLayoutGuide type="bottom" id="akW-33-vcC"/>
@@ -32,13 +32,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CANCEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kyg-xF-lJ3">
-                                                <rect key="frame" x="10.5" y="37" width="59" height="14"/>
+                                                <rect key="frame" x="10.5" y="37.5" width="59" height="14"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FW0-RP-nkK">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="70"/>
+                                                <connections>
+                                                    <action selector="actionBackWithSender:" destination="bnG-6x-a93" eventType="touchUpInside" id="ODo-Jm-nle"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -56,7 +59,7 @@
                                         <rect key="frame" x="225" y="0.0" width="150" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POINT ON MAP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAW-rD-46q">
-                                                <rect key="frame" x="22.5" y="37" width="105" height="14"/>
+                                                <rect key="frame" x="23" y="37.5" width="105" height="14"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>

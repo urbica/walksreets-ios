@@ -99,10 +99,6 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
 extension RouteCreationModuleViewController {
     // MARK : actions
     
-    @IBAction func actionFindUserLocation(sender: AnyObject) {
-    
-    }
-    
     @IBAction func actionSelectTime(sender: UIButton) {
         updateSelectedTime(index: sender.tag)
     }
@@ -117,6 +113,10 @@ extension RouteCreationModuleViewController {
     
     @IBAction func closeRouteDetailsView(sender: AnyObject) {
         hideRouteViews()
+    }
+    
+    @IBAction func actionOpenSearch(sender: AnyObject) {
+        output.openSearch()
     }
     
     @IBAction func actionOpenAbout(sender: AnyObject) {

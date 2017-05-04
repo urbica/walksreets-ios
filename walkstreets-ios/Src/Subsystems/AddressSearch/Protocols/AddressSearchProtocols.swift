@@ -14,6 +14,7 @@ protocol AddressSearchViewInput: class {
 protocol AddressSearchViewOutput {
 
     func viewIsReady()
+    func actionBack()
 }
 
 protocol AddressSearchModuleInput: class {
@@ -29,5 +30,5 @@ protocol AddressSearchInteractorOutput: class {
 }
 
 protocol AddressSearchRouterInput {
-
+    func actionBack()
 }

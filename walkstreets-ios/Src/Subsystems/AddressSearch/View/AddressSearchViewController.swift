@@ -24,3 +24,11 @@ class AddressSearchViewController: UIViewController, AddressSearchViewInput {
     func setupInitialState() {
     }
 }
+
+extension AddressSearchViewController {
+    //MARK: actions
+    
+    @IBAction func actionBack(sender: AnyObject) {
+        output.actionBack()
+    }
+}
