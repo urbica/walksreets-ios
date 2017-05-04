@@ -10,7 +10,10 @@
 		0831A58BF9B0F4CEF0A32550 /* AddressSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30978BA783FA2AFCFC2DBD08 /* AddressSearchInteractor.swift */; };
 		16318C2A56C2D27F1A5A66AD /* AddressSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A52F8D1C9334185D70B5A0 /* AddressSearchPresenter.swift */; };
 		179C28D7EE35EAF4EFF76A2B /* AddressSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48795177FF9C29210DCF1098 /* AddressSearchRouter.swift */; };
+		19127D36028C7FA135753380 /* AddressPointInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD184C2015BE8EB98C77641 /* AddressPointInitializer.swift */; };
+		19BCB4F82ACD4BBC9B7A4125 /* AddressPointPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9872266730A6439ED8F37EB /* AddressPointPresenter.swift */; };
 		25D6E5956C3B6181E637B548 /* AddressSearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54AE4BEA1CCA121327F5967 /* AddressSearchProtocols.swift */; };
+		276F19702527E9378A8A2E65 /* AddressPointInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3915E3E5329A2A4F3A443 /* AddressPointInteractor.swift */; };
 		306D415E1DCD2C1100043F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D415D1DCD2C1100043F86 /* AppDelegate.swift */; };
 		306D41651DCD2C1100043F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 306D41641DCD2C1100043F86 /* Assets.xcassets */; };
 		306D41681DCD2C1100043F86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306D41661DCD2C1100043F86 /* LaunchScreen.storyboard */; };
@@ -34,9 +37,13 @@
 		8B9EF1F0C1123394DC3BD340 /* AboutConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A07B55A947D3B4C36EF54 /* AboutConfigurator.swift */; };
 		92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342EF44F078F8AB2C7963D16 /* RouteCreationModulePresenter.swift */; };
 		960E20EFE390E5F4DCFCFA2F /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283844FEC4424901696A8FA4 /* AboutPresenter.swift */; };
+		A00F3A654E088FDEC92458F1 /* AddressPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECF8AA8FAB81349AFEB4BC6 /* AddressPointViewController.swift */; };
+		B43E9393F4861E965D635E0A /* AddressPointConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D650CF947229325031A05ED /* AddressPointConfigurator.swift */; };
 		B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DA9A0C5667FCEE70CEB00 /* RouteCreationModuleRouter.swift */; };
 		B747C8FC21D87E01D5973FE5 /* RouteCreationModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */; };
+		C225BC6A1B91D9763A4CFA99 /* AddressPointRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFA5594D1CE4F888B8AF8C8 /* AddressPointRouter.swift */; };
 		D3EAF393C21361678ABD0218 /* AddressSearchConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB35B9503B06A0A18391D68 /* AddressSearchConfigurator.swift */; };
+		D404E4669FBB44F91AC14072 /* AddressPointProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC315C2E75BF88764510E78 /* AddressPointProtocols.swift */; };
 		D9B39AC1217ED510C5C4A351 /* Pods_walkstreets_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF62A8B0EC862CC8156F93C3 /* Pods_walkstreets_ios.framework */; };
 		E022832E1E95279D00B7AB3D /* StartScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E022832D1E95279D00B7AB3D /* StartScreen.storyboard */; };
 		E02B70901EBB2B7600379C76 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02B708F1EBB2B7600379C76 /* About.storyboard */; };
@@ -77,6 +84,7 @@
 		0552DDB458787869F10328D2 /* RouteCreationModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleConfigurator.swift; sourceTree = "<group>"; };
 		061EEE0F9E70D196A9F10334 /* AboutProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutProtocols.swift; sourceTree = "<group>"; };
 		106FD96F22ECB96D84A20203 /* Pods-walkstreets-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walkstreets-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-walkstreets-ios/Pods-walkstreets-ios.release.xcconfig"; sourceTree = "<group>"; };
+		1ECF8AA8FAB81349AFEB4BC6 /* AddressPointViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressPointViewController.swift; sourceTree = "<group>"; };
 		283844FEC4424901696A8FA4 /* AboutPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
 		2EB35B9503B06A0A18391D68 /* AddressSearchConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchConfigurator.swift; sourceTree = "<group>"; };
 		306D415A1DCD2C1100043F86 /* walkstreets-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "walkstreets-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,15 +110,21 @@
 		339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleViewController.swift; sourceTree = "<group>"; };
 		342EF44F078F8AB2C7963D16 /* RouteCreationModulePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModulePresenter.swift; sourceTree = "<group>"; };
 		37A52F8D1C9334185D70B5A0 /* AddressSearchPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchPresenter.swift; sourceTree = "<group>"; };
+		43C3915E3E5329A2A4F3A443 /* AddressPointInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressPointInteractor.swift; sourceTree = "<group>"; };
 		48795177FF9C29210DCF1098 /* AddressSearchRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchRouter.swift; sourceTree = "<group>"; };
 		55ED4AA49E3F290998D8FFF1 /* AddressSearchViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchViewController.swift; sourceTree = "<group>"; };
 		5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleProtocols.swift; sourceTree = "<group>"; };
+		6FC315C2E75BF88764510E78 /* AddressPointProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressPointProtocols.swift; sourceTree = "<group>"; };
 		79CFCAB5B63E57F7BECA4911 /* AboutViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		7D393807BF77BA3F32F88643 /* RouteCreationModuleInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleInteractor.swift; sourceTree = "<group>"; };
 		807A07B55A947D3B4C36EF54 /* AboutConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutConfigurator.swift; sourceTree = "<group>"; };
+		8D650CF947229325031A05ED /* AddressPointConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressPointConfigurator.swift; sourceTree = "<group>"; };
+		9DD184C2015BE8EB98C77641 /* AddressPointInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressPointInitializer.swift; sourceTree = "<group>"; };
 		C54AE4BEA1CCA121327F5967 /* AddressSearchProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchProtocols.swift; sourceTree = "<group>"; };
 		CF62A8B0EC862CC8156F93C3 /* Pods_walkstreets_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_walkstreets_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42975D3FFAEEA4E4FFD169D /* Pods-walkstreets-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walkstreets-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-walkstreets-ios/Pods-walkstreets-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		D9872266730A6439ED8F37EB /* AddressPointPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressPointPresenter.swift; sourceTree = "<group>"; };
+		DEFA5594D1CE4F888B8AF8C8 /* AddressPointRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressPointRouter.swift; sourceTree = "<group>"; };
 		E022832D1E95279D00B7AB3D /* StartScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartScreen.storyboard; sourceTree = "<group>"; };
 		E02B708F1EBB2B7600379C76 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		E02B70911EBB2DEA00379C76 /* CustomizableTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableTextView.swift; sourceTree = "<group>"; };
@@ -161,6 +175,15 @@
 				061EEE0F9E70D196A9F10334 /* AboutProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		181F00B62EC35F905F09E7D1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				43C3915E3E5329A2A4F3A443 /* AddressPointInteractor.swift */,
+			);
+			name = Interactor;
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		222D46650C9ED6E6110B1B9E /* Protocols */ = {
@@ -294,6 +317,7 @@
 				856095D59408619462511290 /* StartScreen */,
 				AC08AA12B957383CF8E68AE0 /* About */,
 				6B2CD48A3A0F49F845635187 /* AddressSearch */,
+				B545B93FD05502EB079F3EFC /* AddressPoint */,
 			);
 			path = Subsystems;
 			sourceTree = "<group>";
@@ -357,6 +381,15 @@
 			path = AddressSearch;
 			sourceTree = "<group>";
 		};
+		8088C2FFB00E3B73B3906D8A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DEFA5594D1CE4F888B8AF8C8 /* AddressPointRouter.swift */,
+			);
+			name = Router;
+			path = Router;
+			sourceTree = "<group>";
+		};
 		856095D59408619462511290 /* StartScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +407,15 @@
 			children = (
 				79CFCAB5B63E57F7BECA4911 /* AboutViewController.swift */,
 			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		90CF1449DF88D28122B471B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1ECF8AA8FAB81349AFEB4BC6 /* AddressPointViewController.swift */,
+			);
+			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -395,6 +437,24 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		A2230D3F183281CFC2897642 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D9872266730A6439ED8F37EB /* AddressPointPresenter.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A2C8FFC7AAD52F178CA26250 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6FC315C2E75BF88764510E78 /* AddressPointProtocols.swift */,
+			);
+			name = Protocols;
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		AC08AA12B957383CF8E68AE0 /* About */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +465,30 @@
 				0764E9B32E5DC264F689289A /* Protocols */,
 			);
 			path = About;
+			sourceTree = "<group>";
+		};
+		AEFB022D3E41B05E91923A6A /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				8D650CF947229325031A05ED /* AddressPointConfigurator.swift */,
+				9DD184C2015BE8EB98C77641 /* AddressPointInitializer.swift */,
+			);
+			name = Configurator;
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		B545B93FD05502EB079F3EFC /* AddressPoint */ = {
+			isa = PBXGroup;
+			children = (
+				90CF1449DF88D28122B471B9 /* View */,
+				A2230D3F183281CFC2897642 /* Presenter */,
+				181F00B62EC35F905F09E7D1 /* Interactor */,
+				8088C2FFB00E3B73B3906D8A /* Router */,
+				AEFB022D3E41B05E91923A6A /* Configurator */,
+				A2C8FFC7AAD52F178CA26250 /* Protocols */,
+			);
+			name = AddressPoint;
+			path = AddressPoint;
 			sourceTree = "<group>";
 		};
 		B5686E66532B46DDD637BE03 /* Presenter */ = {
@@ -771,6 +855,13 @@
 				179C28D7EE35EAF4EFF76A2B /* AddressSearchRouter.swift in Sources */,
 				D3EAF393C21361678ABD0218 /* AddressSearchConfigurator.swift in Sources */,
 				25D6E5956C3B6181E637B548 /* AddressSearchProtocols.swift in Sources */,
+				A00F3A654E088FDEC92458F1 /* AddressPointViewController.swift in Sources */,
+				19BCB4F82ACD4BBC9B7A4125 /* AddressPointPresenter.swift in Sources */,
+				276F19702527E9378A8A2E65 /* AddressPointInteractor.swift in Sources */,
+				C225BC6A1B91D9763A4CFA99 /* AddressPointRouter.swift in Sources */,
+				B43E9393F4861E965D635E0A /* AddressPointConfigurator.swift in Sources */,
+				19127D36028C7FA135753380 /* AddressPointInitializer.swift in Sources */,
+				D404E4669FBB44F91AC14072 /* AddressPointProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
