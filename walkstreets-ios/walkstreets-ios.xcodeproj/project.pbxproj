@@ -66,6 +66,7 @@
 		E0E142DF1E954C56001C45BE /* StartScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142DE1E954C56001C45BE /* StartScreenConfigurator.swift */; };
 		E0E142E11E954C73001C45BE /* StartScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142E01E954C73001C45BE /* StartScreenProtocols.swift */; };
 		E0E142E31E954CAD001C45BE /* StartScreenConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142E21E954CAD001C45BE /* StartScreenConstants.swift */; };
+		E0FDE0861EC0598900E09D7F /* AddressSearchViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FDE0851EC0598900E09D7F /* AddressSearchViewController+UITableView.swift */; };
 		F099800B9560E696761BDEAF /* RouteCreationModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -146,6 +147,7 @@
 		E0E142DE1E954C56001C45BE /* StartScreenConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenConfigurator.swift; sourceTree = "<group>"; };
 		E0E142E01E954C73001C45BE /* StartScreenProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenProtocols.swift; sourceTree = "<group>"; };
 		E0E142E21E954CAD001C45BE /* StartScreenConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenConstants.swift; sourceTree = "<group>"; };
+		E0FDE0851EC0598900E09D7F /* AddressSearchViewController+UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddressSearchViewController+UITableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				55ED4AA49E3F290998D8FFF1 /* AddressSearchViewController.swift */,
+				E0FDE0851EC0598900E09D7F /* AddressSearchViewController+UITableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -851,6 +854,7 @@
 				25D6E5956C3B6181E637B548 /* AddressSearchProtocols.swift in Sources */,
 				A00F3A654E088FDEC92458F1 /* AddressPointViewController.swift in Sources */,
 				19BCB4F82ACD4BBC9B7A4125 /* AddressPointPresenter.swift in Sources */,
+				E0FDE0861EC0598900E09D7F /* AddressSearchViewController+UITableView.swift in Sources */,
 				276F19702527E9378A8A2E65 /* AddressPointInteractor.swift in Sources */,
 				C225BC6A1B91D9763A4CFA99 /* AddressPointRouter.swift in Sources */,
 				B43E9393F4861E965D635E0A /* AddressPointConfigurator.swift in Sources */,

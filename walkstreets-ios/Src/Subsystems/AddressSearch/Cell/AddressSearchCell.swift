@@ -8,7 +8,9 @@
 
 import UIKit
 
-class AddressSearchCell: UITableViewCell {
+final class AddressSearchCell: UITableViewCell {
+    
+    @IBOutlet weak var titleLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +21,11 @@ class AddressSearchCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    
+    func setItemLabel(text: String) {
+        titleLabel.text = text
     }
 
 }

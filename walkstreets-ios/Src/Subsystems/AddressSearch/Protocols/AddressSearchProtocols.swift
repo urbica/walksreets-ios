@@ -6,15 +6,21 @@
 //  Copyright © 2017 Urbica. All rights reserved.
 //
 
+import Foundation
+
 protocol AddressSearchViewInput: class {
 
     func setupInitialState()
+    func reloadData()
 }
 
 protocol AddressSearchViewOutput {
-
+    
+    var matchingItems: NSArray? {get}
+    
     func viewIsReady()
     func actionBack()
+    func searchTextChanged(text: String)
 }
 
 protocol AddressSearchModuleInput: class {
