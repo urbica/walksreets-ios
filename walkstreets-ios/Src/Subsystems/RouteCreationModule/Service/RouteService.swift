@@ -25,4 +25,19 @@ class RouteService: RootApiService {
         }
         
     }
+    
+    func walkMeAround(userCoordinates:CLLocationCoordinate2D, completionHandler: @escaping()->()) {
+        
+        let parameters: [String: Any] = [
+            "x": userCoordinates.longitude,
+            "y": userCoordinates.latitude,
+            "time": 60
+        ]
+        
+        getData(method: .post, endpoint: Config.beatifulPath, parameters: parameters, encoding: JSONEncoding.default, headers: nil, completionHandler: { (response) in
+            print(response)
+        }) { (error) in
+            print(error)
+        }
+    }
 }

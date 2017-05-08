@@ -108,7 +108,7 @@ extension RouteCreationModuleViewController {
     }
 
     @IBAction func actionRouteDetailsView(sender: AnyObject) {
-        showRouteViews()
+        output.walkMeAround()
     }
     
     @IBAction func closeRouteDetailsView(sender: AnyObject) {

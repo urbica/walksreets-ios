@@ -45,4 +45,10 @@ class RouteCreationModuleInteractor: RouteCreationModuleInteractorInput {
             }
         }
     }
+    
+    func walkMeAround(coordinates: CLLocationCoordinate2D) {
+        routeService.walkMeAround(userCoordinates: coordinates) {
+            
+        }
+    }
 }

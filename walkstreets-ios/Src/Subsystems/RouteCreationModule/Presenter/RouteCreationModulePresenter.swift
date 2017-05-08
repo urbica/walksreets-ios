@@ -53,6 +53,10 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
 
     }
     
+    func walkMeAround() {
+        interactor.walkMeAround(coordinates: Location.core.getCoordinate())
+    }
+    
     func configureRoute(startPoint: (latitude: Double, longtitude: Double), endPoint: (latitude: Double, longitude: Double)) {
         interactor.configureRoute(startPoint: startPoint, endPoint: endPoint, type: routeType)
     }

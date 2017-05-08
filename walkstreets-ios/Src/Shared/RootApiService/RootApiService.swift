@@ -30,11 +30,18 @@ class RootApiService {
     
     let host: String = Config.prodApiPoint
     
-    func getData(method: Alamofire.HTTPMethod = .post, endpoint: String, parameters: [String: Any]? = nil, encoding: URLEncoding? = nil ,headers: HTTPHeaders? = nil, completionHandler: @escaping (APIResponse)->(), errorHandler: ((String) -> ())? = nil) {
+    func getData(method: Alamofire.HTTPMethod = .post, endpoint: String, parameters: [String: Any]? = nil, encoding: ParameterEncoding? = nil ,headers: HTTPHeaders? = nil, completionHandler: @escaping (APIResponse)->(), errorHandler: ((String) -> ())? = nil) {
         
         let url: String = host + endpoint
         
-        Alamofire.request(url, method: method, parameters: parameters, headers: headers).response(queue: queue, responseSerializer: DataRequest.jsonResponseSerializer()) { (response) in
+        var encoding = encoding
+        
+        //TODO: refactor encoding
+        if encoding == nil {
+            encoding = URLEncoding.default
+        }
+        
+        Alamofire.request(url, method: method, parameters: parameters, encoding: encoding!, headers: headers).response(queue: queue, responseSerializer: DataRequest.jsonResponseSerializer()) { (response) in
             
             if response.result.isFailure == true {
                 let error = response.result.error
@@ -82,3 +89,4 @@ class RootApiService {
         
     }
 }
+
