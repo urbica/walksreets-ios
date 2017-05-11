@@ -18,6 +18,12 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     var routeType: String {
          return view.routeType
     }
+    
+    var routes = NSArray() {
+        didSet {
+            view.showRouteAtIndex(index: 0)
+        }
+    }
 
     func viewIsReady() {
 
@@ -55,6 +61,10 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     
     func walkMeAround() {
         interactor.walkMeAround(coordinates: Location.core.getCoordinate())
+    }
+    
+    func setRoutes(routes: NSArray) {
+        self.routes = routes
     }
     
     func configureRoute(startPoint: (latitude: Double, longtitude: Double), endPoint: (latitude: Double, longitude: Double)) {

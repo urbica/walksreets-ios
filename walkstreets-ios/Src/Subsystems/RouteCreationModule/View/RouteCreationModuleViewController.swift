@@ -90,6 +90,10 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         self.selectedTimeIndex = index
     }
     
+    func showRouteAtIndex(index: Int) {
+        
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         

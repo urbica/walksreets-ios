@@ -86,7 +86,10 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
     }
     
     func showRoute(polyline: AnyObject) {
-        mapView.addAnnotation(polyline as! MGLPolyline)
+        if let polyline = polyline as? [CustomAnnotation] {
+            showRouteViews()
+            mapView.add(polyline)
+        }
     }
     
     func mapView(_ mapView: MGLMapView, strokeColorForShapeAnnotation annotation: MGLShape) -> UIColor {

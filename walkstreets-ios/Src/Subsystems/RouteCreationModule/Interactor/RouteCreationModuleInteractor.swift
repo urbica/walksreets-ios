@@ -47,8 +47,29 @@ class RouteCreationModuleInteractor: RouteCreationModuleInteractorInput {
     }
     
     func walkMeAround(coordinates: CLLocationCoordinate2D) {
-        routeService.walkMeAround(userCoordinates: coordinates) {
+        routeService.walkMeAround(userCoordinates: coordinates) { [weak self] routes in
+            self?.output.setRoutes(routes: routes)
+            self?.drawShapes(features: routes)
+        }
+    }
+    
+    func drawShapes(features: NSArray) {
+        
+        if let features = features as? [Feature] {
             
+            var multyPolylines: [CustomAnnotation]? = []
+            for feature in features {
+                let polyline = CustomAnnotation(coordinates: feature.coordinates!, count: UInt((feature.coordinates?.count)!))
+                if feature.color != nil {
+                    polyline.color = UIColor.green
+                } else {
+                    polyline.color = UIColor.black
+                }
+                multyPolylines?.append(polyline)
+            }
+            DispatchQueue.main.async {
+                self.output.showRoute(polyline: multyPolylines as AnyObject)
+            }
         }
     }
 }

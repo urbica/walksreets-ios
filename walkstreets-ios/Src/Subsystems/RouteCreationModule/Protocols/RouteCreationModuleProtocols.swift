@@ -17,6 +17,7 @@ protocol RouteCreationModuleViewInput: class {
     
     func setupInitialState()
     func showRoute(polyline: AnyObject)
+    func showRouteAtIndex(index: Int)
     func addPointTuple(pointTuple: (CLLocationCoordinate2D, CLLocationCoordinate2D))
 }
 
@@ -41,6 +42,7 @@ protocol RouteCreationModuleInteractorInput {
 protocol RouteCreationModuleInteractorOutput: class {
     func addPointTuple(pointTuple: (CLLocationCoordinate2D, CLLocationCoordinate2D))
     func showRoute(polyline: AnyObject)
+    func setRoutes(routes: NSArray)
 }
 
 protocol RouteCreationModuleRouterInput {
