@@ -49,21 +49,21 @@ class RouteCreationModuleInteractor: RouteCreationModuleInteractorInput {
     func walkMeAround(coordinates: CLLocationCoordinate2D) {
         routeService.walkMeAround(userCoordinates: coordinates) { [weak self] routes in
             self?.output.setRoutes(routes: routes)
-            self?.drawShapes(features: routes)
+            self?.drawShapes(features: routes, index: 1)
         }
     }
     
-    func drawShapes(features: NSArray) {
-        
-        if let features = features as? [Feature] {
-            
+    func drawShapes(features: NSArray, index: Int) {
+        if let features = features[index] as? [Feature] {
             var multyPolylines: [CustomAnnotation]? = []
             for feature in features {
                 let polyline = CustomAnnotation(coordinates: feature.coordinates!, count: UInt((feature.coordinates?.count)!))
-                if feature.color != nil {
+                if feature.color == 1 {
                     polyline.color = UIColor.green
-                } else {
+                } else if feature.color == 2 {
                     polyline.color = UIColor.black
+                } else {
+                    polyline.color = UIColor.blue
                 }
                 multyPolylines?.append(polyline)
             }
