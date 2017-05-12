@@ -67,6 +67,10 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
         self.routes = routes
     }
     
+    func selectRouteAtIndex(index: Int) {
+        interactor.drawShapes(features: routes, index: index)
+    }
+    
     func configureRoute(startPoint: (latitude: Double, longtitude: Double), endPoint: (latitude: Double, longitude: Double)) {
         interactor.configureRoute(startPoint: startPoint, endPoint: endPoint, type: routeType)
     }

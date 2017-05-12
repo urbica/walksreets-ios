@@ -28,6 +28,7 @@ protocol RouteCreationModuleViewOutput {
     func configureRoute(startPoint: (latitude: Double, longtitude: Double), endPoint: (latitude: Double, longitude: Double))
     func viewIsReady()
     func configureRouteDetailsWithEndPoint(endPoint: CLLocationCoordinate2D?) -> Bool
+    func selectRouteAtIndex(index: Int)
 }
 
 protocol RouteCreationModuleModuleInput: class {
@@ -37,6 +38,7 @@ protocol RouteCreationModuleModuleInput: class {
 protocol RouteCreationModuleInteractorInput {
     func configureRoute(startPoint: (latitude: Double, longtitude: Double), endPoint: (latitude: Double, longitude: Double), type: String)
     func walkMeAround(coordinates: CLLocationCoordinate2D)
+    func drawShapes(features: NSArray, index: Int) 
 }
 
 protocol RouteCreationModuleInteractorOutput: class {
