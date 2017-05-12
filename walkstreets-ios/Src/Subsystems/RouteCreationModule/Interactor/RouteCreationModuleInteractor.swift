@@ -49,7 +49,7 @@ class RouteCreationModuleInteractor: RouteCreationModuleInteractorInput {
     func walkMeAround(coordinates: CLLocationCoordinate2D) {
         routeService.walkMeAround(userCoordinates: coordinates) { [weak self] routes in
             self?.output.setRoutes(routes: routes)
-            self?.drawShapes(features: routes, index: 2)
+            self?.drawShapes(features: routes, index: 0)
         }
     }
     

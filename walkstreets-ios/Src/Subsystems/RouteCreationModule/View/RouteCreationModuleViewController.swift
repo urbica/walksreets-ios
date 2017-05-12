@@ -74,6 +74,12 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         self.priorityViews[index].backgroundColor = UIColor.black
         self.priorityLabels[index].textColor = UIColor.white
         selectedPriorityIndex = index
+        
+        if let annotations = mapView.annotations {
+            mapView.removeAnnotations(annotations)
+        }
+        
+        output.selectRouteAtIndex(index: index)
     }
     
     func updateSelectedTime(index: Int) {
