@@ -693,7 +693,7 @@
 				TargetAttributes = {
 					306D41591DCD2C1100043F86 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = NVMU6WZ9AZ;
+						DevelopmentTeam = H3KT5D548J;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -1004,7 +1004,7 @@
 			baseConfigurationReference = D42975D3FFAEEA4E4FFD169D /* Pods-walkstreets-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = NVMU6WZ9AZ;
+				DEVELOPMENT_TEAM = H3KT5D548J;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -1023,7 +1023,7 @@
 			baseConfigurationReference = 106FD96F22ECB96D84A20203 /* Pods-walkstreets-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = NVMU6WZ9AZ;
+				DEVELOPMENT_TEAM = H3KT5D548J;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
