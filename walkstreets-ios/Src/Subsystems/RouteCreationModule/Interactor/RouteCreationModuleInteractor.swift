@@ -77,6 +77,7 @@ class RouteCreationModuleInteractor: RouteCreationModuleInteractorInput {
                 }
                 DispatchQueue.main.async {
                     self.output.showRoute(polyline: multyPolylines as AnyObject)
+                    self.output.updateRouteView(route: route as AnyObject)
                 }
             }
         }

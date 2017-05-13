@@ -15,9 +15,6 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     var router: RouteCreationModuleRouterInput!
     let geoCoder = CLGeocoder()
     
-    var routeType: String {
-         return view.routeType
-    }
     
     var routes = NSArray() {
         didSet {
@@ -88,11 +85,15 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     }
     
     func configureRoute(startPoint: (latitude: Double, longtitude: Double), endPoint: (latitude: Double, longitude: Double)) {
-        interactor.configureRoute(startPoint: startPoint, endPoint: endPoint, type: routeType)
+        //interactor.configureRoute(startPoint: startPoint, endPoint: endPoint, type: routeType)
     }
     
     func showRoute(polyline: AnyObject) {
         view.showRoute(polyline: polyline)
+    }
+    
+    func updateRouteView(route: AnyObject) {
+        view.updateRouteView(route: route)
     }
     
     func addPointTuple(pointTuple: (CLLocationCoordinate2D, CLLocationCoordinate2D)) {

@@ -116,6 +116,15 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         
     }
     
+    func updateRouteView(route: AnyObject) {
+        if let route = route as? Route {
+            
+            guard let length = route.length , let time = route.time else {return}
+            
+            self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) km • \(time) min"
+        }
+    }
+    
     func showRouteAtIndex(index: Int) {
         
     }
@@ -152,14 +161,4 @@ extension RouteCreationModuleViewController {
     @IBAction func actionOpenAbout(sender: AnyObject) {
         output.openAbout()
     }
-    
-    
-    @IBAction func actionEditRoute(sender: AnyObject) {
-        locationArray.removeAll()
-        if let annotaions = mapView.annotations {
-            mapView.removeAnnotations(annotaions)
-        }
-    }
-    
-    
 }

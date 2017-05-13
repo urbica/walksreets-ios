@@ -59,6 +59,7 @@
 		E058C0C41EB8C52400E981EB /* CustomizableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0C31EB8C52400E981EB /* CustomizableLabel.swift */; };
 		E058C0C61EB8C53D00E981EB /* CustomizableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0C51EB8C53D00E981EB /* CustomizableButton.swift */; };
 		E058C0C91EB8C57300E981EB /* GDC+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E058C0C81EB8C57300E981EB /* GDC+Helpers.swift */; };
+		E0AF81401EC7B761009FA7D1 /* Double+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AF813F1EC7B761009FA7D1 /* Double+Helpers.swift */; };
 		E0C4F6661E8C06D3005C63C4 /* RootApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C4F6651E8C06D3005C63C4 /* RootApiService.swift */; };
 		E0E142DB1E954C1D001C45BE /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142DA1E954C1D001C45BE /* StartScreenViewController.swift */; };
 		E0E142DD1E954C41001C45BE /* StartScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142DC1E954C41001C45BE /* StartScreenPresenter.swift */; };
@@ -141,6 +142,7 @@
 		E058C0C31EB8C52400E981EB /* CustomizableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableLabel.swift; sourceTree = "<group>"; };
 		E058C0C51EB8C53D00E981EB /* CustomizableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableButton.swift; sourceTree = "<group>"; };
 		E058C0C81EB8C57300E981EB /* GDC+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GDC+Helpers.swift"; sourceTree = "<group>"; };
+		E0AF813F1EC7B761009FA7D1 /* Double+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Helpers.swift"; sourceTree = "<group>"; };
 		E0C4F6651E8C06D3005C63C4 /* RootApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootApiService.swift; sourceTree = "<group>"; };
 		E0E142DA1E954C1D001C45BE /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		E0E142DC1E954C41001C45BE /* StartScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenPresenter.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 		30FD557F1DCE0D3200000A97 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E0AF813E1EC7B741009FA7D1 /* Double+Helpers */,
 				E058C0C71EB8C55500E981EB /* GDC+Helpers */,
 				E058C0BC1EB8BEF600E981EB /* UIColor+Helpers */,
 				E058C0B41EB8BBAA00E981EB /* Views */,
@@ -578,6 +581,14 @@
 			path = "GDC+Helpers";
 			sourceTree = "<group>";
 		};
+		E0AF813E1EC7B741009FA7D1 /* Double+Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E0AF813F1EC7B761009FA7D1 /* Double+Helpers.swift */,
+			);
+			path = "Double+Helpers";
+			sourceTree = "<group>";
+		};
 		E0C4F6641E8C06A4005C63C4 /* RootApiService */ = {
 			isa = PBXGroup;
 			children = (
@@ -824,6 +835,7 @@
 				306D41721DCD2C6300043F86 /* Config.swift in Sources */,
 				E02B70961EBB5F6B00379C76 /* CustomizableTextField.swift in Sources */,
 				E058C0BE1EB8BF1300E981EB /* UIColor+Helpers.swift in Sources */,
+				E0AF81401EC7B761009FA7D1 /* Double+Helpers.swift in Sources */,
 				30FD55791DCDED6C00000A97 /* RouteCreationModuleConstants.swift in Sources */,
 				E0E142DD1E954C41001C45BE /* StartScreenPresenter.swift in Sources */,
 				F099800B9560E696761BDEAF /* RouteCreationModuleViewController.swift in Sources */,

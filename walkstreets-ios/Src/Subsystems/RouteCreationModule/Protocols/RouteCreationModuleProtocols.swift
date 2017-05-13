@@ -12,12 +12,10 @@ import MapKit
 import Mapbox
 
 protocol RouteCreationModuleViewInput: class {
-    
-    var routeType: String {get}
-    
     func setupInitialState()
     func showRoute(polyline: AnyObject)
     func showRouteAtIndex(index: Int)
+    func updateRouteView(route: AnyObject)
     func addPointTuple(pointTuple: (CLLocationCoordinate2D, CLLocationCoordinate2D))
 }
 
@@ -53,6 +51,8 @@ protocol RouteCreationModuleInteractorOutput: class {
     func addPointTuple(pointTuple: (CLLocationCoordinate2D, CLLocationCoordinate2D))
     func showRoute(polyline: AnyObject)
     func setRoutes(routes: NSArray)
+    func updateRouteView(route: AnyObject)
+    
 }
 
 protocol RouteCreationModuleRouterInput {
