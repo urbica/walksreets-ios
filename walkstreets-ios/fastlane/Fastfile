@@ -17,7 +17,6 @@ platform :ios do
   end
 
   lane :sendTestFlight do
-    certSign
     build
     pilot(skip_waiting_for_build_processing: true)
   end
