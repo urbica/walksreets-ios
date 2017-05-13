@@ -19,7 +19,6 @@
 		306D41721DCD2C6300043F86 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D41711DCD2C6300043F86 /* Config.swift */; };
 		3075B64D1DD066630096DFE7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3075B64C1DD066630096DFE7 /* MapKit.framework */; };
 		3075B6561DD069B30096DFE7 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075B6551DD069B30096DFE7 /* Route.swift */; };
-		3075B6581DD06A370096DFE7 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075B6571DD06A370096DFE7 /* Duration.swift */; };
 		30C8136E1DCD36EC00924001 /* RouteCreationModule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C8136D1DCD36EC00924001 /* RouteCreationModule.storyboard */; };
 		30E530971DFC938200B717CA /* walkstreets_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E530961DFC938200B717CA /* walkstreets_iosTests.swift */; };
 		30FD55751DCDE70100000A97 /* Pods_walkstreets_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FD55741DCDE70100000A97 /* Pods_walkstreets_ios.framework */; };
@@ -66,7 +65,6 @@
 		E0E142DF1E954C56001C45BE /* StartScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142DE1E954C56001C45BE /* StartScreenConfigurator.swift */; };
 		E0E142E11E954C73001C45BE /* StartScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142E01E954C73001C45BE /* StartScreenProtocols.swift */; };
 		E0E142E31E954CAD001C45BE /* StartScreenConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142E21E954CAD001C45BE /* StartScreenConstants.swift */; };
-		E0E6898A1EC4A74600AF2765 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E689891EC4A74600AF2765 /* Geometry.swift */; };
 		E0E689901EC5095600AF2765 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E6898F1EC5095600AF2765 /* Feature.swift */; };
 		E0E689921EC50A2F00AF2765 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E689911EC50A2F00AF2765 /* CustomAnnotation.swift */; };
 		E0FDE0861EC0598900E09D7F /* AddressSearchViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FDE0851EC0598900E09D7F /* AddressSearchViewController+UITableView.swift */; };
@@ -99,7 +97,6 @@
 		306D41711DCD2C6300043F86 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		3075B64C1DD066630096DFE7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3075B6551DD069B30096DFE7 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
-		3075B6571DD06A370096DFE7 /* Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		30978BA783FA2AFCFC2DBD08 /* AddressSearchInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchInteractor.swift; sourceTree = "<group>"; };
 		30C8136D1DCD36EC00924001 /* RouteCreationModule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RouteCreationModule.storyboard; sourceTree = "<group>"; };
 		30E5308A1DFC935000B717CA /* walkstreets-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "walkstreets-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,7 +147,6 @@
 		E0E142DE1E954C56001C45BE /* StartScreenConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenConfigurator.swift; sourceTree = "<group>"; };
 		E0E142E01E954C73001C45BE /* StartScreenProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenProtocols.swift; sourceTree = "<group>"; };
 		E0E142E21E954CAD001C45BE /* StartScreenConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenConstants.swift; sourceTree = "<group>"; };
-		E0E689891EC4A74600AF2765 /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		E0E6898F1EC5095600AF2765 /* Feature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
 		E0E689911EC50A2F00AF2765 /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		E0FDE0851EC0598900E09D7F /* AddressSearchViewController+UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddressSearchViewController+UITableView.swift"; sourceTree = "<group>"; };
@@ -249,8 +245,6 @@
 			isa = PBXGroup;
 			children = (
 				3075B6551DD069B30096DFE7 /* Route.swift */,
-				3075B6571DD06A370096DFE7 /* Duration.swift */,
-				E0E689891EC4A74600AF2765 /* Geometry.swift */,
 				E0E6898F1EC5095600AF2765 /* Feature.swift */,
 			);
 			path = Model;
@@ -847,11 +841,9 @@
 				30FD55771DCDECF300000A97 /* RouteCreationModuleViewController+Maps.swift in Sources */,
 				72A2124729EC1AAC27070C3C /* RouteCreationModuleConfigurator.swift in Sources */,
 				B747C8FC21D87E01D5973FE5 /* RouteCreationModuleProtocols.swift in Sources */,
-				3075B6581DD06A370096DFE7 /* Duration.swift in Sources */,
 				3075B6561DD069B30096DFE7 /* Route.swift in Sources */,
 				E0E689921EC50A2F00AF2765 /* CustomAnnotation.swift in Sources */,
 				E0C4F6661E8C06D3005C63C4 /* RootApiService.swift in Sources */,
-				E0E6898A1EC4A74600AF2765 /* Geometry.swift in Sources */,
 				30FD55811DCE0D5900000A97 /* LocationManager.swift in Sources */,
 				6A1FA1A1997B190C2CA98A19 /* AboutViewController.swift in Sources */,
 				960E20EFE390E5F4DCFCFA2F /* AboutPresenter.swift in Sources */,

@@ -61,22 +61,23 @@ class RouteCreationModuleInteractor: RouteCreationModuleInteractorInput {
     func drawShapes(features: NSArray, index: Int) {
         
         let colors = RouteCreationModuleConstants.colorPickerForRoute(index: index)
-        
-        if let features = features[index] as? [Feature] {
-            var multyPolylines: [CustomAnnotation]? = []
-            for feature in features {
-                let polyline = CustomAnnotation(coordinates: feature.coordinates!, count: UInt((feature.coordinates?.count)!))
-                if feature.color == 1 {
-                    polyline.color = colors[0]
-                } else if feature.color == 2 {
-                    polyline.color = colors[1]
-                } else {
-                    polyline.color = colors[2]
+        if let route = features[index] as? Route {
+            if let features = route.features {
+                var multyPolylines: [CustomAnnotation]? = []
+                for feature in features {
+                    let polyline = CustomAnnotation(coordinates: feature.coordinates!, count: UInt((feature.coordinates?.count)!))
+                    if feature.color == 1 {
+                        polyline.color = colors[0]
+                    } else if feature.color == 2 {
+                        polyline.color = colors[1]
+                    } else {
+                        polyline.color = colors[2]
+                    }
+                    multyPolylines?.append(polyline)
                 }
-                multyPolylines?.append(polyline)
-            }
-            DispatchQueue.main.async {
-                self.output.showRoute(polyline: multyPolylines as AnyObject)
+                DispatchQueue.main.async {
+                    self.output.showRoute(polyline: multyPolylines as AnyObject)
+                }
             }
         }
     }

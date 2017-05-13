@@ -37,8 +37,12 @@ class RouteService: RootApiService {
         getData(method: .post, endpoint: Config.beatifulPath, parameters: parameters, encoding: JSONEncoding.default, headers: nil, completionHandler: { (response) in
 
             if let result = response.json.array {
-                let routes = (result.map { $0.dictionary?["geom"]?["features"].map { Feature(json: $0.1)}})
-                completionHandler(NSArray(array: routes))
+                
+                let newRoutes = result.map {
+                    Route(json: $0)
+                }
+                
+                completionHandler(NSArray(array: newRoutes))
             }
             
         }) { (error) in

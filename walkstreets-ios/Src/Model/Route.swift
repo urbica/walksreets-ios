@@ -13,16 +13,19 @@ class Route {
     var length: Double? = 0
     var time: Int? = 0
     var type: String? = nil
-    var geometry: Geometry? = nil
+    var features: [Feature]? = nil
     
     convenience init(json: JSON) {
         self.init()
         
+        self.features = json.dictionary?["geom"]?["features"].map { Feature(json: $0.1)}
+        
         self.length = json["length"].double
         self.time = json["time"].int
         self.type = json["type"].string
-        
-        self.geometry = Geometry(json: json["geom"])
+
     }
-    
 }
+
+
+
