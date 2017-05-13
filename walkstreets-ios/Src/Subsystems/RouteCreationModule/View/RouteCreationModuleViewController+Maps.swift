@@ -93,6 +93,7 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
     }
     
     func mapView(_ mapView: MGLMapView, strokeColorForShapeAnnotation annotation: MGLShape) -> UIColor {
+                
         if let annotation = annotation as? CustomAnnotation {
             return annotation.color ?? .orange
         } else {
@@ -101,7 +102,7 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
     }
     
     func mapView(_ mapView: MGLMapView, lineWidthForPolylineAnnotation annotation: MGLPolyline) -> CGFloat {
-        return 2.0
+        return 3.0
     }
     
     func mapView(_ mapView: MGLMapView, alphaForShapeAnnotation annotation: MGLShape) -> CGFloat {

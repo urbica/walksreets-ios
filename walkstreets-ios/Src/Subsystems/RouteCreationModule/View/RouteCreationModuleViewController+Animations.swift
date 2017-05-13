@@ -36,6 +36,10 @@ extension RouteCreationModuleViewController {
         }) { (bool) in
             self.routeTimeView.isHidden = true
             self.routeDetailsView.isHidden = true
+            self.output.clearRoutes()
+            if let annotations = self.mapView.annotations {
+                self.mapView.removeAnnotations(annotations)
+            }
         }
     }
 }

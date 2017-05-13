@@ -46,10 +46,15 @@ class RouteCreationModuleInteractor: RouteCreationModuleInteractorInput {
         }
     }
     
-    func walkMeAround(coordinates: CLLocationCoordinate2D) {
-        routeService.walkMeAround(userCoordinates: coordinates) { [weak self] routes in
+    func walkMeAround(coordinates: CLLocationCoordinate2D, time: Int) {
+        
+        let times = [30, 60, 90]
+        
+        routeService.walkMeAround(userCoordinates: coordinates, time: times[time]) { [weak self] routes in
             self?.output.setRoutes(routes: routes)
-            self?.drawShapes(features: routes, index: 0)
+            if let time = self?.output.timeIndex {
+                self?.drawShapes(features: routes, index: time)
+            }
         }
     }
     
