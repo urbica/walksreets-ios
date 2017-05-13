@@ -6,6 +6,23 @@ platform :ios do
   #
   # Learn more here: https://github.com/fastlane/setups/blob/master/samples-ios/distribute-beta-build.md 🚀
   #
+
+  lane :certSign do
+    cert
+    sigh(force: true)
+  end 
+
+  lane :build do
+    gym
+  end
+
+  lane :sendTestFlight do
+    certSign
+    build
+    pilot(skip_waiting_for_build_processing: true)
+  end
+
+
   lane :beta do |values|
     # Fabric generated this lane for deployment to Crashlytics Beta
     # set 'export_method' to 'ad-hoc' if your Crashlytics Beta distribution uses ad-hoc provisioning
