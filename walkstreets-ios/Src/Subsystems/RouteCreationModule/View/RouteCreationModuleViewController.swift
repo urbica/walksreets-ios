@@ -91,9 +91,29 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
             view.backgroundColor = UIColor.white
         }
         
+        for label in priorityLabels {
+            label.textColor = UIColor.black
+        }
+        
+        for view in priorityViews {
+            view.backgroundColor = UIColor.white
+        }
+        
+        self.priorityViews[0].backgroundColor = UIColor.black
+        self.priorityLabels[0].textColor = UIColor.white
+        selectedPriorityIndex = 1
+        
         self.selectedTimeViews[index].backgroundColor = UIColor.black
         self.timeLabels[index].font = UIFont(name: "VremenaGroteskMedium", size: 17)
         self.selectedTimeIndex = index
+        
+        
+        
+        output.walkMeAround(time: index)
+        if let annotations = mapView.annotations {
+            mapView.removeAnnotations(annotations)
+        }
+        
     }
     
     func showRouteAtIndex(index: Int) {
@@ -118,7 +138,7 @@ extension RouteCreationModuleViewController {
     }
 
     @IBAction func actionRouteDetailsView(sender: AnyObject) {
-        output.walkMeAround()
+        output.walkMeAround(time: 0)
     }
     
     @IBAction func closeRouteDetailsView(sender: AnyObject) {

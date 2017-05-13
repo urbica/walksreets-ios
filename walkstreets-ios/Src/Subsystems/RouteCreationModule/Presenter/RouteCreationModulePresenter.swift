@@ -21,7 +21,19 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     
     var routes = NSArray() {
         didSet {
-            view.showRouteAtIndex(index: 0)
+            //view.showRouteAtIndex(index: 0)
+        }
+    }
+    
+    var timeIndex: Int = 0 {
+        didSet {
+            //interactor.walkMeAround(coordinates: Location.core.getCoordinate(), time: timeIndex)
+        }
+    }
+    
+    var routeIndex: Int = 0 {
+        didSet {
+            //selectRouteAtIndex(index: routeIndex)
         }
     }
 
@@ -59,12 +71,16 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
 
     }
     
-    func walkMeAround() {
-        interactor.walkMeAround(coordinates: Location.core.getCoordinate())
+    func walkMeAround(time: Int) {
+        interactor.walkMeAround(coordinates: Location.core.getCoordinate(), time: time)
     }
     
     func setRoutes(routes: NSArray) {
         self.routes = routes
+    }
+    
+    func clearRoutes() {
+        self.routes = []
     }
     
     func selectRouteAtIndex(index: Int) {

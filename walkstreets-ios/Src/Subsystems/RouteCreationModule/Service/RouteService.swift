@@ -26,12 +26,12 @@ class RouteService: RootApiService {
         
     }
     
-    func walkMeAround(userCoordinates:CLLocationCoordinate2D, completionHandler: @escaping(NSArray)->()) {
+    func walkMeAround(userCoordinates:CLLocationCoordinate2D, time: Int, completionHandler: @escaping(NSArray)->()) {
         
         let parameters: [String: Any] = [
             "x": userCoordinates.longitude,
             "y": userCoordinates.latitude,
-            "time": 60
+            "time": time
         ]
         
         getData(method: .post, endpoint: Config.beatifulPath, parameters: parameters, encoding: JSONEncoding.default, headers: nil, completionHandler: { (response) in
