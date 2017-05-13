@@ -45,4 +45,39 @@ class RouteCreationModuleInteractor: RouteCreationModuleInteractorInput {
             }
         }
     }
+    
+    func walkMeAround(coordinates: CLLocationCoordinate2D, time: Int) {
+        
+        let times = [30, 60, 90]
+        
+        routeService.walkMeAround(userCoordinates: coordinates, time: times[time]) { [weak self] routes in
+            self?.output.setRoutes(routes: routes)
+            if let time = self?.output.timeIndex {
+                self?.drawShapes(features: routes, index: time)
+            }
+        }
+    }
+    
+    func drawShapes(features: NSArray, index: Int) {
+        
+        let colors = RouteCreationModuleConstants.colorPickerForRoute(index: index)
+        
+        if let features = features[index] as? [Feature] {
+            var multyPolylines: [CustomAnnotation]? = []
+            for feature in features {
+                let polyline = CustomAnnotation(coordinates: feature.coordinates!, count: UInt((feature.coordinates?.count)!))
+                if feature.color == 1 {
+                    polyline.color = colors[0]
+                } else if feature.color == 2 {
+                    polyline.color = colors[1]
+                } else {
+                    polyline.color = colors[2]
+                }
+                multyPolylines?.append(polyline)
+            }
+            DispatchQueue.main.async {
+                self.output.showRoute(polyline: multyPolylines as AnyObject)
+            }
+        }
+    }
 }

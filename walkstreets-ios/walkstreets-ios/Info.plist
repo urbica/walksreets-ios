@@ -18,10 +18,24 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>18d051be1a4381947d54cf113e55232abc9f408d</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MGLMapboxAccessToken</key>
-	<string>pk.eyJ1Ijoid2Fsa3N0cmVldHMiLCJhIjoiY2l2YzlldnoyMDA1dTJ0cGZ5ZDZnc2VtbCJ9.7qotpbSKCuh__h6N47v_ig</string>
+	<string>pk.eyJ1Ijoid2Fsa21hcCIsImEiOiJjaXI0d285eXIwMDR1aHRtOWQ3YWE3d2JtIn0.pqyo1f-gocUK9i819vmQBQ</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -31,6 +45,13 @@
 	<string>Please, give location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Please, give location</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>VremenaGroteskMedium.otf</string>
+		<string>VremenaGroteskBook.otf</string>
+		<string>VremenaGroteskBold.otf</string>
+		<string>VremenaGrotesk.otf</string>
+	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>

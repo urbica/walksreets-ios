@@ -6,7 +6,7 @@
 //  Copyright © 2016 Roman Ustiantcev. All rights reserved.
 //
 
-import MapKit
+import Mapbox
 import Alamofire
 import SwiftyJSON
 
@@ -24,5 +24,25 @@ class RouteService: RootApiService {
             print(error)
         }
         
+    }
+    
+    func walkMeAround(userCoordinates:CLLocationCoordinate2D, time: Int, completionHandler: @escaping(NSArray)->()) {
+        
+        let parameters: [String: Any] = [
+            "x": userCoordinates.longitude,
+            "y": userCoordinates.latitude,
+            "time": time
+        ]
+        
+        getData(method: .post, endpoint: Config.beatifulPath, parameters: parameters, encoding: JSONEncoding.default, headers: nil, completionHandler: { (response) in
+
+            if let result = response.json.array {
+                let routes = (result.map { $0.dictionary?["geom"]?["features"].map { Feature(json: $0.1)}})
+                completionHandler(NSArray(array: routes))
+            }
+            
+        }) { (error) in
+            print(error)
+        }
     }
 }

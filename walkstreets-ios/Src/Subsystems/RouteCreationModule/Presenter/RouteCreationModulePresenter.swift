@@ -18,6 +18,24 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     var routeType: String {
          return view.routeType
     }
+    
+    var routes = NSArray() {
+        didSet {
+            //view.showRouteAtIndex(index: 0)
+        }
+    }
+    
+    var timeIndex: Int = 0 {
+        didSet {
+            //interactor.walkMeAround(coordinates: Location.core.getCoordinate(), time: timeIndex)
+        }
+    }
+    
+    var routeIndex: Int = 0 {
+        didSet {
+            //selectRouteAtIndex(index: routeIndex)
+        }
+    }
 
     func viewIsReady() {
 
@@ -46,11 +64,27 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
                 return
             }
             
-            self.view.configureRouteDetailsView(address: address as String, street: street as String)
+            //self.view.configureRouteDetailsView(address: address as String, street: street as String)
         })
         
         return true
 
+    }
+    
+    func walkMeAround(time: Int) {
+        interactor.walkMeAround(coordinates: Location.core.getCoordinate(), time: time)
+    }
+    
+    func setRoutes(routes: NSArray) {
+        self.routes = routes
+    }
+    
+    func clearRoutes() {
+        self.routes = []
+    }
+    
+    func selectRouteAtIndex(index: Int) {
+        interactor.drawShapes(features: routes, index: index)
     }
     
     func configureRoute(startPoint: (latitude: Double, longtitude: Double), endPoint: (latitude: Double, longitude: Double)) {
@@ -63,5 +97,13 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     
     func addPointTuple(pointTuple: (CLLocationCoordinate2D, CLLocationCoordinate2D)) {
         view.addPointTuple(pointTuple:pointTuple)
+    }
+    
+    func openAbout() {
+        router.openAbout()
+    }
+    
+    func openSearch() {
+        router.openSearch()
     }
 }

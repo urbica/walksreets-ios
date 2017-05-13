@@ -15,21 +15,12 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
         
         mapView.delegate = self
         mapView.showsUserLocation = true
-        // regular style
-        
-        if routeType == "regular" {
-            mapView.styleURL = RouteCreationModuleConstants.regularRouteStyle
-            routeType = "regular"
-        } else if routeType == "green" {
-            mapView.styleURL = RouteCreationModuleConstants.steplessRouteStyle
-            routeType = "green"
-        }
-        
-        // TODO: wide sidewalks later: mapbox://styles/walkstreets/cinr4p56q00bfc7m5vxorbwog
         
         mapView.setCenter(RouteCreationModuleConstants.moscowCenterCoordinate, zoomLevel: 13, animated: false)
         mapView.compassView.isHidden = true
-        setupTapMap()
+        
+        // Double tap later
+        //setupTapMap()
     }
     
     func setupTapMap() {
@@ -95,15 +86,23 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
     }
     
     func showRoute(polyline: AnyObject) {
-        mapView.addAnnotation(polyline as! MGLPolyline)
+        if let polyline = polyline as? [CustomAnnotation] {
+            showRouteViews()
+            mapView.add(polyline)
+        }
     }
     
     func mapView(_ mapView: MGLMapView, strokeColorForShapeAnnotation annotation: MGLShape) -> UIColor {
-        return UIColor.red
+                
+        if let annotation = annotation as? CustomAnnotation {
+            return annotation.color ?? .orange
+        } else {
+            return UIColor.red
+        }
     }
     
     func mapView(_ mapView: MGLMapView, lineWidthForPolylineAnnotation annotation: MGLPolyline) -> CGFloat {
-        return 2.0
+        return 3.0
     }
     
     func mapView(_ mapView: MGLMapView, alphaForShapeAnnotation annotation: MGLShape) -> CGFloat {

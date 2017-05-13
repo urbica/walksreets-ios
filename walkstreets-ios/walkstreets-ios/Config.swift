@@ -10,8 +10,9 @@ import Foundation
 
 struct Config {
     
-    static let prodApiPoint = "http://www.basemap.ru/walk/api/rpc/"
+    static let prodApiPoint = "http://stuurman.urbica.co/"
     static let routeEndpoint = "get_route"
     static let greenEndpoint = "get_green_route"
+    static let beatifulPath = "beautiful_path"
     
 }

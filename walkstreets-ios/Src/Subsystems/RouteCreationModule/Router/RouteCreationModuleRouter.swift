@@ -8,4 +8,14 @@
 
 class RouteCreationModuleRouter: RouteCreationModuleRouterInput {
 
+    weak var view: RouteCreationModuleViewController?
+    
+    func openAbout() {
+        view?.performSegue(withIdentifier: "openAbout", sender: nil)
+    }
+    
+    func openSearch() {
+        view?.performSegue(withIdentifier: "openSearch", sender: nil)
+    }
+    
 }

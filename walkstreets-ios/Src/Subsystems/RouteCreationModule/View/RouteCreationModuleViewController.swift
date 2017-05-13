@@ -14,24 +14,32 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     // main view
     @IBOutlet weak var mapView: MGLMapView!
     
-    // route details
+    // start route view
+    @IBOutlet weak var startRouteView: UIView!
+    
+    
+    // route time views
+    @IBOutlet weak var routeTimeView: UIView!
+    @IBOutlet var timeLabels: Array<UILabel>!
+    @IBOutlet var selectedTimeViews: Array<UIView>!
+    @IBOutlet var timeButtons: Array<UIButton>!
+    @IBOutlet weak var timeViewHeightConstraint: NSLayoutConstraint!
+    
+    // route detail view
     @IBOutlet weak var routeDetailsView: UIView!
-    @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var locationTypeLabel: UILabel!
+    @IBOutlet weak var lengthTimeLabel: UILabel!
     @IBOutlet weak var routeDetailsHeightConstraint: NSLayoutConstraint!
     
-    // route settings
-    @IBOutlet weak var routeSettingsView: UIView!
+    // priority views
+    @IBOutlet var priorityViews: Array<CustomizableView>!
+    @IBOutlet var priorityLabels: Array<UILabel>!
     
-    @IBOutlet weak var distanceLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var routeTimerStackView: UIStackView!
-    @IBOutlet weak var routeTypeView: UIView!
-    @IBOutlet weak var routeTypeViewHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var regularRouteButton: UIButton!
-    @IBOutlet weak var steplessRouteButton: UIButton!
+    
     
     var output: RouteCreationModuleViewOutput!
+    var selectedPriorityIndex: Int?
+    var selectedTimeIndex: Int?
+    
     var routeType: String = "regular"
     var locationArray = [CLLocationCoordinate2D]()
     
@@ -47,46 +55,104 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     // MARK: RouteCreationModuleViewInput
     func setupInitialState() {
         routeDetailsHeightConstraint.constant = 0
+        timeViewHeightConstraint.constant = 0
+        
+        routeTimeView.isHidden = true
         routeDetailsView.isHidden = true
         setupMap()
     }
     
-    func configureRouteDetailsView(address: String, street: String) {
-        addressLabel.text = address
-        locationTypeLabel.text = street
+    func updatePriorityViews(index: Int) {
+        for label in priorityLabels {
+            label.textColor = UIColor.black
+        }
+        
+        for view in priorityViews {
+            view.backgroundColor = UIColor.white
+        }
+        
+        self.priorityViews[index].backgroundColor = UIColor.black
+        self.priorityLabels[index].textColor = UIColor.white
+        selectedPriorityIndex = index
+        
+        if let annotations = mapView.annotations {
+            mapView.removeAnnotations(annotations)
+        }
+        
+        output.selectRouteAtIndex(index: index)
+    }
+    
+    func updateSelectedTime(index: Int) {
+        for label in timeLabels {
+            label.font = UIFont(name: "VremenaGroteskBook", size: 17)
+        }
+        
+        for view in selectedTimeViews {
+            view.backgroundColor = UIColor.white
+        }
+        
+        for label in priorityLabels {
+            label.textColor = UIColor.black
+        }
+        
+        for view in priorityViews {
+            view.backgroundColor = UIColor.white
+        }
+        
+        self.priorityViews[0].backgroundColor = UIColor.black
+        self.priorityLabels[0].textColor = UIColor.white
+        selectedPriorityIndex = 1
+        
+        self.selectedTimeViews[index].backgroundColor = UIColor.black
+        self.timeLabels[index].font = UIFont(name: "VremenaGroteskMedium", size: 17)
+        self.selectedTimeIndex = index
+        
+        
+        
+        output.walkMeAround(time: index)
+        if let annotations = mapView.annotations {
+            mapView.removeAnnotations(annotations)
+        }
+        
+    }
+    
+    func showRouteAtIndex(index: Int) {
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
     }
 }
 
 extension RouteCreationModuleViewController {
     // MARK : actions
     
-    @IBAction func actionFindUserLocation(sender: AnyObject) {
+    @IBAction func actionSelectTime(sender: UIButton) {
+        updateSelectedTime(index: sender.tag)
+    }
     
+    @IBAction func actionSelectRoutePriority(sender: UIButton) {
+        updatePriorityViews(index: sender.tag)
     }
 
-    @IBAction func actionCloseRoutedetailsView(sender: AnyObject) {
-        if routeDetailsView.isHidden == false {
-            closeRouteDetailsView()
-        }
+    @IBAction func actionRouteDetailsView(sender: AnyObject) {
+        output.walkMeAround(time: 0)
     }
     
-    @IBAction func actionShowCloseRouteSettings(sender: AnyObject) {
-        if routeTypeView.isHidden == true {
-            openRouteTypeView()
-        } else {
-            closeRouteTypeView()
-        }
+    @IBAction func closeRouteDetailsView(sender: AnyObject) {
+        hideRouteViews()
     }
     
-    @IBAction func actionStartroute(sender: AnyObject) {
-        if routeDetailsView.isHidden == true {
-            openRouteDetailsView()
-            if locationArray.count == 2 {
-                output.configureRouteDetailsWithEndPoint(endPoint: locationArray.first)
-            }
-        }
-        
+    @IBAction func actionOpenSearch(sender: AnyObject) {
+        output.openSearch()
     }
+    
+    @IBAction func actionOpenAbout(sender: AnyObject) {
+        output.openAbout()
+    }
+    
     
     @IBAction func actionEditRoute(sender: AnyObject) {
         locationArray.removeAll()
@@ -95,17 +161,5 @@ extension RouteCreationModuleViewController {
         }
     }
     
-    @IBAction func chooseRegularRoute(sender: AnyObject) {
-        regularRouteButton.isHighlighted = true
-        steplessRouteButton.isHighlighted = false
-        routeType = "regular"
-        setupMap()
-    }
     
-    @IBAction func chooseSteplessRoute(sender: AnyObject) {
-        regularRouteButton.isHighlighted = false
-        steplessRouteButton.isHighlighted = true
-        routeType = "green"
-        setupMap()
-    }
 }
