@@ -15,8 +15,15 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
         
         mapView.delegate = self
         mapView.showsUserLocation = true
+        let userLocation = Location.core.getCoordinate()
         
-        mapView.setCenter(RouteCreationModuleConstants.moscowCenterCoordinate, zoomLevel: 13, animated: false)
+        if userLocation.latitude == 0.0 {
+            mapView.setCenter(RouteCreationModuleConstants.moscowCenterCoordinate, animated: false)
+        } else {
+            mapView.setCenter(userLocation, zoomLevel: 13, animated: false)
+        }
+        
+        mapView.tintColor = UIColor(hex: "#1000ff")
         mapView.compassView.isHidden = true
         
         // Double tap later
@@ -93,7 +100,7 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
     }
     
     func mapView(_ mapView: MGLMapView, strokeColorForShapeAnnotation annotation: MGLShape) -> UIColor {
-                
+        
         if let annotation = annotation as? CustomAnnotation {
             return annotation.color ?? .orange
         } else {
