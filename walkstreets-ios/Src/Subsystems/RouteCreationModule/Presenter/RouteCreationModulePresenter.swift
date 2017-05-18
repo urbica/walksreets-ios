@@ -18,7 +18,7 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     
     var routes = NSArray() {
         didSet {
-            //view.showRouteAtIndex(index: 0)
+            selectRouteAtIndex(index: routeIndex)
         }
     }
     

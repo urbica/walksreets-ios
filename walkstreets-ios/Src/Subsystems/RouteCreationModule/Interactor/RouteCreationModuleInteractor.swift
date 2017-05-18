@@ -52,9 +52,6 @@ class RouteCreationModuleInteractor: RouteCreationModuleInteractorInput {
         
         routeService.walkMeAround(userCoordinates: coordinates, time: times[time]) { [weak self] routes in
             self?.output.setRoutes(routes: routes)
-            if let time = self?.output.timeIndex {
-                self?.drawShapes(features: routes, index: time)
-            }
         }
     }
     
