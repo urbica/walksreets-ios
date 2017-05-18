@@ -58,7 +58,7 @@
                                             <constraint firstAttribute="bottom" secondItem="ozn-aE-4m7" secondAttribute="bottom" id="UcN-VI-pIk"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iaj-LE-Yeo">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iaj-LE-Yeo">
                                         <rect key="frame" x="20" y="38" width="355" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87Y-Pi-130">

@@ -49,6 +49,7 @@ class StartScreenViewController: UIViewController, StartScreenViewInput {
         
         forwardButton.setTitleColor(UIColor.black, for: .normal)
         forwardButton.isEnabled = true
+        output.openRouteCreation()
     }
     
 }
