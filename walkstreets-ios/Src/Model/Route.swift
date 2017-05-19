@@ -7,6 +7,7 @@
 //
 
 import SwiftyJSON
+import MapKit
 
 class Route {
     
@@ -14,6 +15,8 @@ class Route {
     var time: Int? = 0
     var type: String? = nil
     var features: [Feature]? = nil
+    var sw: CLLocationCoordinate2D? = nil
+    var ne: CLLocationCoordinate2D? = nil
     
     convenience init(json: JSON) {
         self.init()
@@ -23,6 +26,16 @@ class Route {
         self.length = json["length"].double
         self.time = json["time"].int
         self.type = json["type"].string
+        if let zoom = json["zoom"].dictionary {
+            
+            if let sw = zoom["sw"]?.array {
+                self.sw = CLLocationCoordinate2D(latitude: sw.last!.doubleValue, longitude: sw.first!.doubleValue)
+            }
+            
+            if let ne = zoom["ne"]?.array {
+                self.ne = CLLocationCoordinate2D(latitude: ne.last!.doubleValue, longitude: ne.first!.doubleValue)
+            }
+        }
 
     }
 }

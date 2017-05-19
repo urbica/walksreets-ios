@@ -124,6 +124,11 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
             
             guard let length = route.length , let time = route.time else {return}
             
+            if let sw = route.sw, let ne = route.ne {
+                let bounds = MGLCoordinateBoundsMake(sw, ne)
+                mapView.setVisibleCoordinateBounds(bounds, animated: false)
+            }
+            
             self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) km • \(time) min"
         }
     }
