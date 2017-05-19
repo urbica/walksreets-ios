@@ -18,7 +18,9 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     
     var routes = NSArray() {
         didSet {
-            selectRouteAtIndex(index: routeIndex)
+            if routes.count > 0 {
+                selectRouteAtIndex(index: routeIndex)
+            }
         }
     }
     
