@@ -14,6 +14,7 @@ import Mapbox
 protocol RouteCreationModuleViewInput: class {
     func setupInitialState()
     func showRoute(polyline: AnyObject)
+    func drawFirstLine(polyline: AnyObject)
     func showRouteAtIndex(index: Int)
     func updateRouteView(route: AnyObject)
     func addPointTuple(pointTuple: (CLLocationCoordinate2D, CLLocationCoordinate2D))
@@ -49,6 +50,7 @@ protocol RouteCreationModuleInteractorOutput: class {
     var timeIndex: Int {get set}
     
     func addPointTuple(pointTuple: (CLLocationCoordinate2D, CLLocationCoordinate2D))
+    func updateSecondLine(polyline: AnyObject)
     func showRoute(polyline: AnyObject)
     func setRoutes(routes: NSArray)
     func updateRouteView(route: AnyObject)

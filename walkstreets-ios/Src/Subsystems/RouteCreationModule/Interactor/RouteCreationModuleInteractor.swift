@@ -61,6 +61,7 @@ class RouteCreationModuleInteractor: RouteCreationModuleInteractorInput {
         if let route = features[index] as? Route {
             if let features = route.features {
                 var multyPolylines: [CustomAnnotation]? = []
+                var secondMultyPolylines: [MGLPolyline]? = []
                 for feature in features {
                     let polyline = CustomAnnotation(coordinates: feature.coordinates!, count: UInt((feature.coordinates?.count)!))
                     if feature.color == 1 {
@@ -70,10 +71,16 @@ class RouteCreationModuleInteractor: RouteCreationModuleInteractorInput {
                     } else {
                         polyline.color = colors[2]
                     }
+                    polyline.width = 3
                     multyPolylines?.append(polyline)
+                    
+                    let polylineTwo = MGLPolyline(coordinates: feature.coordinates!, count: UInt((feature.coordinates?.count)!))
+                    secondMultyPolylines?.append(polylineTwo)
+                    
                 }
                 DispatchQueue.main.async {
                     self.output.showRoute(polyline: multyPolylines as AnyObject)
+                    self.output.updateSecondLine(polyline: secondMultyPolylines as AnyObject)
                     self.output.updateRouteView(route: route as AnyObject)
                 }
             }
