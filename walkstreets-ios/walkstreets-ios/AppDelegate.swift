@@ -21,8 +21,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Setting up Fabric
         Fabric.with([Crashlytics.self])
         
+        setupWindow()
+        OnStartHelper.showStartScreenIfNeeded()
         
         return true
+    }
+    
+    func setupWindow() {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        if let window = window {
+            window.makeKeyAndVisible()
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

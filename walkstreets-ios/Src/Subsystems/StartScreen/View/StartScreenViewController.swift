@@ -28,17 +28,17 @@ class StartScreenViewController: UIViewController, StartScreenViewInput {
     // MARK: StartScreenViewInput
     func setupInitialState() {
         
-        switch CLLocationManager.authorizationStatus() {
-        case .authorizedAlways, .authorizedWhenInUse:
-            forwardButton.setTitleColor(UIColor.black, for: .normal)
-            forwardButton.isEnabled = true
-            locationButton.setTitleColor(UIColor.gray, for: .disabled)
-            locationButton.isEnabled = false
-        default:
+        let status = CLLocationManager.authorizationStatus()
+        if status == .denied || status == .restricted || status == .notDetermined {
             forwardButton.setTitleColor(UIColor.gray, for: .normal)
             forwardButton.isEnabled = false
             locationButton.setTitleColor(UIColor.black, for: .disabled)
             locationButton.isEnabled = true
+        } else {
+            forwardButton.setTitleColor(UIColor.black, for: .normal)
+            forwardButton.isEnabled = true
+            locationButton.setTitleColor(UIColor.gray, for: .disabled)
+            locationButton.isEnabled = false
         }
     }
     
@@ -49,6 +49,7 @@ class StartScreenViewController: UIViewController, StartScreenViewInput {
         
         forwardButton.setTitleColor(UIColor.black, for: .normal)
         forwardButton.isEnabled = true
+        output.openRouteCreation()
     }
     
 }

@@ -37,7 +37,7 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     
     
     var output: RouteCreationModuleViewOutput!
-    var selectedPriorityIndex: Int?
+    var selectedPriorityIndex: Int? = 0
     var selectedTimeIndex: Int?
     
     var routeType: String = "regular"
@@ -99,9 +99,12 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
             view.backgroundColor = UIColor.white
         }
         
-        self.priorityViews[0].backgroundColor = UIColor.black
-        self.priorityLabels[0].textColor = UIColor.white
-        selectedPriorityIndex = 1
+        if let priority = selectedPriorityIndex {
+        
+            self.priorityViews[priority].backgroundColor = UIColor.black
+            self.priorityLabels[priority].textColor = UIColor.white
+            output.routeIndex = priority
+        }
         
         self.selectedTimeViews[index].backgroundColor = UIColor.black
         self.timeLabels[index].font = UIFont(name: "VremenaGroteskMedium", size: 17)
@@ -120,6 +123,11 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         if let route = route as? Route {
             
             guard let length = route.length , let time = route.time else {return}
+            
+            if let sw = route.sw, let ne = route.ne {
+                let bounds = MGLCoordinateBoundsMake(sw, ne)
+                mapView.setVisibleCoordinateBounds(bounds, animated: false)
+            }
             
             self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) km • \(time) min"
         }

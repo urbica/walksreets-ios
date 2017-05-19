@@ -12,5 +12,6 @@ import Mapbox
 class CustomAnnotation: MGLPolyline {
     
     var color: UIColor?
+    var width: CGFloat?
     
 }

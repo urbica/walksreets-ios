@@ -18,7 +18,9 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     
     var routes = NSArray() {
         didSet {
-            //view.showRouteAtIndex(index: 0)
+            if routes.count > 0 {
+                selectRouteAtIndex(index: routeIndex)
+            }
         }
     }
     
@@ -33,6 +35,8 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
             //selectRouteAtIndex(index: routeIndex)
         }
     }
+    
+    var multyLine: AnyObject?
 
     func viewIsReady() {
 
@@ -88,8 +92,19 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
         //interactor.configureRoute(startPoint: startPoint, endPoint: endPoint, type: routeType)
     }
     
+    func updateSecondLine(polyline: AnyObject) {
+        drawFirstLine(polyline: polyline) {
+            self.view.showRoute(polyline: self.multyLine!)
+        }
+    }
+    
     func showRoute(polyline: AnyObject) {
-        view.showRoute(polyline: polyline)
+        self.multyLine = polyline
+    }
+    
+    func drawFirstLine(polyline: AnyObject, completion: ()->()) {
+        view.drawFirstLine(polyline: polyline)
+        completion()
     }
     
     func updateRouteView(route: AnyObject) {
