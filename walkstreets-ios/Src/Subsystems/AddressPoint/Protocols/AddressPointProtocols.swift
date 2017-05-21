@@ -14,6 +14,7 @@ protocol AddressPointViewInput: class {
 protocol AddressPointViewOutput {
 
     func viewIsReady()
+    func dismiss()
 }
 
 protocol AddressPointModuleInput: class {
@@ -29,5 +30,5 @@ protocol AddressPointInteractorOutput: class {
 }
 
 protocol AddressPointRouterInput {
-
+    func dismiss()
 }

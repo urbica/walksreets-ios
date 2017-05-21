@@ -20,6 +20,7 @@ class AddressPointModuleConfigurator {
     private func configure(viewController: AddressPointViewController) {
 
         let router = AddressPointRouter()
+        router.view = viewController
 
         let presenter = AddressPointPresenter()
         presenter.view = viewController

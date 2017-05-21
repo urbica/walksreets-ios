@@ -6,6 +6,8 @@
 //  Copyright © 2017 Urbica. All rights reserved.
 //
 
+import MapKit
+
 class AddressSearchRouter: AddressSearchRouterInput {
 
     weak var view: AddressSearchViewController?
@@ -14,5 +16,8 @@ class AddressSearchRouter: AddressSearchRouterInput {
         view?.navigationController?.popViewController(animated: true)
     }
     
+    func pointAddress(selectedItem: MKMapItem) {
+        view?.performSegue(withIdentifier: "toAddressPoint", sender: selectedItem)
+    }
     
 }

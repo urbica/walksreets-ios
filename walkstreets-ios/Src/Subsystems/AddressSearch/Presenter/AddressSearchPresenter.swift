@@ -41,4 +41,8 @@ class AddressSearchPresenter: AddressSearchModuleInput, AddressSearchViewOutput,
     func actionBack() {
         router.actionBack()
     }
+    
+    func pointAddress(index: Int) {
+        router.pointAddress(selectedItem: (matchingItems?[index] as? MKMapItem)!)
+    }
 }

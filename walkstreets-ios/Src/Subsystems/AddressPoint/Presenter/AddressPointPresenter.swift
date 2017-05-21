@@ -15,4 +15,8 @@ class AddressPointPresenter: AddressPointModuleInput, AddressPointViewOutput, Ad
     func viewIsReady() {
 
     }
+    
+    func dismiss() {
+        router.dismiss()
+    }
 }

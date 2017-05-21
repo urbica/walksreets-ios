@@ -35,7 +35,7 @@ extension AddressSearchViewController: UITableViewDataSource {
 
 extension AddressSearchViewController: UITableViewDelegate {
 
-    
-    
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        output.pointAddress(index: indexPath.row)
+    }
 }
