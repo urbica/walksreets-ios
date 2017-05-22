@@ -99,6 +99,33 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
         }
     }
     
+    // TODO: replace showRoute and drawFirstLine
+    
+//    func showRoute(polyline: AnyObject) {
+//        if let polyline = polyline as? MGLMultiPolyline {
+//            showRouteViews()
+//            
+//            guard let style = self.mapView.style else { return }
+//            let source = MGLShapeSource(identifier: "cusromLine", shape: polyline, options: nil)
+//            style.addSource(source)
+//            
+//            let layer = MGLLineStyleLayer(identifier: "cusromLine", source: source)
+//            layer.lineJoin = MGLStyleValue(rawValue: NSValue(mglLineJoin: .round))
+//            layer.lineCap = MGLStyleValue(rawValue: NSValue(mglLineCap: .round))
+//            layer.lineWidth = MGLStyleValue(interpolationMode: .exponential,
+//                                            cameraStops: [14: MGLStyleValue<NSNumber>(rawValue: 2),
+//                                                          18: MGLStyleValue<NSNumber>(rawValue: 20)],
+//                                            options: [.defaultValue : MGLConstantStyleValue<NSNumber>(rawValue: 1.5)])
+//            layer.lineColor = MGLStyleValue(rawValue: UIColor.blue)
+//            
+//            style.addLayer(layer)
+//            
+//            
+//            mapView.add(polyline)
+//        }
+//    }
+
+    
     func drawFirstLine(polyline: AnyObject) {
         
         if let polyline = polyline as? [MGLPolyline] {
