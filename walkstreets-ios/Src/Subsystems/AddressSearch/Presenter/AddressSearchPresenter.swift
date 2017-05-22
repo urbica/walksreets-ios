@@ -26,7 +26,7 @@ class AddressSearchPresenter: AddressSearchModuleInput, AddressSearchViewOutput,
     
     func searchTextChanged(text: String) {
         let request = MKLocalSearchRequest()
-        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        let span = MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
         request.naturalLanguageQuery = text
         request.region = MKCoordinateRegion(center: RouteCreationModuleConstants.moscowCenterCoordinate, span: span)
         let search = MKLocalSearch(request: request)

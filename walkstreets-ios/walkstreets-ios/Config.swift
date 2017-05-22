@@ -14,5 +14,6 @@ struct Config {
     static let routeEndpoint = "get_route"
     static let greenEndpoint = "get_green_route"
     static let beatifulPath = "beautiful_path"
+    static let ws = "ws"
     
 }

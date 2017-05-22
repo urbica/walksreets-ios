@@ -14,9 +14,13 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
 
     @IBOutlet weak var mapView: MGLMapView!
     @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var lengthTimeLabel: UILabel!
+    @IBOutlet var priorityViews: Array<CustomizableView>!
+    @IBOutlet var priorityLabels: Array<UILabel>!
     
     var output: AddressPointViewOutput!
     var selectedItem: MKMapItem?
+    var selectedPriorityIndex: Int? = 0
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -25,8 +29,8 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
         output.viewIsReady()
         setupInitialState()
     }
-
-
+    
+    
     // MARK: AddressPointViewInput
     func setupInitialState() {
         if let address = parseAddress(selectedItem: selectedItem?.placemark) {
@@ -34,6 +38,15 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
         }
         
         setupMap()
+        let userLocation = Location.core.getCoordinate()
+        
+        if let placemark = selectedItem?.placemark {
+            let firstPoint = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
+            let lastPoint = CLLocationCoordinate2D(latitude: (placemark.coordinate.latitude), longitude: (placemark.coordinate.longitude))
+            
+            output.drawRoutsForPoints(firstPoint: firstPoint, lastPoint: lastPoint)
+            
+        }
     }
     
     func setupMap() {
@@ -68,6 +81,26 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
         )
         return addressLine
     }
+    
+    func updatePriorityViews(index: Int) {
+        for label in priorityLabels {
+            label.textColor = UIColor.black
+        }
+        
+        for view in priorityViews {
+            view.backgroundColor = UIColor.white
+        }
+        
+        self.priorityViews[index].backgroundColor = UIColor.black
+        self.priorityLabels[index].textColor = UIColor.white
+        selectedPriorityIndex = index
+        
+        if let annotations = mapView.annotations {
+            mapView.removeAnnotations(annotations)
+        }
+        
+        output.selectRouteAtIndex(index: index)
+    }
 }
 
 extension AddressPointViewController {
@@ -76,8 +109,64 @@ extension AddressPointViewController {
     @IBAction func actionClose(sender: AnyObject) {
         output.dismiss()
     }
+    
+    @IBAction func actionSelectRoutePriority(sender: UIButton) {
+        updatePriorityViews(index: sender.tag)
+    }
 }
 
 extension AddressPointViewController: MGLMapViewDelegate {
     
+    func updateRouteView(route: AnyObject) {
+        if let route = route as? Route {
+            
+            guard let length = route.length , let time = route.time else {return}
+            
+            if let sw = route.sw, let ne = route.ne {
+                let bounds = MGLCoordinateBoundsMake(sw, ne)
+                mapView.setVisibleCoordinateBounds(bounds, animated: false)
+            }
+            
+            self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) km • \(time) min"
+        }
+    }
+    
+    func showRouteAtIndex(index: Int) {
+    
+    }
+    
+    func showRoute(polyline: AnyObject) {
+        if let polyline = polyline as? [CustomAnnotation] {
+            mapView.add(polyline)
+        }
+    }
+    
+    func drawFirstLine(polyline: AnyObject) {
+        
+        if let polyline = polyline as? [MGLPolyline] {
+            mapView.add(polyline)
+        }
+    }
+    
+    func mapView(_ mapView: MGLMapView, strokeColorForShapeAnnotation annotation: MGLShape) -> UIColor {
+        
+        if let annotation = annotation as? CustomAnnotation {
+            return annotation.color ?? .orange
+        } else {
+            return UIColor(hex: "1000FF")
+        }
+    }
+    
+    func mapView(_ mapView: MGLMapView, lineWidthForPolylineAnnotation annotation: MGLPolyline) -> CGFloat {
+        
+        if let annotationWidth = (annotation as? CustomAnnotation)?.width {
+            return annotationWidth
+        }
+        
+        return 5.5
+    }
+    
+    func mapView(_ mapView: MGLMapView, alphaForShapeAnnotation annotation: MGLShape) -> CGFloat {
+        return 1.0
+    }
 }
