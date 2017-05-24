@@ -14,6 +14,12 @@ class AddressPointPresenter: AddressPointModuleInput, AddressPointViewOutput, Ad
     var interactor: AddressPointInteractorInput!
     var router: AddressPointRouterInput!
     
+    init () {
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: AddressPointConstants.kPointUpdated), object: nil, queue: OperationQueue.main) { [weak self] _ in
+            self?.view.updateMap()
+        }
+    }
+    
     var routes = NSArray() {
         didSet {
             if routes.count > 0 {

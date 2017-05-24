@@ -21,7 +21,8 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
     var output: AddressPointViewOutput!
     var selectedItem: MKMapItem?
     var selectedPriorityIndex: Int? = 0
-
+    var endPoint = MGLPointAnnotation()
+    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,11 +44,31 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
         if let placemark = selectedItem?.placemark {
             let firstPoint = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
             let lastPoint = CLLocationCoordinate2D(latitude: (placemark.coordinate.latitude), longitude: (placemark.coordinate.longitude))
-            
+            endPoint.coordinate = lastPoint
             output.drawRoutsForPoints(firstPoint: firstPoint, lastPoint: lastPoint)
-            //setupPoints(firstPoint: firstPoint, lastPoint: lastPoint)
             
         }
+    }
+    
+    func updateMap() {
+        
+        if let annotations = mapView.annotations {
+            mapView.removeAnnotations(annotations)
+        }
+        
+        if let layer = mapView.style?.layer(withIdentifier: "customLine") {
+            mapView.style?.removeLayer(layer)
+        }
+        
+        if let source = mapView.style?.source(withIdentifier: "customLine") {
+            mapView.style?.removeSource(source)
+        }
+        
+        let userLocation = Location.core.getCoordinate()
+        let firstPoint = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
+        let lastPoint = endPoint.coordinate
+        
+        output.drawRoutsForPoints(firstPoint: firstPoint, lastPoint: lastPoint)
     }
     
     func setupPoints(firstPoint: CLLocationCoordinate2D, lastPoint: CLLocationCoordinate2D) {
@@ -56,7 +77,6 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
         startPoint.coordinate = firstPoint
         mapView.addAnnotation(startPoint)
         
-        let endPoint = MGLPointAnnotation()
         endPoint.coordinate = lastPoint
         mapView.addAnnotation(endPoint)
         
@@ -171,14 +191,11 @@ extension AddressPointViewController: MGLMapViewDelegate {
             mapView.add(polyline)
         }
         
-        if let placemark = selectedItem?.placemark {
-            let userLocation = Location.core.getCoordinate()
-
-            let firstPoint = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
-            let lastPoint = CLLocationCoordinate2D(latitude: (placemark.coordinate.latitude), longitude: (placemark.coordinate.longitude))
+        let userLocation = Location.core.getCoordinate()
         
-            setupPoints(firstPoint: firstPoint, lastPoint: lastPoint)
-        }
+        let firstPoint = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
+        
+        setupPoints(firstPoint: firstPoint, lastPoint: self.endPoint.coordinate)
     }
     
     func drawFirstLine(polyline: AnyObject) {
@@ -229,17 +246,20 @@ extension AddressPointViewController: MGLMapViewDelegate {
     func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
         
         let userLocation = Location.core.getCoordinate()
-        let placemark = selectedItem?.placemark
-        let endPoint = placemark?.coordinate
+        let endPointCoordinate = self.endPoint.coordinate
         
         if annotation.coordinate.latitude == userLocation.latitude && annotation.coordinate.longitude == userLocation.longitude {
             let image = UIImage(named: "startPoint")!
-            return DraggableAnnotationView(reuseIdentifier: "startPoint", size: 40, image: image)
+            let drag = DraggableAnnotationView(reuseIdentifier: "startPoint", size: 40, image: image)
+            drag.isDraggable = false
+            return drag
             
-        } else if annotation.coordinate.latitude == endPoint!.latitude && annotation.coordinate.longitude == endPoint!.longitude {
+        } else if annotation.coordinate.latitude == endPointCoordinate.latitude && annotation.coordinate.longitude == endPointCoordinate.longitude {
+            
             let image = UIImage(named: "endPoint")!
             return DraggableAnnotationView(reuseIdentifier: "endPoint", size: 40, image: image)
         }
         return nil
     }
+    
 }

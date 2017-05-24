@@ -61,6 +61,8 @@ class DraggableAnnotationView: MGLAnnotationView {
         UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
             self.layer.opacity = 1
             self.transform = CGAffineTransform.identity.scaledBy(x: 1, y: 1)
-        }, completion: nil)
+        }, completion: { _ in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: AddressPointConstants.kPointUpdated), object: nil)
+        })
     }
 }

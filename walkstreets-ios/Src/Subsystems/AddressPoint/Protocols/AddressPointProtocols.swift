@@ -15,6 +15,7 @@ protocol AddressPointViewInput: class {
     func drawFirstLine(polyline: AnyObject)
     func showRouteAtIndex(index: Int)
     func updateRouteView(route: AnyObject)
+    func updateMap()
 }
 
 protocol AddressPointViewOutput {
