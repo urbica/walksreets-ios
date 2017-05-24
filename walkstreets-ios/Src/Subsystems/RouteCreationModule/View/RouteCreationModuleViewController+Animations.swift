@@ -40,6 +40,14 @@ extension RouteCreationModuleViewController {
             if let annotations = self.mapView.annotations {
                 self.mapView.removeAnnotations(annotations)
             }
+            
+            if let layer = self.mapView.style?.layer(withIdentifier: "customLine") {
+                self.mapView.style?.removeLayer(layer)
+            }
+            
+            if let source = self.mapView.style?.source(withIdentifier: "customLine") {
+                self.mapView.style?.removeSource(source)
+            }
         }
     }
 }
