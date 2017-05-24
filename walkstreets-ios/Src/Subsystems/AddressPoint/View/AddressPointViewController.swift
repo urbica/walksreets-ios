@@ -45,8 +45,21 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
             let lastPoint = CLLocationCoordinate2D(latitude: (placemark.coordinate.latitude), longitude: (placemark.coordinate.longitude))
             
             output.drawRoutsForPoints(firstPoint: firstPoint, lastPoint: lastPoint)
+            setupPoints(firstPoint: firstPoint, lastPoint: lastPoint)
             
         }
+    }
+    
+    func setupPoints(firstPoint: CLLocationCoordinate2D, lastPoint: CLLocationCoordinate2D) {
+        
+        let startPoint = MGLPointAnnotation()
+        startPoint.coordinate = firstPoint
+        mapView.addAnnotation(startPoint)
+        
+        let endPoint = MGLPointAnnotation()
+        endPoint.coordinate = lastPoint
+        mapView.addAnnotation(endPoint)
+        
     }
     
     func setupMap() {
@@ -156,6 +169,15 @@ extension AddressPointViewController: MGLMapViewDelegate {
         if let polyline = polyline as? [CustomAnnotation] {
             mapView.add(polyline)
         }
+        
+        if let placemark = selectedItem?.placemark {
+            let userLocation = Location.core.getCoordinate()
+
+            let firstPoint = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
+            let lastPoint = CLLocationCoordinate2D(latitude: (placemark.coordinate.latitude), longitude: (placemark.coordinate.longitude))
+        
+            setupPoints(firstPoint: firstPoint, lastPoint: lastPoint)
+        }
     }
     
     func drawFirstLine(polyline: AnyObject) {
@@ -201,5 +223,26 @@ extension AddressPointViewController: MGLMapViewDelegate {
     
     func mapView(_ mapView: MGLMapView, alphaForShapeAnnotation annotation: MGLShape) -> CGFloat {
         return 1.0
+    }
+    
+    func mapView(_ mapView: MGLMapView, imageFor annotation: MGLAnnotation) -> MGLAnnotationImage? {
+        let userLocation = Location.core.getCoordinate()
+        let placemark = selectedItem?.placemark
+        let endPoint = placemark?.coordinate
+        
+        if annotation.coordinate.latitude == userLocation.latitude && annotation.coordinate.longitude == userLocation.longitude {
+            var annotationImage = mapView.dequeueReusableAnnotationImage(withIdentifier: "startPoint")
+            var image = UIImage(named: "startPoint")!
+            image = image.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 0, bottom: image.size.height, right: 0))
+            annotationImage = MGLAnnotationImage(image: image, reuseIdentifier: "startPoint")
+            return annotationImage
+        } else if annotation.coordinate.latitude == endPoint!.latitude && annotation.coordinate.longitude == endPoint!.longitude {
+            var annotationImage = mapView.dequeueReusableAnnotationImage(withIdentifier: "endPoint")
+            var image = UIImage(named: "endPoint")!
+            image = image.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: 0, bottom: image.size.height, right: 0))
+            annotationImage = MGLAnnotationImage(image: image, reuseIdentifier: "endPoint")
+            return annotationImage
+        }
+        return nil
     }
 }
