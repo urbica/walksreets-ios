@@ -69,6 +69,7 @@
 		E0E142E31E954CAD001C45BE /* StartScreenConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142E21E954CAD001C45BE /* StartScreenConstants.swift */; };
 		E0E689901EC5095600AF2765 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E6898F1EC5095600AF2765 /* Feature.swift */; };
 		E0E689921EC50A2F00AF2765 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E689911EC50A2F00AF2765 /* CustomAnnotation.swift */; };
+		E0F614D01ED6224B00A89982 /* DraggableAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F614CF1ED6224B00A89982 /* DraggableAnnotation.swift */; };
 		E0FDE0861EC0598900E09D7F /* AddressSearchViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FDE0851EC0598900E09D7F /* AddressSearchViewController+UITableView.swift */; };
 		E0FE34851ECDF781002BDBE0 /* OnStartHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE34841ECDF781002BDBE0 /* OnStartHelper.swift */; };
 		F099800B9560E696761BDEAF /* RouteCreationModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */; };
@@ -154,6 +155,7 @@
 		E0E142E21E954CAD001C45BE /* StartScreenConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenConstants.swift; sourceTree = "<group>"; };
 		E0E6898F1EC5095600AF2765 /* Feature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
 		E0E689911EC50A2F00AF2765 /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
+		E0F614CF1ED6224B00A89982 /* DraggableAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableAnnotation.swift; sourceTree = "<group>"; };
 		E0FDE0851EC0598900E09D7F /* AddressSearchViewController+UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddressSearchViewController+UITableView.swift"; sourceTree = "<group>"; };
 		E0FE34841ECDF781002BDBE0 /* OnStartHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnStartHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -310,6 +312,7 @@
 				E0C4F6641E8C06A4005C63C4 /* RootApiService */,
 				30FD55801DCE0D5900000A97 /* LocationManager.swift */,
 				E0E689911EC50A2F00AF2765 /* CustomAnnotation.swift */,
+				E0F614CF1ED6224B00A89982 /* DraggableAnnotation.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -870,6 +873,7 @@
 				E058C0C61EB8C53D00E981EB /* CustomizableButton.swift in Sources */,
 				63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */,
 				E0E142E11E954C73001C45BE /* StartScreenProtocols.swift in Sources */,
+				E0F614D01ED6224B00A89982 /* DraggableAnnotation.swift in Sources */,
 				E02B70921EBB2DEA00379C76 /* CustomizableTextView.swift in Sources */,
 				B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */,
 				E058C0B61EB8BC0E00E981EB /* CustomizableView.swift in Sources */,
