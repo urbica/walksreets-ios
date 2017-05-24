@@ -52,6 +52,15 @@ class AddressSearchViewController: UIViewController, AddressSearchViewInput {
         )
         return addressLine
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if segue.identifier == "toAddressPoint" {
+            let vc = segue.destination as! AddressPointViewController
+            vc.selectedItem = sender as? MKMapItem
+        }
+    }
 
 }
 

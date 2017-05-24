@@ -6,7 +6,7 @@
 //  Copyright © 2017 Urbica. All rights reserved.
 //
 
-import Foundation
+import MapKit
 
 protocol AddressSearchViewInput: class {
 
@@ -21,6 +21,7 @@ protocol AddressSearchViewOutput {
     func viewIsReady()
     func actionBack()
     func searchTextChanged(text: String)
+    func pointAddress(index: Int)
 }
 
 protocol AddressSearchModuleInput: class {
@@ -37,4 +38,5 @@ protocol AddressSearchInteractorOutput: class {
 
 protocol AddressSearchRouterInput {
     func actionBack()
+    func pointAddress(selectedItem: MKMapItem)
 }

@@ -13,6 +13,7 @@
 		19BCB4F82ACD4BBC9B7A4125 /* AddressPointPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9872266730A6439ED8F37EB /* AddressPointPresenter.swift */; };
 		25D6E5956C3B6181E637B548 /* AddressSearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54AE4BEA1CCA121327F5967 /* AddressSearchProtocols.swift */; };
 		276F19702527E9378A8A2E65 /* AddressPointInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3915E3E5329A2A4F3A443 /* AddressPointInteractor.swift */; };
+		2A3B20B41ED35832001C89E1 /* AddressPointService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B20B31ED35832001C89E1 /* AddressPointService.swift */; };
 		306D415E1DCD2C1100043F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D415D1DCD2C1100043F86 /* AppDelegate.swift */; };
 		306D41651DCD2C1100043F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 306D41641DCD2C1100043F86 /* Assets.xcassets */; };
 		306D41681DCD2C1100043F86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306D41661DCD2C1100043F86 /* LaunchScreen.storyboard */; };
@@ -68,6 +69,8 @@
 		E0E142E31E954CAD001C45BE /* StartScreenConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142E21E954CAD001C45BE /* StartScreenConstants.swift */; };
 		E0E689901EC5095600AF2765 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E6898F1EC5095600AF2765 /* Feature.swift */; };
 		E0E689921EC50A2F00AF2765 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E689911EC50A2F00AF2765 /* CustomAnnotation.swift */; };
+		E0F614D01ED6224B00A89982 /* DraggableAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F614CF1ED6224B00A89982 /* DraggableAnnotation.swift */; };
+		E0F614D21ED62C5D00A89982 /* AddressPointConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F614D11ED62C5D00A89982 /* AddressPointConstants.swift */; };
 		E0FDE0861EC0598900E09D7F /* AddressSearchViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FDE0851EC0598900E09D7F /* AddressSearchViewController+UITableView.swift */; };
 		E0FE34851ECDF781002BDBE0 /* OnStartHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE34841ECDF781002BDBE0 /* OnStartHelper.swift */; };
 		F099800B9560E696761BDEAF /* RouteCreationModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */; };
@@ -90,6 +93,7 @@
 		106FD96F22ECB96D84A20203 /* Pods-walkstreets-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walkstreets-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-walkstreets-ios/Pods-walkstreets-ios.release.xcconfig"; sourceTree = "<group>"; };
 		1ECF8AA8FAB81349AFEB4BC6 /* AddressPointViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressPointViewController.swift; sourceTree = "<group>"; };
 		283844FEC4424901696A8FA4 /* AboutPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
+		2A3B20B31ED35832001C89E1 /* AddressPointService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressPointService.swift; sourceTree = "<group>"; };
 		2EB35B9503B06A0A18391D68 /* AddressSearchConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchConfigurator.swift; sourceTree = "<group>"; };
 		306D415A1DCD2C1100043F86 /* walkstreets-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "walkstreets-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		306D415D1DCD2C1100043F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 		E0E142E21E954CAD001C45BE /* StartScreenConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenConstants.swift; sourceTree = "<group>"; };
 		E0E6898F1EC5095600AF2765 /* Feature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
 		E0E689911EC50A2F00AF2765 /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
+		E0F614CF1ED6224B00A89982 /* DraggableAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableAnnotation.swift; sourceTree = "<group>"; };
+		E0F614D11ED62C5D00A89982 /* AddressPointConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressPointConstants.swift; sourceTree = "<group>"; };
 		E0FDE0851EC0598900E09D7F /* AddressSearchViewController+UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddressSearchViewController+UITableView.swift"; sourceTree = "<group>"; };
 		E0FE34841ECDF781002BDBE0 /* OnStartHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnStartHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,6 +205,14 @@
 				C54AE4BEA1CCA121327F5967 /* AddressSearchProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2A3B20B21ED357E2001C89E1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2A3B20B31ED35832001C89E1 /* AddressPointService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		306D41511DCD2C1100043F86 = {
@@ -300,6 +314,7 @@
 				E0C4F6641E8C06A4005C63C4 /* RootApiService */,
 				30FD55801DCE0D5900000A97 /* LocationManager.swift */,
 				E0E689911EC50A2F00AF2765 /* CustomAnnotation.swift */,
+				E0F614CF1ED6224B00A89982 /* DraggableAnnotation.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -478,6 +493,7 @@
 			isa = PBXGroup;
 			children = (
 				8D650CF947229325031A05ED /* AddressPointConfigurator.swift */,
+				E0F614D11ED62C5D00A89982 /* AddressPointConstants.swift */,
 			);
 			path = Configurator;
 			sourceTree = "<group>";
@@ -489,6 +505,7 @@
 				90CF1449DF88D28122B471B9 /* View */,
 				A2230D3F183281CFC2897642 /* Presenter */,
 				181F00B62EC35F905F09E7D1 /* Interactor */,
+				2A3B20B21ED357E2001C89E1 /* Service */,
 				8088C2FFB00E3B73B3906D8A /* Router */,
 				AEFB022D3E41B05E91923A6A /* Configurator */,
 				A2C8FFC7AAD52F178CA26250 /* Protocols */,
@@ -853,11 +870,13 @@
 				F099800B9560E696761BDEAF /* RouteCreationModuleViewController.swift in Sources */,
 				30FD557B1DCDF61100000A97 /* RouteCreationModuleViewController+Animations.swift in Sources */,
 				30FD557E1DCE0CE300000A97 /* RouteService.swift in Sources */,
+				2A3B20B41ED35832001C89E1 /* AddressPointService.swift in Sources */,
 				92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */,
 				E02B70991EBB5FA600379C76 /* AddressSearchCell.swift in Sources */,
 				E058C0C61EB8C53D00E981EB /* CustomizableButton.swift in Sources */,
 				63D199A9F886A3DC99D1B57F /* RouteCreationModuleInteractor.swift in Sources */,
 				E0E142E11E954C73001C45BE /* StartScreenProtocols.swift in Sources */,
+				E0F614D01ED6224B00A89982 /* DraggableAnnotation.swift in Sources */,
 				E02B70921EBB2DEA00379C76 /* CustomizableTextView.swift in Sources */,
 				B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */,
 				E058C0B61EB8BC0E00E981EB /* CustomizableView.swift in Sources */,
@@ -883,6 +902,7 @@
 				A00F3A654E088FDEC92458F1 /* AddressPointViewController.swift in Sources */,
 				19BCB4F82ACD4BBC9B7A4125 /* AddressPointPresenter.swift in Sources */,
 				E0FDE0861EC0598900E09D7F /* AddressSearchViewController+UITableView.swift in Sources */,
+				E0F614D21ED62C5D00A89982 /* AddressPointConstants.swift in Sources */,
 				276F19702527E9378A8A2E65 /* AddressPointInteractor.swift in Sources */,
 				C225BC6A1B91D9763A4CFA99 /* AddressPointRouter.swift in Sources */,
 				B43E9393F4861E965D635E0A /* AddressPointConfigurator.swift in Sources */,

@@ -79,6 +79,14 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
             mapView.removeAnnotations(annotations)
         }
         
+        if let layer = mapView.style?.layer(withIdentifier: "customLine") {
+            mapView.style?.removeLayer(layer)
+        }
+        
+        if let source = mapView.style?.source(withIdentifier: "customLine") {
+            mapView.style?.removeSource(source)
+        }
+        
         output.selectRouteAtIndex(index: index)
     }
     
@@ -115,6 +123,14 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         output.walkMeAround(time: index)
         if let annotations = mapView.annotations {
             mapView.removeAnnotations(annotations)
+        }
+        
+        if let layer = mapView.style?.layer(withIdentifier: "customLine") {
+            mapView.style?.removeLayer(layer)
+        }
+        
+        if let source = mapView.style?.source(withIdentifier: "customLine") {
+            mapView.style?.removeSource(source)
         }
         
     }
