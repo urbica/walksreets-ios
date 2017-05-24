@@ -99,6 +99,14 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
             mapView.removeAnnotations(annotations)
         }
         
+        if let layer = mapView.style?.layer(withIdentifier: "customLine") {
+            mapView.style?.removeLayer(layer)
+        }
+        
+        if let source = mapView.style?.source(withIdentifier: "customLine") {
+            mapView.style?.removeSource(source)
+        }
+        
         output.selectRouteAtIndex(index: index)
     }
 }
@@ -107,6 +115,15 @@ extension AddressPointViewController {
     // MARK: actions
     
     @IBAction func actionClose(sender: AnyObject) {
+        
+        if let layer = mapView.style?.layer(withIdentifier: "customLine") {
+            mapView.style?.removeLayer(layer)
+        }
+        
+        if let source = mapView.style?.source(withIdentifier: "customLine") {
+            mapView.style?.removeSource(source)
+        }
+        
         output.dismiss()
     }
     
@@ -143,7 +160,23 @@ extension AddressPointViewController: MGLMapViewDelegate {
     
     func drawFirstLine(polyline: AnyObject) {
         
-        if let polyline = polyline as? [MGLPolyline] {
+        if let polyline = polyline as? MGLMultiPolyline {
+            
+            guard let style = self.mapView.style else { return }
+            let source = MGLShapeSource(identifier: "customLine", shape: polyline, options: nil)
+            style.addSource(source)
+            
+            let layer = MGLLineStyleLayer(identifier: "customLine", source: source)
+            layer.lineJoin = MGLStyleValue(rawValue: NSValue(mglLineJoin: .round))
+            layer.lineCap = MGLStyleValue(rawValue: NSValue(mglLineCap: .round))
+            layer.lineWidth = MGLStyleValue(interpolationMode: .exponential,
+                                            cameraStops: [14: MGLStyleValue<NSNumber>(rawValue: 5.5),
+                                                          18: MGLStyleValue<NSNumber>(rawValue: 20)],
+                                            options: [.defaultValue : MGLConstantStyleValue<NSNumber>(rawValue: 1.5)])
+            if let color = RouteCreationModuleConstants.colorForBackground(index: selectedPriorityIndex!) {
+                layer.lineColor = MGLStyleValue(rawValue: color)
+            }
+            style.insertLayer(layer, at: 262)
             mapView.add(polyline)
         }
     }

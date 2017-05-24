@@ -42,9 +42,11 @@ class AddressPointInteractor: AddressPointInteractorInput {
                     secondMultyPolylines?.append(polylineTwo)
                     
                 }
+                let lineOne = MGLMultiPolyline(polylines: secondMultyPolylines!)
+
                 DispatchQueue.main.async {
                     self.output.showRoute(polyline: multyPolylines as AnyObject)
-                    self.output.updateSecondLine(polyline: secondMultyPolylines as AnyObject)
+                    self.output.updateSecondLine(polyline: lineOne as AnyObject)
                     self.output.updateRouteView(route: route as AnyObject)
                 }
             }
