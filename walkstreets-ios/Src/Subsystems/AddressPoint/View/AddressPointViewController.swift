@@ -128,6 +128,11 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
         self.priorityLabels[index].textColor = UIColor.white
         selectedPriorityIndex = index
         
+        for view in priorityViews {
+            view.isUserInteractionEnabled = false
+        }
+        
+        
         if let annotations = mapView.annotations {
             mapView.removeAnnotations(annotations)
         }
@@ -196,6 +201,14 @@ extension AddressPointViewController: MGLMapViewDelegate {
         let firstPoint = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
         
         setupPoints(firstPoint: firstPoint, lastPoint: self.endPoint.coordinate)
+        for (index, view) in priorityViews.enumerated() {
+            
+            if index == selectedPriorityIndex {
+                priorityViews[index].isUserInteractionEnabled = false
+            }
+            
+            view.isUserInteractionEnabled = true
+        }
     }
     
     func drawFirstLine(polyline: AnyObject) {
@@ -250,14 +263,15 @@ extension AddressPointViewController: MGLMapViewDelegate {
         
         if annotation.coordinate.latitude == userLocation.latitude && annotation.coordinate.longitude == userLocation.longitude {
             let image = UIImage(named: "startPoint")!
-            let drag = DraggableAnnotationView(reuseIdentifier: "startPoint", size: 40, image: image)
+            
+            
+            let drag = DraggableAnnotationView(reuseIdentifier: "startPoint", size: 50, image: image)
             drag.isDraggable = false
             return drag
             
         } else if annotation.coordinate.latitude == endPointCoordinate.latitude && annotation.coordinate.longitude == endPointCoordinate.longitude {
-            
             let image = UIImage(named: "endPoint")!
-            return DraggableAnnotationView(reuseIdentifier: "endPoint", size: 40, image: image)
+            return DraggableAnnotationView(reuseIdentifier: "endPoint", size: 50, image: image)
         }
         return nil
     }
