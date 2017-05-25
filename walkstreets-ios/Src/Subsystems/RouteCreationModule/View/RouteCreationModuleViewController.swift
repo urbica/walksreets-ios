@@ -73,6 +73,16 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         
         self.priorityViews[index].backgroundColor = UIColor.black
         self.priorityLabels[index].textColor = UIColor.white
+        
+        
+        for view in priorityViews {
+            if view.isUserInteractionEnabled == false {
+                view.isUserInteractionEnabled = true
+            }
+        }
+        
+        self.priorityViews[index].isUserInteractionEnabled = false
+        
         selectedPriorityIndex = index
         
         if let annotations = mapView.annotations {
@@ -118,9 +128,9 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         self.timeLabels[index].font = UIFont(name: "VremenaGroteskMedium", size: 17)
         self.selectedTimeIndex = index
         
-        
-        
         output.walkMeAround(time: index)
+        routeTimeView.isUserInteractionEnabled = false
+
         if let annotations = mapView.annotations {
             mapView.removeAnnotations(annotations)
         }

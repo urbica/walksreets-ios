@@ -211,7 +211,7 @@ extension AddressPointViewController: MGLMapViewDelegate {
             layer.lineCap = MGLStyleValue(rawValue: NSValue(mglLineCap: .round))
             layer.lineWidth = MGLStyleValue(interpolationMode: .exponential,
                                             cameraStops: [14: MGLStyleValue<NSNumber>(rawValue: 5.5),
-                                                          18: MGLStyleValue<NSNumber>(rawValue: 20)],
+                                                          18: MGLStyleValue<NSNumber>(rawValue: 5.5)],
                                             options: [.defaultValue : MGLConstantStyleValue<NSNumber>(rawValue: 1.5)])
             if let color = RouteCreationModuleConstants.colorForBackground(index: selectedPriorityIndex!) {
                 layer.lineColor = MGLStyleValue(rawValue: color)
