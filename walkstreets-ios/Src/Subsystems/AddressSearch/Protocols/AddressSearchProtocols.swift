@@ -20,6 +20,7 @@ protocol AddressSearchViewOutput {
     
     func viewIsReady()
     func actionBack()
+    func clearData()
     func searchTextChanged(text: String)
     func pointAddress(index: Int)
 }
