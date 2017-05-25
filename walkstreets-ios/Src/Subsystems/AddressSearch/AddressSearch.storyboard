@@ -33,7 +33,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CANCEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kyg-xF-lJ3">
-                                                <rect key="frame" x="10.5" y="37.5" width="59" height="14"/>
+                                                <rect key="frame" x="10.5" y="38" width="59" height="14"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -60,7 +60,7 @@
                                         <rect key="frame" x="225" y="0.0" width="150" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POINT ON MAP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAW-rD-46q">
-                                                <rect key="frame" x="23" y="37.5" width="105" height="14"/>
+                                                <rect key="frame" x="23.5" y="38" width="105" height="14"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -166,6 +166,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="9ph-lv-nu3" id="FF8-LW-l6l"/>
+                        <outlet property="textField" destination="FbW-3B-t0P" id="abb-x7-DRz"/>
                         <segue destination="oDy-Uj-IMP" kind="show" identifier="toAddressPoint" id="CSf-Oj-mV1"/>
                     </connections>
                 </viewController>

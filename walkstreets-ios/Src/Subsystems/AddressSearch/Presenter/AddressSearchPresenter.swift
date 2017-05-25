@@ -26,7 +26,7 @@ class AddressSearchPresenter: AddressSearchModuleInput, AddressSearchViewOutput,
     
     func searchTextChanged(text: String) {
         let request = MKLocalSearchRequest()
-        let span = MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
+        let span = MKCoordinateSpan(latitudeDelta: 0.00001, longitudeDelta: 0.00001)
         request.naturalLanguageQuery = text
         request.region = MKCoordinateRegion(center: RouteCreationModuleConstants.moscowCenterCoordinate, span: span)
         let search = MKLocalSearch(request: request)
@@ -36,6 +36,10 @@ class AddressSearchPresenter: AddressSearchModuleInput, AddressSearchViewOutput,
             }
             self?.matchingItems = NSArray(array: response.mapItems)
         }
+    }
+    
+    func clearData() {
+        matchingItems = []
     }
     
     func actionBack() {

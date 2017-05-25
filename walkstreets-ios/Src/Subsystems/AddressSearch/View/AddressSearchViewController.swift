@@ -12,6 +12,7 @@ import MapKit
 class AddressSearchViewController: UIViewController, AddressSearchViewInput {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textField: CustomizableTextField!
 
     var output: AddressSearchViewOutput!
 
@@ -72,6 +73,7 @@ extension AddressSearchViewController {
     }
     
     @IBAction func searchFieldDidChange(_ sender: CustomizableTextField) {
+        guard let count = textField.text?.characters.count, count > 0 else { output.clearData();return}
         output.searchTextChanged(text: sender.text!)
     }
 }

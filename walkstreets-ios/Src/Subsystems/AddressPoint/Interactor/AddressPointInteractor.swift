@@ -20,7 +20,7 @@ class AddressPointInteractor: AddressPointInteractorInput {
     }
     
     func drawShapes(features: NSArray, index: Int) {
-        
+        guard features.count > 0 else { return }
         let colors = RouteCreationModuleConstants.colorPickerForRoute(index: index)
         if let route = features[index] as? Route {
             if let features = route.features {
