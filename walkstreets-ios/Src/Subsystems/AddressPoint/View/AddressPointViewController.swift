@@ -265,13 +265,13 @@ extension AddressPointViewController: MGLMapViewDelegate {
             let image = UIImage(named: "startPoint")!
             
             
-            let drag = DraggableAnnotationView(reuseIdentifier: "startPoint", size: 50, image: image)
+            let drag = DraggableAnnotationView(reuseIdentifier: "startPoint", size: 50, image: image, pointOnMap: false)
             drag.isDraggable = false
             return drag
             
         } else if annotation.coordinate.latitude == endPointCoordinate.latitude && annotation.coordinate.longitude == endPointCoordinate.longitude {
             let image = UIImage(named: "endPoint")!
-            return DraggableAnnotationView(reuseIdentifier: "endPoint", size: 50, image: image)
+            return DraggableAnnotationView(reuseIdentifier: "endPoint", size: 50, image: image, pointOnMap: false)
         }
         return nil
     }
