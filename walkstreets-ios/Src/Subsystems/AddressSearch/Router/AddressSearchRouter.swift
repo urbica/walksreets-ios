@@ -20,4 +20,8 @@ class AddressSearchRouter: AddressSearchRouterInput {
         view?.performSegue(withIdentifier: "toAddressPoint", sender: selectedItem)
     }
     
+    func pointOnMap() {
+        view?.performSegue(withIdentifier: "pointOnMap", sender: nil)
+    }
+    
 }
