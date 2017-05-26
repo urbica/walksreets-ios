@@ -76,4 +76,8 @@ extension AddressSearchViewController {
         guard let count = textField.text?.characters.count, count > 0 else { output.clearData();return}
         output.searchTextChanged(text: sender.text!)
     }
+    
+    @IBAction func actionPointOnMap(sender: AnyObject) {
+        output.pointOnMap()
+    }
 }

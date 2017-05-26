@@ -1,84 +1,41 @@
 //
-//  AddressPointAddressPointViewController.swift
+//  PointOnMapPointOnMapViewController.swift
 //  walkstreets-ios
 //
-//  Created by Roman Ustiantcev on 04/05/2017.
+//  Created by Roman Ustiantcev on 26/05/2017.
 //  Copyright © 2017 Urbica. All rights reserved.
 //
 
 import UIKit
 import Mapbox
-import MapKit
 
-class AddressPointViewController: UIViewController, AddressPointViewInput {
+class PointOnMapViewController: UIViewController, PointOnMapViewInput {
 
     @IBOutlet weak var mapView: MGLMapView!
-    @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var lengthTimeLabel: UILabel!
     @IBOutlet var priorityViews: Array<CustomizableView>!
     @IBOutlet var priorityLabels: Array<UILabel>!
+    @IBOutlet weak var lengthTimeLabel: UILabel!
+    @IBOutlet weak var priorityViewsHeightConstraint: NSLayoutConstraint!
+
     
-    var output: AddressPointViewOutput!
-    var selectedItem: MKMapItem?
+    var output: PointOnMapViewOutput!
+    let lastPoint = MGLPointAnnotation()
+    let location = Location.core.getCoordinate()
     var selectedPriorityIndex: Int? = 0
-    var endPoint = MGLPointAnnotation()
-    
+
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        AddressPointModuleConfigurator().configureModuleForViewInput(viewInput: self)
+        PointOnMapModuleConfigurator().configureModuleForViewInput(viewInput: self)
         output.viewIsReady()
         setupInitialState()
     }
-    
-    
-    // MARK: AddressPointViewInput
+
+
+    // MARK: PointOnMapViewInput
     func setupInitialState() {
-        if let address = parseAddress(selectedItem: selectedItem?.placemark) {
-            addressLabel.text = address
-        }
-        
+        priorityViewsHeightConstraint.constant = 0
         setupMap()
-        let userLocation = Location.core.getCoordinate()
-        
-        if let placemark = selectedItem?.placemark {
-            let firstPoint = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
-            let lastPoint = CLLocationCoordinate2D(latitude: (placemark.coordinate.latitude), longitude: (placemark.coordinate.longitude))
-            endPoint.coordinate = lastPoint
-            output.drawRoutsForPoints(firstPoint: firstPoint, lastPoint: lastPoint)
-            
-        }
-    }
-    
-    func updateMap() {
-        
-        if let annotations = mapView.annotations {
-            mapView.removeAnnotations(annotations)
-        }
-        
-        if let layer = mapView.style?.layer(withIdentifier: "customLine") {
-            mapView.style?.removeLayer(layer)
-        }
-        
-        if let source = mapView.style?.source(withIdentifier: "customLine") {
-            mapView.style?.removeSource(source)
-        }
-        
-        let userLocation = Location.core.getCoordinate()
-        let firstPoint = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
-        let lastPoint = endPoint.coordinate
-        
-        output.drawRoutsForPoints(firstPoint: firstPoint, lastPoint: lastPoint)
-    }
-    
-    func setupPoints(firstPoint: CLLocationCoordinate2D, lastPoint: CLLocationCoordinate2D) {
-        
-        let startPoint = MGLPointAnnotation()
-        startPoint.coordinate = firstPoint
-        mapView.addAnnotation(startPoint)
-        
-        endPoint.coordinate = lastPoint
-        mapView.addAnnotation(endPoint)
         
     }
     
@@ -97,22 +54,43 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
         mapView.tintColor = UIColor(hex: "#1000ff")
         mapView.compassView.isHidden = true
         
+        setupLastPoint(lastPoint: mapView.centerCoordinate)
+        
         // Double tap later
         //setupTapMap()
     }
     
-    func parseAddress(selectedItem:MKPlacemark?) -> String? {
-        let firstSpace = (selectedItem?.subThoroughfare != nil && selectedItem?.thoroughfare != nil) ? " " : ""
-        // put a comma between street and city/state
-        let addressLine = String(
-            format:"%@%@%@",
-            // street number
-            selectedItem?.subThoroughfare ?? "",
-            firstSpace,
-            // street name
-            selectedItem?.thoroughfare ?? ""
-        )
-        return addressLine
+    func setupLastPoint(lastPoint: CLLocationCoordinate2D) {
+        
+        self.lastPoint.coordinate = lastPoint
+        mapView.addAnnotation(self.lastPoint)
+        
+    }
+    
+    func showRouteAtIndex(index: Int) {
+        
+    }
+    
+    
+    func updateMap() {
+        
+        if let annotations = mapView.annotations {
+            mapView.removeAnnotations(annotations)
+        }
+        
+        if let layer = mapView.style?.layer(withIdentifier: "customLine") {
+            mapView.style?.removeLayer(layer)
+        }
+        
+        if let source = mapView.style?.source(withIdentifier: "customLine") {
+            mapView.style?.removeSource(source)
+        }
+        
+        let userLocation = Location.core.getCoordinate()
+        let firstPoint = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
+        let lastPoint = self.lastPoint.coordinate
+        
+        output.drawRoutsForPoints(firstPoint: firstPoint, lastPoint: lastPoint)
     }
     
     func updatePriorityViews(index: Int) {
@@ -148,22 +126,18 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
         
         output.selectRouteAtIndex(index: index)
     }
+    
 }
 
-extension AddressPointViewController {
+extension PointOnMapViewController {
     // MARK: actions
     
-    @IBAction func actionClose(sender: AnyObject) {
-        
-        if let layer = mapView.style?.layer(withIdentifier: "customLine") {
-            mapView.style?.removeLayer(layer)
-        }
-        
-        if let source = mapView.style?.source(withIdentifier: "customLine") {
-            mapView.style?.removeSource(source)
-        }
-        
+    @IBAction func actionBack(senderL: AnyObject) {
         output.dismiss()
+    }
+    
+    @IBAction func actionPoint(sender: AnyObject) {
+       updateMap()
     }
     
     @IBAction func actionSelectRoutePriority(sender: UIButton) {
@@ -171,7 +145,7 @@ extension AddressPointViewController {
     }
 }
 
-extension AddressPointViewController: MGLMapViewDelegate {
+extension PointOnMapViewController: MGLMapViewDelegate {
     
     func updateRouteView(route: AnyObject) {
         if let route = route as? Route {
@@ -187,20 +161,13 @@ extension AddressPointViewController: MGLMapViewDelegate {
         }
     }
     
-    func showRouteAtIndex(index: Int) {
-    
-    }
-    
     func showRoute(polyline: AnyObject) {
         if let polyline = polyline as? [CustomAnnotation] {
             mapView.add(polyline)
         }
         
-        let userLocation = Location.core.getCoordinate()
+        setupLastPoint(lastPoint: lastPoint.coordinate)
         
-        let firstPoint = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
-        
-        setupPoints(firstPoint: firstPoint, lastPoint: self.endPoint.coordinate)
         for (index, view) in priorityViews.enumerated() {
             
             if index == selectedPriorityIndex {
@@ -212,10 +179,15 @@ extension AddressPointViewController: MGLMapViewDelegate {
     }
     
     func drawFirstLine(polyline: AnyObject) {
+        priorityViewsHeightConstraint.constant = 182
+        
+        UIView.animate(withDuration: 0.3) { 
+            self.view.layoutIfNeeded()
+        }
         
         if let polyline = polyline as? MGLMultiPolyline {
             
-            guard let style = self.mapView.style else { return }
+            guard let style = mapView.style else { return }
             let source = MGLShapeSource(identifier: "customLine", shape: polyline, options: nil)
             style.addSource(source)
             
@@ -257,21 +229,11 @@ extension AddressPointViewController: MGLMapViewDelegate {
     }
     
     func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
+        let endPointCoordinate = self.lastPoint.coordinate
         
-        let userLocation = Location.core.getCoordinate()
-        let endPointCoordinate = self.endPoint.coordinate
-        
-        if annotation.coordinate.latitude == userLocation.latitude && annotation.coordinate.longitude == userLocation.longitude {
-            let image = UIImage(named: "startPoint")!
-            
-            
-            let drag = DraggableAnnotationView(reuseIdentifier: "startPoint", size: 50, image: image, pointOnMap: false)
-            drag.isDraggable = false
-            return drag
-            
-        } else if annotation.coordinate.latitude == endPointCoordinate.latitude && annotation.coordinate.longitude == endPointCoordinate.longitude {
+        if annotation.coordinate.latitude == endPointCoordinate.latitude && annotation.coordinate.longitude == endPointCoordinate.longitude {
             let image = UIImage(named: "endPoint")!
-            return DraggableAnnotationView(reuseIdentifier: "endPoint", size: 50, image: image, pointOnMap: false)
+            return DraggableAnnotationView(reuseIdentifier: "endPoint", size: 50, image: image)
         }
         return nil
     }

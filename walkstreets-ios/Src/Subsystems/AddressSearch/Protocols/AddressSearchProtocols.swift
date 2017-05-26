@@ -23,6 +23,7 @@ protocol AddressSearchViewOutput {
     func clearData()
     func searchTextChanged(text: String)
     func pointAddress(index: Int)
+    func pointOnMap()
 }
 
 protocol AddressSearchModuleInput: class {
@@ -40,4 +41,5 @@ protocol AddressSearchInteractorOutput: class {
 protocol AddressSearchRouterInput {
     func actionBack()
     func pointAddress(selectedItem: MKMapItem)
+    func pointOnMap()
 }
