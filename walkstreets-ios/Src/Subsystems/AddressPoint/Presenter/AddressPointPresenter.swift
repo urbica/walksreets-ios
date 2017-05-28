@@ -29,7 +29,7 @@ class AddressPointPresenter: AddressPointModuleInput, AddressPointViewOutput, Ad
     }
     
     var timeIndex: Int = 0
-    var routeIndex: Int = 0
+    var routeIndex: Int { return view.selectedPriorityIndex! }
     var multyLine: AnyObject?
 
     func viewIsReady() {
