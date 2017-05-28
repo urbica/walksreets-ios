@@ -171,6 +171,6 @@ extension AddressPointViewController {
     
     @IBAction func actionGo(sender: AnyObject) {
         mapView.setUserTrackingMode(.followWithHeading, animated: true)
-        mapView.setZoomLevel(9.0, animated: true)
+        mapView.setZoomLevel(17.0, animated: true)
     }
 }
