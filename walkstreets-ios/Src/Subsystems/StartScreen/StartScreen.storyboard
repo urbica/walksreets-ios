@@ -35,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The happiest routes instead of the shortest" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UU-dh-yT3" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                <rect key="frame" x="40" y="135" width="180" height="28"/>
+                                <rect key="frame" x="40" y="135" width="190" height="28"/>
                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -103,7 +103,7 @@
                             <constraint firstAttribute="trailing" secondItem="oaP-GA-YdF" secondAttribute="trailing" id="8Ck-9u-2l4"/>
                             <constraint firstItem="698-H4-Q67" firstAttribute="top" secondItem="oaP-GA-YdF" secondAttribute="bottom" id="9oi-61-WZv"/>
                             <constraint firstItem="1UU-dh-yT3" firstAttribute="leading" secondItem="1Za-KZ-RLo" secondAttribute="leading" id="EVL-P5-tri"/>
-                            <constraint firstAttribute="trailing" secondItem="1UU-dh-yT3" secondAttribute="trailing" constant="155" id="HbT-9t-NXe"/>
+                            <constraint firstAttribute="trailing" secondItem="1UU-dh-yT3" secondAttribute="trailing" constant="145" id="HbT-9t-NXe"/>
                             <constraint firstItem="1Za-KZ-RLo" firstAttribute="top" secondItem="3VD-Nw-Web" secondAttribute="bottom" constant="86" id="MYm-Rs-yyO"/>
                             <constraint firstItem="oaP-GA-YdF" firstAttribute="leading" secondItem="cTY-gv-YC6" secondAttribute="leading" id="Okx-1z-FqL"/>
                             <constraint firstItem="1UU-dh-yT3" firstAttribute="leading" secondItem="cTY-gv-YC6" secondAttribute="leading" constant="40" id="ssO-OP-9hq"/>

@@ -12,7 +12,6 @@ import MapKit
 class StartScreenViewController: UIViewController, StartScreenViewInput {
     
     @IBOutlet weak var locationButton: UIButton!
-    @IBOutlet weak var forwardButton: UIButton!
     
     var output: StartScreenViewOutput!
     
@@ -30,13 +29,9 @@ class StartScreenViewController: UIViewController, StartScreenViewInput {
         
         let status = CLLocationManager.authorizationStatus()
         if status == .denied || status == .restricted || status == .notDetermined {
-            forwardButton.setTitleColor(UIColor.gray, for: .normal)
-            forwardButton.isEnabled = false
             locationButton.setTitleColor(UIColor.black, for: .disabled)
             locationButton.isEnabled = true
         } else {
-            forwardButton.setTitleColor(UIColor.black, for: .normal)
-            forwardButton.isEnabled = true
             locationButton.setTitleColor(UIColor.gray, for: .disabled)
             locationButton.isEnabled = false
         }
@@ -46,9 +41,6 @@ class StartScreenViewController: UIViewController, StartScreenViewInput {
         _ = Location.core.getCoordinate()
         locationButton.isEnabled = false
         locationButton.setTitleColor(UIColor.gray, for: .disabled)
-        
-        forwardButton.setTitleColor(UIColor.black, for: .normal)
-        forwardButton.isEnabled = true
         output.openRouteCreation()
     }
     
