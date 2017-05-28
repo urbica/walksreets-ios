@@ -22,7 +22,7 @@ class PointOnMapPresenter: PointOnMapModuleInput, PointOnMapViewOutput, PointOnM
         }
     }
     
-    var routeIndex: Int = 0
+    var routeIndex: Int  { return view.selectedPriorityIndex! }
     var multyLine: AnyObject?
     
     func viewIsReady() {

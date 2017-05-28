@@ -21,6 +21,7 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
     var output: AddressPointViewOutput!
     var selectedItem: MKMapItem?
     var selectedPriorityIndex: Int? = 0
+    let startPoint = MGLPointAnnotation()
     var endPoint = MGLPointAnnotation()
     
     // MARK: Life cycle
@@ -44,8 +45,9 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
         if let placemark = selectedItem?.placemark {
             let firstPoint = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
             let lastPoint = CLLocationCoordinate2D(latitude: (placemark.coordinate.latitude), longitude: (placemark.coordinate.longitude))
+            self.startPoint.coordinate = firstPoint
             endPoint.coordinate = lastPoint
-            output.drawRoutsForPoints(firstPoint: firstPoint, lastPoint: lastPoint)
+            output.drawRoutsForPoints(firstPoint: startPoint.coordinate, lastPoint: lastPoint)
             
         }
     }
@@ -64,16 +66,13 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
             mapView.style?.removeSource(source)
         }
         
-        let userLocation = Location.core.getCoordinate()
-        let firstPoint = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
         let lastPoint = endPoint.coordinate
         
-        output.drawRoutsForPoints(firstPoint: firstPoint, lastPoint: lastPoint)
+        output.drawRoutsForPoints(firstPoint: self.startPoint.coordinate, lastPoint: lastPoint)
     }
     
     func setupPoints(firstPoint: CLLocationCoordinate2D, lastPoint: CLLocationCoordinate2D) {
         
-        let startPoint = MGLPointAnnotation()
         startPoint.coordinate = firstPoint
         mapView.addAnnotation(startPoint)
         
@@ -169,111 +168,9 @@ extension AddressPointViewController {
     @IBAction func actionSelectRoutePriority(sender: UIButton) {
         updatePriorityViews(index: sender.tag)
     }
-}
-
-extension AddressPointViewController: MGLMapViewDelegate {
     
-    func updateRouteView(route: AnyObject) {
-        if let route = route as? Route {
-            
-            guard let length = route.length , let time = route.time else {return}
-            
-            if let sw = route.sw, let ne = route.ne {
-                let bounds = MGLCoordinateBoundsMake(sw, ne)
-                mapView.setVisibleCoordinateBounds(bounds, animated: false)
-            }
-            
-            self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) km • \(time) min"
-        }
+    @IBAction func actionGo(sender: AnyObject) {
+        mapView.setUserTrackingMode(.followWithHeading, animated: true)
+        mapView.setZoomLevel(17.0, animated: true)
     }
-    
-    func showRouteAtIndex(index: Int) {
-    
-    }
-    
-    func showRoute(polyline: AnyObject) {
-        if let polyline = polyline as? [CustomAnnotation] {
-            mapView.add(polyline)
-        }
-        
-        let userLocation = Location.core.getCoordinate()
-        
-        let firstPoint = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
-        
-        setupPoints(firstPoint: firstPoint, lastPoint: self.endPoint.coordinate)
-        for (index, view) in priorityViews.enumerated() {
-            
-            if index == selectedPriorityIndex {
-                priorityViews[index].isUserInteractionEnabled = false
-            }
-            
-            view.isUserInteractionEnabled = true
-        }
-    }
-    
-    func drawFirstLine(polyline: AnyObject) {
-        
-        if let polyline = polyline as? MGLMultiPolyline {
-            
-            guard let style = self.mapView.style else { return }
-            let source = MGLShapeSource(identifier: "customLine", shape: polyline, options: nil)
-            style.addSource(source)
-            
-            let layer = MGLLineStyleLayer(identifier: "customLine", source: source)
-            layer.lineJoin = MGLStyleValue(rawValue: NSValue(mglLineJoin: .round))
-            layer.lineCap = MGLStyleValue(rawValue: NSValue(mglLineCap: .round))
-            layer.lineWidth = MGLStyleValue(interpolationMode: .exponential,
-                                            cameraStops: [14: MGLStyleValue<NSNumber>(rawValue: 5.5),
-                                                          18: MGLStyleValue<NSNumber>(rawValue: 5.5)],
-                                            options: [.defaultValue : MGLConstantStyleValue<NSNumber>(rawValue: 1.5)])
-            if let color = RouteCreationModuleConstants.colorForBackground(index: selectedPriorityIndex!) {
-                layer.lineColor = MGLStyleValue(rawValue: color)
-            }
-            style.insertLayer(layer, at: 262)
-            mapView.add(polyline)
-        }
-    }
-    
-    func mapView(_ mapView: MGLMapView, strokeColorForShapeAnnotation annotation: MGLShape) -> UIColor {
-        
-        if let annotation = annotation as? CustomAnnotation {
-            return annotation.color ?? .orange
-        } else {
-            return UIColor(hex: "1000FF")
-        }
-    }
-    
-    func mapView(_ mapView: MGLMapView, lineWidthForPolylineAnnotation annotation: MGLPolyline) -> CGFloat {
-        
-        if let annotationWidth = (annotation as? CustomAnnotation)?.width {
-            return annotationWidth
-        }
-        
-        return 5.5
-    }
-    
-    func mapView(_ mapView: MGLMapView, alphaForShapeAnnotation annotation: MGLShape) -> CGFloat {
-        return 1.0
-    }
-    
-    func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
-        
-        let userLocation = Location.core.getCoordinate()
-        let endPointCoordinate = self.endPoint.coordinate
-        
-        if annotation.coordinate.latitude == userLocation.latitude && annotation.coordinate.longitude == userLocation.longitude {
-            let image = UIImage(named: "startPoint")!
-            
-            
-            let drag = DraggableAnnotationView(reuseIdentifier: "startPoint", size: 50, image: image, pointOnMap: false)
-            drag.isDraggable = false
-            return drag
-            
-        } else if annotation.coordinate.latitude == endPointCoordinate.latitude && annotation.coordinate.longitude == endPointCoordinate.longitude {
-            let image = UIImage(named: "endPoint")!
-            return DraggableAnnotationView(reuseIdentifier: "endPoint", size: 50, image: image, pointOnMap: false)
-        }
-        return nil
-    }
-    
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2C5-Gp-VJn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2C5-Gp-VJn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -81,8 +81,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODW-bn-OyL" customClass="CustomizableView" customModule="walkstreets_ios" customModuleProvider="target">
                                         <rect key="frame" x="8" y="75" width="359" height="67"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELLO@WALKSTREETS.ORG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klX-qF-oFb" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                                <rect key="frame" x="80" y="26.5" width="198.5" height="14"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELLO@URBICA.CO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klX-qF-oFb" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
+                                                <rect key="frame" x="111.5" y="27" width="136.5" height="14"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -120,8 +120,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Td-S9-O2q">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Помочь с проектом или просто что-нибудь написать вот сюда:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L50-Pd-EKa" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="8" width="347" height="28"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can contact us on " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L50-Pd-EKa" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="38" width="347" height="14"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -134,7 +134,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="L50-Pd-EKa" firstAttribute="top" secondItem="7Td-S9-O2q" secondAttribute="top" constant="8" id="P6z-YP-PpC"/>
+                                            <constraint firstAttribute="bottom" secondItem="L50-Pd-EKa" secondAttribute="bottom" constant="15" id="0yj-4C-ufz"/>
                                             <constraint firstItem="L50-Pd-EKa" firstAttribute="leading" secondItem="7Td-S9-O2q" secondAttribute="leading" constant="20" id="Qo8-Rs-wzY"/>
                                             <constraint firstAttribute="trailing" secondItem="L50-Pd-EKa" secondAttribute="trailing" constant="8" id="xpj-0J-3iK"/>
                                         </constraints>
@@ -155,7 +155,7 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEc-Hl-ejC" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
                                 <rect key="frame" x="16" y="95" width="309" height="182"/>
-                                <string key="text">Walkstreets is an Urbica studio project. We are a Moscow-based company working on design, development and data analysis.
+                                <string key="text">Walkstreets is an Urbica studio project. We are a Moscow-based team of designer, developers and data analysts.
 
 The Walkstreets app is created to build the happiest and the most comfortable routes instead of the shortest and the fastest. We believe it will help people to discover the city and make the everyday routine enjoyable.
 

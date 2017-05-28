@@ -36,20 +36,24 @@
 		6A1FA1A1997B190C2CA98A19 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CFCAB5B63E57F7BECA4911 /* AboutViewController.swift */; };
 		72A2124729EC1AAC27070C3C /* RouteCreationModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552DDB458787869F10328D2 /* RouteCreationModuleConfigurator.swift */; };
 		79F47F130202C72F05897F9D /* AddressSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ED4AA49E3F290998D8FFF1 /* AddressSearchViewController.swift */; };
+		882D2A1C937C55D35B2FE2B1 /* OnboardingConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B4D1B98658A202B37F7DA5 /* OnboardingConfigurator.swift */; };
 		88F7DC5117B931B33898A084 /* PointOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A54B601E274C06D72442C90 /* PointOnMapViewController.swift */; };
 		8B9EF1F0C1123394DC3BD340 /* AboutConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A07B55A947D3B4C36EF54 /* AboutConfigurator.swift */; };
 		92273E32351DBC69D965A042 /* RouteCreationModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342EF44F078F8AB2C7963D16 /* RouteCreationModulePresenter.swift */; };
 		960E20EFE390E5F4DCFCFA2F /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283844FEC4424901696A8FA4 /* AboutPresenter.swift */; };
 		A00F3A654E088FDEC92458F1 /* AddressPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECF8AA8FAB81349AFEB4BC6 /* AddressPointViewController.swift */; };
+		A591ABE5884B5D71727025EB /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B81F727C8AA1A7F004B287C /* OnboardingViewController.swift */; };
 		B43E9393F4861E965D635E0A /* AddressPointConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D650CF947229325031A05ED /* AddressPointConfigurator.swift */; };
 		B71F4BD740BCB81C4D076E61 /* RouteCreationModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DA9A0C5667FCEE70CEB00 /* RouteCreationModuleRouter.swift */; };
 		B747C8FC21D87E01D5973FE5 /* RouteCreationModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */; };
 		BF09E1E02725BE108592DAA0 /* PointOnMapConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D285253A0CF70F50097A1 /* PointOnMapConfigurator.swift */; };
 		BFD236854880B1115B41D453 /* PointOnMapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2A857C7C2298E6EC38BA3 /* PointOnMapRouter.swift */; };
 		C225BC6A1B91D9763A4CFA99 /* AddressPointRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFA5594D1CE4F888B8AF8C8 /* AddressPointRouter.swift */; };
+		CDB58A9F2B72A4FD85B5F89F /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518ED608466A37DC193B165B /* OnboardingPresenter.swift */; };
 		D3EAF393C21361678ABD0218 /* AddressSearchConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB35B9503B06A0A18391D68 /* AddressSearchConfigurator.swift */; };
 		D404E4669FBB44F91AC14072 /* AddressPointProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC315C2E75BF88764510E78 /* AddressPointProtocols.swift */; };
 		D9B39AC1217ED510C5C4A351 /* Pods_walkstreets_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF62A8B0EC862CC8156F93C3 /* Pods_walkstreets_ios.framework */; };
+		DCA27839C044CA0AEDC99B46 /* OnboardingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E91A7DA1ABD9784610D4D59 /* OnboardingProtocols.swift */; };
 		E022832E1E95279D00B7AB3D /* StartScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E022832D1E95279D00B7AB3D /* StartScreen.storyboard */; };
 		E02B70901EBB2B7600379C76 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02B708F1EBB2B7600379C76 /* About.storyboard */; };
 		E02B70921EBB2DEA00379C76 /* CustomizableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02B70911EBB2DEA00379C76 /* CustomizableTextView.swift */; };
@@ -78,6 +82,9 @@
 		E0E689921EC50A2F00AF2765 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E689911EC50A2F00AF2765 /* CustomAnnotation.swift */; };
 		E0F614D01ED6224B00A89982 /* DraggableAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F614CF1ED6224B00A89982 /* DraggableAnnotation.swift */; };
 		E0F614D21ED62C5D00A89982 /* AddressPointConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F614D11ED62C5D00A89982 /* AddressPointConstants.swift */; };
+		E0F74F8E1EDB43100075500C /* AddressPointViewController+Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F74F8D1EDB43100075500C /* AddressPointViewController+Maps.swift */; };
+		E0F74F901EDB43350075500C /* PointOnMapViewController+Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F74F8F1EDB43350075500C /* PointOnMapViewController+Maps.swift */; };
+		E0F74F921EDB48AC0075500C /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F74F911EDB48AC0075500C /* Onboarding.storyboard */; };
 		E0FDE0861EC0598900E09D7F /* AddressSearchViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FDE0851EC0598900E09D7F /* AddressSearchViewController+UITableView.swift */; };
 		E0FE34851ECDF781002BDBE0 /* OnStartHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE34841ECDF781002BDBE0 /* OnStartHelper.swift */; };
 		F099800B9560E696761BDEAF /* RouteCreationModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CA3988FB4B348C7125903 /* RouteCreationModuleViewController.swift */; };
@@ -94,6 +101,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00B4D1B98658A202B37F7DA5 /* OnboardingConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingConfigurator.swift; sourceTree = "<group>"; };
 		01F2A857C7C2298E6EC38BA3 /* PointOnMapRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOnMapRouter.swift; sourceTree = "<group>"; };
 		01F32DB810DD923282A7E4A2 /* PointOnMapProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOnMapProtocols.swift; sourceTree = "<group>"; };
 		042DA9A0C5667FCEE70CEB00 /* RouteCreationModuleRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleRouter.swift; sourceTree = "<group>"; };
@@ -130,6 +138,8 @@
 		43C3915E3E5329A2A4F3A443 /* AddressPointInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressPointInteractor.swift; sourceTree = "<group>"; };
 		43C47CD5BA8E69D0DC38C548 /* PointOnMapInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOnMapInteractor.swift; sourceTree = "<group>"; };
 		48795177FF9C29210DCF1098 /* AddressSearchRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchRouter.swift; sourceTree = "<group>"; };
+		4E91A7DA1ABD9784610D4D59 /* OnboardingProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingProtocols.swift; sourceTree = "<group>"; };
+		518ED608466A37DC193B165B /* OnboardingPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
 		55ED4AA49E3F290998D8FFF1 /* AddressSearchViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchViewController.swift; sourceTree = "<group>"; };
 		5D4369802EDEBDD3214268AA /* RouteCreationModuleProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleProtocols.swift; sourceTree = "<group>"; };
 		612D285253A0CF70F50097A1 /* PointOnMapConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PointOnMapConfigurator.swift; sourceTree = "<group>"; };
@@ -139,6 +149,7 @@
 		7D393807BF77BA3F32F88643 /* RouteCreationModuleInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteCreationModuleInteractor.swift; sourceTree = "<group>"; };
 		807A07B55A947D3B4C36EF54 /* AboutConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutConfigurator.swift; sourceTree = "<group>"; };
 		8D650CF947229325031A05ED /* AddressPointConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressPointConfigurator.swift; sourceTree = "<group>"; };
+		9B81F727C8AA1A7F004B287C /* OnboardingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		C54AE4BEA1CCA121327F5967 /* AddressSearchProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressSearchProtocols.swift; sourceTree = "<group>"; };
 		CF62A8B0EC862CC8156F93C3 /* Pods_walkstreets_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_walkstreets_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42975D3FFAEEA4E4FFD169D /* Pods-walkstreets-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walkstreets-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-walkstreets-ios/Pods-walkstreets-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +183,9 @@
 		E0E689911EC50A2F00AF2765 /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		E0F614CF1ED6224B00A89982 /* DraggableAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableAnnotation.swift; sourceTree = "<group>"; };
 		E0F614D11ED62C5D00A89982 /* AddressPointConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressPointConstants.swift; sourceTree = "<group>"; };
+		E0F74F8D1EDB43100075500C /* AddressPointViewController+Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddressPointViewController+Maps.swift"; sourceTree = "<group>"; };
+		E0F74F8F1EDB43350075500C /* PointOnMapViewController+Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PointOnMapViewController+Maps.swift"; sourceTree = "<group>"; };
+		E0F74F911EDB48AC0075500C /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		E0FDE0851EC0598900E09D7F /* AddressSearchViewController+UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddressSearchViewController+UITableView.swift"; sourceTree = "<group>"; };
 		E0FE34841ECDF781002BDBE0 /* OnStartHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnStartHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -366,6 +380,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		498D3F22D6BF870D2F703F21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9B81F727C8AA1A7F004B287C /* OnboardingViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4C48668F374B6EF1CD9DD512 /* Subsystems */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +397,7 @@
 				6B2CD48A3A0F49F845635187 /* AddressSearch */,
 				B545B93FD05502EB079F3EFC /* AddressPoint */,
 				791E1C27AECF9101F8F25965 /* PointOnMap */,
+				D02DADCFFA08C22E9F2CD183 /* Onboarding */,
 			);
 			path = Subsystems;
 			sourceTree = "<group>";
@@ -488,10 +511,19 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		904034BEE4E225D20B3212C3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				518ED608466A37DC193B165B /* OnboardingPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		90CF1449DF88D28122B471B9 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				1ECF8AA8FAB81349AFEB4BC6 /* AddressPointViewController.swift */,
+				E0F74F8D1EDB43100075500C /* AddressPointViewController+Maps.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -549,6 +581,14 @@
 				E0F614D11ED62C5D00A89982 /* AddressPointConstants.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		B4D78127232E00D6BACF4AA1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4E91A7DA1ABD9784610D4D59 /* OnboardingProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		B545B93FD05502EB079F3EFC /* AddressPoint */ = {
@@ -613,6 +653,18 @@
 				30FD55781DCDED6C00000A97 /* RouteCreationModuleConstants.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		D02DADCFFA08C22E9F2CD183 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E0F74F911EDB48AC0075500C /* Onboarding.storyboard */,
+				498D3F22D6BF870D2F703F21 /* View */,
+				904034BEE4E225D20B3212C3 /* Presenter */,
+				FF6FF8F8DB22C0B19CC61D10 /* Configurator */,
+				B4D78127232E00D6BACF4AA1 /* Protocols */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		E02B70971EBB5F8500379C76 /* Cell */ = {
@@ -737,6 +789,7 @@
 			isa = PBXGroup;
 			children = (
 				7A54B601E274C06D72442C90 /* PointOnMapViewController.swift */,
+				E0F74F8F1EDB43350075500C /* PointOnMapViewController+Maps.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -747,6 +800,14 @@
 				342EF44F078F8AB2C7963D16 /* RouteCreationModulePresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FF6FF8F8DB22C0B19CC61D10 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				00B4D1B98658A202B37F7DA5 /* OnboardingConfigurator.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -846,6 +907,7 @@
 				E058C0BF1EB8C47200E981EB /* VremenaGrotesk.otf in Resources */,
 				E02B70941EBB5CB700379C76 /* AddressSearch.storyboard in Resources */,
 				E058C0C01EB8C47500E981EB /* VremenaGroteskBold.otf in Resources */,
+				E0F74F921EDB48AC0075500C /* Onboarding.storyboard in Resources */,
 				306D41681DCD2C1100043F86 /* LaunchScreen.storyboard in Resources */,
 				306D41651DCD2C1100043F86 /* Assets.xcassets in Resources */,
 				E058C0C11EB8C47900E981EB /* VremenaGroteskBook.otf in Resources */,
@@ -963,6 +1025,7 @@
 				72A2124729EC1AAC27070C3C /* RouteCreationModuleConfigurator.swift in Sources */,
 				B747C8FC21D87E01D5973FE5 /* RouteCreationModuleProtocols.swift in Sources */,
 				3075B6561DD069B30096DFE7 /* Route.swift in Sources */,
+				E0F74F901EDB43350075500C /* PointOnMapViewController+Maps.swift in Sources */,
 				E0E689921EC50A2F00AF2765 /* CustomAnnotation.swift in Sources */,
 				E0C4F6661E8C06D3005C63C4 /* RootApiService.swift in Sources */,
 				30FD55811DCE0D5900000A97 /* LocationManager.swift in Sources */,
@@ -971,6 +1034,7 @@
 				8B9EF1F0C1123394DC3BD340 /* AboutConfigurator.swift in Sources */,
 				5307848F0056AEC1DD01A210 /* AboutProtocols.swift in Sources */,
 				79F47F130202C72F05897F9D /* AddressSearchViewController.swift in Sources */,
+				E0F74F8E1EDB43100075500C /* AddressPointViewController+Maps.swift in Sources */,
 				16318C2A56C2D27F1A5A66AD /* AddressSearchPresenter.swift in Sources */,
 				E0E689901EC5095600AF2765 /* Feature.swift in Sources */,
 				0831A58BF9B0F4CEF0A32550 /* AddressSearchInteractor.swift in Sources */,
@@ -991,6 +1055,10 @@
 				BFD236854880B1115B41D453 /* PointOnMapRouter.swift in Sources */,
 				BF09E1E02725BE108592DAA0 /* PointOnMapConfigurator.swift in Sources */,
 				1CDBF98722AD07B2A3D08560 /* PointOnMapProtocols.swift in Sources */,
+				A591ABE5884B5D71727025EB /* OnboardingViewController.swift in Sources */,
+				CDB58A9F2B72A4FD85B5F89F /* OnboardingPresenter.swift in Sources */,
+				882D2A1C937C55D35B2FE2B1 /* OnboardingConfigurator.swift in Sources */,
+				DCA27839C044CA0AEDC99B46 /* OnboardingProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

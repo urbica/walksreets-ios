@@ -10,6 +10,8 @@ import MapKit
 
 protocol PointOnMapViewInput: class {
 
+    var selectedPriorityIndex: Int? {get}
+    
     func setupInitialState()
     func showRoute(polyline: AnyObject)
     func drawFirstLine(polyline: AnyObject)

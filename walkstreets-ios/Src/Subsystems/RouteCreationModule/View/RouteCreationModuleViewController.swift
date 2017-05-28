@@ -195,4 +195,8 @@ extension RouteCreationModuleViewController {
     @IBAction func actionOpenAbout(sender: AnyObject) {
         output.openAbout()
     }
+    
+    @IBAction func actionGo(sender: AnyObject) {
+        mapView.setUserTrackingMode(.follow, animated: true)
+    }
 }
