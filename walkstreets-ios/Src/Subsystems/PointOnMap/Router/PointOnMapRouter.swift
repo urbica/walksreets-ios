@@ -11,7 +11,12 @@ class PointOnMapRouter: PointOnMapRouterInput {
     weak var view: PointOnMapViewController?
     
     func dismiss() {
-        _ = view?.navigationController?.popViewController(animated: true)
+        
+        if let controllers = self.view?.navigationController?.viewControllers {
+            view?.navigationController?.popToViewController(controllers[0], animated: true)
+        }
+        
+       // _ = view?.navigationController?.popViewController(animated: true)
     }
     
 }
