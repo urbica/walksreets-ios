@@ -13,6 +13,8 @@ class AddressSearchPresenter: AddressSearchModuleInput, AddressSearchViewOutput,
     weak var view: AddressSearchViewInput!
     var interactor: AddressSearchInteractorInput!
     var router: AddressSearchRouterInput!
+    var region = MKCoordinateRegion()
+    
     var matchingItems: NSArray? {
         didSet {
             view.reloadData()
@@ -21,14 +23,16 @@ class AddressSearchPresenter: AddressSearchModuleInput, AddressSearchViewOutput,
 
     
     func viewIsReady() {
-
+        region.span.latitudeDelta = 0.001
+        region.span.longitudeDelta = 0.001
+        region.center = RouteCreationModuleConstants.moscowCenterCoordinate
     }
     
     func searchTextChanged(text: String) {
+
         let request = MKLocalSearchRequest()
-        let span = MKCoordinateSpan(latitudeDelta: 0.00001, longitudeDelta: 0.00001)
         request.naturalLanguageQuery = text
-        request.region = MKCoordinateRegion(center: RouteCreationModuleConstants.moscowCenterCoordinate, span: span)
+        request.region = region
         let search = MKLocalSearch(request: request)
         search.start { [weak self] response, _ in
             guard let response = response else {
