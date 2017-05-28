@@ -303,6 +303,7 @@
                     <connections>
                         <outlet property="lengthTimeLabel" destination="sMi-kU-fpB" id="B9a-u7-DJu"/>
                         <outlet property="mapView" destination="QUn-er-F8y" id="RJY-43-jsi"/>
+                        <outlet property="okButton" destination="803-Dt-IvW" id="a3F-iN-ja0"/>
                         <outlet property="priorityViewsHeightConstraint" destination="WEv-nT-Zsq" id="kur-0W-6Pb"/>
                         <outletCollection property="priorityLabels" destination="spn-fY-xxS" collectionClass="NSMutableArray" id="VGx-fF-Idu"/>
                         <outletCollection property="priorityLabels" destination="aDH-uA-RiV" collectionClass="NSMutableArray" id="paJ-m9-joO"/>

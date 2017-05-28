@@ -66,6 +66,7 @@ extension PointOnMapViewController: MGLMapViewDelegate {
                 layer.lineColor = MGLStyleValue(rawValue: color)
             }
             style.insertLayer(layer, at: 262)
+            okButton.isEnabled = true
             mapView.add(polyline)
         }
     }

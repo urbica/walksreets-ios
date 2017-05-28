@@ -16,7 +16,7 @@ class PointOnMapViewController: UIViewController, PointOnMapViewInput {
     @IBOutlet var priorityLabels: Array<UILabel>!
     @IBOutlet weak var lengthTimeLabel: UILabel!
     @IBOutlet weak var priorityViewsHeightConstraint: NSLayoutConstraint!
-
+    @IBOutlet weak var okButton: UIButton!
     
     var output: PointOnMapViewOutput!
     let lastPoint = MGLPointAnnotation()
@@ -138,6 +138,7 @@ extension PointOnMapViewController {
     
     @IBAction func actionPoint(sender: AnyObject) {
        updateMap()
+        okButton.isEnabled = false
     }
     
     @IBAction func actionSelectRoutePriority(sender: UIButton) {
