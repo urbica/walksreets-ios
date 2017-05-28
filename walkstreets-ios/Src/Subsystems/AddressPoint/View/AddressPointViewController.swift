@@ -21,6 +21,7 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
     var output: AddressPointViewOutput!
     var selectedItem: MKMapItem?
     var selectedPriorityIndex: Int? = 0
+    let startPoint = MGLPointAnnotation()
     var endPoint = MGLPointAnnotation()
     
     // MARK: Life cycle
@@ -44,8 +45,9 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
         if let placemark = selectedItem?.placemark {
             let firstPoint = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
             let lastPoint = CLLocationCoordinate2D(latitude: (placemark.coordinate.latitude), longitude: (placemark.coordinate.longitude))
+            self.startPoint.coordinate = firstPoint
             endPoint.coordinate = lastPoint
-            output.drawRoutsForPoints(firstPoint: firstPoint, lastPoint: lastPoint)
+            output.drawRoutsForPoints(firstPoint: startPoint.coordinate, lastPoint: lastPoint)
             
         }
     }
@@ -64,16 +66,13 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
             mapView.style?.removeSource(source)
         }
         
-        let userLocation = Location.core.getCoordinate()
-        let firstPoint = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
         let lastPoint = endPoint.coordinate
         
-        output.drawRoutsForPoints(firstPoint: firstPoint, lastPoint: lastPoint)
+        output.drawRoutsForPoints(firstPoint: self.startPoint.coordinate, lastPoint: lastPoint)
     }
     
     func setupPoints(firstPoint: CLLocationCoordinate2D, lastPoint: CLLocationCoordinate2D) {
         
-        let startPoint = MGLPointAnnotation()
         startPoint.coordinate = firstPoint
         mapView.addAnnotation(startPoint)
         
@@ -196,11 +195,8 @@ extension AddressPointViewController: MGLMapViewDelegate {
             mapView.add(polyline)
         }
         
-        let userLocation = Location.core.getCoordinate()
         
-        let firstPoint = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
-        
-        setupPoints(firstPoint: firstPoint, lastPoint: self.endPoint.coordinate)
+        setupPoints(firstPoint: self.startPoint.coordinate, lastPoint: self.endPoint.coordinate)
         for (index, view) in priorityViews.enumerated() {
             
             if index == selectedPriorityIndex {
@@ -258,15 +254,13 @@ extension AddressPointViewController: MGLMapViewDelegate {
     
     func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
         
-        let userLocation = Location.core.getCoordinate()
+        let startPoint = self.startPoint.coordinate
         let endPointCoordinate = self.endPoint.coordinate
         
-        if annotation.coordinate.latitude == userLocation.latitude && annotation.coordinate.longitude == userLocation.longitude {
+        if annotation.coordinate.latitude == startPoint.latitude && annotation.coordinate.longitude == startPoint.longitude {
             let image = UIImage(named: "startPoint")!
-            
-            
+        
             let drag = DraggableAnnotationView(reuseIdentifier: "startPoint", size: 50, image: image, pointOnMap: false)
-            drag.isDraggable = false
             return drag
             
         } else if annotation.coordinate.latitude == endPointCoordinate.latitude && annotation.coordinate.longitude == endPointCoordinate.longitude {
