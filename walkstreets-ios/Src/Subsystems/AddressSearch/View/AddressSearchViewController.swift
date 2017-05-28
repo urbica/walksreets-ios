@@ -27,6 +27,7 @@ class AddressSearchViewController: UIViewController, AddressSearchViewInput {
 
     // MARK: AddressSearchViewInput
     func setupInitialState() {
+        textField.becomeFirstResponder()
     }
     
     func reloadData() {
