@@ -45,7 +45,7 @@ extension AboutViewController: MFMailComposeViewControllerDelegate {
         if MFMailComposeViewController.canSendMail() {
             let emailTitle = "WalkStreets Feedback"
             let messageBody = "Feature request or bug report?"
-            let toRecipents = ["hello@walkstreets.org"]
+            let toRecipents = ["hello@urbica.co"]
             let mailController: MFMailComposeViewController = MFMailComposeViewController()
             mailController.mailComposeDelegate = self
             mailController.setSubject(emailTitle)
