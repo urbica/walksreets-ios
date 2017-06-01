@@ -59,3 +59,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+// Mark: - 3D Touch
+extension AppDelegate {
+    
+    @available(iOS 9.0, *)
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        
+        // TODO: uncomment after onboarding is done
+        
+        //guard UserDefaults.standard.boolForKey(Config.onboardingWasShownKey) == true else {
+        //    return
+        //}
+        
+        
+        switch shortcutItem.type {
+        case "com.walkstreets-ios.app.Walkstreets.getBack":
+            presentRouteCreation()
+        case "com.walkstreets-ios.app.Walkstreets.showAddress":
+            presentAddress()
+        default:
+            return
+        }
+    }
+    
+    func presentRouteCreation() {
+        let identifier = "routeCreationNavID"
+        let vc = UIStoryboard.mainInterfaceStoryboard.instantiateViewController(withIdentifier: identifier) as! UINavigationController
+        
+        window?.rootViewController?.present(vc, animated: true, completion: {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: RouteCreationModuleConstants.walkMe), object: nil)
+        })
+    }
+    
+    func presentAddress() {
+     
+        let identifier = "addressSearchID"
+
+        let navController = UIStoryboard.addressStoryboard.instantiateViewController(withIdentifier: identifier) as! UINavigationController
+        window?.rootViewController?.present(navController, animated: false, completion: {
+        })
+    }
+    
+}
+

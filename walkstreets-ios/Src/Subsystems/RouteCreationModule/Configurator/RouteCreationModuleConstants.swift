@@ -22,6 +22,8 @@ struct RouteCreationModuleConstants {
     
     static let backgroundColors = [UIColor(hex: "009969"), UIColor(hex: "D962AD"), UIColor(hex: "0045FF")]
     
+    static let walkMe = "walkMe"
+    
     static func colorPickerForRoute(index: Int) -> [UIColor] {
         if index == 0 {
             return greenRouteColors

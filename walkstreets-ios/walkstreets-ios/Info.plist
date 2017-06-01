@@ -2,6 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>getBack</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Get back</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.walkstreets-ios.app.Walkstreets.getBack</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.walkstreets-ios.app.Walkstreets.showAddress</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Address</string>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>routeCreation_search</string>
+		</dict>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

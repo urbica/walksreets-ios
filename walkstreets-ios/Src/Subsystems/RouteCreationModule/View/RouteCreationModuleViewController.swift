@@ -168,6 +168,11 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         
     }
     
+    func walkMe() {
+        output.walkMeAround(time: 0)
+        startRouteView.isHidden = true
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
@@ -186,8 +191,7 @@ extension RouteCreationModuleViewController {
     }
 
     @IBAction func actionRouteDetailsView(sender: AnyObject) {
-        output.walkMeAround(time: 0)
-        startRouteView.isHidden = true
+        walkMe()
     }
     
     @IBAction func closeRouteDetailsView(sender: AnyObject) {

@@ -18,6 +18,7 @@ protocol RouteCreationModuleViewInput: class {
     func showRouteAtIndex(index: Int)
     func updateRouteView(route: AnyObject)
     func addPointTuple(pointTuple: (CLLocationCoordinate2D, CLLocationCoordinate2D))
+    func walkMe()
 }
 
 protocol RouteCreationModuleViewOutput {

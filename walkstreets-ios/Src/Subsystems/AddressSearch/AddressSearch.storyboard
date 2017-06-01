@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bnG-6x-a93">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GYF-Pq-WQB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,7 +33,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CANCEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kyg-xF-lJ3">
-                                                <rect key="frame" x="10.5" y="37" width="59" height="14"/>
+                                                <rect key="frame" x="10.5" y="37.5" width="59" height="14"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -60,7 +60,7 @@
                                         <rect key="frame" x="225" y="0.0" width="150" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POINT ON MAP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAW-rD-46q">
-                                                <rect key="frame" x="22.5" y="37" width="105" height="14"/>
+                                                <rect key="frame" x="23" y="37.5" width="105" height="14"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -167,6 +167,7 @@
                             <constraint firstAttribute="trailing" secondItem="x5K-TB-5CO" secondAttribute="trailing" id="vq1-2z-Ia2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="RY7-ev-oSP"/>
                     <connections>
                         <outlet property="tableView" destination="9ph-lv-nu3" id="FF8-LW-l6l"/>
                         <outlet property="textField" destination="FbW-3B-t0P" id="abb-x7-DRz"/>
@@ -176,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UY0-qf-ZtA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="232.80000000000001" y="141.67916041979012"/>
+            <point key="canvasLocation" x="1172" y="141.67916041979012"/>
         </scene>
         <!--AddressPoint-->
         <scene sceneID="zDY-us-g4D">
@@ -184,7 +185,7 @@
                 <viewControllerPlaceholder storyboardName="AddressPoint" id="oDy-Uj-IMP" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H8z-sE-Ptr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="909" y="141"/>
+            <point key="canvasLocation" x="1848" y="140.32983508245877"/>
         </scene>
         <!--PointOnMap-->
         <scene sceneID="XpR-8C-M93">
@@ -192,7 +193,25 @@
                 <viewControllerPlaceholder storyboardName="PointOnMap" id="S25-VS-WSh" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DnA-ep-21a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="910" y="228"/>
+            <point key="canvasLocation" x="1848.8" y="227.58620689655174"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5Rd-xo-oMz">
+            <objects>
+                <navigationController storyboardIdentifier="addressSearchID" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="GYF-Pq-WQB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AbV-T5-GE4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bnG-6x-a93" kind="relationship" relationship="rootViewController" id="VFZ-Gt-qOJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X1g-sU-87I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="232.80000000000001" y="141.67916041979012"/>
         </scene>
     </scenes>
 </document>
