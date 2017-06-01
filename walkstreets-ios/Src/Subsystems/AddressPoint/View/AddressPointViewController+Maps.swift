@@ -21,7 +21,11 @@ extension AddressPointViewController: MGLMapViewDelegate {
                 mapView.setVisibleCoordinateBounds(bounds, animated: false)
             }
             
-            self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) km • \(time) min"
+            if time > 60 {
+                self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) km • \(time / 60) hours, \(time % 60) min"
+            } else {
+                self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) km • \(time) min"
+            }
         }
     }
     
