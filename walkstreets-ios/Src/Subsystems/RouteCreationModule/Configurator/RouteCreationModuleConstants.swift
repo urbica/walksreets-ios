@@ -16,11 +16,13 @@ struct RouteCreationModuleConstants {
     static let steplessRouteStyle = URL(string: "mapbox://styles/walkstreets/civ5iiv98002t2is5axe0myxx")
     static let mainApiPoint = "http://routes.walkstreets.org/regular/route/v1/driving/"
 
-    static let greenRouteColors = [UIColor(hex: "FAFF91"), UIColor(hex: "7FFF7F"), UIColor(hex: "00E66D")]
-    static let noizeRouteColors = [UIColor(hex: "FF73BF"), UIColor(hex: "FFB2D1"), UIColor(hex: "FFF2D4")]
-    static let airRouteColors = [UIColor(hex: "CCFFFF"), UIColor(hex: "4CD9FF"), UIColor(hex: "00B2FF")]
+    static let greenRouteColors = [UIColor(hex: "F7FF66"), UIColor(hex: "66FF66"), UIColor(hex: "00B86C")]
+    static let noizeRouteColors = [UIColor(hex: "FF73B2"), UIColor(hex: "FFBFB2"), UIColor(hex: "FFFFB2")]
+    static let airRouteColors = [UIColor(hex: "99FFFF"), UIColor(hex: "00A6FF"), UIColor(hex: "004CFF")]
     
-    static let backgroundColors = [UIColor(hex: "00B866"), UIColor(hex: "FF61BF"), UIColor(hex: "0099FF")]
+    static let backgroundColors = [UIColor(hex: "009969"), UIColor(hex: "D962AD"), UIColor(hex: "0045FF")]
+    
+    static let walkMe = "walkMe"
     
     static func colorPickerForRoute(index: Int) -> [UIColor] {
         if index == 0 {

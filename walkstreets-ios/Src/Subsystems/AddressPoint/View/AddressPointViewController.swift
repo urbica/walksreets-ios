@@ -13,7 +13,6 @@ import MapKit
 class AddressPointViewController: UIViewController, AddressPointViewInput {
 
     @IBOutlet weak var mapView: MGLMapView!
-    @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var lengthTimeLabel: UILabel!
     @IBOutlet var priorityViews: Array<CustomizableView>!
     @IBOutlet var priorityLabels: Array<UILabel>!
@@ -35,10 +34,6 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
     
     // MARK: AddressPointViewInput
     func setupInitialState() {
-        if let address = parseAddress(selectedItem: selectedItem?.placemark) {
-            addressLabel.text = address
-        }
-        
         setupMap()
         let userLocation = Location.core.getCoordinate()
         
@@ -120,7 +115,7 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
         }
         
         for view in priorityViews {
-            view.backgroundColor = UIColor.white
+            view.backgroundColor = UIColor.clear
         }
         
         self.priorityViews[index].backgroundColor = UIColor.black

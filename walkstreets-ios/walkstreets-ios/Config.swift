@@ -16,4 +16,7 @@ struct Config {
     static let beatifulPath = "beautiful_path"
     static let ws = "ws"
     
+    static let showShortcut = "showShortcut"
+
+    
 }

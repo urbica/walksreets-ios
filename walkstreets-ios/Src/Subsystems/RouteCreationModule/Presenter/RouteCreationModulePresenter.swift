@@ -15,6 +15,11 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     var router: RouteCreationModuleRouterInput!
     let geoCoder = CLGeocoder()
     
+    init () {
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: RouteCreationModuleConstants.walkMe), object: nil, queue: OperationQueue.main) { [weak self] _ in
+            self?.view.walkMe()
+        }
+    }
     
     var routes = NSArray() {
         didSet {

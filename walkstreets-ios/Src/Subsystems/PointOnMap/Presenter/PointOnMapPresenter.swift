@@ -13,6 +13,12 @@ class PointOnMapPresenter: PointOnMapModuleInput, PointOnMapViewOutput, PointOnM
     weak var view: PointOnMapViewInput!
     var interactor: PointOnMapInteractorInput!
     var router: PointOnMapRouterInput!
+    
+    init () {
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: AddressPointConstants.kPointUpdated), object: nil, queue: OperationQueue.main) { [weak self] _ in
+            self?.view.updateMap()
+        }
+    }
 
     var routes = NSArray() {
         didSet {

@@ -68,7 +68,7 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         }
         
         for view in priorityViews {
-            view.backgroundColor = UIColor.white
+            view.backgroundColor = UIColor.clear
         }
         
         self.priorityViews[index].backgroundColor = UIColor.black
@@ -114,7 +114,7 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         }
         
         for view in priorityViews {
-            view.backgroundColor = UIColor.white
+            view.backgroundColor = UIColor.clear
         }
         
         if let priority = selectedPriorityIndex {
@@ -153,14 +153,24 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
             if let sw = route.sw, let ne = route.ne {
                 let bounds = MGLCoordinateBoundsMake(sw, ne)
                 mapView.setVisibleCoordinateBounds(bounds, animated: false)
+                mapView.center = CGPoint(x: UIScreen.main.bounds.size.width, y:UIScreen.main.bounds.size.height + 60)
             }
             
-            self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) km • \(time) min"
+            if time > 60 {
+                self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) km • \(time / 60) hours, \(time % 60) min"
+            } else {
+                self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) km • \(time) min"
+            }
         }
     }
     
     func showRouteAtIndex(index: Int) {
         
+    }
+    
+    func walkMe() {
+        output.walkMeAround(time: 0)
+        startRouteView.isHidden = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -181,10 +191,11 @@ extension RouteCreationModuleViewController {
     }
 
     @IBAction func actionRouteDetailsView(sender: AnyObject) {
-        output.walkMeAround(time: 0)
+        walkMe()
     }
     
     @IBAction func closeRouteDetailsView(sender: AnyObject) {
+        startRouteView.isHidden = false
         hideRouteViews()
     }
     

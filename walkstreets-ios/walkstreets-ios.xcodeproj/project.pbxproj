@@ -54,6 +54,9 @@
 		D404E4669FBB44F91AC14072 /* AddressPointProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC315C2E75BF88764510E78 /* AddressPointProtocols.swift */; };
 		D9B39AC1217ED510C5C4A351 /* Pods_walkstreets_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF62A8B0EC862CC8156F93C3 /* Pods_walkstreets_ios.framework */; };
 		DCA27839C044CA0AEDC99B46 /* OnboardingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E91A7DA1ABD9784610D4D59 /* OnboardingProtocols.swift */; };
+		E0019C351EE0B57D00369286 /* UIApplication+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0019C341EE0B57D00369286 /* UIApplication+Helpers.swift */; };
+		E0019C371EE0B5A800369286 /* UIViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0019C361EE0B5A800369286 /* UIViewController+Helpers.swift */; };
+		E0019C391EE0B5F400369286 /* Storyboard+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0019C381EE0B5F400369286 /* Storyboard+Helpers.swift */; };
 		E022832E1E95279D00B7AB3D /* StartScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E022832D1E95279D00B7AB3D /* StartScreen.storyboard */; };
 		E02B70901EBB2B7600379C76 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02B708F1EBB2B7600379C76 /* About.storyboard */; };
 		E02B70921EBB2DEA00379C76 /* CustomizableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02B70911EBB2DEA00379C76 /* CustomizableTextView.swift */; };
@@ -155,6 +158,9 @@
 		D42975D3FFAEEA4E4FFD169D /* Pods-walkstreets-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walkstreets-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-walkstreets-ios/Pods-walkstreets-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		D9872266730A6439ED8F37EB /* AddressPointPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressPointPresenter.swift; sourceTree = "<group>"; };
 		DEFA5594D1CE4F888B8AF8C8 /* AddressPointRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressPointRouter.swift; sourceTree = "<group>"; };
+		E0019C341EE0B57D00369286 /* UIApplication+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Helpers.swift"; sourceTree = "<group>"; };
+		E0019C361EE0B5A800369286 /* UIViewController+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helpers.swift"; sourceTree = "<group>"; };
+		E0019C381EE0B5F400369286 /* Storyboard+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Storyboard+Helpers.swift"; sourceTree = "<group>"; };
 		E022832D1E95279D00B7AB3D /* StartScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartScreen.storyboard; sourceTree = "<group>"; };
 		E02B708F1EBB2B7600379C76 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		E02B70911EBB2DEA00379C76 /* CustomizableTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizableTextView.swift; sourceTree = "<group>"; };
@@ -350,6 +356,7 @@
 		30FD557F1DCE0D3200000A97 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E0019C331EE0B55B00369286 /* UIApplication+Helpers */,
 				E0FE34831ECDF754002BDBE0 /* OnStartHelper */,
 				E0AF813E1EC7B741009FA7D1 /* Double+Helpers */,
 				E058C0C71EB8C55500E981EB /* GDC+Helpers */,
@@ -359,6 +366,8 @@
 				30FD55801DCE0D5900000A97 /* LocationManager.swift */,
 				E0E689911EC50A2F00AF2765 /* CustomAnnotation.swift */,
 				E0F614CF1ED6224B00A89982 /* DraggableAnnotation.swift */,
+				E0019C361EE0B5A800369286 /* UIViewController+Helpers.swift */,
+				E0019C381EE0B5F400369286 /* Storyboard+Helpers.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -665,6 +674,14 @@
 				B4D78127232E00D6BACF4AA1 /* Protocols */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		E0019C331EE0B55B00369286 /* UIApplication+Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E0019C341EE0B57D00369286 /* UIApplication+Helpers.swift */,
+			);
+			path = "UIApplication+Helpers";
 			sourceTree = "<group>";
 		};
 		E02B70971EBB5F8500379C76 /* Cell */ = {
@@ -1028,8 +1045,10 @@
 				E0F74F901EDB43350075500C /* PointOnMapViewController+Maps.swift in Sources */,
 				E0E689921EC50A2F00AF2765 /* CustomAnnotation.swift in Sources */,
 				E0C4F6661E8C06D3005C63C4 /* RootApiService.swift in Sources */,
+				E0019C351EE0B57D00369286 /* UIApplication+Helpers.swift in Sources */,
 				30FD55811DCE0D5900000A97 /* LocationManager.swift in Sources */,
 				6A1FA1A1997B190C2CA98A19 /* AboutViewController.swift in Sources */,
+				E0019C391EE0B5F400369286 /* Storyboard+Helpers.swift in Sources */,
 				960E20EFE390E5F4DCFCFA2F /* AboutPresenter.swift in Sources */,
 				8B9EF1F0C1123394DC3BD340 /* AboutConfigurator.swift in Sources */,
 				5307848F0056AEC1DD01A210 /* AboutProtocols.swift in Sources */,
@@ -1046,6 +1065,7 @@
 				E0FDE0861EC0598900E09D7F /* AddressSearchViewController+UITableView.swift in Sources */,
 				E0F614D21ED62C5D00A89982 /* AddressPointConstants.swift in Sources */,
 				276F19702527E9378A8A2E65 /* AddressPointInteractor.swift in Sources */,
+				E0019C371EE0B5A800369286 /* UIViewController+Helpers.swift in Sources */,
 				C225BC6A1B91D9763A4CFA99 /* AddressPointRouter.swift in Sources */,
 				B43E9393F4861E965D635E0A /* AddressPointConfigurator.swift in Sources */,
 				D404E4669FBB44F91AC14072 /* AddressPointProtocols.swift in Sources */,

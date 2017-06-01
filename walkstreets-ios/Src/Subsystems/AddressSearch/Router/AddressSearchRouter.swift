@@ -14,6 +14,7 @@ class AddressSearchRouter: AddressSearchRouterInput {
     
     func actionBack() {
         view?.navigationController?.popViewController(animated: true)
+        view?.dismiss(animated: true, completion: nil)
     }
     
     func pointAddress(selectedItem: MKMapItem) {
