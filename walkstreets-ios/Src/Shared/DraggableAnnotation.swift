@@ -11,13 +11,11 @@ import Mapbox
 
 class DraggableAnnotationView: MGLAnnotationView {
     
-    var pointOnMap: Bool = true
     
     init(reuseIdentifier: String, size: CGFloat, image: UIImage, pointOnMap: Bool? = true) {
         super.init(reuseIdentifier: reuseIdentifier)
         
         isDraggable = true
-        self.pointOnMap = pointOnMap!
         
         scalesWithViewingDistance = false
         
@@ -65,9 +63,7 @@ class DraggableAnnotationView: MGLAnnotationView {
             self.layer.opacity = 1
             self.transform = CGAffineTransform.identity.scaledBy(x: 1, y: 1)
         }, completion: { _ in
-            if !self.pointOnMap {
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: AddressPointConstants.kPointUpdated), object: nil)
-            }
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: AddressPointConstants.kPointUpdated), object: nil)
         })
     }
 }
