@@ -31,7 +31,7 @@ class OnStartHelper {
         #if DEBUG
             let onboardingWasShown = UserDefaults.standard.bool(forKey: Config.onboardingWasShownKey)
         #else
-            let onboardingWasShown = UserDefaults.standard.boolForKey(Config.onboardingWasShownKey)
+            let onboardingWasShown = UserDefaults.standard.bool(forKey: Config.onboardingWasShownKey)
         #endif
         
         let window = UIApplication.shared.keyWindow
