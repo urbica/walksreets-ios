@@ -169,8 +169,34 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     }
     
     func walkMe() {
+        
         output.walkMeAround(time: 0)
         startRouteView.isHidden = true
+    }
+    
+    func restartToInitial() {
+        
+        selectedPriorityIndex = 0
+        for label in priorityLabels {
+            label.textColor = UIColor.black
+        }
+        
+        for view in priorityViews {
+            view.backgroundColor = UIColor.clear
+        }
+        
+        self.priorityViews[selectedPriorityIndex!].backgroundColor = UIColor.black
+        self.priorityLabels[selectedPriorityIndex!].textColor = UIColor.white
+        
+        
+        for view in priorityViews {
+            if view.isUserInteractionEnabled == false {
+                view.isUserInteractionEnabled = true
+            }
+        }
+        
+        self.priorityViews[selectedPriorityIndex!].isUserInteractionEnabled = false
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
