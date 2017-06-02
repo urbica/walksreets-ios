@@ -11,8 +11,9 @@ class AddressPointRouter: AddressPointRouterInput {
     weak var view: AddressPointViewController?
     
     func dismiss() {
-        view?.dismiss(animated: true, completion: nil)
-        _ = view?.navigationController?.popViewController(animated: true)
+        if let controllers = self.view?.navigationController?.viewControllers {
+            view?.navigationController?.popToViewController(controllers[0], animated: true)
+        }
     }
     
     

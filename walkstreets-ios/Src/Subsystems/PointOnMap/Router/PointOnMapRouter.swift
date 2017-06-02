@@ -12,9 +12,9 @@ class PointOnMapRouter: PointOnMapRouterInput {
     
     func dismiss() {
         
-        if let controllers = self.view?.navigationController?.viewControllers {
-            view?.navigationController?.popToViewController(controllers[0], animated: true)
-        }
+            view?.dismiss(animated: true, completion: nil)
+            _ = view?.navigationController?.popViewController(animated: true)
+        
         
        // _ = view?.navigationController?.popViewController(animated: true)
     }
