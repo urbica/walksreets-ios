@@ -16,6 +16,10 @@ extension AddressPointViewController: MGLMapViewDelegate {
             
             guard let length = route.length , let time = route.time else {return}
             
+            if let start = route.start {
+                setupPoints(firstPoint: start, lastPoint: endPoint.coordinate)
+            }
+            
             if let sw = route.sw, let ne = route.ne {
                 let bounds = MGLCoordinateBoundsMake(sw, ne)
                 mapView.setVisibleCoordinateBounds(bounds, animated: false)
@@ -38,8 +42,6 @@ extension AddressPointViewController: MGLMapViewDelegate {
             mapView.add(polyline)
         }
         
-        
-        setupPoints(firstPoint: self.startPoint.coordinate, lastPoint: self.endPoint.coordinate)
         for (index, view) in priorityViews.enumerated() {
             
             if index == selectedPriorityIndex {
