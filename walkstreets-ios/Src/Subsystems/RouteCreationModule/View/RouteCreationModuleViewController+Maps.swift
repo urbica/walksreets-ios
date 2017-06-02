@@ -101,7 +101,7 @@ extension RouteCreationModuleViewController : MGLMapViewDelegate {
     }
     
     func drawFirstLine(polyline: AnyObject) {
-        
+        startRouteView.isHidden = true
         if let polyline = polyline as? MGLMultiPolyline {
             
             guard let style = self.mapView.style else { return }

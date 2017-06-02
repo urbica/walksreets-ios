@@ -180,10 +180,8 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         
     }
     
-    func walkMe() {
-        
+    func walkMe() {        
         output.walkMeAround(time: 0)
-        startRouteView.isHidden = true
     }
     
     func restartToInitial() {
