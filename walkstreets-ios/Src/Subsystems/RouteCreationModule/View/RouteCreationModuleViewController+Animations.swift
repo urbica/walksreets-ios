@@ -48,6 +48,8 @@ extension RouteCreationModuleViewController {
             if let source = self.mapView.style?.source(withIdentifier: "customLine") {
                 self.mapView.style?.removeSource(source)
             }
+            
+            self.restartToInitial()
         }
     }
 }
