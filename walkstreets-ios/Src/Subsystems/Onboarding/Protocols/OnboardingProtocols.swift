@@ -6,12 +6,18 @@
 //  Copyright © 2017 Urbica. All rights reserved.
 //
 
+import UIKit
+
 protocol OnboardingViewInput: class {
 
     func setupInitialState()
+    func goToStart()
 }
 
 protocol OnboardingViewOutput {
-
+    
+    var onboardingImages: [UIImage]? {get}
+    
+    func proceedToStart()
     func viewIsReady()
 }

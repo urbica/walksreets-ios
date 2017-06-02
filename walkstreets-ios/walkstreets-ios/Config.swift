@@ -18,5 +18,5 @@ struct Config {
     
     static let showShortcut = "showShortcut"
 
-    
+    static let onboardingWasShownKey = "onboardingWasShown"
 }
