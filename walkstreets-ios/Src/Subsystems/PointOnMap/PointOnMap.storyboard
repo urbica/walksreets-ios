@@ -84,12 +84,18 @@
                                                                     <action selector="actionSelectRoutePriorityWithSender:" destination="S3o-Wf-VxE" eventType="touchUpInside" id="sG7-TD-zA8"/>
                                                                 </connections>
                                                             </button>
+                                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenLegend" translatesAutoresizingMaskIntoConstraints="NO" id="Bwo-Yg-MUf">
+                                                                <rect key="frame" x="0.0" y="34" width="122.5" height="19"/>
+                                                            </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
+                                                            <constraint firstItem="Bwo-Yg-MUf" firstAttribute="leading" secondItem="NPA-Mv-y89" secondAttribute="leading" id="HNA-Fc-Uii"/>
                                                             <constraint firstItem="spn-fY-xxS" firstAttribute="top" secondItem="NPA-Mv-y89" secondAttribute="top" constant="8" id="MmD-Y7-szD"/>
                                                             <constraint firstItem="c2y-hB-zln" firstAttribute="top" secondItem="NPA-Mv-y89" secondAttribute="top" id="Piw-YM-mxm"/>
                                                             <constraint firstAttribute="trailing" secondItem="c2y-hB-zln" secondAttribute="trailing" id="Q9N-yj-f6h"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Bwo-Yg-MUf" secondAttribute="bottom" constant="2" id="ark-E2-wtu"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Bwo-Yg-MUf" secondAttribute="trailing" id="jVJ-Vz-9rY"/>
                                                             <constraint firstItem="spn-fY-xxS" firstAttribute="leading" secondItem="NPA-Mv-y89" secondAttribute="leading" constant="8" id="my2-1p-VgW"/>
                                                             <constraint firstItem="c2y-hB-zln" firstAttribute="leading" secondItem="NPA-Mv-y89" secondAttribute="leading" id="t83-xo-4UK"/>
                                                             <constraint firstAttribute="bottom" secondItem="c2y-hB-zln" secondAttribute="bottom" id="yyW-8d-tio"/>
@@ -117,15 +123,21 @@
                                                                     <action selector="actionSelectRoutePriorityWithSender:" destination="S3o-Wf-VxE" eventType="touchUpInside" id="0cT-Oh-RiL"/>
                                                                 </connections>
                                                             </button>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noizeLegend" translatesAutoresizingMaskIntoConstraints="NO" id="gkG-aT-2DE">
+                                                                <rect key="frame" x="0.0" y="34" width="122" height="19"/>
+                                                            </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
+                                                            <constraint firstItem="gkG-aT-2DE" firstAttribute="leading" secondItem="62Y-05-WOq" secondAttribute="leading" id="0n4-oH-1of"/>
                                                             <constraint firstAttribute="bottom" secondItem="91m-ze-L0R" secondAttribute="bottom" id="2e3-lc-OTo"/>
+                                                            <constraint firstAttribute="bottom" secondItem="gkG-aT-2DE" secondAttribute="bottom" constant="2" id="E2c-g7-hsk"/>
                                                             <constraint firstItem="aDH-uA-RiV" firstAttribute="top" secondItem="62Y-05-WOq" secondAttribute="top" constant="8" id="NQi-Wt-VeU"/>
                                                             <constraint firstItem="91m-ze-L0R" firstAttribute="leading" secondItem="62Y-05-WOq" secondAttribute="leading" constant="-2" id="RqD-Kg-CzQ"/>
                                                             <constraint firstAttribute="trailing" secondItem="91m-ze-L0R" secondAttribute="trailing" id="Ybp-v6-fmi"/>
                                                             <constraint firstItem="aDH-uA-RiV" firstAttribute="leading" secondItem="62Y-05-WOq" secondAttribute="leading" constant="8" id="roO-KE-pYY"/>
                                                             <constraint firstItem="91m-ze-L0R" firstAttribute="top" secondItem="62Y-05-WOq" secondAttribute="top" id="s1Y-go-K4k"/>
+                                                            <constraint firstAttribute="trailing" secondItem="gkG-aT-2DE" secondAttribute="trailing" id="yxn-ug-LHf"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -150,13 +162,19 @@
                                                                     <action selector="actionSelectRoutePriorityWithSender:" destination="S3o-Wf-VxE" eventType="touchUpInside" id="8tH-K2-tIt"/>
                                                                 </connections>
                                                             </button>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="airLegend" translatesAutoresizingMaskIntoConstraints="NO" id="k6y-c3-mN3">
+                                                                <rect key="frame" x="0.0" y="35" width="122.5" height="18"/>
+                                                            </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstItem="yOb-xf-67U" firstAttribute="leading" secondItem="ba2-u4-nXu" secondAttribute="leading" constant="8" id="1Z1-W1-tkb"/>
+                                                            <constraint firstAttribute="trailing" secondItem="k6y-c3-mN3" secondAttribute="trailing" id="2wy-lI-Ldc"/>
                                                             <constraint firstItem="aCl-pZ-xIm" firstAttribute="leading" secondItem="ba2-u4-nXu" secondAttribute="leading" id="3fS-nI-c2Z"/>
+                                                            <constraint firstItem="k6y-c3-mN3" firstAttribute="leading" secondItem="ba2-u4-nXu" secondAttribute="leading" id="4ay-U3-qN3"/>
                                                             <constraint firstItem="yOb-xf-67U" firstAttribute="top" secondItem="ba2-u4-nXu" secondAttribute="top" constant="8" id="alv-GR-jM9"/>
                                                             <constraint firstAttribute="bottom" secondItem="aCl-pZ-xIm" secondAttribute="bottom" id="gUy-dK-O7j"/>
+                                                            <constraint firstAttribute="bottom" secondItem="k6y-c3-mN3" secondAttribute="bottom" constant="2" id="jWJ-dn-wtQ"/>
                                                             <constraint firstAttribute="trailing" secondItem="aCl-pZ-xIm" secondAttribute="trailing" id="pkI-ej-xCM"/>
                                                             <constraint firstItem="aCl-pZ-xIm" firstAttribute="top" secondItem="ba2-u4-nXu" secondAttribute="top" id="uOp-g1-jz9"/>
                                                         </constraints>
@@ -272,6 +290,9 @@
                         <outletCollection property="priorityViews" destination="NPA-Mv-y89" collectionClass="NSMutableArray" id="DU5-pW-5A5"/>
                         <outletCollection property="priorityViews" destination="62Y-05-WOq" collectionClass="NSMutableArray" id="4Lq-RG-lwH"/>
                         <outletCollection property="priorityViews" destination="ba2-u4-nXu" collectionClass="NSMutableArray" id="chg-CL-zA9"/>
+                        <outletCollection property="legendsArray" destination="Bwo-Yg-MUf" collectionClass="NSMutableArray" id="vlM-MR-ww9"/>
+                        <outletCollection property="legendsArray" destination="gkG-aT-2DE" collectionClass="NSMutableArray" id="uLd-rt-tMc"/>
+                        <outletCollection property="legendsArray" destination="k6y-c3-mN3" collectionClass="NSMutableArray" id="5fu-Ny-C44"/>
                         <segue destination="053-Vo-xag" kind="show" identifier="toRouteCreation" id="mDH-H1-E2p"/>
                     </connections>
                 </viewController>
@@ -289,6 +310,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="airLegend" width="110" height="18"/>
+        <image name="greenLegend" width="111" height="19"/>
+        <image name="noizeLegend" width="110" height="19"/>
         <image name="routeCreation_close" width="13" height="13"/>
     </resources>
 </document>

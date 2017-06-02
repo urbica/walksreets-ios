@@ -29,6 +29,10 @@ extension AddressSearchViewController: UITableViewDataSource {
             return 0
         }
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
 
 }
 
