@@ -33,7 +33,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CANCEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kyg-xF-lJ3">
-                                                <rect key="frame" x="10.5" y="37.5" width="59" height="14"/>
+                                                <rect key="frame" x="10.5" y="37" width="59" height="14"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -60,7 +60,7 @@
                                         <rect key="frame" x="225" y="0.0" width="150" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POINT ON MAP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAW-rD-46q">
-                                                <rect key="frame" x="23" y="37.5" width="105" height="14"/>
+                                                <rect key="frame" x="22.5" y="37" width="105" height="14"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -126,8 +126,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMb-WO-u2e">
-                                                    <rect key="frame" x="8" y="11.5" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMb-WO-u2e">
+                                                    <rect key="frame" x="8" y="12" width="359" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -136,6 +136,7 @@
                                             <constraints>
                                                 <constraint firstItem="kMb-WO-u2e" firstAttribute="centerY" secondItem="gVW-rK-5cZ" secondAttribute="centerY" id="Yes-9k-yO2"/>
                                                 <constraint firstItem="kMb-WO-u2e" firstAttribute="leading" secondItem="gVW-rK-5cZ" secondAttribute="leadingMargin" id="jb6-P8-KUn"/>
+                                                <constraint firstItem="kMb-WO-u2e" firstAttribute="trailing" secondItem="gVW-rK-5cZ" secondAttribute="trailingMargin" id="xxD-28-diS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -200,7 +201,7 @@
             <objects>
                 <navigationController storyboardIdentifier="addressSearchID" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="GYF-Pq-WQB" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AbV-T5-GE4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="AbV-T5-GE4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

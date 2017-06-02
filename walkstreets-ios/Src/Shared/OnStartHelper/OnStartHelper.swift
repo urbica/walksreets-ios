@@ -26,4 +26,22 @@ class OnStartHelper {
         window?.rootViewController = viewController
     }
     
+    class func showOnboardingIfNeeded() {
+        
+        #if DEBUG
+            let onboardingWasShown = UserDefaults.standard.bool(forKey: Config.onboardingWasShownKey)
+        #else
+            let onboardingWasShown = UserDefaults.standard.boolForKey(Config.onboardingWasShownKey)
+        #endif
+        
+        let window = UIApplication.shared.keyWindow
+        if !onboardingWasShown {
+            let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+            let viewController = storyboard.instantiateInitialViewController()
+            window?.rootViewController = viewController
+        } else {
+            showStartScreenIfNeeded()
+        }
+    }
+    
 }

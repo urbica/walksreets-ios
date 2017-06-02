@@ -16,6 +16,7 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
     @IBOutlet weak var lengthTimeLabel: UILabel!
     @IBOutlet var priorityViews: Array<CustomizableView>!
     @IBOutlet var priorityLabels: Array<UILabel>!
+    @IBOutlet var legendsArray: Array<UIImageView>!
     
     var output: AddressPointViewOutput!
     var selectedItem: MKMapItem?
@@ -117,6 +118,12 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
         for view in priorityViews {
             view.backgroundColor = UIColor.clear
         }
+        
+        for legend in legendsArray {
+            legend.isHidden = true
+        }
+        
+        self.legendsArray[index].isHidden = false
         
         self.priorityViews[index].backgroundColor = UIColor.black
         self.priorityLabels[index].textColor = UIColor.white

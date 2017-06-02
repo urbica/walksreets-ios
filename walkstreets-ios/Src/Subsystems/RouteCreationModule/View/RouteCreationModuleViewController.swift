@@ -34,6 +34,8 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     @IBOutlet var priorityViews: Array<CustomizableView>!
     @IBOutlet var priorityLabels: Array<UILabel>!
     
+    // legend
+    @IBOutlet var legendArray: Array<UIImageView>!
     
     
     var output: RouteCreationModuleViewOutput!
@@ -71,6 +73,11 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
             view.backgroundColor = UIColor.clear
         }
         
+        for legend in legendArray {
+            legend.isHidden = true
+        }
+        
+        self.legendArray[index].isHidden = false
         self.priorityViews[index].backgroundColor = UIColor.black
         self.priorityLabels[index].textColor = UIColor.white
         
@@ -109,6 +116,10 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
             view.backgroundColor = UIColor.white
         }
         
+        for legend in legendArray {
+            legend.isHidden = true
+        }
+        
         for label in priorityLabels {
             label.textColor = UIColor.black
         }
@@ -121,6 +132,7 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         
             self.priorityViews[priority].backgroundColor = UIColor.black
             self.priorityLabels[priority].textColor = UIColor.white
+            self.legendArray[priority].isHidden = false
             output.routeIndex = priority
         }
         
@@ -168,10 +180,8 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         
     }
     
-    func walkMe() {
-        
+    func walkMe() {        
         output.walkMeAround(time: 0)
-        startRouteView.isHidden = true
     }
     
     func restartToInitial() {

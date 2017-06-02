@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Onboarding View Controller-->
         <scene sceneID="5Ik-Lk-8T3">
             <objects>
-                <viewController id="hZv-j9-Ztb" sceneMemberID="viewController">
+                <viewController id="hZv-j9-Ztb" customClass="OnboardingViewController" customModule="walkstreets_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2cf-Xl-Oa9"/>
                         <viewControllerLayoutGuide type="bottom" id="Htt-E2-vbN"/>
@@ -19,12 +19,70 @@
                     <view key="view" contentMode="scaleToFill" id="N1q-7W-9zS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NQ4-Xv-o6k">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tmh-GR-bXp">
+                                    <size key="itemSize" width="375" height="667"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="onboardingCell" id="Dht-A3-UZY" customClass="OnboardingCell" customModule="walkstreets_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Ye-sc-TvQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="8Ye-sc-TvQ" secondAttribute="bottom" id="OUh-7f-xtc"/>
+                                            <constraint firstAttribute="trailing" secondItem="8Ye-sc-TvQ" secondAttribute="trailing" id="Wiu-5c-QNg"/>
+                                            <constraint firstItem="8Ye-sc-TvQ" firstAttribute="top" secondItem="Dht-A3-UZY" secondAttribute="top" id="dnM-Bd-WJX"/>
+                                            <constraint firstItem="8Ye-sc-TvQ" firstAttribute="leading" secondItem="Dht-A3-UZY" secondAttribute="leading" id="zuW-Cw-o5U"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="onboardingImageView" destination="8Ye-sc-TvQ" id="601-iF-8JH"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="hZv-j9-Ztb" id="a5F-A4-k3D"/>
+                                    <outlet property="delegate" destination="hZv-j9-Ztb" id="kCD-GG-E5n"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NQ4-Xv-o6k" firstAttribute="leading" secondItem="N1q-7W-9zS" secondAttribute="leading" id="HT9-Tg-RcL"/>
+                            <constraint firstItem="NQ4-Xv-o6k" firstAttribute="top" secondItem="N1q-7W-9zS" secondAttribute="top" id="JQL-5u-c25"/>
+                            <constraint firstAttribute="trailing" secondItem="NQ4-Xv-o6k" secondAttribute="trailing" id="nap-ah-Oco"/>
+                            <constraint firstItem="Htt-E2-vbN" firstAttribute="top" secondItem="NQ4-Xv-o6k" secondAttribute="bottom" id="xQR-xR-FAq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="NQ4-Xv-o6k" id="b1g-w4-6qO"/>
+                        <segue destination="zbh-lV-dUA" kind="presentation" identifier="toStartScreen" modalTransitionStyle="flipHorizontal" id="DfE-Sy-mG8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ToG-kL-4ab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="158"/>
+            <point key="canvasLocation" x="136.80000000000001" y="157.87106446776613"/>
+        </scene>
+        <!--StartScreen-->
+        <scene sceneID="RKH-4U-FbD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="StartScreen" id="zbh-lV-dUA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zjn-QH-ygx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="705" y="151"/>
         </scene>
     </scenes>
 </document>

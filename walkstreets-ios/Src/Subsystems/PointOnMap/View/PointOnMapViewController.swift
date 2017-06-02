@@ -16,6 +16,7 @@ class PointOnMapViewController: UIViewController, PointOnMapViewInput {
     @IBOutlet var priorityLabels: Array<UILabel>!
     @IBOutlet weak var lengthTimeLabel: UILabel!
     @IBOutlet weak var priorityViewsHeightConstraint: NSLayoutConstraint!
+    @IBOutlet var legendsArray: Array<UIImageView>!
     
     var output: PointOnMapViewOutput!
     let lastPoint = MGLPointAnnotation()
@@ -35,7 +36,6 @@ class PointOnMapViewController: UIViewController, PointOnMapViewInput {
     func setupInitialState() {
         priorityViewsHeightConstraint.constant = 0
         setupMap()
-        
     }
     
     func setupMap() {
@@ -100,6 +100,12 @@ class PointOnMapViewController: UIViewController, PointOnMapViewInput {
         for view in priorityViews {
             view.backgroundColor = UIColor.clear
         }
+        
+        for legend in legendsArray {
+            legend.isHidden = true
+        }
+        
+        self.legendsArray[index].isHidden = false
         
         self.priorityViews[index].backgroundColor = UIColor.black
         self.priorityLabels[index].textColor = UIColor.white

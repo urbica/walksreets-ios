@@ -17,6 +17,7 @@ class Route {
     var features: [Feature]? = nil
     var sw: CLLocationCoordinate2D? = nil
     var ne: CLLocationCoordinate2D? = nil
+    var start: CLLocationCoordinate2D? = nil
     
     convenience init(json: JSON) {
         self.init()
@@ -37,6 +38,9 @@ class Route {
             }
         }
 
+        if let start = json["start"].array {
+            self.start = CLLocationCoordinate2D(latitude: start.last!.doubleValue, longitude: start.first!.doubleValue)
+        }
     }
 }
 

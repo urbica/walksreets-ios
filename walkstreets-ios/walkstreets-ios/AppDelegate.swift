@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Crashlytics.self])
         
         setupWindow()
-        OnStartHelper.showStartScreenIfNeeded()
+        OnStartHelper.showOnboardingIfNeeded()
         
         return true
     }

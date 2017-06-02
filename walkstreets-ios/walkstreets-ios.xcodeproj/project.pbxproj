@@ -76,6 +76,7 @@
 		E05EA3741ED8AD540090ACF5 /* PointOnMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05EA3731ED8AD540090ACF5 /* PointOnMap.storyboard */; };
 		E0AF81401EC7B761009FA7D1 /* Double+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AF813F1EC7B761009FA7D1 /* Double+Helpers.swift */; };
 		E0C4F6661E8C06D3005C63C4 /* RootApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C4F6651E8C06D3005C63C4 /* RootApiService.swift */; };
+		E0E086C51EE2129A003B65E4 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E086C41EE2129A003B65E4 /* OnboardingCell.swift */; };
 		E0E142DB1E954C1D001C45BE /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142DA1E954C1D001C45BE /* StartScreenViewController.swift */; };
 		E0E142DD1E954C41001C45BE /* StartScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142DC1E954C41001C45BE /* StartScreenPresenter.swift */; };
 		E0E142DF1E954C56001C45BE /* StartScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E142DE1E954C56001C45BE /* StartScreenConfigurator.swift */; };
@@ -180,6 +181,7 @@
 		E05EA3731ED8AD540090ACF5 /* PointOnMap.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PointOnMap.storyboard; sourceTree = "<group>"; };
 		E0AF813F1EC7B761009FA7D1 /* Double+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Helpers.swift"; sourceTree = "<group>"; };
 		E0C4F6651E8C06D3005C63C4 /* RootApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootApiService.swift; sourceTree = "<group>"; };
+		E0E086C41EE2129A003B65E4 /* OnboardingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
 		E0E142DA1E954C1D001C45BE /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		E0E142DC1E954C41001C45BE /* StartScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenPresenter.swift; sourceTree = "<group>"; };
 		E0E142DE1E954C56001C45BE /* StartScreenConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenConfigurator.swift; sourceTree = "<group>"; };
@@ -668,6 +670,7 @@
 			isa = PBXGroup;
 			children = (
 				E0F74F911EDB48AC0075500C /* Onboarding.storyboard */,
+				E0E086C31EE2127D003B65E4 /* Cell */,
 				498D3F22D6BF870D2F703F21 /* View */,
 				904034BEE4E225D20B3212C3 /* Presenter */,
 				FF6FF8F8DB22C0B19CC61D10 /* Configurator */,
@@ -745,6 +748,14 @@
 				E0C4F6651E8C06D3005C63C4 /* RootApiService.swift */,
 			);
 			path = RootApiService;
+			sourceTree = "<group>";
+		};
+		E0E086C31EE2127D003B65E4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E0E086C41EE2129A003B65E4 /* OnboardingCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		E0FE34831ECDF754002BDBE0 /* OnStartHelper */ = {
@@ -1046,6 +1057,7 @@
 				E0E689921EC50A2F00AF2765 /* CustomAnnotation.swift in Sources */,
 				E0C4F6661E8C06D3005C63C4 /* RootApiService.swift in Sources */,
 				E0019C351EE0B57D00369286 /* UIApplication+Helpers.swift in Sources */,
+				E0E086C51EE2129A003B65E4 /* OnboardingCell.swift in Sources */,
 				30FD55811DCE0D5900000A97 /* LocationManager.swift in Sources */,
 				6A1FA1A1997B190C2CA98A19 /* AboutViewController.swift in Sources */,
 				E0019C391EE0B5F400369286 /* Storyboard+Helpers.swift in Sources */,
