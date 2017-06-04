@@ -17,11 +17,16 @@ class PointOnMapViewController: UIViewController, PointOnMapViewInput {
     @IBOutlet weak var lengthTimeLabel: UILabel!
     @IBOutlet weak var priorityViewsHeightConstraint: NSLayoutConstraint!
     @IBOutlet var legendsArray: Array<UIImageView>!
+    @IBOutlet weak var userLocationView: UIView!
+    @IBOutlet weak var compassImageView: UIImageView!
+    @IBOutlet weak var compassView: UIView!
     
     var output: PointOnMapViewOutput!
     let lastPoint = MGLPointAnnotation()
     let location = Location.core.getCoordinate()
     var selectedPriorityIndex: Int? = 0
+    let manager = CLLocationManager()
+
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -34,12 +39,15 @@ class PointOnMapViewController: UIViewController, PointOnMapViewInput {
 
     // MARK: PointOnMapViewInput
     func setupInitialState() {
+        manager.delegate = self
+        manager.startUpdatingHeading()
+
         priorityViewsHeightConstraint.constant = 0
         setupMap()
     }
     
     func setupMap() {
-        
+
         mapView.delegate = self
         mapView.showsUserLocation = true
         let userLocation = Location.core.getCoordinate()
@@ -151,5 +159,22 @@ extension PointOnMapViewController {
     
     @IBAction func actionCenterOnUser(sender: AnyObject) {
         mapView.setCenter(Location.core.getCoordinate(), animated: true)
+    }
+}
+
+extension PointOnMapViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        
+        // Convert Degree to Radian and move the needle
+        let newRad =  -newHeading.trueHeading * Double.pi / 180.0
+        UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseInOut, animations: { 
+            self.compassImageView.transform = CGAffineTransform(rotationAngle: CGFloat(newRad))
+            self.view.layoutIfNeeded()
+            self.view.layoutSubviews()
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseOut, animations: { 
+            
+        }, completion: nil)
     }
 }

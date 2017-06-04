@@ -49,7 +49,8 @@ extension PointOnMapViewController: MGLMapViewDelegate {
     
     func drawFirstLine(polyline: AnyObject) {
         priorityViewsHeightConstraint.constant = 182
-        
+        userLocationView.isHidden = false
+        compassView.isHidden = false
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }

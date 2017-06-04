@@ -41,7 +41,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="ne4-CV-di0" firstAttribute="centerX" secondItem="k6D-Zx-eZI" secondAttribute="centerX" id="8JC-WS-mvH"/>
                                             <constraint firstAttribute="height" constant="40" id="CNP-lS-lKn"/>
@@ -57,7 +57,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="k6D-Zx-eZI" secondAttribute="trailing" constant="20" id="2JP-yD-f4x"/>
-                                    <constraint firstAttribute="bottom" secondItem="k6D-Zx-eZI" secondAttribute="bottom" constant="251" id="qaF-cQ-hgc"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="zoomLevel">
@@ -338,6 +337,7 @@
                             <constraint firstItem="RZt-Xy-106" firstAttribute="top" secondItem="wqb-0w-GL4" secondAttribute="bottom" id="Qte-av-WlQ"/>
                             <constraint firstAttribute="trailing" secondItem="wqb-0w-GL4" secondAttribute="trailing" id="RRe-cF-N0o"/>
                             <constraint firstItem="wqb-0w-GL4" firstAttribute="leading" secondItem="Xjc-Fj-6dw" secondAttribute="leading" id="Sk3-B9-pan"/>
+                            <constraint firstItem="0gu-gZ-g2h" firstAttribute="top" secondItem="k6D-Zx-eZI" secondAttribute="bottom" constant="77" id="Swb-kl-ftC"/>
                             <constraint firstItem="wqb-0w-GL4" firstAttribute="top" secondItem="Xjc-Fj-6dw" secondAttribute="top" id="Thw-uQ-Tfs"/>
                             <constraint firstItem="RZt-Xy-106" firstAttribute="top" secondItem="zZB-ul-reH" secondAttribute="bottom" id="iYd-1i-Fg6"/>
                             <constraint firstItem="zZB-ul-reH" firstAttribute="leading" secondItem="Xjc-Fj-6dw" secondAttribute="leading" id="kVN-16-2Pd"/>
