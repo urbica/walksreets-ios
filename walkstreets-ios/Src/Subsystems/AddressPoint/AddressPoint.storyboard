@@ -72,10 +72,15 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gu-gZ-g2h">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3,5 km • 37 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZg-Ta-T5Z">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3,5 km • 37 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZg-Ta-T5Z" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
                                                 <rect key="frame" x="199.5" y="7" width="100.5" height="14"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                        <real key="value" value="2.2000000000000002"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YE0-Le-Z1N">
                                                 <rect key="frame" x="20" y="29" width="280" height="55"/>

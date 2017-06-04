@@ -61,10 +61,15 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWc-ea-2We">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3,5 km • 37 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMi-kU-fpB">
-                                                <rect key="frame" x="268.5" y="7" width="100.5" height="14"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3,5 KM • 37 KM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMi-kU-fpB" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
+                                                <rect key="frame" x="266" y="7" width="103" height="14"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                        <real key="value" value="2.2000000000000002"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zq3-9e-KQt">
                                                 <rect key="frame" x="6" y="27" width="363" height="55"/>
