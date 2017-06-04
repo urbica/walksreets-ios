@@ -28,6 +28,13 @@ class OnboardingViewController: UIViewController, OnboardingViewInput {
     // MARK: OnboardingViewInput
     func setupInitialState() {
         setupSwipe()
+        setupTap()
+    }
+    
+    func setupTap() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(nextSwipe(swipe:)))
+        tap.numberOfTapsRequired = 1
+        self.view.addGestureRecognizer(tap)
     }
     
     
