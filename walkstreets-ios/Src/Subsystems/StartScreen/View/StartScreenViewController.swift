@@ -30,10 +30,10 @@ class StartScreenViewController: UIViewController, StartScreenViewInput {
         let status = CLLocationManager.authorizationStatus()
         if status == .denied || status == .restricted || status == .notDetermined {
             locationButton.setTitleColor(UIColor.black, for: .disabled)
-            locationButton.isEnabled = true
+            //locationButton.isEnabled = true
         } else {
             locationButton.setTitleColor(UIColor.gray, for: .disabled)
-            locationButton.isEnabled = false
+            //locationButton.isEnabled = false
         }
     }
     
