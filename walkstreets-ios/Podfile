@@ -13,7 +13,7 @@ target 'walkstreets-ios' do
     pod 'Mapbox-iOS-SDK'
     pod 'PureLayout'
     pod 'Whisper'
-    pod 'UIScrollView-InfiniteScroll', '~> 1.0.0'
+    
     
     # analytics
     pod 'Fabric'

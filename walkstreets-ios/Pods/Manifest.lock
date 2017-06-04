@@ -12,7 +12,6 @@ PODS:
   - PureLayout (3.0.2)
   - Spring (1.0.3)
   - SwiftyJSON (3.1.4)
-  - UIScrollView-InfiniteScroll (1.0.1)
   - Whisper (5.0.0)
 
 DEPENDENCIES:
@@ -24,7 +23,6 @@ DEPENDENCIES:
   - PureLayout
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
   - SwiftyJSON
-  - UIScrollView-InfiniteScroll (~> 1.0.0)
   - Whisper
 
 EXTERNAL SOURCES:
@@ -46,9 +44,8 @@ SPEC CHECKSUMS:
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
-  UIScrollView-InfiniteScroll: a90df4ba4a7ca1926128ade34a850ddbdf74c564
   Whisper: 051f25e704bf8992641ffd28b20d5682ddc5f5d3
 
-PODFILE CHECKSUM: c0e2ab88a4937460097c0aa71c6926248a630b56
+PODFILE CHECKSUM: 4eedeb9b4cad379d9ef8b7ab76d4009810e5a303
 
 COCOAPODS: 1.2.1
