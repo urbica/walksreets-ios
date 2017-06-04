@@ -20,6 +20,7 @@ extension RouteCreationModuleViewController {
         UIView.animate(withDuration: 0.3, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: [], animations: {
             self.routeTimeView.alpha = 1
             self.routeDetailsView.alpha = 1
+            self.userLocationView.isHidden = false
             self.view.layoutIfNeeded()
         }) { (bool) in
 
@@ -32,6 +33,7 @@ extension RouteCreationModuleViewController {
         UIView.animate(withDuration: 0.3, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: [], animations: {
             self.view.layoutIfNeeded()
             self.routeTimeView.alpha = 0
+            self.userLocationView.isHidden = true
             self.routeDetailsView.alpha = 0
         }) { (bool) in
             self.routeTimeView.isHidden = true

@@ -17,6 +17,7 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
     @IBOutlet var priorityViews: Array<CustomizableView>!
     @IBOutlet var priorityLabels: Array<UILabel>!
     @IBOutlet var legendsArray: Array<UIImageView>!
+    @IBOutlet weak var centerUserView: UIView!
     
     var output: AddressPointViewOutput!
     var selectedItem: MKMapItem?
@@ -174,5 +175,9 @@ extension AddressPointViewController {
     @IBAction func actionGo(sender: AnyObject) {
         mapView.setUserTrackingMode(.followWithHeading, animated: true)
         mapView.setZoomLevel(17.0, animated: true)
+    }
+    
+    @IBAction func actionCenterOnUser(sender: AnyObject) {
+        mapView.setCenter(Location.core.getCoordinate(), animated: true)
     }
 }

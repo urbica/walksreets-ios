@@ -148,4 +148,8 @@ extension PointOnMapViewController {
     @IBAction func actionGo(sender: AnyObject) {
         mapView.setUserTrackingMode(.follow, animated: true)
     }
+    
+    @IBAction func actionCenterOnUser(sender: AnyObject) {
+        mapView.setCenter(Location.core.getCoordinate(), animated: true)
+    }
 }

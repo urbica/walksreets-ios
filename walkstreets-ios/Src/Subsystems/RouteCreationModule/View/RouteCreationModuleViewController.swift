@@ -37,6 +37,8 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     // legend
     @IBOutlet var legendArray: Array<UIImageView>!
     
+    // userLocation view
+    @IBOutlet weak var userLocationView: UIView!
     
     var output: RouteCreationModuleViewOutput!
     var selectedPriorityIndex: Int? = 0
@@ -245,5 +247,9 @@ extension RouteCreationModuleViewController {
     
     @IBAction func actionGo(sender: AnyObject) {
         mapView.setUserTrackingMode(.follow, animated: true)
+    }
+    
+    @IBAction func actionUserLocation(sender: AnyObject) {
+        mapView.setCenter(Location.core.getCoordinate(), animated: true)
     }
 }

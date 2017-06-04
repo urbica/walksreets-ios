@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -27,7 +28,38 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUn-er-F8y" customClass="MGLMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoU-I6-XDg">
+                                        <rect key="frame" x="307" y="376" width="40" height="40"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userCenter" translatesAutoresizingMaskIntoConstraints="NO" id="u4b-xR-jWG">
+                                                <rect key="frame" x="5.5" y="5.5" width="29" height="29"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Je-na-XtI">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <connections>
+                                                    <action selector="actionCenterOnUserWithSender:" destination="S3o-Wf-VxE" eventType="touchUpInside" id="hyO-kF-asI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="0pB-CA-XE5"/>
+                                            <constraint firstItem="1Je-na-XtI" firstAttribute="top" secondItem="OoU-I6-XDg" secondAttribute="top" id="6si-IH-e9p"/>
+                                            <constraint firstItem="1Je-na-XtI" firstAttribute="leading" secondItem="OoU-I6-XDg" secondAttribute="leading" id="96Q-LW-wDd"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Je-na-XtI" secondAttribute="trailing" id="Ukv-Xd-9DW"/>
+                                            <constraint firstItem="u4b-xR-jWG" firstAttribute="centerX" secondItem="OoU-I6-XDg" secondAttribute="centerX" id="XzJ-fZ-pxC"/>
+                                            <constraint firstAttribute="height" constant="40" id="ijF-f7-aVB"/>
+                                            <constraint firstItem="u4b-xR-jWG" firstAttribute="centerY" secondItem="OoU-I6-XDg" secondAttribute="centerY" id="ofO-ty-JkJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="1Je-na-XtI" secondAttribute="bottom" id="tvt-Jr-ZpU"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="OoU-I6-XDg" secondAttribute="bottom" constant="251" id="2ad-0a-1jl"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="OoU-I6-XDg" secondAttribute="trailing" constant="20" id="ow1-1V-UYC"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/walkmap/cizpnte4900gh2rplobw8pgu0"/>
                                 </userDefinedRuntimeAttributes>
@@ -334,5 +366,6 @@
         <image name="greenLegend" width="111" height="19"/>
         <image name="noizeLegend" width="110" height="19"/>
         <image name="routeCreation_close" width="13" height="13"/>
+        <image name="userCenter" width="29" height="29"/>
     </resources>
 </document>
