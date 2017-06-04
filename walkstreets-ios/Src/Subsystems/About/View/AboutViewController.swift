@@ -10,8 +10,11 @@ import UIKit
 import MessageUI
 
 class AboutViewController: UIViewController, AboutViewInput {
+    
+    @IBOutlet weak var attributedLabel: CustomizableLabel!
 
     var output: AboutViewOutput!
+    let url = URL(string: "http://urbica.co")
 
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -24,6 +27,14 @@ class AboutViewController: UIViewController, AboutViewInput {
 
     // MARK: AboutViewInput
     func setupInitialState() {
+        let text = "WALKSTREETS IS AN URBICA STUDIO PROJECT. WE ARE A MOSCOW-BASED TEAM OF DESIGNER, DEVELOPERS AND DATA ANALYSTS."
+        let textToColor = "URBICA STUDIO"
+        
+        let range = (text as NSString).range(of: textToColor)
+        let attributedString = NSMutableAttributedString(string:text)
+        attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor(hex: "3311FF") , range: range)
+        attributedLabel.attributedText = attributedString
+        
     }
 }
 
@@ -36,6 +47,10 @@ extension AboutViewController {
     
     @IBAction func actionSendEmail(sender: AnyObject) {
         sendEmail()
+    }
+    
+    @IBAction func actionVisitURL(sender: AnyObject) {
+        UIApplication.shared.openURL(url!)
     }
 }
 

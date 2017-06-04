@@ -32,11 +32,16 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w4L-wD-6Cx">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="70"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CANCEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kyg-xF-lJ3">
-                                                <rect key="frame" x="10.5" y="37" width="59" height="14"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CANCEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kyg-xF-lJ3" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
+                                                <rect key="frame" x="20.5" y="37.5" width="59" height="14"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                        <real key="value" value="2.2000000000000002"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FW0-RP-nkK">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="70"/>
@@ -47,7 +52,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="Kyg-xF-lJ3" firstAttribute="centerX" secondItem="w4L-wD-6Cx" secondAttribute="centerX" id="0Jw-sd-Kbz"/>
+                                            <constraint firstItem="Kyg-xF-lJ3" firstAttribute="centerX" secondItem="w4L-wD-6Cx" secondAttribute="centerX" constant="10" id="0Jw-sd-Kbz"/>
                                             <constraint firstItem="FW0-RP-nkK" firstAttribute="leading" secondItem="w4L-wD-6Cx" secondAttribute="leading" id="OWg-HU-emB"/>
                                             <constraint firstAttribute="bottom" secondItem="FW0-RP-nkK" secondAttribute="bottom" id="WeP-Qb-aEh"/>
                                             <constraint firstAttribute="trailing" secondItem="FW0-RP-nkK" secondAttribute="trailing" id="Y1e-VA-DXB"/>
@@ -59,11 +64,16 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rIn-o2-bCF">
                                         <rect key="frame" x="225" y="0.0" width="150" height="70"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POINT ON MAP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAW-rD-46q">
-                                                <rect key="frame" x="22.5" y="37" width="105" height="14"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POINT ON MAP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAW-rD-46q" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
+                                                <rect key="frame" x="23" y="37.5" width="105" height="14"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                        <real key="value" value="2.2000000000000002"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svd-Ea-9Eg">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="70"/>
@@ -111,6 +121,12 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="attrPlaceholderText" value="ADDRESS"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="attrPlaceholderColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="searchFieldDidChange:" destination="bnG-6x-a93" eventType="editingChanged" id="uDG-QD-BYa"/>
                                 </connections>
@@ -126,11 +142,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMb-WO-u2e">
-                                                    <rect key="frame" x="8" y="12" width="359" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMb-WO-u2e" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="15.5" width="359" height="14"/>
+                                                    <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                            <real key="value" value="2.2000000000000002"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -149,6 +170,16 @@
                                     <outlet property="delegate" destination="bnG-6x-a93" id="DWd-RO-BRC"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYF-hb-dxk">
+                                <rect key="frame" x="319" y="85" width="46" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="wHw-kC-G87"/>
+                                </constraints>
+                                <state key="normal" image="routeCreation_close"/>
+                                <connections>
+                                    <action selector="actionClearWithSender:" destination="bnG-6x-a93" eventType="touchUpInside" id="gad-yk-5M0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -157,13 +188,16 @@
                             <constraint firstItem="x5K-TB-5CO" firstAttribute="centerY" secondItem="FbW-3B-t0P" secondAttribute="centerY" id="GcB-CX-ZCb"/>
                             <constraint firstItem="9ph-lv-nu3" firstAttribute="leading" secondItem="mfV-dB-D41" secondAttribute="leading" id="Go8-VP-zOk"/>
                             <constraint firstItem="x5K-TB-5CO" firstAttribute="top" secondItem="riF-Dz-LUd" secondAttribute="bottom" id="Kn4-Cl-9fF"/>
+                            <constraint firstItem="9ph-lv-nu3" firstAttribute="top" secondItem="hYF-hb-dxk" secondAttribute="bottom" constant="23" id="LNZ-Ig-lSB"/>
                             <constraint firstItem="riF-Dz-LUd" firstAttribute="leading" secondItem="mfV-dB-D41" secondAttribute="leading" id="PXC-Bv-v4K"/>
                             <constraint firstAttribute="trailing" secondItem="riF-Dz-LUd" secondAttribute="trailing" id="Qah-an-Bqd"/>
                             <constraint firstItem="riF-Dz-LUd" firstAttribute="top" secondItem="mfV-dB-D41" secondAttribute="top" id="Ve6-wr-dJt"/>
                             <constraint firstAttribute="trailing" secondItem="9ph-lv-nu3" secondAttribute="trailing" id="aHZ-Ya-xJc"/>
                             <constraint firstItem="FbW-3B-t0P" firstAttribute="leading" secondItem="mfV-dB-D41" secondAttribute="leading" constant="10" id="bz6-ee-alO"/>
                             <constraint firstItem="x5K-TB-5CO" firstAttribute="centerX" secondItem="FbW-3B-t0P" secondAttribute="centerX" id="d9L-Hf-3gK"/>
+                            <constraint firstAttribute="trailing" secondItem="hYF-hb-dxk" secondAttribute="trailing" constant="10" id="d9a-aT-czh"/>
                             <constraint firstItem="9ph-lv-nu3" firstAttribute="top" secondItem="x5K-TB-5CO" secondAttribute="bottom" constant="8" id="mCG-cm-q6Q"/>
+                            <constraint firstItem="hYF-hb-dxk" firstAttribute="top" secondItem="riF-Dz-LUd" secondAttribute="bottom" constant="15" id="vD4-BS-bcS"/>
                             <constraint firstAttribute="trailing" secondItem="FbW-3B-t0P" secondAttribute="trailing" constant="10" id="vpn-UV-sNO"/>
                             <constraint firstAttribute="trailing" secondItem="x5K-TB-5CO" secondAttribute="trailing" id="vq1-2z-Ia2"/>
                         </constraints>
@@ -215,4 +249,7 @@
             <point key="canvasLocation" x="232.80000000000001" y="141.67916041979012"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="routeCreation_close" width="13" height="13"/>
+    </resources>
 </document>

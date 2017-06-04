@@ -25,7 +25,7 @@ final class AddressSearchCell: UITableViewCell {
     
     
     func setItemLabel(text: String) {
-        titleLabel.text = text
+        titleLabel.text = text.uppercased()
     }
 
 }

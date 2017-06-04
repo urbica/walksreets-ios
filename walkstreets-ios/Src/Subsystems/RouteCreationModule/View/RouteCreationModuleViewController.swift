@@ -37,6 +37,8 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     // legend
     @IBOutlet var legendArray: Array<UIImageView>!
     
+    // userLocation view
+    @IBOutlet weak var userLocationView: UIView!
     
     var output: RouteCreationModuleViewOutput!
     var selectedPriorityIndex: Int? = 0
@@ -109,7 +111,7 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     
     func updateSelectedTime(index: Int) {
         for label in timeLabels {
-            label.font = UIFont(name: "VremenaGroteskBook", size: 17)
+            label.font = UIFont(name: "VremenaGroteskBook", size: 14)
         }
         
         for view in selectedTimeViews {
@@ -137,7 +139,7 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         }
         
         self.selectedTimeViews[index].backgroundColor = UIColor.black
-        self.timeLabels[index].font = UIFont(name: "VremenaGroteskMedium", size: 17)
+        self.timeLabels[index].font = UIFont(name: "VremenaGroteskMedium", size: 14)
         self.selectedTimeIndex = index
         
         output.walkMeAround(time: index)
@@ -169,9 +171,9 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
             }
             
             if time > 60 {
-                self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) km • \(time / 60) hours, \(time % 60) min"
+                self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) KM • \(time / 60) HOURS, \(time % 60) MIN"
             } else {
-                self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) km • \(time) min"
+                self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) KM • \(time) MIN"
             }
         }
     }
@@ -245,5 +247,9 @@ extension RouteCreationModuleViewController {
     
     @IBAction func actionGo(sender: AnyObject) {
         mapView.setUserTrackingMode(.follow, animated: true)
+    }
+    
+    @IBAction func actionUserLocation(sender: AnyObject) {
+        mapView.setCenter(Location.core.getCoordinate(), animated: true)
     }
 }

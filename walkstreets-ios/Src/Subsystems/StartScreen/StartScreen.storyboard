@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -28,20 +29,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WALKSTREETS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Za-KZ-RLo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WALKSTREETS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Za-KZ-RLo" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
                                 <rect key="frame" x="40" y="106" width="295" height="24"/>
                                 <fontDescription key="fontDescription" name="VremenaGroteskBold" family="Vremena Grotesk" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                        <real key="value" value="3.7999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The happiest routes instead of the shortest" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UU-dh-yT3" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                <rect key="frame" x="40" y="135" width="190" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE HAPPIEST ROUTES INSTEAD OF THE SHORTEST" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UU-dh-yT3" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
+                                <rect key="frame" x="40" y="145" width="191" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="191" id="ffc-mM-JT0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
-                                        <real key="value" value="2.2000000000000002"/>
+                                        <real key="value" value="2.2200000000000002"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
@@ -49,16 +58,16 @@
                                 <rect key="frame" x="0.0" y="345" width="375" height="322"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r8e-Ig-73Z">
-                                        <rect key="frame" x="40" y="120" width="234" height="35"/>
+                                        <rect key="frame" x="40" y="52" width="151" height="35"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TURN LOCATION SERVICES ON" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKN-gk-bJE">
-                                                <rect key="frame" x="0.0" y="0.0" width="234" height="35"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TURN LOCATION SERVICES ON" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKN-gk-bJE">
+                                                <rect key="frame" x="0.0" y="0.0" width="151" height="35"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.066666666666666666" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozn-aE-4m7" customClass="CustomizableButton" customModule="walkstreets_ios" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="234" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="151" height="35"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="17"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -75,37 +84,37 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="ozn-aE-4m7" secondAttribute="trailing" id="BJO-rb-08U"/>
-                                            <constraint firstAttribute="trailing" secondItem="nKN-gk-bJE" secondAttribute="trailing" id="BXJ-El-F1n"/>
-                                            <constraint firstItem="nKN-gk-bJE" firstAttribute="leading" secondItem="r8e-Ig-73Z" secondAttribute="leading" id="LxS-UF-KFH"/>
-                                            <constraint firstItem="ozn-aE-4m7" firstAttribute="leading" secondItem="r8e-Ig-73Z" secondAttribute="leading" id="PnB-QH-elf"/>
-                                            <constraint firstItem="ozn-aE-4m7" firstAttribute="top" secondItem="r8e-Ig-73Z" secondAttribute="top" id="UOP-mN-6Zc"/>
-                                            <constraint firstAttribute="bottom" secondItem="ozn-aE-4m7" secondAttribute="bottom" id="UcN-VI-pIk"/>
-                                            <constraint firstAttribute="height" constant="35" id="b0J-Hs-UnB"/>
-                                            <constraint firstItem="nKN-gk-bJE" firstAttribute="top" secondItem="r8e-Ig-73Z" secondAttribute="top" id="f8x-ZQ-qEO"/>
-                                            <constraint firstAttribute="bottom" secondItem="nKN-gk-bJE" secondAttribute="bottom" id="nKl-cI-aof"/>
+                                            <constraint firstAttribute="trailing" secondItem="ozn-aE-4m7" secondAttribute="trailing" id="9Rz-H9-7Gd"/>
+                                            <constraint firstItem="ozn-aE-4m7" firstAttribute="leading" secondItem="r8e-Ig-73Z" secondAttribute="leading" id="F11-y2-hnY"/>
+                                            <constraint firstItem="ozn-aE-4m7" firstAttribute="top" secondItem="r8e-Ig-73Z" secondAttribute="top" id="HUF-aV-tEW"/>
+                                            <constraint firstAttribute="bottom" secondItem="ozn-aE-4m7" secondAttribute="bottom" id="KCG-Wj-1k7"/>
+                                            <constraint firstAttribute="trailing" secondItem="nKN-gk-bJE" secondAttribute="trailing" id="TPG-OF-9YK"/>
+                                            <constraint firstAttribute="height" constant="35" id="avs-xC-TWZ"/>
+                                            <constraint firstItem="nKN-gk-bJE" firstAttribute="top" secondItem="r8e-Ig-73Z" secondAttribute="top" id="b1k-eC-1h2"/>
+                                            <constraint firstAttribute="bottom" secondItem="nKN-gk-bJE" secondAttribute="bottom" id="bs8-72-YXZ"/>
+                                            <constraint firstAttribute="width" constant="151" id="ceb-18-X66"/>
+                                            <constraint firstItem="nKN-gk-bJE" firstAttribute="leading" secondItem="r8e-Ig-73Z" secondAttribute="leading" id="e77-kx-F9o"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="r8e-Ig-73Z" secondAttribute="trailing" constant="101" id="0aE-PC-fAI"/>
+                                    <constraint firstItem="r8e-Ig-73Z" firstAttribute="top" secondItem="oaP-GA-YdF" secondAttribute="top" constant="52" id="5tE-gr-rSS"/>
                                     <constraint firstAttribute="height" constant="322" id="9aa-gN-yrF"/>
-                                    <constraint firstItem="r8e-Ig-73Z" firstAttribute="top" secondItem="oaP-GA-YdF" secondAttribute="top" constant="120" id="DsL-D8-R9U"/>
-                                    <constraint firstItem="r8e-Ig-73Z" firstAttribute="leading" secondItem="oaP-GA-YdF" secondAttribute="leading" constant="40" id="Rl6-iF-FPe"/>
+                                    <constraint firstItem="r8e-Ig-73Z" firstAttribute="leading" secondItem="oaP-GA-YdF" secondAttribute="leading" constant="40" id="HZQ-Co-Ga4"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1UU-dh-yT3" firstAttribute="top" secondItem="1Za-KZ-RLo" secondAttribute="bottom" constant="5" id="0yV-7N-GJk"/>
+                            <constraint firstItem="1UU-dh-yT3" firstAttribute="top" secondItem="1Za-KZ-RLo" secondAttribute="bottom" constant="15" id="0yV-7N-GJk"/>
                             <constraint firstItem="1Za-KZ-RLo" firstAttribute="centerX" secondItem="cTY-gv-YC6" secondAttribute="centerX" id="1HB-JK-2lO"/>
                             <constraint firstAttribute="trailing" secondItem="oaP-GA-YdF" secondAttribute="trailing" id="8Ck-9u-2l4"/>
                             <constraint firstItem="698-H4-Q67" firstAttribute="top" secondItem="oaP-GA-YdF" secondAttribute="bottom" id="9oi-61-WZv"/>
                             <constraint firstItem="1UU-dh-yT3" firstAttribute="leading" secondItem="1Za-KZ-RLo" secondAttribute="leading" id="EVL-P5-tri"/>
-                            <constraint firstAttribute="trailing" secondItem="1UU-dh-yT3" secondAttribute="trailing" constant="145" id="HbT-9t-NXe"/>
                             <constraint firstItem="1Za-KZ-RLo" firstAttribute="top" secondItem="3VD-Nw-Web" secondAttribute="bottom" constant="86" id="MYm-Rs-yyO"/>
                             <constraint firstItem="oaP-GA-YdF" firstAttribute="leading" secondItem="cTY-gv-YC6" secondAttribute="leading" id="Okx-1z-FqL"/>
+                            <constraint firstItem="1UU-dh-yT3" firstAttribute="trailing" secondItem="1Za-KZ-RLo" secondAttribute="trailing" multiplier="1/1.45" id="PgE-1C-4LY"/>
                             <constraint firstItem="1UU-dh-yT3" firstAttribute="leading" secondItem="cTY-gv-YC6" secondAttribute="leading" constant="40" id="ssO-OP-9hq"/>
                         </constraints>
                     </view>
@@ -116,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cV-tQ-WuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-28.125" y="124.64788732394366"/>
+            <point key="canvasLocation" x="-29.600000000000001" y="124.58770614692655"/>
         </scene>
         <!--RouteCreationModule-->
         <scene sceneID="NI3-UA-rEx">

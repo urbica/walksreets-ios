@@ -81,4 +81,8 @@ extension AddressSearchViewController {
     @IBAction func actionPointOnMap(sender: AnyObject) {
         output.pointOnMap()
     }
+    
+    @IBAction func actionClear(sender: AnyObject) {
+        textField.text = nil
+    }
 }

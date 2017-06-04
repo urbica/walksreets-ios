@@ -21,7 +21,12 @@ extension PointOnMapViewController: MGLMapViewDelegate {
                 mapView.setVisibleCoordinateBounds(bounds, animated: false)
             }
             
-            self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) km • \(time) min"
+            if time > 60 {
+                self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) KM • \(time / 60) HOURS, \(time % 60) MIN"
+            } else {
+                self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) KM • \(time) MIN"
+            }
+            
         }
     }
     
@@ -44,7 +49,8 @@ extension PointOnMapViewController: MGLMapViewDelegate {
     
     func drawFirstLine(polyline: AnyObject) {
         priorityViewsHeightConstraint.constant = 182
-        
+        userLocationView.isHidden = false
+        compassView.isHidden = false
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
