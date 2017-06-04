@@ -267,7 +267,7 @@
                                         <rect key="frame" x="260" y="0.0" width="60" height="70"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="routeCreation_close" translatesAutoresizingMaskIntoConstraints="NO" id="7Ps-2b-Z0E">
-                                                <rect key="frame" x="23.5" y="38.5" width="13" height="13"/>
+                                                <rect key="frame" x="28.5" y="38.5" width="13" height="13"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5HI-TN-H3Y">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="70"/>
@@ -278,7 +278,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="7Ps-2b-Z0E" firstAttribute="centerX" secondItem="oQw-9h-uvt" secondAttribute="centerX" id="Ad5-ru-NdC"/>
+                                            <constraint firstItem="7Ps-2b-Z0E" firstAttribute="centerX" secondItem="oQw-9h-uvt" secondAttribute="centerX" constant="5" id="Ad5-ru-NdC"/>
                                             <constraint firstAttribute="trailing" secondItem="5HI-TN-H3Y" secondAttribute="trailing" id="DYE-an-dmS"/>
                                             <constraint firstAttribute="bottom" secondItem="5HI-TN-H3Y" secondAttribute="bottom" id="LnI-7p-oHp"/>
                                             <constraint firstItem="5HI-TN-H3Y" firstAttribute="top" secondItem="oQw-9h-uvt" secondAttribute="top" id="U5S-LX-k4e"/>

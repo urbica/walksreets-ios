@@ -256,7 +256,7 @@
                                         <rect key="frame" x="315" y="0.0" width="60" height="60"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="routeCreation_close" translatesAutoresizingMaskIntoConstraints="NO" id="gbP-yI-M2o">
-                                                <rect key="frame" x="23.5" y="33.5" width="13" height="13"/>
+                                                <rect key="frame" x="28.5" y="33.5" width="13" height="13"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="803-Dt-IvW">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -272,7 +272,7 @@
                                             <constraint firstAttribute="width" constant="60" id="Tbz-ev-fZb"/>
                                             <constraint firstAttribute="bottom" secondItem="803-Dt-IvW" secondAttribute="bottom" id="XxP-lA-2zo"/>
                                             <constraint firstItem="gbP-yI-M2o" firstAttribute="centerY" secondItem="tbj-FM-fWX" secondAttribute="centerY" constant="10" id="ZGf-dL-bWe"/>
-                                            <constraint firstItem="gbP-yI-M2o" firstAttribute="centerX" secondItem="tbj-FM-fWX" secondAttribute="centerX" id="ou4-mc-utm"/>
+                                            <constraint firstItem="gbP-yI-M2o" firstAttribute="centerX" secondItem="tbj-FM-fWX" secondAttribute="centerX" constant="5" id="ou4-mc-utm"/>
                                             <constraint firstAttribute="trailing" secondItem="803-Dt-IvW" secondAttribute="trailing" id="x2G-l6-l62"/>
                                         </constraints>
                                     </view>
