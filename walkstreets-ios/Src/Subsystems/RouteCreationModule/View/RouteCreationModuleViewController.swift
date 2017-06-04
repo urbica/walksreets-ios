@@ -109,7 +109,7 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     
     func updateSelectedTime(index: Int) {
         for label in timeLabels {
-            label.font = UIFont(name: "VremenaGroteskBook", size: 17)
+            label.font = UIFont(name: "VremenaGroteskBook", size: 14)
         }
         
         for view in selectedTimeViews {
@@ -137,7 +137,7 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         }
         
         self.selectedTimeViews[index].backgroundColor = UIColor.black
-        self.timeLabels[index].font = UIFont(name: "VremenaGroteskMedium", size: 17)
+        self.timeLabels[index].font = UIFont(name: "VremenaGroteskMedium", size: 14)
         self.selectedTimeIndex = index
         
         output.walkMeAround(time: index)
