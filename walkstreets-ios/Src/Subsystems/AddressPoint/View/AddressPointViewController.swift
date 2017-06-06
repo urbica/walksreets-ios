@@ -18,6 +18,8 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
     @IBOutlet var priorityLabels: Array<UILabel>!
     @IBOutlet var legendsArray: Array<UIImageView>!
     @IBOutlet weak var centerUserView: UIView!
+    @IBOutlet weak var prioritiesHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var userLocationConstraint: NSLayoutConstraint!
     
     var output: AddressPointViewOutput!
     var selectedItem: MKMapItem?
@@ -150,6 +152,15 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
         
         output.selectRouteAtIndex(index: index)
     }
+    
+    func hidePriorityViews() {
+        prioritiesHeightConstraint.constant = 0
+        userLocationConstraint.constant = 100
+        
+        UIView.animate(withDuration: 0.3, animations: { 
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
 }
 
 extension AddressPointViewController {
@@ -175,6 +186,7 @@ extension AddressPointViewController {
     @IBAction func actionGo(sender: AnyObject) {
         mapView.setZoomLevel(17.0, animated: true)
         mapView.setUserTrackingMode(.followWithHeading, animated: true)
+        hidePriorityViews()
     }
     
     @IBAction func actionCenterOnUser(sender: AnyObject) {
