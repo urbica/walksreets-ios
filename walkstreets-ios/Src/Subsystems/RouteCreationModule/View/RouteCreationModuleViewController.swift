@@ -39,6 +39,9 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     
     // userLocation view
     @IBOutlet weak var userLocationView: UIView!
+    @IBOutlet weak var userLocationHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var resetView: UIView!
     
     var output: RouteCreationModuleViewOutput!
     var selectedPriorityIndex: Int? = 0
@@ -58,6 +61,10 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
 
     // MARK: RouteCreationModuleViewInput
     func setupInitialState() {
+        
+        resetView.isHidden = true
+        lengthTimeLabel.isHidden = true
+        
         routeDetailsHeightConstraint.constant = 0
         timeViewHeightConstraint.constant = 0
         
@@ -169,7 +176,7 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
                 mapView.setVisibleCoordinateBounds(bounds, animated: false)
                 mapView.center = CGPoint(x: UIScreen.main.bounds.size.width, y:UIScreen.main.bounds.size.height + 60)
             }
-            
+            lengthTimeLabel.isHidden = false
             if time > 60 {
                 self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) KM • \(time / 60) H \(time % 60) MIN"
             } else {
@@ -230,6 +237,17 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         
     }
     
+    func hidePriorityViews() {
+        resetView.isHidden = false
+        routeDetailsHeightConstraint.constant = 0
+        routeTimeView.isHidden = true
+        userLocationHeightConstraint.constant = 100
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
@@ -253,6 +271,8 @@ extension RouteCreationModuleViewController {
     
     @IBAction func closeRouteDetailsView(sender: AnyObject) {
         startRouteView.isHidden = false
+        lengthTimeLabel.isHidden = true
+        resetView.isHidden = true
         hideRouteViews()
     }
     
@@ -265,7 +285,9 @@ extension RouteCreationModuleViewController {
     }
     
     @IBAction func actionGo(sender: AnyObject) {
-        mapView.setUserTrackingMode(.follow, animated: true)
+        mapView.setZoomLevel(17.0, animated: true)
+        mapView.setUserTrackingMode(.followWithHeading, animated: true)
+        hidePriorityViews()
     }
     
     @IBAction func actionUserLocation(sender: AnyObject) {

@@ -41,13 +41,13 @@
                                                 <rect key="frame" x="8" y="0.0" width="67" height="70"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvV-YW-hn2">
-                                                        <rect key="frame" x="12" y="35" width="44" height="14"/>
+                                                        <rect key="frame" x="11.5" y="35.5" width="44" height="14"/>
                                                         <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMF-Fi-AQa">
-                                                        <rect key="frame" x="12" y="66" width="44" height="4"/>
+                                                        <rect key="frame" x="11.5" y="66" width="44" height="4"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="4" id="0uO-g6-ERr"/>
@@ -78,7 +78,7 @@
                                                 <rect key="frame" x="75" y="0.0" width="67" height="70"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g69-is-w1G">
-                                                        <rect key="frame" x="12.5" y="35" width="42.5" height="14"/>
+                                                        <rect key="frame" x="12.5" y="35.5" width="42.5" height="14"/>
                                                         <fontDescription key="fontDescription" name="VremenaGroteskBook" family="Vremena Grotesk" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -114,7 +114,7 @@
                                                 <rect key="frame" x="142" y="0.0" width="67" height="70"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7f-LP-F0h">
-                                                        <rect key="frame" x="12.5" y="35" width="42.5" height="14"/>
+                                                        <rect key="frame" x="12.5" y="35.5" width="42.5" height="14"/>
                                                         <fontDescription key="fontDescription" name="VremenaGroteskBook" family="Vremena Grotesk" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -191,7 +191,7 @@
                                         </constraints>
                                     </view>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sll-ya-05N">
-                                        <rect key="frame" x="260" y="277" width="40" height="40"/>
+                                        <rect key="frame" x="260" y="326" width="40" height="40"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userCenter" translatesAutoresizingMaskIntoConstraints="NO" id="EDK-7K-Szw">
                                                 <rect key="frame" x="5.5" y="5.5" width="29" height="29"/>
@@ -215,10 +215,23 @@
                                             <constraint firstAttribute="trailing" secondItem="9gR-5H-aDw" secondAttribute="trailing" id="n4q-EH-efr"/>
                                         </constraints>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3,5 KM • 37 MIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AME-ni-zm8" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
+                                        <rect key="frame" x="192" y="401" width="107.5" height="14"/>
+                                        <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                <real key="value" value="2.2000000000000002"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="TOi-Rc-gh0" firstAttribute="top" secondItem="kML-PR-LQ9" secondAttribute="top" id="0Gr-qw-01o"/>
+                                    <constraint firstAttribute="trailing" secondItem="AME-ni-zm8" secondAttribute="trailing" constant="20" id="0NI-Oq-j3y"/>
+                                    <constraint firstItem="AME-ni-zm8" firstAttribute="top" secondItem="sll-ya-05N" secondAttribute="bottom" constant="35" id="TmS-k6-UHJ"/>
                                     <constraint firstAttribute="trailing" secondItem="TOi-Rc-gh0" secondAttribute="trailing" id="sVd-ST-dbj"/>
                                     <constraint firstItem="TOi-Rc-gh0" firstAttribute="leading" secondItem="kML-PR-LQ9" secondAttribute="leading" id="vSW-Fl-F8p"/>
                                     <constraint firstAttribute="trailing" secondItem="sll-ya-05N" secondAttribute="trailing" constant="20" id="zrV-c6-MOL"/>
@@ -255,7 +268,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADDRESS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0q-DH-e7h" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                                        <rect key="frame" x="29" y="6.5" width="67.5" height="14"/>
+                                                        <rect key="frame" x="29" y="6" width="67.5" height="14"/>
                                                         <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                                         <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                         <nil key="textColor"/>
@@ -381,13 +394,16 @@
                                         <rect key="frame" x="0.0" y="104" width="320" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O80-Vc-Tc9">
-                                                <rect key="frame" x="149.5" y="28.5" width="21.5" height="14"/>
+                                                <rect key="frame" x="149.5" y="28" width="21.5" height="14"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRh-pU-0sa">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                                <connections>
+                                                    <action selector="actionGoWithSender:" destination="G9h-yb-vWj" eventType="touchUpInside" id="inp-Tw-dHL"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.20000000000000001" green="0.066666666666666666" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -403,17 +419,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxp-yg-M2B">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3,5 KM • 37 MIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AME-ni-zm8" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                                <rect key="frame" x="193.5" y="7" width="107.5" height="14"/>
-                                                <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
-                                                <nil key="highlightedColor"/>
-                                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
-                                                        <real key="value" value="2.2000000000000002"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </label>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XXL-dZ-Mbu">
                                                 <rect key="frame" x="20" y="30" width="281" height="55"/>
                                                 <subviews>
@@ -572,10 +577,8 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="XXL-dZ-Mbu" firstAttribute="leading" secondItem="oxp-yg-M2B" secondAttribute="leading" constant="20" id="4WJ-le-pWW"/>
-                                            <constraint firstItem="XXL-dZ-Mbu" firstAttribute="top" secondItem="AME-ni-zm8" secondAttribute="bottom" constant="9" id="ei6-ZX-3hG"/>
+                                            <constraint firstItem="XXL-dZ-Mbu" firstAttribute="top" secondItem="oxp-yg-M2B" secondAttribute="top" constant="30" id="Gmh-NA-Y6C"/>
                                             <constraint firstAttribute="trailing" secondItem="XXL-dZ-Mbu" secondAttribute="trailing" constant="19" id="f17-QN-dMw"/>
-                                            <constraint firstItem="AME-ni-zm8" firstAttribute="trailing" secondItem="XXL-dZ-Mbu" secondAttribute="trailing" id="g2X-Fv-MsF"/>
-                                            <constraint firstItem="AME-ni-zm8" firstAttribute="top" secondItem="oxp-yg-M2B" secondAttribute="top" constant="7" id="n0N-W6-HaH"/>
                                             <constraint firstAttribute="height" constant="104" id="wEQ-61-h31"/>
                                         </constraints>
                                     </view>
@@ -592,9 +595,49 @@
                                     <constraint firstItem="2ai-cY-Krw" firstAttribute="leading" secondItem="f13-wY-goM" secondAttribute="leading" id="xKW-vC-81N"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLc-Ks-jmH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzt-B4-u6O">
+                                        <rect key="frame" x="251" y="0.0" width="69" height="70"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="routeCreation_close" translatesAutoresizingMaskIntoConstraints="NO" id="jUW-Qi-Pkd">
+                                                <rect key="frame" x="28" y="35.5" width="13" height="13"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Guh-sW-d86">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="70"/>
+                                                <connections>
+                                                    <action selector="closeRouteDetailsViewWithSender:" destination="G9h-yb-vWj" eventType="touchUpInside" id="Pvi-EF-WhS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="69" id="Eja-dF-2RN"/>
+                                            <constraint firstItem="jUW-Qi-Pkd" firstAttribute="centerY" secondItem="zzt-B4-u6O" secondAttribute="centerY" constant="7" id="Vx8-MS-7Ip"/>
+                                            <constraint firstAttribute="bottom" secondItem="Guh-sW-d86" secondAttribute="bottom" id="fYd-sD-FK6"/>
+                                            <constraint firstItem="Guh-sW-d86" firstAttribute="leading" secondItem="zzt-B4-u6O" secondAttribute="leading" id="olv-Yf-KyS"/>
+                                            <constraint firstItem="Guh-sW-d86" firstAttribute="top" secondItem="zzt-B4-u6O" secondAttribute="top" id="qUo-HD-PbC"/>
+                                            <constraint firstItem="jUW-Qi-Pkd" firstAttribute="centerX" secondItem="zzt-B4-u6O" secondAttribute="centerX" id="t0Y-wf-Nhf"/>
+                                            <constraint firstAttribute="trailing" secondItem="Guh-sW-d86" secondAttribute="trailing" id="tci-bL-bm6"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="zzt-B4-u6O" firstAttribute="top" secondItem="xLc-Ks-jmH" secondAttribute="top" id="6jp-Ya-2a7"/>
+                                    <constraint firstAttribute="bottom" secondItem="zzt-B4-u6O" secondAttribute="bottom" id="SxY-Vd-pNa"/>
+                                    <constraint firstAttribute="height" constant="70" id="UP2-ke-fIZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="zzt-B4-u6O" secondAttribute="trailing" id="W85-DJ-zYT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xLc-Ks-jmH" secondAttribute="trailing" id="6n2-DH-PBp"/>
+                            <constraint firstItem="xLc-Ks-jmH" firstAttribute="leading" secondItem="Ri3-tg-QXr" secondAttribute="leading" id="8VT-9E-OrM"/>
+                            <constraint firstItem="xLc-Ks-jmH" firstAttribute="top" secondItem="Ri3-tg-QXr" secondAttribute="top" id="GSU-jU-qxv"/>
+                            <constraint firstItem="XXL-dZ-Mbu" firstAttribute="top" secondItem="sll-ya-05N" secondAttribute="bottom" constant="58" id="Hwf-Ai-aED"/>
                             <constraint firstItem="kML-PR-LQ9" firstAttribute="leading" secondItem="Ri3-tg-QXr" secondAttribute="leading" id="Iv2-yq-LrN"/>
                             <constraint firstAttribute="bottom" secondItem="3bI-Et-JCQ" secondAttribute="bottom" id="LRH-xl-Rfv"/>
                             <constraint firstAttribute="trailing" secondItem="f13-wY-goM" secondAttribute="trailing" id="YTo-5M-ghv"/>
@@ -603,7 +646,6 @@
                             <constraint firstItem="cTQ-ed-HJz" firstAttribute="top" secondItem="f13-wY-goM" secondAttribute="bottom" id="dYn-Jb-AKD"/>
                             <constraint firstAttribute="trailing" secondItem="3bI-Et-JCQ" secondAttribute="trailing" id="fed-lC-k8E"/>
                             <constraint firstItem="kML-PR-LQ9" firstAttribute="top" secondItem="Ri3-tg-QXr" secondAttribute="top" id="hnw-Nf-rl7"/>
-                            <constraint firstItem="f13-wY-goM" firstAttribute="top" secondItem="sll-ya-05N" secondAttribute="bottom" constant="77" id="i9o-zl-0I2"/>
                             <constraint firstItem="f13-wY-goM" firstAttribute="leading" secondItem="Ri3-tg-QXr" secondAttribute="leading" id="ksK-20-Oj8"/>
                             <constraint firstItem="cTQ-ed-HJz" firstAttribute="top" secondItem="kML-PR-LQ9" secondAttribute="bottom" id="sEQ-iM-hi5"/>
                         </constraints>
@@ -612,11 +654,13 @@
                     <connections>
                         <outlet property="lengthTimeLabel" destination="AME-ni-zm8" id="vn4-6O-Ogl"/>
                         <outlet property="mapView" destination="kML-PR-LQ9" id="BVB-to-vOA"/>
+                        <outlet property="resetView" destination="xLc-Ks-jmH" id="9lN-dY-BHB"/>
                         <outlet property="routeDetailsHeightConstraint" destination="E14-h7-POi" id="6q3-0S-4cj"/>
                         <outlet property="routeDetailsView" destination="f13-wY-goM" id="RQv-Aa-hyE"/>
                         <outlet property="routeTimeView" destination="TOi-Rc-gh0" id="t80-rG-zXc"/>
                         <outlet property="startRouteView" destination="3bI-Et-JCQ" id="1dI-Ru-drU"/>
                         <outlet property="timeViewHeightConstraint" destination="WMX-2q-zUE" id="nwc-RA-Aeu"/>
+                        <outlet property="userLocationHeightConstraint" destination="Hwf-Ai-aED" id="QW4-fJ-p9a"/>
                         <outlet property="userLocationView" destination="sll-ya-05N" id="G76-35-32d"/>
                         <outletCollection property="selectedTimeViews" destination="qMF-Fi-AQa" collectionClass="NSMutableArray" id="a51-1B-S7x"/>
                         <outletCollection property="selectedTimeViews" destination="3tI-2P-kBP" collectionClass="NSMutableArray" id="A82-c4-b20"/>
