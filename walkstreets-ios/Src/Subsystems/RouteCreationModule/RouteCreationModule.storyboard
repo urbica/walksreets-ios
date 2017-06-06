@@ -234,7 +234,7 @@
                                     <constraint firstItem="AME-ni-zm8" firstAttribute="top" secondItem="sll-ya-05N" secondAttribute="bottom" constant="35" id="TmS-k6-UHJ"/>
                                     <constraint firstAttribute="trailing" secondItem="TOi-Rc-gh0" secondAttribute="trailing" id="sVd-ST-dbj"/>
                                     <constraint firstItem="TOi-Rc-gh0" firstAttribute="leading" secondItem="kML-PR-LQ9" secondAttribute="leading" id="vSW-Fl-F8p"/>
-                                    <constraint firstAttribute="trailing" secondItem="sll-ya-05N" secondAttribute="trailing" constant="20" id="zrV-c6-MOL"/>
+                                    <constraint firstItem="AME-ni-zm8" firstAttribute="trailing" secondItem="sll-ya-05N" secondAttribute="trailing" id="wJ6-nk-sFs"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/walkmap/cizpnte4900gh2rplobw8pgu0"/>

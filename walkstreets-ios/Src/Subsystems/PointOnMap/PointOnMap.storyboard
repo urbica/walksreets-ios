@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -30,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3,5 KM • 37 KM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMi-kU-fpB" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                        <rect key="frame" x="197" y="377" width="103" height="14"/>
+                                        <rect key="frame" x="197" y="397" width="103" height="14"/>
                                         <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -40,7 +39,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoU-I6-XDg">
-                                        <rect key="frame" x="252" y="312" width="40" height="40"/>
+                                        <rect key="frame" x="260" y="322" width="40" height="40"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userCenter" translatesAutoresizingMaskIntoConstraints="NO" id="u4b-xR-jWG">
                                                 <rect key="frame" x="5.5" y="5.5" width="29" height="29"/>
@@ -68,8 +67,8 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="sMi-kU-fpB" secondAttribute="trailing" constant="20" id="O4P-pG-9sX"/>
-                                    <constraint firstItem="sMi-kU-fpB" firstAttribute="top" secondItem="OoU-I6-XDg" secondAttribute="bottom" constant="25" id="mRy-eY-ecD"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="OoU-I6-XDg" secondAttribute="trailing" constant="20" id="ow1-1V-UYC"/>
+                                    <constraint firstItem="sMi-kU-fpB" firstAttribute="trailing" secondItem="OoU-I6-XDg" secondAttribute="trailing" id="apu-AP-O3W"/>
+                                    <constraint firstItem="sMi-kU-fpB" firstAttribute="top" secondItem="OoU-I6-XDg" secondAttribute="bottom" constant="35" id="mRy-eY-ecD"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/walkmap/cizpnte4900gh2rplobw8pgu0"/>
@@ -328,7 +327,7 @@
                             <constraint firstAttribute="trailing" secondItem="C6F-7C-QNe" secondAttribute="trailing" id="JRX-J4-4f5"/>
                             <constraint firstItem="Dr3-WW-xkO" firstAttribute="leading" secondItem="Lch-5M-lcN" secondAttribute="leading" id="Jeh-qK-2wA"/>
                             <constraint firstItem="QUn-er-F8y" firstAttribute="leading" secondItem="Lch-5M-lcN" secondAttribute="leading" id="Le7-Jr-X47"/>
-                            <constraint firstItem="zq3-9e-KQt" firstAttribute="top" secondItem="OoU-I6-XDg" secondAttribute="bottom" constant="69" id="Mop-Vk-5rY"/>
+                            <constraint firstItem="zq3-9e-KQt" firstAttribute="top" secondItem="OoU-I6-XDg" secondAttribute="bottom" constant="59" id="Mop-Vk-5rY"/>
                             <constraint firstItem="C6F-7C-QNe" firstAttribute="leading" secondItem="Lch-5M-lcN" secondAttribute="leading" id="XQF-Pv-tLz"/>
                             <constraint firstItem="sMi-kU-fpB" firstAttribute="trailing" secondItem="zq3-9e-KQt" secondAttribute="trailing" id="Yjc-EL-xlm"/>
                             <constraint firstItem="dk9-kD-aJ5" firstAttribute="top" secondItem="QUn-er-F8y" secondAttribute="bottom" id="fP2-kG-smF"/>
