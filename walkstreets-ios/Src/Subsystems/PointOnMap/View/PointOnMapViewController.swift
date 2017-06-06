@@ -68,7 +68,8 @@ class PointOnMapViewController: UIViewController, PointOnMapViewInput {
     
     func setupLastPoint(lastPoint: CLLocationCoordinate2D) {
         
-        self.lastPoint.coordinate = lastPoint
+        self.lastPoint.coordinate.latitude = lastPoint.latitude + 0.0001
+        self.lastPoint.coordinate.longitude = lastPoint.longitude + 0.0001
         mapView.addAnnotation(self.lastPoint)
         
     }

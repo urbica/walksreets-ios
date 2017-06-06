@@ -103,7 +103,7 @@ extension PointOnMapViewController: MGLMapViewDelegate {
         
         if annotation.coordinate.latitude == endPointCoordinate.latitude && annotation.coordinate.longitude == endPointCoordinate.longitude {
             let image = UIImage(named: "endPoint")!
-            return DraggableAnnotationView(reuseIdentifier: "endPoint", size: 50, image: image)
+            return DraggableAnnotationView(reuseIdentifier: "endPoint", size: image.size.height, image: image)
         }
         return nil
     }

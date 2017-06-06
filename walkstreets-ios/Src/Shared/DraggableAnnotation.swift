@@ -20,7 +20,7 @@ class DraggableAnnotationView: MGLAnnotationView {
         scalesWithViewingDistance = false
         
         
-        frame = CGRect(x: 0, y: 0, width: size, height: size)
+        frame = CGRect(x: 0, y: 0, width: 47, height: size)
         layer.contents = image.cgImage
 
     }

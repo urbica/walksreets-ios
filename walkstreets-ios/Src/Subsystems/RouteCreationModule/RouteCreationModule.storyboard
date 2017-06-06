@@ -358,11 +358,11 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lI0-I4-Gna" customClass="CustomizableButton" customModule="walkstreets_ios" customModuleProvider="target">
-                                        <rect key="frame" x="97" y="85" width="126" height="29"/>
+                                        <rect key="frame" x="97" y="85" width="126" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="126" id="2om-pp-Ap8"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="VremenaGrotesk" family="Vremena Grotesk" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="VremenaGrotesk" family="Vremena Grotesk" pointSize="14"/>
                                         <state key="normal" title="ABOUT">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
