@@ -87,6 +87,8 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     
     func clearRoutes() {
         self.routes = []
+        self.routeIndex = 0
+        self.timeIndex = 0
     }
     
     func selectRouteAtIndex(index: Int) {

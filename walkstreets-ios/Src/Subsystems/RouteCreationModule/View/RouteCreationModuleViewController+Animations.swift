@@ -28,6 +28,7 @@ extension RouteCreationModuleViewController {
     }
     
     func hideRouteViews() {
+        restartToInitial()
         timeViewHeightConstraint.constant = 0
         routeDetailsHeightConstraint.constant = 0
         UIView.animate(withDuration: 0.3, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: [], animations: {
@@ -39,19 +40,20 @@ extension RouteCreationModuleViewController {
             self.routeTimeView.isHidden = true
             self.routeDetailsView.isHidden = true
             self.output.clearRoutes()
-            if let annotations = self.mapView.annotations {
-                self.mapView.removeAnnotations(annotations)
-            }
             
-            if let layer = self.mapView.style?.layer(withIdentifier: "customLine") {
-                self.mapView.style?.removeLayer(layer)
+            DispatchQueue.main.async {
+                if let annotations = self.mapView.annotations {
+                    self.mapView.removeAnnotations(annotations)
+                }
+                
+                if let layer = self.mapView.style?.layer(withIdentifier: "customLine") {
+                    self.mapView.style?.removeLayer(layer)
+                }
+                
+                if let source = self.mapView.style?.source(withIdentifier: "customLine") {
+                    self.mapView.style?.removeSource(source)
+                }
             }
-            
-            if let source = self.mapView.style?.source(withIdentifier: "customLine") {
-                self.mapView.style?.removeSource(source)
-            }
-            
-            self.restartToInitial()
         }
     }
 }
