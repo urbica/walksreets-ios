@@ -16,11 +16,11 @@ class DraggableAnnotationView: MGLAnnotationView {
         super.init(reuseIdentifier: reuseIdentifier)
         
         isDraggable = true
-        
+        centerOffset = CGVector(dx: 0, dy: -30)
         scalesWithViewingDistance = false
         
         
-        frame = CGRect(x: 0, y: -20, width: 47, height: size)
+        frame = CGRect(x: 0, y: 0, width: 47, height: size)
         layer.contents = image.cgImage
 
     }
