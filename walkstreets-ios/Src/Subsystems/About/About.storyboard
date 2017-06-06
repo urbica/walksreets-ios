@@ -30,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABOUT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEy-Ix-8hh" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="34" width="58" height="20"/>
+                                        <rect key="frame" x="20" y="35.5" width="61" height="17"/>
                                         <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                                         <rect key="frame" x="265" y="0.0" width="55" height="70"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_close" translatesAutoresizingMaskIntoConstraints="NO" id="vpI-2y-vGt">
-                                                <rect key="frame" x="20.5" y="37.5" width="13" height="13"/>
+                                                <rect key="frame" x="22" y="37.5" width="13" height="13"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SN6-al-oL2">
                                                 <rect key="frame" x="0.0" y="0.0" width="55" height="70"/>
@@ -57,7 +57,7 @@
                                         <constraints>
                                             <constraint firstItem="vpI-2y-vGt" firstAttribute="centerY" secondItem="kfH-UM-Ivv" secondAttribute="centerY" constant="9" id="3Kt-KR-crX"/>
                                             <constraint firstItem="SN6-al-oL2" firstAttribute="top" secondItem="kfH-UM-Ivv" secondAttribute="top" id="BNL-Qt-luO"/>
-                                            <constraint firstItem="vpI-2y-vGt" firstAttribute="centerX" secondItem="kfH-UM-Ivv" secondAttribute="centerX" id="Pyw-BF-qtF"/>
+                                            <constraint firstItem="vpI-2y-vGt" firstAttribute="centerX" secondItem="kfH-UM-Ivv" secondAttribute="centerX" constant="1" id="Pyw-BF-qtF"/>
                                             <constraint firstItem="SN6-al-oL2" firstAttribute="leading" secondItem="kfH-UM-Ivv" secondAttribute="leading" id="Tbz-7v-3II"/>
                                             <constraint firstAttribute="trailing" secondItem="SN6-al-oL2" secondAttribute="trailing" id="WRR-yH-qu3"/>
                                             <constraint firstAttribute="bottom" secondItem="SN6-al-oL2" secondAttribute="bottom" id="y9q-HG-iNK"/>
@@ -72,17 +72,17 @@
                                     <constraint firstAttribute="trailing" secondItem="kfH-UM-Ivv" secondAttribute="trailing" id="fC0-a4-4Bp"/>
                                     <constraint firstAttribute="bottom" secondItem="kfH-UM-Ivv" secondAttribute="bottom" id="o5d-dP-AVT"/>
                                     <constraint firstItem="kfH-UM-Ivv" firstAttribute="top" secondItem="AhU-Af-qh1" secondAttribute="top" id="pTt-gL-oh5"/>
-                                    <constraint firstItem="dEy-Ix-8hh" firstAttribute="leading" secondItem="AhU-Af-qh1" secondAttribute="leading" constant="8" id="qTZ-q9-O4B"/>
+                                    <constraint firstItem="dEy-Ix-8hh" firstAttribute="leading" secondItem="AhU-Af-qh1" secondAttribute="leading" constant="20" id="qTZ-q9-O4B"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yeM-Vx-sPy">
                                 <rect key="frame" x="0.0" y="418" width="320" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODW-bn-OyL" customClass="CustomizableView" customModule="walkstreets_ios" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="69" width="304" height="61"/>
+                                        <rect key="frame" x="8" y="68.5" width="304" height="55.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELLO@URBICA.CO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klX-qF-oFb" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                                <rect key="frame" x="86.5" y="22.5" width="133" height="16.5"/>
+                                                <rect key="frame" x="84" y="20.5" width="136.5" height="14"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -93,7 +93,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsC-Zm-lqD">
-                                                <rect key="frame" x="0.0" y="0.0" width="304" height="61"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="304" height="56"/>
                                                 <connections>
                                                     <action selector="actionSendEmailWithSender:" destination="2C5-Gp-VJn" eventType="touchUpInside" id="JSu-Pa-gls"/>
                                                 </connections>
@@ -118,10 +118,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Td-S9-O2q">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU CAN CONTACT US ON" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L50-Pd-EKa" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="29.5" width="292" height="16.5"/>
+                                                <rect key="frame" x="20" y="31" width="292" height="14"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -143,18 +143,18 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="7Td-S9-O2q" firstAttribute="top" secondItem="yeM-Vx-sPy" secondAttribute="top" id="3J6-YZ-Ibu"/>
-                                    <constraint firstAttribute="bottom" secondItem="ODW-bn-OyL" secondAttribute="bottom" constant="20" id="AGH-rQ-VEg"/>
+                                    <constraint firstAttribute="bottom" secondItem="ODW-bn-OyL" secondAttribute="bottom" constant="26" id="AGH-rQ-VEg"/>
                                     <constraint firstAttribute="height" constant="150" id="Lpr-wF-JZA"/>
                                     <constraint firstItem="ODW-bn-OyL" firstAttribute="leading" secondItem="yeM-Vx-sPy" secondAttribute="leading" constant="8" id="Zt9-os-LGc"/>
                                     <constraint firstItem="7Td-S9-O2q" firstAttribute="leading" secondItem="yeM-Vx-sPy" secondAttribute="leading" id="c7o-fA-fZ3"/>
-                                    <constraint firstItem="7Td-S9-O2q" firstAttribute="height" secondItem="ODW-bn-OyL" secondAttribute="height" id="iEE-29-r1l"/>
+                                    <constraint firstItem="7Td-S9-O2q" firstAttribute="height" secondItem="ODW-bn-OyL" secondAttribute="height" constant="4" id="iEE-29-r1l"/>
                                     <constraint firstAttribute="trailing" secondItem="ODW-bn-OyL" secondAttribute="trailing" constant="8" id="ogu-v7-o12"/>
                                     <constraint firstAttribute="trailing" secondItem="7Td-S9-O2q" secondAttribute="trailing" id="u6x-4B-Tem"/>
                                     <constraint firstItem="ODW-bn-OyL" firstAttribute="top" secondItem="7Td-S9-O2q" secondAttribute="bottom" constant="8" id="zCj-ea-ZPo"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEc-Hl-ejC" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                <rect key="frame" x="20" y="95" width="248" height="82"/>
+                                <rect key="frame" x="20" y="95" width="248" height="70"/>
                                 <attributedString key="attributedText">
                                     <fragment content="WALKSTREETS IS AN URBICA STUDIO PROJECT. WE ARE A MOSCOW-BASED TEAM OF DESIGNER, DEVELOPERS AND DATA ANALYSTS.">
                                         <attributes>
@@ -171,7 +171,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hX-6K-D1c" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                <rect key="frame" x="20" y="191" width="232" height="130.5"/>
+                                <rect key="frame" x="20" y="179" width="232" height="140"/>
                                 <string key="text">THE WALKSTREETS APP IS CREATED TO BUILD THE HEPPIEST AND THE MOST COMFORTABLE ROUTES INSTEAD OF THE SHORTEST AND THE FASTESTS. WE BELIEVE IT WILL HELP PEOPLE TO DISCOVER THE CITY AND THE EVERYDAY ROUTINE ENJOYABLE.</string>
                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                 <nil key="textColor"/>
@@ -183,7 +183,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WE USED OPEN DATA AND NOISE SENSORS TO CREATE THE APP ALONG WITH GREANPEACE AND AEROSTATE DATA." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g96-ef-MF3" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                <rect key="frame" x="20" y="335.5" width="248" height="65.5"/>
+                                <rect key="frame" x="20" y="333" width="248" height="56"/>
                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

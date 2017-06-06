@@ -20,6 +20,12 @@ class CustomizableTextField: SpringTextField {
     @IBInspectable var verticalInsets: CGFloat = 0
     @IBInspectable var leftImage: String?
     
+    @IBInspectable var characterSpacing: CGFloat = 0 {
+        didSet {
+            setCharacterSpacing(value: characterSpacing)
+        }
+    }
+    
     override func awakeFromNib() {
         layer.masksToBounds = true;
         layer.borderWidth = borderWidth
@@ -41,6 +47,12 @@ class CustomizableTextField: SpringTextField {
             
             attrs[NSBaselineOffsetAttributeName] = verticalInsets as AnyObject?
             
+            let attributedString = NSMutableAttributedString(string: text!)
+            attributedString.addAttribute(NSKernAttributeName, value: 2.2, range: NSRange(location: 0, length: attributedString.length))
+            attributedText = attributedString
+            
+            attrs[NSKernAttributeName] = 2.2 as AnyObject
+            
             attributedPlaceholder = NSAttributedString(string: placeholder, attributes: attrs)
         }
         
@@ -49,6 +61,14 @@ class CustomizableTextField: SpringTextField {
             leftView = UIImageView(image: UIImage(named: leftImage))
         }
         
+    }
+    
+    func setCharacterSpacing(value: CGFloat) {
+        if let textString = text {
+            let attributedString = NSMutableAttributedString(string: textString)
+            attributedString.addAttribute(NSKernAttributeName, value: value, range: NSRange(location: 0, length: attributedString.length - 1))
+            attributedText = attributedString
+        }
     }
     
     override func leftViewRect(forBounds bounds: CGRect) -> CGRect {

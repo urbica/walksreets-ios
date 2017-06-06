@@ -24,9 +24,10 @@ extension AddressPointViewController: MGLMapViewDelegate {
                 let bounds = MGLCoordinateBoundsMake(sw, ne)
                 mapView.setVisibleCoordinateBounds(bounds, animated: false)
             }
-            
+            lengthTimeLabel.isHidden = false
+
             if time > 60 {
-                self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) KM • \(time / 60) HOURS, \(time % 60) MIN"
+                self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) KM • \(time / 60) H \(time % 60) MIN"
             } else {
                 self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) KM • \(time) MIN"
             }
@@ -105,12 +106,12 @@ extension AddressPointViewController: MGLMapViewDelegate {
         if annotation.coordinate.latitude == startPoint.latitude && annotation.coordinate.longitude == startPoint.longitude {
             let image = UIImage(named: "startPoint")!
             
-            let drag = DraggableAnnotationView(reuseIdentifier: "startPoint", size: 50, image: image, pointOnMap: false)
+            let drag = DraggableAnnotationView(reuseIdentifier: "startPoint", size: image.size.height, image: image, pointOnMap: false)
             return drag
             
         } else if annotation.coordinate.latitude == endPointCoordinate.latitude && annotation.coordinate.longitude == endPointCoordinate.longitude {
             let image = UIImage(named: "endPoint")!
-            return DraggableAnnotationView(reuseIdentifier: "endPoint", size: 50, image: image, pointOnMap: false)
+            return DraggableAnnotationView(reuseIdentifier: "endPoint", size: image.size.height, image: image, pointOnMap: false)
         }
         return nil
     }

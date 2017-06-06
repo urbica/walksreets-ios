@@ -26,7 +26,7 @@ class StartScreenViewController: UIViewController, StartScreenViewInput {
     
     // MARK: StartScreenViewInput
     func setupInitialState() {
-        
+        _ = Location.core.getCoordinate()
         let status = CLLocationManager.authorizationStatus()
         if status == .denied || status == .restricted || status == .notDetermined {
             locationButton.setTitleColor(UIColor.black, for: .disabled)
@@ -38,10 +38,12 @@ class StartScreenViewController: UIViewController, StartScreenViewInput {
     }
     
     func initLocationManager() {
-        _ = Location.core.getCoordinate()
-        locationButton.isEnabled = false
-        locationButton.setTitleColor(UIColor.gray, for: .disabled)
-        output.openRouteCreation()
+        let status = CLLocationManager.authorizationStatus()
+        if status == .denied || status == .restricted || status == .notDetermined {
+            return
+        } else {
+            output.openRouteCreation()
+        }
     }
     
 }

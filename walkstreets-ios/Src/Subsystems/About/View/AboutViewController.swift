@@ -29,9 +29,10 @@ class AboutViewController: UIViewController, AboutViewInput {
     func setupInitialState() {
         let text = "WALKSTREETS IS AN URBICA STUDIO PROJECT. WE ARE A MOSCOW-BASED TEAM OF DESIGNER, DEVELOPERS AND DATA ANALYSTS."
         let textToColor = "URBICA STUDIO"
-        
+        let textRange = (text as NSString).range(of: text)
         let range = (text as NSString).range(of: textToColor)
         let attributedString = NSMutableAttributedString(string:text)
+        attributedString.addAttribute(NSKernAttributeName, value: 2.2, range: NSRange(location: 0, length: textRange.length - 1))
         attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor(hex: "3311FF") , range: range)
         attributedLabel.attributedText = attributedString
         

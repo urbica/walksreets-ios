@@ -20,9 +20,9 @@ extension PointOnMapViewController: MGLMapViewDelegate {
                 let bounds = MGLCoordinateBoundsMake(sw, ne)
                 mapView.setVisibleCoordinateBounds(bounds, animated: false)
             }
-            
+            lengthTimeLabel.isHidden = false
             if time > 60 {
-                self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) KM • \(time / 60) HOURS, \(time % 60) MIN"
+                self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) KM • \(time / 60) H \(time % 60) MIN"
             } else {
                 self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) KM • \(time) MIN"
             }
@@ -50,7 +50,7 @@ extension PointOnMapViewController: MGLMapViewDelegate {
     func drawFirstLine(polyline: AnyObject) {
         priorityViewsHeightConstraint.constant = 182
         userLocationView.isHidden = false
-        compassView.isHidden = false
+        //compassView.isHidden = false
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
@@ -103,7 +103,7 @@ extension PointOnMapViewController: MGLMapViewDelegate {
         
         if annotation.coordinate.latitude == endPointCoordinate.latitude && annotation.coordinate.longitude == endPointCoordinate.longitude {
             let image = UIImage(named: "endPoint")!
-            return DraggableAnnotationView(reuseIdentifier: "endPoint", size: 50, image: image)
+            return DraggableAnnotationView(reuseIdentifier: "endPoint", size: image.size.height, image: image)
         }
         return nil
     }
