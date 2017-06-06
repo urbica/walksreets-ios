@@ -38,6 +38,7 @@ class AddressPointViewController: UIViewController, AddressPointViewInput {
     
     // MARK: AddressPointViewInput
     func setupInitialState() {
+        lengthTimeLabel.isHidden = true
         setupMap()
         let userLocation = Location.core.getCoordinate()
         

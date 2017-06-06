@@ -18,8 +18,7 @@ class PointOnMapViewController: UIViewController, PointOnMapViewInput {
     @IBOutlet weak var priorityViewsHeightConstraint: NSLayoutConstraint!
     @IBOutlet var legendsArray: Array<UIImageView>!
     @IBOutlet weak var userLocationView: UIView!
-    @IBOutlet weak var compassImageView: UIImageView!
-    @IBOutlet weak var compassView: UIView!
+    @IBOutlet weak var userLocationConstraint: NSLayoutConstraint!
     
     var output: PointOnMapViewOutput!
     let lastPoint = MGLPointAnnotation()
@@ -41,7 +40,7 @@ class PointOnMapViewController: UIViewController, PointOnMapViewInput {
     func setupInitialState() {
         manager.delegate = self
         manager.startUpdatingHeading()
-
+        lengthTimeLabel.isHidden = true
         priorityViewsHeightConstraint.constant = 0
         setupMap()
     }
@@ -140,6 +139,15 @@ class PointOnMapViewController: UIViewController, PointOnMapViewInput {
         output.selectRouteAtIndex(index: index)
     }
     
+    func hidePriorityViews() {
+        priorityViewsHeightConstraint.constant = 0
+        userLocationConstraint.constant = 100
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+    
 }
 
 extension PointOnMapViewController {
@@ -154,7 +162,9 @@ extension PointOnMapViewController {
     }
     
     @IBAction func actionGo(sender: AnyObject) {
-        mapView.setUserTrackingMode(.follow, animated: true)
+        mapView.setZoomLevel(17.0, animated: true)
+        mapView.setUserTrackingMode(.followWithHeading, animated: true)
+        hidePriorityViews()
     }
     
     @IBAction func actionCenterOnUser(sender: AnyObject) {
@@ -163,18 +173,18 @@ extension PointOnMapViewController {
 }
 
 extension PointOnMapViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        
-        // Convert Degree to Radian and move the needle
-        let newRad =  -newHeading.trueHeading * Double.pi / 180.0
-        UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseInOut, animations: { 
-            self.compassImageView.transform = CGAffineTransform(rotationAngle: CGFloat(newRad))
-            self.view.layoutIfNeeded()
-            self.view.layoutSubviews()
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseOut, animations: { 
-            
-        }, completion: nil)
-    }
+//    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+//        
+//        // Convert Degree to Radian and move the needle
+//        let newRad =  -newHeading.trueHeading * Double.pi / 180.0
+//        UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseInOut, animations: { 
+//            self.compassImageView.transform = CGAffineTransform(rotationAngle: CGFloat(newRad))
+//            self.view.layoutIfNeeded()
+//            self.view.layoutSubviews()
+//        }, completion: nil)
+//        
+//        UIView.animate(withDuration: 0.6, delay: 0, options: .curveEaseOut, animations: { 
+//            
+//        }, completion: nil)
+//    }
 }

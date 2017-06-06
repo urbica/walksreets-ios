@@ -20,7 +20,7 @@ extension PointOnMapViewController: MGLMapViewDelegate {
                 let bounds = MGLCoordinateBoundsMake(sw, ne)
                 mapView.setVisibleCoordinateBounds(bounds, animated: false)
             }
-            
+            lengthTimeLabel.isHidden = false
             if time > 60 {
                 self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) KM • \(time / 60) H \(time % 60) MIN"
             } else {
