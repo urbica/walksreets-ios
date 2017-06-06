@@ -171,7 +171,7 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
             }
             
             if time > 60 {
-                self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) KM • \(time / 60) HOURS, \(time % 60) MIN"
+                self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) KM • \(time / 60) H \(time % 60) MIN"
             } else {
                 self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) KM • \(time) MIN"
             }
@@ -189,6 +189,8 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     func restartToInitial() {
         
         selectedPriorityIndex = 0
+        selectedTimeIndex = 0
+        
         for label in priorityLabels {
             label.textColor = UIColor.black
         }
@@ -196,6 +198,23 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         for view in priorityViews {
             view.backgroundColor = UIColor.clear
         }
+        
+        for label in timeLabels {
+            label.font = UIFont(name: "VremenaGroteskBook", size: 14)
+        }
+        
+        for view in selectedTimeViews {
+            view.backgroundColor = UIColor.white
+        }
+        
+        for legend in legendArray {
+            legend.isHidden = true
+        }
+        
+        self.legendArray[selectedPriorityIndex!].isHidden = false
+        
+        self.selectedTimeViews[selectedTimeIndex!].backgroundColor = UIColor.black
+        self.timeLabels[selectedTimeIndex!].font = UIFont(name: "VremenaGroteskMedium", size: 14)
         
         self.priorityViews[selectedPriorityIndex!].backgroundColor = UIColor.black
         self.priorityLabels[selectedPriorityIndex!].textColor = UIColor.white

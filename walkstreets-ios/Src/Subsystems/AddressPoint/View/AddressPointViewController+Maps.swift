@@ -26,7 +26,7 @@ extension AddressPointViewController: MGLMapViewDelegate {
             }
             
             if time > 60 {
-                self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) KM • \(time / 60) HOURS, \(time % 60) MIN"
+                self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) KM • \(time / 60) H \(time % 60) MIN"
             } else {
                 self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) KM • \(time) MIN"
             }
