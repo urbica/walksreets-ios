@@ -40,14 +40,19 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Irx-N2-sas">
                                                 <rect key="frame" x="8" y="0.0" width="67" height="70"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvV-YW-hn2">
-                                                        <rect key="frame" x="11.5" y="35.5" width="44" height="14"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 MIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvV-YW-hn2" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
+                                                        <rect key="frame" x="10.5" y="35" width="47.5" height="14"/>
                                                         <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                                <real key="value" value="2.2000000000000002"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMF-Fi-AQa">
-                                                        <rect key="frame" x="11.5" y="66" width="44" height="4"/>
+                                                        <rect key="frame" x="10.5" y="66" width="47.5" height="4"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="4" id="0uO-g6-ERr"/>
@@ -77,14 +82,19 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPc-y7-Y1C">
                                                 <rect key="frame" x="75" y="0.0" width="67" height="70"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g69-is-w1G">
-                                                        <rect key="frame" x="12.5" y="35.5" width="42.5" height="14"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 MIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g69-is-w1G" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
+                                                        <rect key="frame" x="11" y="35" width="45.5" height="14"/>
                                                         <fontDescription key="fontDescription" name="VremenaGroteskBook" family="Vremena Grotesk" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                                <real key="value" value="2.2000000000000002"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tI-2P-kBP">
-                                                        <rect key="frame" x="12.5" y="66" width="42.5" height="4"/>
+                                                        <rect key="frame" x="11" y="66" width="45.5" height="4"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="4" id="bL8-gI-lkI"/>
@@ -113,14 +123,19 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="syz-fe-bdz">
                                                 <rect key="frame" x="142" y="0.0" width="67" height="70"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7f-LP-F0h">
-                                                        <rect key="frame" x="12.5" y="35.5" width="42.5" height="14"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90 MIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7f-LP-F0h" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
+                                                        <rect key="frame" x="11" y="35" width="45.5" height="14"/>
                                                         <fontDescription key="fontDescription" name="VremenaGroteskBook" family="Vremena Grotesk" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                                <real key="value" value="2.2000000000000002"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nuf-vQ-b9f">
-                                                        <rect key="frame" x="12.5" y="66" width="42.5" height="4"/>
+                                                        <rect key="frame" x="11" y="66" width="45.5" height="4"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="4" id="OV7-A8-3Z9"/>
@@ -268,7 +283,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADDRESS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0q-DH-e7h" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                                        <rect key="frame" x="29" y="6" width="67.5" height="14"/>
+                                                        <rect key="frame" x="29" y="6.5" width="67.5" height="14"/>
                                                         <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                                         <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                         <nil key="textColor"/>
@@ -394,7 +409,7 @@
                                         <rect key="frame" x="0.0" y="104" width="320" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O80-Vc-Tc9">
-                                                <rect key="frame" x="149.5" y="28" width="21.5" height="14"/>
+                                                <rect key="frame" x="149.5" y="28.5" width="21.5" height="14"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -426,7 +441,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="95" height="55"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GREEN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ob-Ub-5rb" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                                                <rect key="frame" x="8" y="8" width="50" height="14"/>
+                                                                <rect key="frame" x="8" y="6" width="50" height="14"/>
                                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
@@ -437,7 +452,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenLegend" translatesAutoresizingMaskIntoConstraints="NO" id="nhz-oQ-gj0">
-                                                                <rect key="frame" x="8" y="34" width="79" height="19"/>
+                                                                <rect key="frame" x="8" y="33" width="79" height="19"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCJ-vu-rM6">
                                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="55"/>
@@ -451,11 +466,11 @@
                                                             <constraint firstAttribute="bottom" secondItem="pCJ-vu-rM6" secondAttribute="bottom" id="2Ie-Ew-Z8y"/>
                                                             <constraint firstAttribute="trailing" secondItem="nhz-oQ-gj0" secondAttribute="trailing" constant="8" id="USs-kz-AMN"/>
                                                             <constraint firstItem="pCJ-vu-rM6" firstAttribute="leading" secondItem="IPA-1Q-pwH" secondAttribute="leading" id="agT-gN-Yhm"/>
-                                                            <constraint firstAttribute="bottom" secondItem="nhz-oQ-gj0" secondAttribute="bottom" constant="2" id="au9-hL-sM5"/>
+                                                            <constraint firstAttribute="bottom" secondItem="nhz-oQ-gj0" secondAttribute="bottom" constant="3" id="au9-hL-sM5"/>
                                                             <constraint firstItem="pCJ-vu-rM6" firstAttribute="top" secondItem="IPA-1Q-pwH" secondAttribute="top" id="c6E-LU-25M"/>
                                                             <constraint firstItem="6Ob-Ub-5rb" firstAttribute="leading" secondItem="IPA-1Q-pwH" secondAttribute="leading" constant="8" id="gOh-NV-Wz0"/>
                                                             <constraint firstItem="nhz-oQ-gj0" firstAttribute="leading" secondItem="IPA-1Q-pwH" secondAttribute="leading" constant="8" id="i2x-t1-svJ"/>
-                                                            <constraint firstItem="6Ob-Ub-5rb" firstAttribute="top" secondItem="IPA-1Q-pwH" secondAttribute="top" constant="8" id="lfk-fm-a9E"/>
+                                                            <constraint firstItem="6Ob-Ub-5rb" firstAttribute="top" secondItem="IPA-1Q-pwH" secondAttribute="top" constant="6" id="lfk-fm-a9E"/>
                                                             <constraint firstAttribute="trailing" secondItem="pCJ-vu-rM6" secondAttribute="trailing" id="sDZ-TU-pyc"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
@@ -471,7 +486,7 @@
                                                         <rect key="frame" x="93" y="0.0" width="95" height="55"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOIZE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wus-Go-cK4" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                                                <rect key="frame" x="8" y="8" width="44" height="14"/>
+                                                                <rect key="frame" x="8" y="6" width="44" height="14"/>
                                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -481,7 +496,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noizeLegend" translatesAutoresizingMaskIntoConstraints="NO" id="Gjv-wU-U24">
-                                                                <rect key="frame" x="8" y="34" width="79" height="19"/>
+                                                                <rect key="frame" x="8" y="33" width="79" height="19"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZ5-Pd-W7Y">
                                                                 <rect key="frame" x="-2" y="0.0" width="97" height="55"/>
@@ -492,12 +507,12 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="bottom" secondItem="Gjv-wU-U24" secondAttribute="bottom" constant="2" id="1GM-Ac-Swi"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Gjv-wU-U24" secondAttribute="bottom" constant="3" id="1GM-Ac-Swi"/>
                                                             <constraint firstAttribute="trailing" secondItem="UZ5-Pd-W7Y" secondAttribute="trailing" id="BLS-Oa-p9K"/>
                                                             <constraint firstAttribute="bottom" secondItem="UZ5-Pd-W7Y" secondAttribute="bottom" id="I8m-xw-Vrd"/>
                                                             <constraint firstItem="UZ5-Pd-W7Y" firstAttribute="top" secondItem="JFk-3l-hBz" secondAttribute="top" id="IS3-1J-j3X"/>
                                                             <constraint firstItem="UZ5-Pd-W7Y" firstAttribute="leading" secondItem="JFk-3l-hBz" secondAttribute="leading" constant="-2" id="IxN-WA-6o3"/>
-                                                            <constraint firstItem="wus-Go-cK4" firstAttribute="top" secondItem="JFk-3l-hBz" secondAttribute="top" constant="8" id="bCe-xb-d6Z"/>
+                                                            <constraint firstItem="wus-Go-cK4" firstAttribute="top" secondItem="JFk-3l-hBz" secondAttribute="top" constant="6" id="bCe-xb-d6Z"/>
                                                             <constraint firstItem="Gjv-wU-U24" firstAttribute="leading" secondItem="JFk-3l-hBz" secondAttribute="leading" constant="8" id="bws-46-fI2"/>
                                                             <constraint firstAttribute="trailing" secondItem="Gjv-wU-U24" secondAttribute="trailing" constant="8" id="xsd-D4-nuQ"/>
                                                             <constraint firstItem="wus-Go-cK4" firstAttribute="leading" secondItem="JFk-3l-hBz" secondAttribute="leading" constant="8" id="ycp-9q-keW"/>
@@ -515,7 +530,7 @@
                                                         <rect key="frame" x="186" y="0.0" width="95" height="55"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AIR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hT-dw-bh8" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                                                <rect key="frame" x="8" y="8" width="24" height="14"/>
+                                                                <rect key="frame" x="8" y="6" width="24" height="14"/>
                                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -525,7 +540,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="airLegend" translatesAutoresizingMaskIntoConstraints="NO" id="dGT-7N-AU6">
-                                                                <rect key="frame" x="8" y="35" width="79" height="18"/>
+                                                                <rect key="frame" x="8" y="34" width="79" height="18"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKY-wh-HF1">
                                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="55"/>
@@ -536,10 +551,10 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstItem="1hT-dw-bh8" firstAttribute="top" secondItem="Ybj-T4-Q9o" secondAttribute="top" constant="8" id="0CN-G2-DfU"/>
+                                                            <constraint firstItem="1hT-dw-bh8" firstAttribute="top" secondItem="Ybj-T4-Q9o" secondAttribute="top" constant="6" id="0CN-G2-DfU"/>
                                                             <constraint firstAttribute="trailing" secondItem="yKY-wh-HF1" secondAttribute="trailing" id="2hX-Yg-LqS"/>
                                                             <constraint firstAttribute="bottom" secondItem="yKY-wh-HF1" secondAttribute="bottom" id="4jQ-4H-Qnw"/>
-                                                            <constraint firstAttribute="bottom" secondItem="dGT-7N-AU6" secondAttribute="bottom" constant="2" id="7Rh-z4-WBl"/>
+                                                            <constraint firstAttribute="bottom" secondItem="dGT-7N-AU6" secondAttribute="bottom" constant="3" id="7Rh-z4-WBl"/>
                                                             <constraint firstItem="yKY-wh-HF1" firstAttribute="leading" secondItem="Ybj-T4-Q9o" secondAttribute="leading" id="MTq-gq-f88"/>
                                                             <constraint firstItem="1hT-dw-bh8" firstAttribute="leading" secondItem="Ybj-T4-Q9o" secondAttribute="leading" constant="8" id="fwQ-mw-DIl"/>
                                                             <constraint firstItem="yKY-wh-HF1" firstAttribute="top" secondItem="Ybj-T4-Q9o" secondAttribute="top" id="iFd-Cs-7f4"/>
@@ -568,8 +583,10 @@
                                                     <constraint firstItem="JFk-3l-hBz" firstAttribute="leading" secondItem="IPA-1Q-pwH" secondAttribute="trailing" constant="-2" id="Yqx-Zt-D7L"/>
                                                     <constraint firstItem="IPA-1Q-pwH" firstAttribute="width" secondItem="JFk-3l-hBz" secondAttribute="width" id="ava-Ts-4ts"/>
                                                     <constraint firstItem="Ybj-T4-Q9o" firstAttribute="top" secondItem="XXL-dZ-Mbu" secondAttribute="top" id="axG-RA-l7d"/>
+                                                    <constraint firstItem="wus-Go-cK4" firstAttribute="top" secondItem="6Ob-Ub-5rb" secondAttribute="top" id="bDN-45-psG"/>
                                                     <constraint firstAttribute="bottom" secondItem="Ybj-T4-Q9o" secondAttribute="bottom" id="fqQ-pz-kzR"/>
                                                     <constraint firstItem="IPA-1Q-pwH" firstAttribute="leading" secondItem="XXL-dZ-Mbu" secondAttribute="leading" id="ie5-hQ-ivC"/>
+                                                    <constraint firstItem="1hT-dw-bh8" firstAttribute="top" secondItem="6Ob-Ub-5rb" secondAttribute="top" id="jNj-1A-c38"/>
                                                     <constraint firstItem="IPA-1Q-pwH" firstAttribute="top" secondItem="XXL-dZ-Mbu" secondAttribute="top" id="wnf-pX-zw0"/>
                                                 </constraints>
                                             </view>
