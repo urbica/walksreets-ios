@@ -42,9 +42,9 @@
 		<true/>
 	</dict>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Please, give location</string>
+	<string>In order to provide the happiest routes for you, we need to use your location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Please, give location</string>
+	<string>In order to provide the happiest routes for you, we need to use your location</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>VremenaGroteskMedium.otf</string>
