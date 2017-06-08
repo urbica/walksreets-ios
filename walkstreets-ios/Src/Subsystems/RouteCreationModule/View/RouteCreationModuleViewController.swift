@@ -45,7 +45,7 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     
     var output: RouteCreationModuleViewOutput!
     var selectedPriorityIndex: Int? = 0
-    var selectedTimeIndex: Int?
+    var selectedTimeIndex: Int? = 0
     
     var routeType: String = "regular"
     var locationArray = [CLLocationCoordinate2D]()
@@ -217,7 +217,7 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         for legend in legendArray {
             legend.isHidden = true
         }
-        
+                
         self.legendArray[selectedPriorityIndex!].isHidden = false
         
         self.selectedTimeViews[selectedTimeIndex!].backgroundColor = UIColor.black

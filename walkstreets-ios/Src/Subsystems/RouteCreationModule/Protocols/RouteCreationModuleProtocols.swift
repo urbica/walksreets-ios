@@ -12,6 +12,7 @@ import MapKit
 import Mapbox
 
 protocol RouteCreationModuleViewInput: class {
+    
     func setupInitialState()
     func showRoute(polyline: AnyObject)
     func drawFirstLine(polyline: AnyObject)

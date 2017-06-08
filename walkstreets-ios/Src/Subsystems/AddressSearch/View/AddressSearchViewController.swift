@@ -27,7 +27,14 @@ class AddressSearchViewController: UIViewController, AddressSearchViewInput {
 
     // MARK: AddressSearchViewInput
     func setupInitialState() {
+        textField.addTarget(self, action: #selector(AddressSearchViewController.textFieldDidChange), for: .editingChanged)
         textField.becomeFirstResponder()
+    }
+    
+    func textFieldDidChange() {
+        let attributedString = NSMutableAttributedString(string: textField.text!.uppercased())
+        attributedString.addAttribute(NSKernAttributeName, value: 2.2, range: NSRange(location: 0, length: attributedString.length))
+        textField.attributedText = attributedString
     }
     
     func reloadData() {

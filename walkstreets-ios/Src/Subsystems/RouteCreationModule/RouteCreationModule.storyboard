@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bM7-hz-sGk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bM7-hz-sGk">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="VremenaGrotesk.otf">
-            <string>VremenaGrotesk</string>
-        </array>
         <array key="VremenaGroteskBook.otf">
             <string>VremenaGroteskBook</string>
         </array>
@@ -41,7 +38,7 @@
                                                 <rect key="frame" x="8" y="0.0" width="67" height="70"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 MIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvV-YW-hn2" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                                        <rect key="frame" x="10.5" y="35" width="47.5" height="14"/>
+                                                        <rect key="frame" x="12" y="35" width="47.5" height="14"/>
                                                         <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -52,7 +49,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMF-Fi-AQa">
-                                                        <rect key="frame" x="10.5" y="66" width="47.5" height="4"/>
+                                                        <rect key="frame" x="12" y="66" width="47.5" height="4"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="4" id="0uO-g6-ERr"/>
@@ -75,7 +72,7 @@
                                                     <constraint firstAttribute="bottom" secondItem="qMF-Fi-AQa" secondAttribute="bottom" id="fFY-fl-BvT"/>
                                                     <constraint firstItem="yjW-qd-OSp" firstAttribute="leading" secondItem="Irx-N2-sas" secondAttribute="leading" id="iJM-I9-zOd"/>
                                                     <constraint firstItem="qMF-Fi-AQa" firstAttribute="leading" secondItem="VvV-YW-hn2" secondAttribute="leading" id="klB-ul-C4h"/>
-                                                    <constraint firstItem="VvV-YW-hn2" firstAttribute="centerX" secondItem="Irx-N2-sas" secondAttribute="centerX" id="rjA-FU-hq4"/>
+                                                    <constraint firstItem="VvV-YW-hn2" firstAttribute="centerX" secondItem="Irx-N2-sas" secondAttribute="centerX" constant="2" id="rjA-FU-hq4"/>
                                                     <constraint firstAttribute="width" constant="67" id="stX-xJ-pPg"/>
                                                 </constraints>
                                             </view>
@@ -83,7 +80,7 @@
                                                 <rect key="frame" x="75" y="0.0" width="67" height="70"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 MIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g69-is-w1G" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                                        <rect key="frame" x="11" y="35" width="45.5" height="14"/>
+                                                        <rect key="frame" x="13" y="35.5" width="45.5" height="14"/>
                                                         <fontDescription key="fontDescription" name="VremenaGroteskBook" family="Vremena Grotesk" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -94,7 +91,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tI-2P-kBP">
-                                                        <rect key="frame" x="11" y="66" width="45.5" height="4"/>
+                                                        <rect key="frame" x="13" y="66" width="45.5" height="4"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="4" id="bL8-gI-lkI"/>
@@ -112,7 +109,7 @@
                                                     <constraint firstItem="wcw-Zt-seB" firstAttribute="leading" secondItem="QPc-y7-Y1C" secondAttribute="leading" id="4wc-g1-M00"/>
                                                     <constraint firstAttribute="trailing" secondItem="wcw-Zt-seB" secondAttribute="trailing" id="9DH-gy-wrT"/>
                                                     <constraint firstItem="3tI-2P-kBP" firstAttribute="trailing" secondItem="g69-is-w1G" secondAttribute="trailing" id="Ixu-LD-zpS"/>
-                                                    <constraint firstItem="g69-is-w1G" firstAttribute="centerX" secondItem="QPc-y7-Y1C" secondAttribute="centerX" id="N79-Vb-OVy"/>
+                                                    <constraint firstItem="g69-is-w1G" firstAttribute="centerX" secondItem="QPc-y7-Y1C" secondAttribute="centerX" constant="2" id="N79-Vb-OVy"/>
                                                     <constraint firstItem="3tI-2P-kBP" firstAttribute="leading" secondItem="g69-is-w1G" secondAttribute="leading" id="XkF-eR-FOc"/>
                                                     <constraint firstItem="3tI-2P-kBP" firstAttribute="top" secondItem="wcw-Zt-seB" secondAttribute="bottom" id="cKd-Ww-sGV"/>
                                                     <constraint firstItem="g69-is-w1G" firstAttribute="centerY" secondItem="QPc-y7-Y1C" secondAttribute="centerY" constant="7" id="myx-OU-S3x"/>
@@ -124,7 +121,7 @@
                                                 <rect key="frame" x="142" y="0.0" width="67" height="70"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90 MIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7f-LP-F0h" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                                        <rect key="frame" x="11" y="35" width="45.5" height="14"/>
+                                                        <rect key="frame" x="13" y="35.5" width="45.5" height="14"/>
                                                         <fontDescription key="fontDescription" name="VremenaGroteskBook" family="Vremena Grotesk" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -135,7 +132,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nuf-vQ-b9f">
-                                                        <rect key="frame" x="11" y="66" width="45.5" height="4"/>
+                                                        <rect key="frame" x="13" y="66" width="45.5" height="4"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="4" id="OV7-A8-3Z9"/>
@@ -158,14 +155,14 @@
                                                     <constraint firstItem="XNR-ew-zFv" firstAttribute="top" secondItem="syz-fe-bdz" secondAttribute="top" id="GKB-75-bFU"/>
                                                     <constraint firstItem="nuf-vQ-b9f" firstAttribute="trailing" secondItem="a7f-LP-F0h" secondAttribute="trailing" id="Qvd-kN-nZ2"/>
                                                     <constraint firstItem="nuf-vQ-b9f" firstAttribute="top" secondItem="XNR-ew-zFv" secondAttribute="bottom" id="m9D-RH-BKg"/>
-                                                    <constraint firstItem="a7f-LP-F0h" firstAttribute="centerX" secondItem="syz-fe-bdz" secondAttribute="centerX" id="w1P-5Q-bXW"/>
+                                                    <constraint firstItem="a7f-LP-F0h" firstAttribute="centerX" secondItem="syz-fe-bdz" secondAttribute="centerX" constant="2" id="w1P-5Q-bXW"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xL4-2O-IgK">
                                                 <rect key="frame" x="251" y="0.0" width="69" height="70"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="routeCreation_close" translatesAutoresizingMaskIntoConstraints="NO" id="KUc-iW-cg5">
-                                                        <rect key="frame" x="27.5" y="35.5" width="13" height="13"/>
+                                                        <rect key="frame" x="36" y="35.5" width="13" height="13"/>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7R-iU-sHe">
                                                         <rect key="frame" x="0.0" y="0.0" width="69" height="70"/>
@@ -178,7 +175,7 @@
                                                 <constraints>
                                                     <constraint firstItem="Z7R-iU-sHe" firstAttribute="leading" secondItem="xL4-2O-IgK" secondAttribute="leading" id="8rF-DE-QTb"/>
                                                     <constraint firstAttribute="trailing" secondItem="Z7R-iU-sHe" secondAttribute="trailing" id="FqX-AA-wdj"/>
-                                                    <constraint firstItem="KUc-iW-cg5" firstAttribute="centerX" secondItem="xL4-2O-IgK" secondAttribute="centerX" id="HcP-3x-s1c"/>
+                                                    <constraint firstItem="KUc-iW-cg5" firstAttribute="centerX" secondItem="xL4-2O-IgK" secondAttribute="centerX" constant="8" id="HcP-3x-s1c"/>
                                                     <constraint firstItem="KUc-iW-cg5" firstAttribute="centerY" secondItem="xL4-2O-IgK" secondAttribute="centerY" constant="7" id="Pz6-sw-eKl"/>
                                                     <constraint firstItem="Z7R-iU-sHe" firstAttribute="top" secondItem="xL4-2O-IgK" secondAttribute="top" id="fvT-7N-4Dt"/>
                                                     <constraint firstAttribute="bottom" secondItem="Z7R-iU-sHe" secondAttribute="bottom" id="mqp-Ki-Pd9"/>
@@ -283,7 +280,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADDRESS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0q-DH-e7h" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                                        <rect key="frame" x="29" y="6.5" width="67.5" height="14"/>
+                                                        <rect key="frame" x="29" y="6" width="67.5" height="14"/>
                                                         <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                                         <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                         <nil key="textColor"/>
@@ -377,7 +374,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="126" id="2om-pp-Ap8"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="VremenaGrotesk" family="Vremena Grotesk" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                         <state key="normal" title="ABOUT">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -409,7 +406,7 @@
                                         <rect key="frame" x="0.0" y="104" width="320" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O80-Vc-Tc9">
-                                                <rect key="frame" x="149.5" y="28.5" width="21.5" height="14"/>
+                                                <rect key="frame" x="149.5" y="28" width="21.5" height="14"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -452,7 +449,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenLegend" translatesAutoresizingMaskIntoConstraints="NO" id="nhz-oQ-gj0">
-                                                                <rect key="frame" x="8" y="33" width="79" height="19"/>
+                                                                <rect key="frame" x="8" y="30" width="79" height="19"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCJ-vu-rM6">
                                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="55"/>
@@ -466,7 +463,7 @@
                                                             <constraint firstAttribute="bottom" secondItem="pCJ-vu-rM6" secondAttribute="bottom" id="2Ie-Ew-Z8y"/>
                                                             <constraint firstAttribute="trailing" secondItem="nhz-oQ-gj0" secondAttribute="trailing" constant="8" id="USs-kz-AMN"/>
                                                             <constraint firstItem="pCJ-vu-rM6" firstAttribute="leading" secondItem="IPA-1Q-pwH" secondAttribute="leading" id="agT-gN-Yhm"/>
-                                                            <constraint firstAttribute="bottom" secondItem="nhz-oQ-gj0" secondAttribute="bottom" constant="3" id="au9-hL-sM5"/>
+                                                            <constraint firstAttribute="bottom" secondItem="nhz-oQ-gj0" secondAttribute="bottom" constant="6" id="au9-hL-sM5"/>
                                                             <constraint firstItem="pCJ-vu-rM6" firstAttribute="top" secondItem="IPA-1Q-pwH" secondAttribute="top" id="c6E-LU-25M"/>
                                                             <constraint firstItem="6Ob-Ub-5rb" firstAttribute="leading" secondItem="IPA-1Q-pwH" secondAttribute="leading" constant="8" id="gOh-NV-Wz0"/>
                                                             <constraint firstItem="nhz-oQ-gj0" firstAttribute="leading" secondItem="IPA-1Q-pwH" secondAttribute="leading" constant="8" id="i2x-t1-svJ"/>
@@ -496,7 +493,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noizeLegend" translatesAutoresizingMaskIntoConstraints="NO" id="Gjv-wU-U24">
-                                                                <rect key="frame" x="8" y="33" width="79" height="19"/>
+                                                                <rect key="frame" x="8" y="30" width="79" height="19"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZ5-Pd-W7Y">
                                                                 <rect key="frame" x="-2" y="0.0" width="97" height="55"/>
@@ -507,7 +504,7 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="bottom" secondItem="Gjv-wU-U24" secondAttribute="bottom" constant="3" id="1GM-Ac-Swi"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Gjv-wU-U24" secondAttribute="bottom" constant="6" id="1GM-Ac-Swi"/>
                                                             <constraint firstAttribute="trailing" secondItem="UZ5-Pd-W7Y" secondAttribute="trailing" id="BLS-Oa-p9K"/>
                                                             <constraint firstAttribute="bottom" secondItem="UZ5-Pd-W7Y" secondAttribute="bottom" id="I8m-xw-Vrd"/>
                                                             <constraint firstItem="UZ5-Pd-W7Y" firstAttribute="top" secondItem="JFk-3l-hBz" secondAttribute="top" id="IS3-1J-j3X"/>
@@ -540,7 +537,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="airLegend" translatesAutoresizingMaskIntoConstraints="NO" id="dGT-7N-AU6">
-                                                                <rect key="frame" x="8" y="34" width="79" height="18"/>
+                                                                <rect key="frame" x="8" y="31" width="79" height="18"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKY-wh-HF1">
                                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="55"/>
@@ -554,7 +551,7 @@
                                                             <constraint firstItem="1hT-dw-bh8" firstAttribute="top" secondItem="Ybj-T4-Q9o" secondAttribute="top" constant="6" id="0CN-G2-DfU"/>
                                                             <constraint firstAttribute="trailing" secondItem="yKY-wh-HF1" secondAttribute="trailing" id="2hX-Yg-LqS"/>
                                                             <constraint firstAttribute="bottom" secondItem="yKY-wh-HF1" secondAttribute="bottom" id="4jQ-4H-Qnw"/>
-                                                            <constraint firstAttribute="bottom" secondItem="dGT-7N-AU6" secondAttribute="bottom" constant="3" id="7Rh-z4-WBl"/>
+                                                            <constraint firstAttribute="bottom" secondItem="dGT-7N-AU6" secondAttribute="bottom" constant="6" id="7Rh-z4-WBl"/>
                                                             <constraint firstItem="yKY-wh-HF1" firstAttribute="leading" secondItem="Ybj-T4-Q9o" secondAttribute="leading" id="MTq-gq-f88"/>
                                                             <constraint firstItem="1hT-dw-bh8" firstAttribute="leading" secondItem="Ybj-T4-Q9o" secondAttribute="leading" constant="8" id="fwQ-mw-DIl"/>
                                                             <constraint firstItem="yKY-wh-HF1" firstAttribute="top" secondItem="Ybj-T4-Q9o" secondAttribute="top" id="iFd-Cs-7f4"/>
@@ -619,7 +616,7 @@
                                         <rect key="frame" x="251" y="0.0" width="69" height="70"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="routeCreation_close" translatesAutoresizingMaskIntoConstraints="NO" id="jUW-Qi-Pkd">
-                                                <rect key="frame" x="28" y="35.5" width="13" height="13"/>
+                                                <rect key="frame" x="36" y="35.5" width="13" height="13"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Guh-sW-d86">
                                                 <rect key="frame" x="0.0" y="0.0" width="69" height="70"/>
@@ -635,7 +632,7 @@
                                             <constraint firstAttribute="bottom" secondItem="Guh-sW-d86" secondAttribute="bottom" id="fYd-sD-FK6"/>
                                             <constraint firstItem="Guh-sW-d86" firstAttribute="leading" secondItem="zzt-B4-u6O" secondAttribute="leading" id="olv-Yf-KyS"/>
                                             <constraint firstItem="Guh-sW-d86" firstAttribute="top" secondItem="zzt-B4-u6O" secondAttribute="top" id="qUo-HD-PbC"/>
-                                            <constraint firstItem="jUW-Qi-Pkd" firstAttribute="centerX" secondItem="zzt-B4-u6O" secondAttribute="centerX" id="t0Y-wf-Nhf"/>
+                                            <constraint firstItem="jUW-Qi-Pkd" firstAttribute="centerX" secondItem="zzt-B4-u6O" secondAttribute="centerX" constant="8" id="t0Y-wf-Nhf"/>
                                             <constraint firstAttribute="trailing" secondItem="Guh-sW-d86" secondAttribute="trailing" id="tci-bL-bm6"/>
                                         </constraints>
                                     </view>

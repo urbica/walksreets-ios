@@ -32,10 +32,6 @@ Fabric: Copyright 2016 Twitter, Inc. All Rights Reserved. Use of this software i
 
 Fabric: Copyright 2016 Twitter, Inc. All Rights Reserved. Use of this software is subject to the terms and conditions of the Fabric Software and Services Agreement located at https://fabric.io/terms. OSS: http://get.fabric.io/terms/opensource.txt
 
-## GoogleMaps
-
-Copyright 2017 Google
-
 ## Mapbox-iOS-SDK
 
 mapbox-gl-native copyright (c) 2014-2017 Mapbox.

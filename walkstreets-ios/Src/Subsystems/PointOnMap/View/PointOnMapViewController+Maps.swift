@@ -13,7 +13,7 @@ extension PointOnMapViewController: MGLMapViewDelegate {
     
     func updateRouteView(route: AnyObject) {
         if let route = route as? Route {
-            
+
             guard let length = route.length , let time = route.time else {return}
             
             if let sw = route.sw, let ne = route.ne {
