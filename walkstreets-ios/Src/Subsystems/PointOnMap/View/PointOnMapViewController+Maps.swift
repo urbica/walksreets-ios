@@ -20,6 +20,14 @@ extension PointOnMapViewController: MGLMapViewDelegate {
                 let bounds = MGLCoordinateBoundsMake(sw, ne)
                 mapView.setVisibleCoordinateBounds(bounds, animated: false)
             }
+            
+            
+            if let start = route.start {
+                setupLastPoint(lastPoint: lastPoint.coordinate, firstPoint: start)
+            } else {
+                setupLastPoint(lastPoint: lastPoint.coordinate)
+            }
+            
             lengthTimeLabel.isHidden = false
             if time > 60 {
                 self.lengthTimeLabel.text = "\(length.roundTo(places: 2)) KM • \(time / 60) H \(time % 60) MIN"
@@ -34,8 +42,6 @@ extension PointOnMapViewController: MGLMapViewDelegate {
         if let polyline = polyline as? [CustomAnnotation] {
             mapView.add(polyline)
         }
-        
-        setupLastPoint(lastPoint: lastPoint.coordinate)
         
         for (index, view) in priorityViews.enumerated() {
             
@@ -99,11 +105,19 @@ extension PointOnMapViewController: MGLMapViewDelegate {
     }
     
     func mapView(_ mapView: MGLMapView, viewFor annotation: MGLAnnotation) -> MGLAnnotationView? {
+        
+        let startPoint = self.firstPointAnnotation.coordinate
         let endPointCoordinate = self.lastPoint.coordinate
         
-        if annotation.coordinate.latitude == endPointCoordinate.latitude && annotation.coordinate.longitude == endPointCoordinate.longitude {
+        if annotation.coordinate.latitude == startPoint.latitude && annotation.coordinate.longitude == startPoint.longitude {
+            let image = UIImage(named: "startPoint")!
+            
+            let drag = DraggableAnnotationView(reuseIdentifier: "startPoint", size: image.size.height, image: image, pointOnMap: false)
+            return drag
+            
+        } else if annotation.coordinate.latitude == endPointCoordinate.latitude && annotation.coordinate.longitude == endPointCoordinate.longitude {
             let image = UIImage(named: "endPoint")!
-            return DraggableAnnotationView(reuseIdentifier: "endPoint", size: image.size.height, image: image)
+            return DraggableAnnotationView(reuseIdentifier: "endPoint", size: image.size.height, image: image, pointOnMap: false)
         }
         return nil
     }

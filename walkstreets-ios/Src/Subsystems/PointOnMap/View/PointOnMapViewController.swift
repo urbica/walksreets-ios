@@ -22,6 +22,7 @@ class PointOnMapViewController: UIViewController, PointOnMapViewInput {
     
     var output: PointOnMapViewOutput!
     let lastPoint = MGLPointAnnotation()
+    let firstPointAnnotation = MGLPointAnnotation()
     let location = Location.core.getCoordinate()
     var selectedPriorityIndex: Int? = 0
     let manager = CLLocationManager()
@@ -64,13 +65,39 @@ class PointOnMapViewController: UIViewController, PointOnMapViewInput {
         
         // Double tap later
         //setupTapMap()
+        
+        setupTap()
     }
     
-    func setupLastPoint(lastPoint: CLLocationCoordinate2D) {
+    func setupTap() {
+        let tap = UITapGestureRecognizer()
+        tap.numberOfTapsRequired = 1
+        tap.numberOfTouchesRequired = 1
+        tap.addTarget(self, action: #selector(handleTap(tap:)))
+        tap.delegate = self
+        self.mapView.addGestureRecognizer(tap)
+    }
+    
+    func handleTap(tap: UITapGestureRecognizer) {
+        let location = self.mapView.convert(tap.location(in: self.mapView), toCoordinateFrom: self.mapView)
+        if location.latitude == lastPoint.coordinate.latitude {
+            mapView.selectAnnotation(lastPoint, animated: true)
+        }
         
-        self.lastPoint.coordinate.latitude = lastPoint.latitude
-        self.lastPoint.coordinate.longitude = lastPoint.longitude
+        if location.latitude == firstPointAnnotation.coordinate.latitude {
+            mapView.selectAnnotation(firstPointAnnotation, animated: true)
+        }
+    }
+    
+    func setupLastPoint(lastPoint: CLLocationCoordinate2D, firstPoint: CLLocationCoordinate2D? = nil) {
+        
+        self.lastPoint.coordinate = lastPoint
         mapView.addAnnotation(self.lastPoint)
+        
+        if let firstPoint = firstPoint {
+            self.firstPointAnnotation.coordinate = firstPoint
+            mapView.addAnnotation(firstPointAnnotation)
+        }
         
     }
     
@@ -93,8 +120,16 @@ class PointOnMapViewController: UIViewController, PointOnMapViewInput {
             mapView.style?.removeSource(source)
         }
         
+        var firstPoint = CLLocationCoordinate2D()
         let userLocation = Location.core.getCoordinate()
-        let firstPoint = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
+
+        switch firstPointAnnotation.coordinate.latitude {
+        case 0:
+            firstPoint = CLLocationCoordinate2D(latitude: userLocation.latitude, longitude: userLocation.longitude)
+        default:
+            firstPoint = firstPointAnnotation.coordinate
+        }
+
         let lastPoint = self.lastPoint.coordinate
         
         output.drawRoutsForPoints(firstPoint: firstPoint, lastPoint: lastPoint)
@@ -188,4 +223,8 @@ extension PointOnMapViewController: CLLocationManagerDelegate {
 //            
 //        }, completion: nil)
 //    }
+}
+
+extension PointOnMapViewController: UIGestureRecognizerDelegate {
+    
 }

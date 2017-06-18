@@ -51,7 +51,7 @@ class DraggableAnnotationView: MGLAnnotationView {
     }
     
     func startDragging() {
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
+        UIView.animate(withDuration: 0.0, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
             self.layer.opacity = 0.8
             self.transform = CGAffineTransform.identity.scaledBy(x: 1.5, y: 1.5)
         }, completion: nil)
@@ -59,7 +59,7 @@ class DraggableAnnotationView: MGLAnnotationView {
     
     func endDragging() {
         transform = CGAffineTransform.identity.scaledBy(x: 1.5, y: 1.5)
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
+        UIView.animate(withDuration: 0.0, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [], animations: {
             self.layer.opacity = 1
             self.transform = CGAffineTransform.identity.scaledBy(x: 1, y: 1)
         }, completion: { _ in
