@@ -16,7 +16,7 @@ class DraggableAnnotationView: MGLAnnotationView {
         super.init(reuseIdentifier: reuseIdentifier)
         
         isDraggable = true
-        centerOffset = CGVector(dx: 0, dy: -40)
+        centerOffset = CGVector(dx: 0, dy: -35)
         scalesWithViewingDistance = false
         
         
