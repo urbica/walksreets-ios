@@ -174,7 +174,6 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
             if let sw = route.sw, let ne = route.ne {
                 let bounds = MGLCoordinateBoundsMake(sw, ne)
                 mapView.setVisibleCoordinateBounds(bounds, animated: false)
-                mapView.center = CGPoint(x: UIScreen.main.bounds.size.width, y:UIScreen.main.bounds.size.height + 60)
             }
             lengthTimeLabel.isHidden = false
             if time > 60 {
