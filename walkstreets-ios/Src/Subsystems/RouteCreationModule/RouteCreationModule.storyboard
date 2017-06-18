@@ -666,6 +666,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ROz-7S-d9q"/>
                     <connections>
+                        <outlet property="getBackButton" destination="iXS-7k-dA5" id="ChA-o1-dNP"/>
                         <outlet property="lengthTimeLabel" destination="AME-ni-zm8" id="vn4-6O-Ogl"/>
                         <outlet property="mapView" destination="kML-PR-LQ9" id="BVB-to-vOA"/>
                         <outlet property="resetView" destination="xLc-Ks-jmH" id="9lN-dY-BHB"/>
@@ -687,13 +688,13 @@
                         <outletCollection property="legendArray" destination="dGT-7N-AU6" collectionClass="NSMutableArray" id="rTj-Uj-ZjC"/>
                         <outletCollection property="selectedTimeViews" destination="qMF-Fi-AQa" collectionClass="NSMutableArray" id="a51-1B-S7x"/>
                         <outletCollection property="timeButtons" destination="yjW-qd-OSp" collectionClass="NSMutableArray" id="QIF-Cd-8CS"/>
-                        <outletCollection property="timeLabels" destination="a7f-LP-F0h" collectionClass="NSMutableArray" id="cIh-fL-kYz"/>
                         <outletCollection property="timeButtons" destination="XNR-ew-zFv" collectionClass="NSMutableArray" id="WRF-9B-ROg"/>
                         <outletCollection property="selectedTimeViews" destination="3tI-2P-kBP" collectionClass="NSMutableArray" id="A82-c4-b20"/>
-                        <outletCollection property="timeLabels" destination="g69-is-w1G" collectionClass="NSMutableArray" id="xJE-H6-3vO"/>
                         <outletCollection property="timeButtons" destination="wcw-Zt-seB" collectionClass="NSMutableArray" id="T0B-ms-3NC"/>
-                        <outletCollection property="timeLabels" destination="VvV-YW-hn2" collectionClass="NSMutableArray" id="yO7-1B-xHE"/>
                         <outletCollection property="selectedTimeViews" destination="nuf-vQ-b9f" collectionClass="NSMutableArray" id="rvW-7B-gLp"/>
+                        <outletCollection property="timeLabels" destination="VvV-YW-hn2" collectionClass="NSMutableArray" id="taa-fV-q6t"/>
+                        <outletCollection property="timeLabels" destination="g69-is-w1G" collectionClass="NSMutableArray" id="qV2-tW-6gm"/>
+                        <outletCollection property="timeLabels" destination="a7f-LP-F0h" collectionClass="NSMutableArray" id="fnX-yt-ixT"/>
                         <segue destination="egM-tx-RAw" kind="show" identifier="openAbout" id="vRq-a5-Hnm"/>
                         <segue destination="QCw-Js-pt1" kind="show" identifier="openSearch" id="qQv-XQ-lQu"/>
                     </connections>
