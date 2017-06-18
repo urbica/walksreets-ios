@@ -16,6 +16,7 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     
     // start route view
     @IBOutlet weak var startRouteView: UIView!
+    @IBOutlet weak var getBackButton: UIButton!
     
     
     // route time views
@@ -174,7 +175,6 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
             if let sw = route.sw, let ne = route.ne {
                 let bounds = MGLCoordinateBoundsMake(sw, ne)
                 mapView.setVisibleCoordinateBounds(bounds, animated: false)
-                mapView.center = CGPoint(x: UIScreen.main.bounds.size.width, y:UIScreen.main.bounds.size.height + 60)
             }
             lengthTimeLabel.isHidden = false
             if time > 60 {
@@ -197,6 +197,7 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         
         selectedPriorityIndex = 0
         selectedTimeIndex = 0
+        getBackButton.isEnabled = true
         
         for label in priorityLabels {
             label.textColor = UIColor.black
@@ -266,6 +267,7 @@ extension RouteCreationModuleViewController {
     }
 
     @IBAction func actionRouteDetailsView(sender: AnyObject) {
+        getBackButton.isEnabled = false
         walkMe()
     }
     
