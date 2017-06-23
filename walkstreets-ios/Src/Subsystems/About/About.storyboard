@@ -82,7 +82,7 @@
                                         <rect key="frame" x="20" y="65.5" width="280" height="58.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELLO@URBICA.CO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klX-qF-oFb" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
-                                                <rect key="frame" x="72" y="23" width="136.5" height="14"/>
+                                                <rect key="frame" x="72.5" y="22.5" width="136.5" height="14"/>
                                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -172,7 +172,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hX-6K-D1c" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
                                 <rect key="frame" x="20" y="184" width="232" height="140"/>
-                                <string key="text">THE WALKSTREETS APP IS CREATED TO BUILD THE HAPPIEST AND THE MOST COMFORTABLE ROUTES INSTEAD OF THE SHORTEST AND THE FASTESTS. WE BELIEVE IT WILL HELP PEOPLE TO DISCOVER THE CITY AND THE EVERYDAY ROUTINE ENJOYABLE.</string>
+                                <string key="text">THE WALKSTREETS APP IS CREATED TO BUILD THE HAPPIEST AND THE MOST COMFORTABLE ROUTES INSTEAD OF THE SHORTEST AND THE FASTEST. WE BELIEVE IT WILL HELP PEOPLE TO DISCOVER THE CITY AND THE EVERYDAY ROUTINE ENJOYABLE.</string>
                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -182,7 +182,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WE USED OPEN DATA AND NOISE SENSORS TO CREATE THE APP ALONG WITH GREANPEACE AND AEROSTATE DATA." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g96-ef-MF3" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WE USED OPEN DATA AND NOISE SENSORS TO CREATE THE APP ALONG WITH GREENPEACE AND AEROSTATE DATA." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g96-ef-MF3" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
                                 <rect key="frame" x="20" y="343" width="248" height="56"/>
                                 <fontDescription key="fontDescription" name="VremenaGroteskMedium" family="Vremena Grotesk" pointSize="14"/>
                                 <nil key="textColor"/>
