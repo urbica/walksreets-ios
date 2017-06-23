@@ -44,7 +44,7 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     var multyLine: AnyObject?
 
     func viewIsReady() {
-        checkLocation()
+        //checkLocation()
     }
     
     func checkLocation() {

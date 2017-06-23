@@ -77,6 +77,9 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
         routeTimeView.isHidden = true
         routeDetailsView.isHidden = true
         setupMap()
+        
+        // remove later
+        showStartView()
     }
     
     func updatePriorityViews(index: Int) {
