@@ -44,7 +44,26 @@ class RouteCreationModulePresenter: RouteCreationModuleModuleInput, RouteCreatio
     var multyLine: AnyObject?
 
     func viewIsReady() {
-
+        checkLocation()
+    }
+    
+    func checkLocation() {
+        let location = Location.core.getCoordinate()
+        geoCoder.reverseGeocodeLocation(CLLocation(latitude: location.latitude, longitude: location.longitude), completionHandler: { [weak self](placemarks, error) -> Void in
+            
+            // Place details
+            var placeMark: CLPlacemark!
+            placeMark = placemarks?[0]
+            
+            // City
+            if let city = placeMark.addressDictionary!["City"] as? NSString {
+                if city == "Moscow" {
+                    self?.view.showStartView()
+                }
+            } else {
+                self?.view.showAlertView()
+            }
+        })
     }
     
     func configureRouteDetailsWithEndPoint(endPoint: CLLocationCoordinate2D?) -> Bool {

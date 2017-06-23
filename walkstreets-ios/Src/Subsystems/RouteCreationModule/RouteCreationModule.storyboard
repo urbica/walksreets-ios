@@ -261,7 +261,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bI-Et-JCQ">
                                 <rect key="frame" x="0.0" y="438" width="320" height="130"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWg-je-kaT" customClass="CustomizableView" customModule="walkstreets_ios" customModuleProvider="target">
+                                    <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWg-je-kaT" customClass="CustomizableView" customModule="walkstreets_ios" customModuleProvider="target">
                                         <rect key="frame" x="20" y="25" width="280" height="55"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D1b-dI-Ufc">
@@ -425,7 +425,7 @@
                                             <constraint firstItem="dRh-pU-0sa" firstAttribute="top" secondItem="2ai-cY-Krw" secondAttribute="top" id="waU-Nf-dnC"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxp-yg-M2B">
+                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxp-yg-M2B">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
                                         <subviews>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XXL-dZ-Mbu">
@@ -642,17 +642,56 @@
                                     <constraint firstAttribute="trailing" secondItem="zzt-B4-u6O" secondAttribute="trailing" id="W85-DJ-zYT"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V3K-du-ygD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80I-Fu-sgK" customClass="CustomizableLabel" customModule="walkstreets_ios" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="30" width="280" height="40.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="APP CURRENTLY WORKS IN MOSCOW. SORRY ">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="VremenaGroteskMedium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="😥">
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="AppleColorEmoji"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="1.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                <real key="value" value="2.2000000000000002"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="5wg-SS-ROU"/>
+                                    <constraint firstItem="80I-Fu-sgK" firstAttribute="top" secondItem="V3K-du-ygD" secondAttribute="top" constant="30" id="6z9-fO-QwC"/>
+                                    <constraint firstItem="80I-Fu-sgK" firstAttribute="leading" secondItem="V3K-du-ygD" secondAttribute="leading" constant="20" id="O2U-Jw-CdD"/>
+                                    <constraint firstItem="80I-Fu-sgK" firstAttribute="centerY" secondItem="V3K-du-ygD" secondAttribute="centerY" id="suq-Dm-P6c"/>
+                                    <constraint firstAttribute="trailing" secondItem="80I-Fu-sgK" secondAttribute="trailing" constant="20" id="zP4-vc-XVl"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="xLc-Ks-jmH" secondAttribute="trailing" id="6n2-DH-PBp"/>
                             <constraint firstItem="xLc-Ks-jmH" firstAttribute="leading" secondItem="Ri3-tg-QXr" secondAttribute="leading" id="8VT-9E-OrM"/>
+                            <constraint firstAttribute="trailing" secondItem="V3K-du-ygD" secondAttribute="trailing" id="9SU-1I-jlP"/>
                             <constraint firstAttribute="trailing" secondItem="TOi-Rc-gh0" secondAttribute="trailing" id="Cm1-Qo-stO"/>
                             <constraint firstItem="xLc-Ks-jmH" firstAttribute="top" secondItem="Ri3-tg-QXr" secondAttribute="top" id="GSU-jU-qxv"/>
+                            <constraint firstItem="V3K-du-ygD" firstAttribute="leading" secondItem="Ri3-tg-QXr" secondAttribute="leading" id="HRm-ib-Hpj"/>
                             <constraint firstItem="XXL-dZ-Mbu" firstAttribute="top" secondItem="sll-ya-05N" secondAttribute="bottom" constant="58" id="Hwf-Ai-aED"/>
                             <constraint firstItem="kML-PR-LQ9" firstAttribute="leading" secondItem="Ri3-tg-QXr" secondAttribute="leading" id="Iv2-yq-LrN"/>
                             <constraint firstItem="TOi-Rc-gh0" firstAttribute="top" secondItem="Ri3-tg-QXr" secondAttribute="top" id="KRs-wM-8Y1"/>
                             <constraint firstAttribute="bottom" secondItem="3bI-Et-JCQ" secondAttribute="bottom" id="LRH-xl-Rfv"/>
+                            <constraint firstItem="V3K-du-ygD" firstAttribute="top" secondItem="Ri3-tg-QXr" secondAttribute="top" id="PcV-CM-GXg"/>
                             <constraint firstAttribute="trailing" secondItem="f13-wY-goM" secondAttribute="trailing" id="YTo-5M-ghv"/>
                             <constraint firstAttribute="trailing" secondItem="kML-PR-LQ9" secondAttribute="trailing" id="ZU0-JT-baY"/>
                             <constraint firstItem="3bI-Et-JCQ" firstAttribute="leading" secondItem="Ri3-tg-QXr" secondAttribute="leading" id="bpg-PA-OmP"/>
@@ -666,8 +705,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="ROz-7S-d9q"/>
                     <connections>
+                        <outlet property="alertLabel" destination="80I-Fu-sgK" id="E5P-bx-bzL"/>
+                        <outlet property="alertView" destination="V3K-du-ygD" id="4BQ-zM-vRs"/>
                         <outlet property="getBackButton" destination="iXS-7k-dA5" id="ChA-o1-dNP"/>
                         <outlet property="lengthTimeLabel" destination="AME-ni-zm8" id="vn4-6O-Ogl"/>
+                        <outlet property="mainStartViews" destination="HWg-je-kaT" id="h2n-A9-yW4"/>
                         <outlet property="mapView" destination="kML-PR-LQ9" id="BVB-to-vOA"/>
                         <outlet property="resetView" destination="xLc-Ks-jmH" id="9lN-dY-BHB"/>
                         <outlet property="routeDetailsHeightConstraint" destination="E14-h7-POi" id="6q3-0S-4cj"/>

@@ -17,6 +17,7 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     // start route view
     @IBOutlet weak var startRouteView: UIView!
     @IBOutlet weak var getBackButton: UIButton!
+    @IBOutlet weak var mainStartViews: CustomizableView!
     
     
     // route time views
@@ -43,6 +44,10 @@ class RouteCreationModuleViewController: UIViewController, RouteCreationModuleVi
     @IBOutlet weak var userLocationHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var resetView: UIView!
+    
+    // Alert view 
+    @IBOutlet weak var alertView: UIView!
+    @IBOutlet weak var alertLabel: UILabel!
     
     var output: RouteCreationModuleViewOutput!
     var selectedPriorityIndex: Int? = 0

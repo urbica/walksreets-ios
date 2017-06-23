@@ -20,6 +20,8 @@ protocol RouteCreationModuleViewInput: class {
     func updateRouteView(route: AnyObject)
     func addPointTuple(pointTuple: (CLLocationCoordinate2D, CLLocationCoordinate2D))
     func walkMe()
+    func showStartView()
+    func showAlertView()
 }
 
 protocol RouteCreationModuleViewOutput {
@@ -34,7 +36,7 @@ protocol RouteCreationModuleViewOutput {
     func viewIsReady()
     func configureRouteDetailsWithEndPoint(endPoint: CLLocationCoordinate2D?) -> Bool
     func selectRouteAtIndex(index: Int)
-    func clearRoutes()
+    func clearRoutes()    
 }
 
 protocol RouteCreationModuleModuleInput: class {

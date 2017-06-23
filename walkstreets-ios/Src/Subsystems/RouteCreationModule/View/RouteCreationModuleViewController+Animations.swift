@@ -56,4 +56,26 @@ extension RouteCreationModuleViewController {
             }
         }
     }
+    
+    func showStartView() {
+        mainStartViews.isHidden = false
+        UIView.animate(withDuration: 0.3) { 
+            self.mainStartViews.alpha = 1
+            self.alertView.alpha = 0
+            self.alertView.isHidden = true
+        }
+    }
+    
+    func showAlertView() {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 7
+        let text = "APP CURRENTLY WORKS IN MOSCOW. SORRY 😥"
+        let attributedString = NSMutableAttributedString(string: text)
+        attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))
+        alertLabel.attributedText = attributedString
+        alertView.isHidden = false
+        UIView.animate(withDuration: 0.3) { 
+            self.alertView.alpha = 1
+        }
+    }
 }
